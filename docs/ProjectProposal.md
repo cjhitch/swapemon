@@ -72,7 +72,7 @@ This project would implement a list feature for Pokémon collections which have 
 ## Key Features
 
 ### Pokémon List
-In this application each user will have their own Pokémon list set up initially by inputing utilizing the form. Each Mon in the list will contain useful breeding and completionist attributes such as legal balls, hidden attributes, IVs, and egg moves.
+In this application each user will have their own Pokémon list set up initially by inputing utilizing the form. Each Mon in the list will contain useful breeding and completionist attributes such as legal balls, hidden attributes, IVs, and egg moves. This will help to track which Pokémon a user has and needs, and give other users a list to help see needs and wants.
 ### Trades
 Once user's have found a Mon they like they will be able to offer a trade to another user. After a trade is accepted and finally marked as complete the user associated with the Pokémon will be updated to transfer to the new user. This will allow for automatic updating of your list without requiring manual entry each time.
 ### Filtering
@@ -80,7 +80,7 @@ Filtering in lists will include many needed attributes such as ball stored in, h
 ### Wishlist
 To help similarly to filtering, users are able to create themselves a wishlist. In this list they are able to put the combinations of what they still need. Rather than a user coming to and looking through all the existing Pokémon and trying to determine what they have they could trade, a user could look through the wishlist to see what they have to offer.
 ### Communication
-Often users will have questions and want to know if they could breed something specifically. By offering an inbox for private messages they will have the ability to do this.
+Often users will have questions and want to know if they could breed something specifically. By offering an inbox for private messages they will have the ability to do this. This will help users solve the main issue of finding existing or new Mons to help complete their list or get needed breeder Pokémon.
 
 ## Integrations
 
