@@ -6,7 +6,7 @@ This application is intended to be a platform to allow users to track Pokémon w
 
 ## Target Market
 
-The market for Pokémon is somewhat suprising. The demographic tends to be fairly even between men and women in an industry that has traditionally been dominated by men. It also seems to favor those who fall into the early to mid adult range. As seen in Mike Sonders article and to little surprise, users that play Pokémon tend to play other games as well (Sonders, 2016).
+The market for Pokémon is somewhat suprising. The demographic tends to be fairly even between men and women in an industry that has traditionally been dominated by men. It also seems to favor those who fall into the early to mid adult range. As seen in Mike Sonders article and to little surprise, the main other identifiable trait is users that play Pokémon tend to play other games as well (Sonders, 2016).
 
 
 Between the handheld and market and mobile phones for Go, the majority of users are adults. According to Nintendo they have seen the number of people in their 20s and 30s increase in the previous years (Nintend, 2017). This is supported by the article by Jorik Weustink where the largest demographic is between 21-35 (Weustink, 2019). Sonders also shows a similar trend with 46% of users between 18-29 (Sonders, 2016).
