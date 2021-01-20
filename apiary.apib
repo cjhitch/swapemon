@@ -1,9 +1,9 @@
 FORMAT: 1A
 HOST: https://polls.apiblueprint.org/
 
-# swapemon
+# Swapemon
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Swapemon API allows to read, edit, update, and delete various pokemon, moves, balls, and users.
 
 ## Pokemon Collection [/pokemon]
 
@@ -13,68 +13,191 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
+                "Bulbasaur": {
+                    "dex": "001",
+                    "icon": "",
+                    "shiny": "",
+                    "gender": {
+                        "male": 87.5,
+                        "female": 12.5
+                    },
+                    "type": ["Grass", "Poison"],
+                    "hatch_steps": "5,120",
+                    "egg_group": ["Monster", "Grass"],
+                    "ability": ["Overgrow", "----"],
+                    "hidden_ability": "Chlorophyll",
+                    "base_egg_hatch": "Bulbasaur",
+                    "egg_moves": ["Skull Bash", "Petal Dance", "Curse", "Ingrain", "Nature Power", "Toxic"]
+                },
+                "Ivysaur": {
+                    "dex": "002",
+                    "icon": "",
+                    "shiny": "",
+                    "gender": {
+                        "male": 87.5,
+                        "female": 12.5
+                    },
+                    "type": ["Grass", "Poison"],
+                    "hatch_steps": "5,120",
+                    "egg_group": ["Monster", "Grass"],
+                    "ability": ["Overgrow", "----"],
+                    "hidden_ability": "Chlorophyll",
+                    "base_egg_hatch": "Bulbasaur",
+                    "egg_moves": ["Skull Bash", "Petal Dance", "Curse", "Ingrain", "Nature Power", "Toxic"]
+                },
+                "Venusaur": {
+                    "dex": "003",
+                    "icon": "",
+                    "shiny": "",
+                    "gender": {
+                        "male": 87.5,
+                        "female": 12.5
+                    },
+                    "type": ["Grass", "Poison"],
+                    "hatch_steps": "5,120",
+                    "egg_group": ["Monster", "Grass"],
+                    "ability": ["Overgrow", "----"],
+                    "hidden_ability": "Chlorophyll",
+                    "base_egg_hatch": "Bulbasaur",
+                    "egg_moves": ["Skull Bash", "Petal Dance", "Curse", "Ingrain", "Nature Power", "Toxic"]
+                },
             }
         ]
 
-### Create a New Question [POST]
+## User Collection [/user]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+### Create a New User [POST]
+
+You may create your user.
 
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+                "userName": "John",
+                "sytem": {
+                    "id": "a39d14cd-7058-4e16-8f4a-a7f923f87e4b",
+                    "name": "Nintendo Switch",
+                },
+                "games": {
+                    "id": "e643d072-9d74-40e2-b10e-21e10b866e25",
+                    "name": "Pokemon Sword",
+                },
+                "pokemon": {},
+                "conversation": {}
         }
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Location: /
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "userName": "John",
+                "sytem": {
+                    "id": "a39d14cd-7058-4e16-8f4a-a7f923f87e4b",
+                    "name": "Nintendo Switch",
+                },
+                "games": {
+                    "id": "e643d072-9d74-40e2-b10e-21e10b866e25",
+                    "name": "Pokemon Sword",
+                },
+                "pokemon": {},
+                "conversation": {}
+            }
+
+### Create a New User Pokemon [POST]
+
+You may create your own user Pokemon.
+
++ Request (application/json)
+
+        {
+            "userId": "1c562767-10fe-4c7f-bc2b-9125112e72b1",
+            "name": "Venusaur",
+            "shiny": true,
+            "gender": {
+                "type": "female",
+                "amount": "87.5",
+            },
+            "pokeType": "grass",
+            "abiliity": {
+                "name": "Chlorophyll",
+                "hidden": true,
+            },
+            "eggMoves": ["Skull Bash", "Petal Dance", "Curse", "Ingrain"]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /1c562767-10fe-4c7f-bc2b-9125112e72b1/pokemon
+
+    + Body
+
+            {
+                "userId": "1c562767-10fe-4c7f-bc2b-9125112e72b1",
+                "name": "Venusaur",
+                "shiny": true,
+                "gender": {
+                    "type": "female",
+                    "amount": "87.5",
+                },
+                "pokeType": "grass",
+                "abiliity": {
+                    "name": "Chlorophyll",
+                    "hidden": true,
+                },
+                "eggMoves": ["Skull Bash", "Petal Dance", "Curse", "Ingrain"]
+            }
+            
+### Edit a User Pokemon [POST]
+
+You may edit your own user Pokemon.
+
++ Request (application/json)
+
+        {
+            "id": "d404f13e-630f-4389-97dd-3cb9d297f512",
+            "userId": "1c562767-10fe-4c7f-bc2b-9125112e72b1",
+            "name": "Venusaur",
+            "shiny": true,
+            "gender": {
+                "type": "female",
+                "amount": "87.5",
+            },
+            "pokeType": "grass",
+            "abiliity": {
+                "name": "Chlorophyll",
+                "hidden": true,
+            },
+            "eggMoves": ["Skull Bash", "Petal Dance", "Curse", "Ingrain"]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /1c562767-10fe-4c7f-bc2b-9125112e72b1/d404f13e-630f-4389-97dd-3cb9d297f512
+
+    + Body
+
+            {
+                "id": "d404f13e-630f-4389-97dd-3cb9d297f512"
+                "userId": "1c562767-10fe-4c7f-bc2b-9125112e72b1",
+                "name": "Venusaur",
+                "shiny": true,
+                "gender": {
+                    "type": "female",
+                    "amount": "87.5",
+                },
+                "pokeType": "grass",
+                "abiliity": {
+                    "name": "Chlorophyll",
+                    "hidden": true,
+                },
+                "eggMoves": ["Skull Bash", "Petal Dance", "Curse", "Ingrain"]
             }
