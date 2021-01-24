@@ -1,0 +1,25 @@
+$primary: #0b4571;
+$secondary: #d30f0f;
+$light: #f1f1f1;
+$dark: #424242;
+$theme-colors: (
+	'primary': $primary,
+	'secondary': $secondary,
+	'light': $light,
+	'dark': $dark,
+);
+$custom-colors: (
+	'primary-dark': #122330,
+	'primary-lighten': #0e558b,
+	'primary-light': #1271ba,
+	'primary-hover': #08375a,
+	'secondary-hover': #a80b0b,
+	'tertiary': #ffbc2f,
+	'tertiary-hover': #ffbc2f,
+	'light-70': rgba(241, 241, 241, 0.7),
+	'dark-54': #545454,
+);
+$theme-colors: map-merge(
+	$map1: $theme-colors,
+	$map2: $custom-colors,
+);
