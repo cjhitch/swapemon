@@ -7,7 +7,8 @@ function App() {
 	return (
 		<div className="App">
 			<Header />
-			<TypePills type="grass" name="Grass" />
+			<TypePills type="electric" name="Electric" />
+			<TypePills type="electric" variant="round" />
 		</div>
 	);
 }
