@@ -1,0 +1,14 @@
+@mixin btnBg($color) {
+	background-color: $color;
+	&:hover {
+		background-color: darken($color: $color, $amount: 20);
+	}
+}
+@mixin py($pad) {
+	padding-top: $pad;
+	padding-bottom: $pad;
+}
+@mixin px($pad) {
+	padding-left: $pad;
+	padding-right: $pad;
+}
