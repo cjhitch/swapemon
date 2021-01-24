@@ -1,2 +1,73 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/mixins';
+
 .TypePills {
+	@include py(0.5rem);
+	@include px(0.75rem);
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	color: $light;
+	font-size: 0.875rem;
+	min-width: 6.875rem;
+	border: none;
+	text-transform: uppercase;
+	border-radius: 1.25rem;
+	&.bug {
+		@include btnBg($bug);
+	}
+	&.dark {
+		@include btnBg($dark);
+	}
+	&.dragon {
+		@include btnBg($dragon);
+	}
+	&.electric {
+		@include btnBg($electric);
+	}
+	&.fairy {
+		@include btnBg($fairy);
+	}
+	&.fight {
+		@include btnBg($fight);
+	}
+	&.fire {
+		@include btnBg($fire);
+	}
+	&.flying {
+		@include btnBg($flying);
+	}
+	&.ghost {
+		@include btnBg($ghost);
+	}
+	&.grass {
+		@include btnBg($grass);
+	}
+	&.ground {
+		@include btnBg($ground);
+	}
+	&.ice {
+		@include btnBg($ice);
+	}
+	&.normal {
+		@include btnBg($normal);
+	}
+	&.poison {
+		@include btnBg($poison);
+	}
+	&.psychic {
+		@include btnBg($psychic);
+	}
+	&.rock {
+		@include btnBg($rock);
+	}
+	&.steel {
+		@include btnBg($steel);
+	}
+	&.water {
+		@include btnBg($water);
+	}
+	&.round {
+		border-radius: 50%;
+	}
 }

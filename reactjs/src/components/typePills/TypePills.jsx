@@ -11,10 +11,10 @@ const TypePills = ({ type, name, variant }) => {
 	return (
 		<button
 			type="button"
-			className={`TypePills ${variant ? 'round' : 'pill'} ${type}`}
+			className={`TypePills ${variant !== 'pill' ? 'round' : ''} ${type}`}
 		>
 			<Image src={imgPath.default} />
-			{!variant && name}
+			{variant === 'pill' && <span>{name}</span>}
 		</button>
 	);
 };
