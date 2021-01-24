@@ -1,13 +1,20 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import User from '../user';
 import './Header.scss';
 
 const Header = () => {
 	return (
 		<header className="Header">
 			<Navbar bg="primary" expand="lg" variant="dark">
-				<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+				<Navbar.Brand href="#profile">
+					<User
+						username="JamesEarlJones"
+						// eslint-disable-next-line
+						image="jej.jpg"
+					/>
+				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ml-auto">
