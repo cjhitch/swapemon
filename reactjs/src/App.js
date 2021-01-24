@@ -10,7 +10,16 @@ function App() {
 			<Header />
 			<TypePills type="electric" name="Electric" />
 			<TypePills type="electric" variant="round" />
-			<PokemonCard name="Bulbasaur" shiny dex="001" ball="dream" />
+			<PokemonCard
+				name="Charizard"
+				shiny
+				dex="006"
+				ball="dream"
+				types={[
+					{ type: 'fire', name: 'Fire' },
+					{ type: 'flying', name: 'Flying' },
+				]}
+			/>
 		</div>
 	);
 }

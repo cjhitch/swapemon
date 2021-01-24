@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'react-bootstrap/Image';
+import TypePills from '../typePills';
 import Shiny from '../../assets/images/icons/shiny.svg';
 import './PokemonCard.scss';
 
@@ -9,8 +10,8 @@ const PokemonCard = ({
 	shiny,
 	dex,
 	ball,
-	// level,
-	// types,
+	level,
+	types,
 	// gender,
 	// ability,
 	// ivs,
@@ -34,11 +35,18 @@ const PokemonCard = ({
 					</span>
 				)}
 			</h2>
-			<h3>
+			<p className="dex">
 				Dex:
 				<span> {dex}</span>
-			</h3>
+			</p>
 			<Image src={ballPath.default} />
+			<p className="level">
+				Lv.
+				<span>{level}</span>
+			</p>
+			{types.map((type) => (
+				<TypePills key={type.name} type={type.type} name={type.name} />
+			))}
 		</article>
 	);
 };
@@ -48,8 +56,8 @@ PokemonCard.propTypes = {
 	shiny: PropTypes.bool,
 	dex: PropTypes.string.isRequired,
 	ball: PropTypes.string.isRequired,
-	// level: PropTypes.number.isRequired,
-	// types: PropTypes.arrayOf(PropTypes.string).isRequired,
+	level: PropTypes.number.isRequired,
+	types: PropTypes.arrayOf(PropTypes.object).isRequired,
 	// gender: PropTypes.string.isRequired,
 	// ability: PropTypes.string.isRequired,
 	// ivs: PropTypes.arrayOf(PropTypes.number),
