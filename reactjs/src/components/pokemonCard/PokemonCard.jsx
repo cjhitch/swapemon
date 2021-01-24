@@ -7,8 +7,8 @@ import './PokemonCard.scss';
 const PokemonCard = ({
 	name,
 	shiny,
-	img,
-	// dex,
+	dex,
+	ball,
 	// level,
 	// types,
 	// gender,
@@ -19,10 +19,12 @@ const PokemonCard = ({
 	// disabling eslint on next line - using .default to ensure it's not bringing in a module and using a dynamic import from the prop
 	// also to allow require not at the top of the file. This image is dependent on the prop and cannot be at the top of the file
 	// eslint-disable-next-line
-	const imgPath = require(`../../assets/images/icons/${img}.svg`);
+	const pokePath = require(`../../assets/images/icons/pokemon/${shiny ? 'shiny/': 'regular/'}${name}.svg`);
+	// eslint-disable-next-line
+	const ballPath = require(`../../assets/images/icons/balls/${ball}.svg`);
 	return (
 		<article className="PokemonCard">
-			<Image src={imgPath.default} />
+			<Image src={pokePath.default} />
 			<h2>
 				{name}
 				{shiny && (
@@ -32,6 +34,11 @@ const PokemonCard = ({
 					</span>
 				)}
 			</h2>
+			<h3>
+				Dex:
+				<span> {dex}</span>
+			</h3>
+			<Image src={ballPath.default} />
 		</article>
 	);
 };
@@ -39,8 +46,8 @@ const PokemonCard = ({
 PokemonCard.propTypes = {
 	name: PropTypes.string.isRequired,
 	shiny: PropTypes.bool,
-	img: PropTypes.string.isRequired,
-	// dex: PropTypes.string.isRequired,
+	dex: PropTypes.string.isRequired,
+	ball: PropTypes.string.isRequired,
 	// level: PropTypes.number.isRequired,
 	// types: PropTypes.arrayOf(PropTypes.string).isRequired,
 	// gender: PropTypes.string.isRequired,

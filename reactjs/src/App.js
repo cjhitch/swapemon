@@ -1,6 +1,7 @@
 import React from 'react';
-import TypePills from './components/typePills';
 import Header from './components/header';
+import TypePills from './components/typePills';
+import PokemonCard from './components/pokemonCard';
 import './App.scss';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 			<Header />
 			<TypePills type="electric" name="Electric" />
 			<TypePills type="electric" variant="round" />
+			<PokemonCard name="Bulbasaur" shiny dex="001" ball="dream" />
 		</div>
 	);
 }
