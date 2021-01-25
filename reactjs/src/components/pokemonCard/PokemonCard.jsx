@@ -32,7 +32,7 @@ const PokemonCard = ({
 
 	return (
 		<article className="PokemonCard">
-			<Image src={pokePath.default} />
+			<Image className="pokemon" src={pokePath.default} />
 			<h2>
 				{name}
 				{shiny && (
@@ -46,14 +46,20 @@ const PokemonCard = ({
 				Dex:
 				<span> {dex}</span>
 			</p>
-			<Image src={ballPath.default} />
+			<Image className="ball" src={ballPath.default} />
 			<p className="level">
 				<b>Lv. </b>
 				{level}
 			</p>
-			{types.map((type) => (
-				<TypePills key={type.name} type={type.type} name={type.name} />
-			))}
+			<div className="type">
+				{types.map((type) => (
+					<TypePills
+						key={type.name}
+						type={type.type}
+						name={type.name}
+					/>
+				))}
+			</div>
 			<p className="gender">
 				{gender[0] === 'female' ? (
 					<BiFemaleSign />
@@ -66,20 +72,27 @@ const PokemonCard = ({
 			</p>
 			<p className="ability">{ability}</p>
 			<div className="iv-em">
-				{ivs.map((iv) => (
-					<>
-						<b key={Object.keys(iv)}>{Object.keys(iv)}</b>:
-						<span>{iv[Object.keys(iv)]}</span>
-					</>
-				))}
-				<h3>Egg Moves:</h3>
-				{moves.map((move) => (
-					<>
-						{console.log(move)}
-						<TypePills variant="round" type={Object.keys(move)} />
-						<p>{move[Object.keys(move)]}</p>
-					</>
-				))}
+				<div className="ivs">
+					{ivs.map((iv) => (
+						<p key={Object.keys(iv)}>
+							<b>{Object.keys(iv)}</b>
+							<span>{iv[Object.keys(iv)]}</span>
+						</p>
+					))}
+				</div>
+				<div className="em">
+					<h3>Egg Moves:</h3>
+					{moves.map((move) => (
+						<>
+							{console.log(move)}
+							<TypePills
+								variant="round"
+								type={Object.keys(move)}
+							/>
+							<p>{move[Object.keys(move)]}</p>
+						</>
+					))}
+				</div>
 			</div>
 			<p>
 				View More <BiChevronDown />

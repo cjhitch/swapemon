@@ -1,11 +1,109 @@
 @import '../../assets/scss/colors';
 
 .PokemonCard {
+	display: grid;
+	grid-template-areas:
+		'pokemon name name name dex dex'
+		'pokemon ball lvl type type gender'
+		'ability ability ability ability ability ability'
+		'ivem ivem ivem ivem ivem ivem'
+		'more more more more more more';
+	grid-template-columns: 3.75rem 1.75rem auto 1fr 3.75rem;
+	align-items: center;
 	color: $light;
 	width: 22.1875rem;
 	border-radius: 0.625rem;
+	padding: 0.5rem 0.875rem;
 	background-color: $primary-light;
+	img {
+		&.pokemon {
+			grid-area: pokemon;
+			width: 3.75rem;
+		}
+		&.ball {
+			grid-area: ball;
+			max-width: 1.75rem;
+		}
+	}
+	h2 {
+		grid-area: name;
+		font-size: 1.125rem;
+		justify-self: start;
+		margin: 0;
+	}
+	p {
+		margin: 0;
+		&.dex {
+			grid-area: dex;
+			justify-self: flex-end;
+			font-weight: 700;
+			span {
+				font-weight: normal;
+			}
+		}
+		&.gender {
+			grid-area: gender;
+			svg {
+				margin-right: -0.35rem;
+			}
+		}
+		&.level {
+			grid-area: lvl;
+		}
+		&.ability {
+			grid-area: ability;
+			text-align: left;
+		}
+		&.more {
+			grid-area: more;
+		}
+	}
+	.type {
+		display: flex;
+		justify-content: center;
+		grid-area: type;
+		button {
+			margin: 0;
+		}
+	}
+	.iv-em {
+		grid-area: ivem;
+		> div {
+			&.ivs {
+				margin-top: 0.5rem;
+				margin-bottom: 0.5rem;
+				display: grid;
+				grid-template-areas:
+					'hp atk def'
+					'spatk spdef spd';
+				grid-template-columns: repeat(3, 1fr);
+				grid-column-gap: 0.625rem;
+				padding: 0.625rem;
+				background-color: $primary-lighten;
+				border-radius: 0.625rem;
+				p {
+					display: flex;
+					justify-content: space-between;
+					b {
+						&::after {
+							content: ':';
+						}
+					}
+				}
+			}
+		}
+	}
 	button {
-		scale: 0.7;
+		&:not(.round) {
+			min-width: 3.4375rem;
+			font-size: 0.5rem;
+			padding: 0.15rem 0.5rem;
+			&:first-of-type {
+				margin-right: 0.25rem;
+			}
+			img {
+				max-width: 0.34375rem;
+			}
+		}
 	}
 }

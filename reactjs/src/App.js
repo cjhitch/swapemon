@@ -11,12 +11,12 @@ function App() {
 		shiny: true,
 		dex: '006',
 		ball: 'dream',
-		level: '42',
+		level: '100',
 		types: [
 			{ type: 'fire', name: 'Fire' },
 			{ type: 'flying', name: 'Flying' },
 		],
-		gender: ['female', '12.5%'],
+		gender: ['female', '87.5%'],
 		ability: 'Solar Power (Hidden)',
 		ivs: [
 			{ HP: 31 },
