@@ -17,9 +17,13 @@
 	align-items: center;
 	justify-content: center;
 	&.round {
-		width: 1.75rem;
-		height: 1.75rem;
+		width: 1.5rem;
+		height: 1.5rem;
 		border-radius: 50%;
+		padding-top: 0.375rem;
+		img {
+			max-width: 0.75rem;
+		}
 	}
 	&:not(.round) {
 		min-width: 7rem;

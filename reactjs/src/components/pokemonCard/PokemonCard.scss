@@ -13,7 +13,7 @@
 	color: $light;
 	width: 22.1875rem;
 	border-radius: 0.625rem;
-	padding: 0.5rem 0.875rem;
+	padding: 1rem 0.875rem;
 	background-color: $primary-light;
 	img {
 		&.pokemon {
@@ -56,6 +56,7 @@
 		}
 		&.more {
 			grid-area: more;
+			margin-top: 0.75rem;
 		}
 	}
 	.type {
@@ -87,6 +88,28 @@
 					b {
 						&::after {
 							content: ':';
+						}
+					}
+				}
+			}
+			&.em {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				h3 {
+					font-size: 1rem;
+					font-weight: 700;
+					display: inline-flex;
+					margin-right: 0.25rem;
+					margin-bottom: 0;
+				}
+				p {
+					display: inline-flex;
+					align-items: center;
+					&:not(:last-of-type) {
+						&::after {
+							content: ',';
+							margin-right: 0.25rem;
 						}
 					}
 				}

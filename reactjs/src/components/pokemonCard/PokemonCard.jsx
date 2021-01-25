@@ -83,18 +83,17 @@ const PokemonCard = ({
 				<div className="em">
 					<h3>Egg Moves:</h3>
 					{moves.map((move) => (
-						<>
-							{console.log(move)}
+						<p key={Object.keys(move)}>
 							<TypePills
 								variant="round"
 								type={Object.keys(move)}
 							/>
-							<p>{move[Object.keys(move)]}</p>
-						</>
+							<span>{move[Object.keys(move)]}</span>
+						</p>
 					))}
 				</div>
 			</div>
-			<p>
+			<p className="more">
 				View More <BiChevronDown />
 			</p>
 		</article>
