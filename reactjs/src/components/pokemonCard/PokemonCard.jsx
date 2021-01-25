@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'react-bootstrap/Image';
-import { BiFemaleSign, BiMaleSign, BiCircle } from 'react-icons/bi';
+import {
+	BiFemaleSign,
+	BiMaleSign,
+	BiCircle,
+	BiChevronDown,
+} from 'react-icons/bi';
 import TypePills from '../typePills';
 import Shiny from '../../assets/images/icons/shiny.svg';
 import './PokemonCard.scss';
@@ -14,9 +19,9 @@ const PokemonCard = ({
 	level,
 	types,
 	gender,
-	// ability,
-	// ivs,
-	// moves,
+	ability,
+	ivs,
+	moves,
 }) => {
 	// disabling eslint on next line - using .default to ensure it's not bringing in a module and using a dynamic import from the prop
 	// also to allow require not at the top of the file. This image is dependent on the prop and cannot be at the top of the file
@@ -43,8 +48,8 @@ const PokemonCard = ({
 			</p>
 			<Image src={ballPath.default} />
 			<p className="level">
-				Lv.
-				<span>{level}</span>
+				<b>Lv. </b>
+				{level}
 			</p>
 			{types.map((type) => (
 				<TypePills key={type.name} type={type.type} name={type.name} />
@@ -57,7 +62,27 @@ const PokemonCard = ({
 				) : (
 					<BiCircle />
 				)}
-				<span>{gender[1]}</span>
+				<span> {gender[1]}</span>
+			</p>
+			<p className="ability">{ability}</p>
+			<div className="iv-em">
+				{ivs.map((iv) => (
+					<>
+						<b key={Object.keys(iv)}>{Object.keys(iv)}</b>:
+						<span>{iv[Object.keys(iv)]}</span>
+					</>
+				))}
+				<h3>Egg Moves:</h3>
+				{moves.map((move) => (
+					<>
+						{console.log(move)}
+						<TypePills variant="round" type={Object.keys(move)} />
+						<p>{move[Object.keys(move)]}</p>
+					</>
+				))}
+			</div>
+			<p>
+				View More <BiChevronDown />
 			</p>
 		</article>
 	);
@@ -71,16 +96,22 @@ PokemonCard.propTypes = {
 	level: PropTypes.number.isRequired,
 	types: PropTypes.arrayOf(PropTypes.object).isRequired,
 	gender: PropTypes.arrayOf(PropTypes.string).isRequired,
-	// gender: PropTypes.string.isRequired,
-	// ability: PropTypes.string.isRequired,
-	// ivs: PropTypes.arrayOf(PropTypes.number),
-	// moves: PropTypes.arrayOf(PropTypes.string),
+	ability: PropTypes.string.isRequired,
+	ivs: PropTypes.arrayOf(PropTypes.object),
+	moves: PropTypes.arrayOf(PropTypes.object),
 };
 
 PokemonCard.defaultProps = {
 	shiny: false,
-	// ivs: ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'],
-	// moves: ['N/A'],
+	ivs: [
+		{ HP: 'N/A' },
+		{ Atk: 'N/A' },
+		{ Def: 'N/A' },
+		{ SpAtk: 'N/A' },
+		{ SpDef: 'N/A' },
+		{ Spd: 'N/A' },
+	],
+	moves: ['N/A'],
 };
 
 export default PokemonCard;
