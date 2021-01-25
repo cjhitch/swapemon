@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'react-bootstrap/Image';
 import {
@@ -23,6 +23,8 @@ const PokemonCard = ({
 	ivs,
 	moves,
 }) => {
+	// eslint-disable-next-line
+	const [expanded, setExpanded] = useState(false);
 	// disabling eslint on next line - using .default to ensure it's not bringing in a module and using a dynamic import from the prop
 	// also to allow require not at the top of the file. This image is dependent on the prop and cannot be at the top of the file
 	// eslint-disable-next-line
@@ -71,7 +73,10 @@ const PokemonCard = ({
 				<span> {gender[1]}</span>
 			</p>
 			<p className="ability">{ability}</p>
-			<div className="iv-em">
+			<div
+				className="iv-em"
+				style={expanded ? { display: 'block' } : { display: 'none' }}
+			>
 				<div className="ivs">
 					{ivs.map((iv) => (
 						<p key={Object.keys(iv)}>
@@ -93,9 +98,13 @@ const PokemonCard = ({
 					))}
 				</div>
 			</div>
-			<p className="more">
+			<button
+				type="button"
+				className="more"
+				onClick={() => setExpanded(!expanded)}
+			>
 				View More <BiChevronDown />
-			</p>
+			</button>
 		</article>
 	);
 };

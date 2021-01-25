@@ -54,10 +54,6 @@
 			grid-area: ability;
 			text-align: left;
 		}
-		&.more {
-			grid-area: more;
-			margin-top: 0.75rem;
-		}
 	}
 	.type {
 		display: flex;
@@ -127,6 +123,14 @@
 			img {
 				max-width: 0.34375rem;
 			}
+		}
+		&.more {
+			grid-area: more;
+			margin-top: 0.75rem;
+			font-size: 1rem;
+			background: none;
+			border: none;
+			color: $light;
 		}
 	}
 }
