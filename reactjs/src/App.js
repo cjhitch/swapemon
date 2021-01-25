@@ -3,6 +3,7 @@ import Header from './components/header';
 import TypePills from './components/typePills';
 import PokemonCard from './components/pokemonCard';
 import Logo from './components/logo';
+import Footer from './components/footer';
 import './App.scss';
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
 				moves={pokemon.eggMoves}
 			/>
 			<Logo />
+			<Footer />
 		</div>
 	);
 }
