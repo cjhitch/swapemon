@@ -103,7 +103,10 @@ const PokemonCard = ({
 				className="more"
 				onClick={() => setExpanded(!expanded)}
 			>
-				View More <BiChevronDown />
+				View {expanded ? 'Less' : 'More'}{' '}
+				<BiChevronDown
+					style={expanded && { transform: 'rotate(180deg)' }}
+				/>
 			</button>
 		</article>
 	);
