@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'react-bootstrap/Image';
+import { BiFemaleSign, BiMaleSign, BiCircle } from 'react-icons/bi';
 import TypePills from '../typePills';
 import Shiny from '../../assets/images/icons/shiny.svg';
 import './PokemonCard.scss';
@@ -12,7 +13,7 @@ const PokemonCard = ({
 	ball,
 	level,
 	types,
-	// gender,
+	gender,
 	// ability,
 	// ivs,
 	// moves,
@@ -23,6 +24,7 @@ const PokemonCard = ({
 	const pokePath = require(`../../assets/images/icons/pokemon/${shiny ? 'shiny/': 'regular/'}${name}.svg`);
 	// eslint-disable-next-line
 	const ballPath = require(`../../assets/images/icons/balls/${ball}.svg`);
+
 	return (
 		<article className="PokemonCard">
 			<Image src={pokePath.default} />
@@ -47,6 +49,16 @@ const PokemonCard = ({
 			{types.map((type) => (
 				<TypePills key={type.name} type={type.type} name={type.name} />
 			))}
+			<p className="gender">
+				{gender[0] === 'female' ? (
+					<BiFemaleSign />
+				) : gender[0] === 'male' ? (
+					<BiMaleSign />
+				) : (
+					<BiCircle />
+				)}
+				<span>{gender[1]}</span>
+			</p>
 		</article>
 	);
 };
@@ -58,6 +70,7 @@ PokemonCard.propTypes = {
 	ball: PropTypes.string.isRequired,
 	level: PropTypes.number.isRequired,
 	types: PropTypes.arrayOf(PropTypes.object).isRequired,
+	gender: PropTypes.arrayOf(PropTypes.string).isRequired,
 	// gender: PropTypes.string.isRequired,
 	// ability: PropTypes.string.isRequired,
 	// ivs: PropTypes.arrayOf(PropTypes.number),

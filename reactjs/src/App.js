@@ -19,6 +19,7 @@ function App() {
 					{ type: 'fire', name: 'Fire' },
 					{ type: 'flying', name: 'Flying' },
 				]}
+				gender={['female', '12.5%']}
 			/>
 		</div>
 	);

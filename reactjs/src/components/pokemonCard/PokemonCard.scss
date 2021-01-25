@@ -1,0 +1,11 @@
+@import '../../assets/scss/colors';
+
+.PokemonCard {
+	color: $light;
+	width: 22.1875rem;
+	border-radius: 0.625rem;
+	background-color: $primary-light;
+	button {
+		scale: 0.7;
+	}
+}

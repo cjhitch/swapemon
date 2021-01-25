@@ -2,6 +2,16 @@ $primary: #0b4571;
 $secondary: #d30f0f;
 $light: #f1f1f1;
 $dark: #424242;
+$primary-dark: #122330;
+$primary-lighten: #0e558b;
+$primary-light: #1271ba;
+$primary-hover: #08375a;
+$secondary-hover: #a80b0b;
+$tertiary: #ffbc2f;
+$tertiary-hover: #ffbc2f;
+$light-70: rgba(241, 241, 241, 0.7);
+$dark-54: #545454;
+
 $theme-colors: (
 	'primary': $primary,
 	'secondary': $secondary,
@@ -9,15 +19,15 @@ $theme-colors: (
 	'dark': $dark,
 );
 $custom-colors: (
-	'primary-dark': #122330,
-	'primary-lighten': #0e558b,
-	'primary-light': #1271ba,
-	'primary-hover': #08375a,
-	'secondary-hover': #a80b0b,
-	'tertiary': #ffbc2f,
-	'tertiary-hover': #ffbc2f,
-	'light-70': rgba(241, 241, 241, 0.7),
-	'dark-54': #545454,
+	'primary-dark': $primary-dark,
+	'primary-lighten': $primary-lighten,
+	'primary-light': $primary-light,
+	'primary-hover': $primary-hover,
+	'secondary-hover': $secondary-hover,
+	'tertiary': $tertiary,
+	'tertiary-hover': $tertiary-hover,
+	'light-70': $light-70,
+	'dark-54': $dark-54,
 );
 $theme-colors: map-merge(
 	$map1: $theme-colors,
