@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/header';
 import TypePills from './components/typePills';
 import PokemonCard from './components/pokemonCard';
+import Logo from './components/logo';
 import './App.scss';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
 				ivs={pokemon.ivs}
 				moves={pokemon.eggMoves}
 			/>
+			<Logo />
 		</div>
 	);
 }
