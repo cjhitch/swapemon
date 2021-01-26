@@ -40,18 +40,7 @@ function App() {
 			<Header />
 			<TypePills type="electric" name="Electric" />
 			<TypePills type="electric" variant="round" />
-			<PokemonCard
-				name={pokemon.name}
-				shiny={pokemon.shiny}
-				dex={pokemon.dex}
-				ball={pokemon.ball}
-				level={pokemon.level}
-				types={pokemon.types}
-				gender={pokemon.gender}
-				ability={pokemon.ability}
-				ivs={pokemon.ivs}
-				moves={pokemon.eggMoves}
-			/>
+			<PokemonCard pokemon={pokemon} />
 			<Logo />
 			<Footer />
 		</div>

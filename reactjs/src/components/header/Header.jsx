@@ -9,11 +9,7 @@ const Header = () => {
 		<header className="Header">
 			<Navbar bg="primary" expand="lg" variant="dark">
 				<Navbar.Brand href="#profile">
-					<User
-						username="JamesEarlJones"
-						// eslint-disable-next-line
-						image="jej.jpg"
-					/>
+					<User username="JamesEarlJones" image="jej.jpg" />
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
