@@ -3,6 +3,7 @@ import Header from './components/header';
 import TypePills from './components/typePills';
 import PokemonCard from './components/pokemonCard';
 import Logo from './components/logo';
+import FormControl from './components/formControl';
 import Footer from './components/footer';
 import './App.scss';
 
@@ -35,6 +36,9 @@ function App() {
 			{ flying: 'Wing Attack' },
 		],
 	};
+	const update = (id, val) => {
+		console.log(id, val);
+	};
 	return (
 		<div className="App">
 			<Header />
@@ -42,6 +46,13 @@ function App() {
 			<TypePills type="electric" variant="round" />
 			<PokemonCard pokemon={pokemon} />
 			<Logo />
+			<FormControl
+				value="john"
+				update={update}
+				type="input"
+				id="newinput"
+				options={['1', '2', '3', '4', '5']}
+			/>
 			<Footer />
 		</div>
 	);

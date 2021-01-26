@@ -4,9 +4,35 @@ import Form from 'react-bootstrap/Form';
 import './FormControl.scss';
 
 const FormControl = ({ value, update, type, id, label, name, options }) => {
+	console.log(options);
 	return (
 		<div className="FormControl">
-			{type === 'check' ? (
+			<Form.Group controlId="formGroupEmail">
+				<Form.Label>{label}</Form.Label>
+				<Form.Control
+					value={value}
+					onChange={(e) => update(id, e.target.value)}
+					as={type}
+					type="email"
+					placeholder={name}
+					id={id}
+				/>
+			</Form.Group>
+			<Form.Check
+				type="checkbox"
+				id={`default-${type}`}
+				label={`default ${type}`}
+			/>
+			<Form.Group controlId="exampleForm.ControlSelect1">
+				<Form.Label>Example select</Form.Label>
+				<Form.Control as="select">
+					{options &&
+						options.map((opt, index) => (
+							<option key={opt[index]}>{opt[index]}</option>
+						))}
+				</Form.Control>
+			</Form.Group>
+			{/* {type === 'check' ? (
 				<Form.Check
 					type={type}
 					id={`${type}-${id}`}
@@ -31,7 +57,7 @@ const FormControl = ({ value, update, type, id, label, name, options }) => {
 							<option key={opt.name} value={opt.id} />
 						))}
 				</Form.Control>
-			)}
+			)} */}
 		</div>
 	);
 };
@@ -47,7 +73,7 @@ FormControl.propTypes = {
 	id: PropTypes.string,
 	label: PropTypes.string,
 	name: PropTypes.string,
-	options: PropTypes.arrayof(PropTypes.string),
+	options: PropTypes.arrayOf(PropTypes.string),
 };
 
 FormControl.defaultProps = {
