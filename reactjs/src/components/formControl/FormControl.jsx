@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
 import './FormControl.scss';
 
-const FormControl = ({ value, update, type, id, label, name, options }) => {
+const FormControl = ({
+	value,
+	update,
+	type,
+	id,
+	label,
+	options,
+	placeholder,
+}) => {
 	return (
 		<div className="FormControl">
 			{type === 'checkbox' ? (
@@ -34,7 +42,7 @@ const FormControl = ({ value, update, type, id, label, name, options }) => {
 						value={value}
 						onChange={(e) => update(id, e.target.value)}
 						as={type}
-						placeholder={name}
+						placeholder={placeholder}
 						id={id}
 					/>
 				</Form.Group>
@@ -53,7 +61,7 @@ FormControl.propTypes = {
 	type: PropTypes.string,
 	id: PropTypes.string,
 	label: PropTypes.string,
-	name: PropTypes.string,
+	placeholder: PropTypes.string,
 	options: PropTypes.arrayOf(PropTypes.string),
 };
 
@@ -61,7 +69,7 @@ FormControl.defaultProps = {
 	id: null,
 	type: 'select',
 	label: null,
-	name: null,
+	placeholder: null,
 	options: [],
 };
 

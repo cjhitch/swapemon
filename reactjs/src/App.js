@@ -4,6 +4,7 @@ import TypePills from './components/typePills';
 import PokemonCard from './components/pokemonCard';
 import Logo from './components/logo';
 import FormControl from './components/formControl';
+import Profile from './components/profile';
 import Footer from './components/footer';
 import './App.scss';
 
@@ -88,6 +89,7 @@ function App() {
 				id="name"
 				label="Pokemon Name"
 			/>
+			<Profile />
 			<Footer />
 		</div>
 	);
