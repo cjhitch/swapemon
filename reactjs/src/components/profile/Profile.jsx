@@ -38,7 +38,7 @@ const Profile = () => {
 			'21c05d07-2e1e-46d6-b93b-290906b9cd2e',
 			'c2d847cb-24ac-4f47-8e05-d9ba632c3980',
 		],
-		consversations: [
+		conversations: [
 			{
 				id: 'a54aa11a-2597-41a4-965a-b96350261e24',
 				userId: '806dd04e-dae0-4e07-bc29-3013a3cdc895',

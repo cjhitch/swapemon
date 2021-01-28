@@ -5,6 +5,7 @@ import PokemonCard from './components/pokemonCard';
 import Logo from './components/logo';
 import FormControl from './components/formControl';
 import Profile from './components/profile';
+import Messages from './components/messages';
 import Footer from './components/footer';
 import './App.scss';
 
@@ -90,6 +91,7 @@ function App() {
 				label="Pokemon Name"
 			/>
 			<Profile />
+			<Messages />
 			<Footer />
 		</div>
 	);
