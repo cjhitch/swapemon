@@ -4,60 +4,41 @@ import Form from 'react-bootstrap/Form';
 import './FormControl.scss';
 
 const FormControl = ({ value, update, type, id, label, name, options }) => {
-	console.log(options);
 	return (
 		<div className="FormControl">
-			<Form.Group controlId="formGroupEmail">
-				<Form.Label>{label}</Form.Label>
-				<Form.Control
-					value={value}
-					onChange={(e) => update(id, e.target.value)}
-					as={type}
-					type="email"
-					placeholder={name}
-					id={id}
-				/>
-			</Form.Group>
-			<Form.Check
-				type="checkbox"
-				id={`default-${type}`}
-				label={`default ${type}`}
-			/>
-			<Form.Group controlId="exampleForm.ControlSelect1">
-				<Form.Label>Example select</Form.Label>
-				<Form.Control as="select">
-					{options &&
-						options.map((opt, index) => (
-							<option key={opt[index]}>{opt[index]}</option>
-						))}
-				</Form.Control>
-			</Form.Group>
-			{/* {type === 'check' ? (
+			{type === 'checkbox' ? (
 				<Form.Check
 					type={type}
-					id={`${type}-${id}`}
+					id={id}
+					label={label}
+					onClick={(e) => update(id, e.target.value)}
 					value={value}
-					checked={value}
-					onChange={(e) => update(id, e.target.value)}
 				/>
-			) : label ? (
-				<Form.Group>
-					<Form.Label>{label}</Form.Label>
-					<Form.Control as={type} placeholder={name}>
+			) : options.length > 0 ? (
+				<Form.Group controlId={id}>
+					{label && <Form.Label>{label}</Form.Label>}
+					<Form.Control
+						as="select"
+						onChange={(e) => update(id, e.target.value)}
+					>
 						{options &&
 							options.map((opt) => (
-								<option key={opt.name} value={opt.id} />
+								<option key={opt}>{opt}</option>
 							))}
 					</Form.Control>
 				</Form.Group>
 			) : (
-				<Form.Control as={type} placeholder={name}>
-					{options &&
-						options.map((opt) => (
-							<option key={opt.name} value={opt.id} />
-						))}
-				</Form.Control>
-			)} */}
+				<Form.Group>
+					{label && <Form.Label htmlFor={id}>{label}</Form.Label>}
+					<Form.Control
+						value={value}
+						onChange={(e) => update(id, e.target.value)}
+						as={type}
+						placeholder={name}
+						id={id}
+					/>
+				</Form.Group>
+			)}
 		</div>
 	);
 };
@@ -69,7 +50,7 @@ FormControl.propTypes = {
 		PropTypes.bool,
 	]).isRequired,
 	update: PropTypes.func.isRequired,
-	type: PropTypes.string.isRequired,
+	type: PropTypes.string,
 	id: PropTypes.string,
 	label: PropTypes.string,
 	name: PropTypes.string,
@@ -78,6 +59,7 @@ FormControl.propTypes = {
 
 FormControl.defaultProps = {
 	id: null,
+	type: 'select',
 	label: null,
 	name: null,
 	options: [],
