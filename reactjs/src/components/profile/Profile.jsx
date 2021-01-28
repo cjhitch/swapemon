@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
 import User from '../user';
+import FormControl from '../formControl';
 import './Profile.scss';
 
 const Profile = () => {
+	const initialState = {
+		gameName: '',
+		gameCode: '',
+		email: '',
+		curPw: '',
+		newPw: '',
+		conPw: '',
+	};
+	const [formState, setFormState] = useState(initialState);
 	// this will be brought in from the store
 	const user = {
 		id: '790fe8b3-3ce3-444a-99c2-6eca0d28c65a',
 		username: 'JamesEarlJones',
-		sytem: {
+		system: {
 			id: 'b77e74b6-e1d9-4a6a-9962-98f16aad65b7',
 			name: 'Switch',
 		},
@@ -46,11 +57,74 @@ const Profile = () => {
 		],
 	};
 
+	const update = (inputId, value) => {
+		setFormState({ ...formState, [inputId]: value });
+	};
+
 	return (
 		<section className="Profile">
 			<h1>Profile</h1>
 			<p>View and update account settings</p>
 			<User username={user.username} image={`${user.id}.jpg`} />
+			<p>
+				<b>
+					{user.system.name} - {user.system.id}
+				</b>
+			</p>
+			<h2>Games</h2>
+			{user.games.map((game) => (
+				<p key={game.id}>
+					{game.name} - {game.id}
+				</p>
+			))}
+			<form action="">
+				<h2>Add Game</h2>
+				<FormControl
+					value={formState.gameName}
+					type="input"
+					id="gameName"
+					update={update}
+				/>
+				<FormControl
+					value={formState.code}
+					type="input"
+					id="gameCode"
+					update={update}
+				/>
+				<Button variant="primary-light">add game</Button>
+			</form>
+			<form action="">
+				<p>Update Email</p>
+				<FormControl
+					value={formState.email}
+					type="input"
+					id="email"
+					update={update}
+				/>
+				<Button variant="primary-light">update email</Button>
+			</form>
+			<form action="">
+				<p>Change Password</p>
+				<FormControl
+					value={formState.curPw}
+					type="input"
+					id="curPw"
+					update={update}
+				/>
+				<FormControl
+					value={formState.newPw}
+					type="input"
+					id="newPw"
+					update={update}
+				/>
+				<FormControl
+					value={formState.conPw}
+					type="input"
+					id="conPw"
+					update={update}
+				/>
+				<Button variant="primary-light">change password</Button>
+			</form>
 		</section>
 	);
 };
