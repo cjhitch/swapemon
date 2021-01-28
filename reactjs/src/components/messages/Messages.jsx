@@ -5,12 +5,13 @@ import './Messages.scss';
 
 const Messages = () => {
 	const [activeId, setActiveId] = useState(null);
+	const [conversationId, setConversationId] = useState(null);
 	const conversations = [
 		{
 			id: 'a54aa11a-2597-41a4-965a-b96350261e24',
 			userId: '806dd04e-dae0-4e07-bc29-3013a3cdc895',
 			userName: 'DarthVader',
-			msg: 'Hey do you have any dream balls to trade for?',
+			msg: "Sorry I couldn't find any",
 		},
 		{
 			id: 'b9d2c918-ad14-41fe-8877-5143bff92463',
@@ -25,8 +26,8 @@ const Messages = () => {
 			msg: 'Would you be willing to trade one of your Moon Bulbasaur?',
 		},
 	];
-	const userClickHandler = (id) => {
-		console.log(id);
+	const userClickHandler = (id, convo) => {
+		setConversationId(convo);
 		setActiveId(id);
 	};
 	return (
@@ -40,10 +41,11 @@ const Messages = () => {
 						username={convo.userName}
 						image={`${convo.userId}.jpg`}
 						userClickHandler={userClickHandler}
+						conversationId={convo.id}
 					/>
 				))}
 			</div>
-			<Chat conversationId={activeId} />
+			<Chat conversationId={conversationId} />
 		</section>
 	);
 };
