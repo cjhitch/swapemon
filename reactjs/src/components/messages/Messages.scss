@@ -1,0 +1,28 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/mixins';
+
+.Messages {
+	@include py(0.3125rem);
+	@include px(2.5rem);
+	background-color: $primary;
+	color: $light;
+	border-radius: 0.625rem;
+	h1 {
+		margin-bottom: 2rem;
+	}
+	.User {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0.5rem;
+		&:first-of-type {
+			padding-top: 1rem;
+		}
+		img {
+			width: 40px;
+			height: 40px;
+		}
+		p {
+			margin-left: 0.5rem;
+		}
+	}
+}
