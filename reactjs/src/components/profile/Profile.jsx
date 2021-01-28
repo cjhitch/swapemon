@@ -77,51 +77,57 @@ const Profile = () => {
 					{game.name} - {game.id}
 				</p>
 			))}
-			<form action="">
+			<form id="addGame" action="">
 				<h2>Add Game</h2>
 				<FormControl
 					value={formState.gameName}
 					type="input"
 					id="gameName"
 					update={update}
+					placeholder="name"
 				/>
 				<FormControl
 					value={formState.code}
 					type="input"
 					id="gameCode"
 					update={update}
+					placeholder="code"
 				/>
 				<Button variant="primary-light">add game</Button>
 			</form>
-			<form action="">
+			<form id="updateEmail" action="">
 				<p>Update Email</p>
 				<FormControl
 					value={formState.email}
 					type="input"
 					id="email"
 					update={update}
+					placeholder="email@email.com"
 				/>
 				<Button variant="primary-light">update email</Button>
 			</form>
-			<form action="">
+			<form id="updatePassword" action="">
 				<p>Change Password</p>
 				<FormControl
 					value={formState.curPw}
 					type="input"
 					id="curPw"
 					update={update}
+					placeholder="current password"
 				/>
 				<FormControl
 					value={formState.newPw}
 					type="input"
 					id="newPw"
 					update={update}
+					placeholder="new password"
 				/>
 				<FormControl
 					value={formState.conPw}
 					type="input"
 					id="conPw"
 					update={update}
+					placeholder="confirm password"
 				/>
 				<Button variant="primary-light">change password</Button>
 			</form>
