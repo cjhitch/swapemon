@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import User from '../user';
 import './Messages.scss';
 
 const Messages = () => {
+	const [activeId, setActiveId] = useState(null);
 	const conversations = [
 		{
 			id: 'a54aa11a-2597-41a4-965a-b96350261e24',
@@ -23,15 +24,23 @@ const Messages = () => {
 			msg: 'Would you be willing to trade one of your Moon Bulbasaur?',
 		},
 	];
+	const userClickHandler = (id) => {
+		// if () {
+		console.log(id);
+		setActiveId(id);
+		// }
+	};
 	return (
 		<section className="Messages">
 			<h1>Messages</h1>
 			<div className="users">
 				{conversations.map((convo) => (
 					<User
+						isActive={activeId}
 						key={convo.id}
 						username={convo.userName}
 						image={`${convo.userId}.jpg`}
+						userClickHandler={userClickHandler}
 					/>
 				))}
 			</div>
