@@ -1,0 +1,17 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/mixins';
+
+.Profile {
+	@include py(0.3125rem);
+	@include px(2.5rem);
+	background-color: $primary;
+	color: $light;
+	border-radius: 0.625rem;
+	figure {
+		align-items: center;
+		img {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+	}
+}
