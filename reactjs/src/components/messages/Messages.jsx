@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import User from '../user';
+import Chat from '../chat';
 import './Messages.scss';
 
 const Messages = () => {
@@ -25,10 +26,8 @@ const Messages = () => {
 		},
 	];
 	const userClickHandler = (id) => {
-		// if () {
 		console.log(id);
 		setActiveId(id);
-		// }
 	};
 	return (
 		<section className="Messages">
@@ -36,7 +35,7 @@ const Messages = () => {
 			<div className="users">
 				{conversations.map((convo) => (
 					<User
-						isActive={activeId}
+						activeChat={activeId}
 						key={convo.id}
 						username={convo.userName}
 						image={`${convo.userId}.jpg`}
@@ -44,6 +43,7 @@ const Messages = () => {
 					/>
 				))}
 			</div>
+			<Chat conversationId={activeId} />
 		</section>
 	);
 };
