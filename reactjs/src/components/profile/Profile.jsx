@@ -15,9 +15,10 @@ const Profile = () => {
 	};
 	const [formState, setFormState] = useState(initialState);
 	// this will be brought in from the store
-	const user = {
+	const [user, setUser] = useState({
 		id: '790fe8b3-3ce3-444a-99c2-6eca0d28c65a',
 		username: 'JamesEarlJones',
+		email: 'anemail@gmail.com',
 		system: {
 			id: 'b77e74b6-e1d9-4a6a-9962-98f16aad65b7',
 			name: 'Switch',
@@ -55,10 +56,33 @@ const Profile = () => {
 					'Would you be willing to trade one of your Moon Bulbasaur?',
 			},
 		],
-	};
+	});
 
 	const update = (inputId, value) => {
 		setFormState({ ...formState, [inputId]: value });
+	};
+	const updateEmail = () => {
+		const newEmail = formState.email;
+		setUser({ ...user, email: newEmail });
+	};
+	const addGame = () => {
+		const newArr = user.games;
+		const newGame = { id: formState.gameCode, name: formState.gameName };
+		newArr.push(newGame);
+		setUser({ ...user, games: newArr });
+	};
+	const updatePassword = () => {
+		// TODO: this should actually be replaced with the db value from the store
+		if (formState.curPw === 'pass123') {
+			if (formState.newPw === formState.conPw) {
+				// set the password here once db is set up
+				alert('password changed!');
+			} else {
+				alert('passwords do not match');
+			}
+		} else {
+			alert("current password doesn't match");
+		}
 	};
 
 	return (
@@ -93,7 +117,9 @@ const Profile = () => {
 					update={update}
 					placeholder="code"
 				/>
-				<Button variant="primary-light">add game</Button>
+				<Button onClick={addGame} variant="primary-light">
+					add game
+				</Button>
 			</form>
 			<form id="updateEmail" action="">
 				<p>Update Email</p>
@@ -104,7 +130,13 @@ const Profile = () => {
 					update={update}
 					placeholder="email@email.com"
 				/>
-				<Button variant="primary-light">update email</Button>
+				<Button
+					// eslint-disable-next-line
+					onClick={updateEmail}
+					variant="primary-light"
+				>
+					update email
+				</Button>
 			</form>
 			<form id="updatePassword" action="">
 				<p>Change Password</p>
@@ -129,7 +161,9 @@ const Profile = () => {
 					update={update}
 					placeholder="confirm password"
 				/>
-				<Button variant="primary-light">change password</Button>
+				<Button onClick={updatePassword} variant="primary-light">
+					change password
+				</Button>
 			</form>
 		</section>
 	);
