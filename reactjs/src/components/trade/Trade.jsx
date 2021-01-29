@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import PropTypes from 'prop-types';
@@ -104,11 +104,12 @@ const Trade = ({ myTrades }) => {
 		const newArr = userTrade;
 		userTrade.push(pokemon);
 		setUserTrade(newArr);
-		console.log('running');
+		setShow(false);
+		setMyShow(false);
 	};
-	useEffect(() => {
-		console.log(userTrade);
-	}, [userTrade]);
+	const tradeHandler = () => {
+		alert('needs to be set up with store but your pokemon were traded!');
+	};
 	return (
 		<div className="Trade">
 			<div className="mytrade">
@@ -174,7 +175,9 @@ const Trade = ({ myTrades }) => {
 					</Modal.Body>
 				</Modal>
 			</div>
-			<Button variant="secondary">Propose Trade</Button>
+			<Button onClick={tradeHandler} variant="secondary">
+				Propose Trade
+			</Button>
 		</div>
 	);
 };
