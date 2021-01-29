@@ -8,6 +8,7 @@ import Forgot from './pages/forgot';
 import Create from './pages/create';
 import Dashboard from './pages/dashboard';
 import Profile from './pages/profile';
+import Trades from './pages/trades';
 // import TypePills from './components/typePills';
 // import PokemonCard from './components/pokemonCard';
 // import Logo from './components/logo';
@@ -87,6 +88,13 @@ function App() {
 						<>
 							<Header />
 							<Profile />
+							<Footer />
+						</>
+					</Route>
+					<Route path="/trades">
+						<>
+							<Header />
+							<Trades />
 							<Footer />
 						</>
 					</Route>
