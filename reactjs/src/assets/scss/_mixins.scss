@@ -25,7 +25,8 @@
 	h1 {
 		text-align: center;
 		max-width: 26.875rem;
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
+		margin-top: -0.5rem;
 		@media (max-width: 47.9375rem) {
 			font-size: 2.5rem;
 		}
@@ -48,14 +49,29 @@
 		}
 	}
 	form {
+		p {
+			margin-bottom: 1rem;
+		}
 		.FormControl {
 			&:last-of-type {
 				margin-bottom: 1.5rem;
 			}
+			&:nth-of-type(n + 2) {
+				margin-top: -0.5rem;
+			}
+			input {
+				max-height: 2.5rem;
+				max-width: 26.875rem;
+				margin: 0 auto;
+				@media (max-width: 47.9375rem) {
+					max-width: 15.1875rem;
+				}
+			}
 		}
 	}
 	p {
-		margin-top: 1.5rem;
+		margin-top: 1.25rem;
+		margin-bottom: 0;
 		a {
 			color: $light-70;
 			&:nth-of-type(n + 2) {

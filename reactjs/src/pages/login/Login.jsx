@@ -36,9 +36,7 @@ const Login = () => {
 					update={update}
 				/>
 				<Link to="/dashboard">
-					<Button className="main" variant="secondary">
-						Submit
-					</Button>
+					<Button variant="secondary">Submit</Button>
 				</Link>
 			</form>
 			<p>

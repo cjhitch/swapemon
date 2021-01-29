@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Login from './pages/login';
 import Forgot from './pages/forgot';
+import Create from './pages/create';
 // import Header from './components/header';
 // import TypePills from './components/typePills';
 // import PokemonCard from './components/pokemonCard';
@@ -78,6 +79,9 @@ function App() {
 					</Route>
 					<Route path="/forgot">
 						<Forgot />
+					</Route>
+					<Route path="/create">
+						<Create />
 					</Route>
 					<Route path="/">
 						<Home />

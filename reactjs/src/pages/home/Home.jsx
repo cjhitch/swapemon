@@ -11,14 +11,10 @@ const Home = () => {
 			<Image src={Logo} />
 			<h1>Track & Manage Pokémon Like A Pro</h1>
 			<Link to="/login">
-				<Button className="main" variant="secondary">
-					Login
-				</Button>
+				<Button variant="secondary">Login</Button>
 			</Link>
 			<Link to="/create">
-				<Button className="main" variant="tertiary">
-					Create an Account
-				</Button>
+				<Button variant="tertiary">Create an Account</Button>
 			</Link>
 		</section>
 	);
