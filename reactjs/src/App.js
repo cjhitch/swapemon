@@ -7,6 +7,7 @@ import Login from './pages/login';
 import Forgot from './pages/forgot';
 import Create from './pages/create';
 import Dashboard from './pages/dashboard';
+import Profile from './pages/profile';
 // import TypePills from './components/typePills';
 // import PokemonCard from './components/pokemonCard';
 // import Logo from './components/logo';
@@ -79,6 +80,13 @@ function App() {
 						<>
 							<Header />
 							<Dashboard />
+							<Footer />
+						</>
+					</Route>
+					<Route path="/profile">
+						<>
+							<Header />
+							<Profile />
 							<Footer />
 						</>
 					</Route>
