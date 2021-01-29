@@ -7,8 +7,8 @@
 		"doc": "docs"
 	},
 	"scripts": {
-		"start": "cd api && node server.js",
-		"heroku-postbuild": "cd reactjs && npm install && npm install --only=dev --no-shrinkwrap && npm run build && cd api && npm install",
+		"start": "cd api && npm install && node server.js",
+		"heroku-postbuild": "cd reactjs && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
 		"build": "cd reactjs && react-scripts build",
 		"dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn start\"",
 		"test:react": "rcd reactjs && eact-scripts test",
