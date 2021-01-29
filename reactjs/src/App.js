@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Login from './pages/login';
+import Forgot from './pages/forgot';
 // import Header from './components/header';
 // import TypePills from './components/typePills';
 // import PokemonCard from './components/pokemonCard';
@@ -74,6 +75,9 @@ function App() {
 				<Switch>
 					<Route path="/login">
 						<Login />
+					</Route>
+					<Route path="/forgot">
+						<Forgot />
 					</Route>
 					<Route path="/">
 						<Home />
