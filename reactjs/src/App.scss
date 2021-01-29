@@ -1,1 +1,11 @@
 @import './assets/scss/custom.scss';
+.App {
+	background: $primary-dark;
+	background: radial-gradient(circle, $primary 0%, $primary-dark 70%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	color: $light;
+}
