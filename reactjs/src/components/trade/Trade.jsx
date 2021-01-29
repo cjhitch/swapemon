@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import PropTypes from 'prop-types';
@@ -9,6 +9,7 @@ import './Trade.scss';
 const Trade = ({ myTrades }) => {
 	const [myshow, setMyShow] = useState(false);
 	const [show, setShow] = useState(false);
+	const [userTrade, setUserTrade] = useState([]);
 	// this info should be coming from store or db
 	// eslint-disable-next-line
 	const [otherUsers, setOtherUsers] = useState([
@@ -99,6 +100,15 @@ const Trade = ({ myTrades }) => {
 			],
 		},
 	];
+	const addTrade = (pokemon) => {
+		const newArr = userTrade;
+		userTrade.push(pokemon);
+		setUserTrade(newArr);
+		console.log('running');
+	};
+	useEffect(() => {
+		console.log(userTrade);
+	}, [userTrade]);
 	return (
 		<div className="Trade">
 			<div className="mytrade">
@@ -131,6 +141,10 @@ const Trade = ({ myTrades }) => {
 					username={otherUsers[0].userName}
 					image={`${otherUsers[0].userId}.jpg`}
 				/>
+				{userTrade.length > 0 &&
+					userTrade.map((pokemon) => (
+						<PokemonCard key={pokemon.id} pokemon={pokemon} />
+					))}
 				<Button
 					className="addPoke"
 					variant="primary-light"
@@ -143,8 +157,6 @@ const Trade = ({ myTrades }) => {
 					className="modal-trade"
 					show={show}
 					onHide={() => setShow(false)}
-					// dialogClassName="modal-90w"
-					// aria-labelledby="example-custom-modal-styling-title"
 				>
 					<Modal.Header closeButton>
 						<Modal.Title id="example-custom-modal-styling-title">
@@ -153,7 +165,11 @@ const Trade = ({ myTrades }) => {
 					</Modal.Header>
 					<Modal.Body>
 						{pokemons.map((pokemon) => (
-							<PokemonCard key={pokemon.id} pokemon={pokemon} />
+							<PokemonCard
+								addTrade={addTrade}
+								key={pokemon.id}
+								pokemon={pokemon}
+							/>
 						))}
 					</Modal.Body>
 				</Modal>

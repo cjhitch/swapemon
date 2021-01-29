@@ -11,7 +11,7 @@ import TypePills from '../typePills';
 import Shiny from '../../assets/images/icons/shiny.svg';
 import './PokemonCard.scss';
 
-const PokemonCard = ({ pokemon }) => {
+const PokemonCard = ({ pokemon, addTrade }) => {
 	const [expanded, setExpanded] = useState(false);
 	const pokePath = require(`../../assets/images/icons/pokemon/${
 		pokemon.shiny ? 'shiny/' : 'regular/'
@@ -87,16 +87,34 @@ const PokemonCard = ({ pokemon }) => {
 					))}
 				</div>
 			</div>
-			<button
-				type="button"
-				className="more"
-				onClick={() => setExpanded(!expanded)}
-			>
-				View {expanded ? 'Less' : 'More'}{' '}
-				<BiChevronDown
-					style={expanded && { transform: 'rotate(180deg)' }}
-				/>
-			</button>
+			{addTrade ? (
+				<div className="more">
+					<button
+						type="button"
+						className="more"
+						onClick={() => setExpanded(!expanded)}
+					>
+						View {expanded ? 'Less' : 'More'}{' '}
+						<BiChevronDown
+							style={expanded && { transform: 'rotate(180deg)' }}
+						/>
+					</button>
+					<button type="button" onClick={() => addTrade(pokemon)}>
+						Add
+					</button>
+				</div>
+			) : (
+				<button
+					type="button"
+					className="more"
+					onClick={() => setExpanded(!expanded)}
+				>
+					View {expanded ? 'Less' : 'More'}{' '}
+					<BiChevronDown
+						style={expanded && { transform: 'rotate(180deg)' }}
+					/>
+				</button>
+			)}
 		</article>
 	);
 };
@@ -110,6 +128,11 @@ PokemonCard.propTypes = {
 			PropTypes.array,
 		])
 	).isRequired,
+	addTrade: PropTypes.func,
+};
+
+PokemonCard.defaultProps = {
+	addTrade: null,
 };
 
 export default PokemonCard;
