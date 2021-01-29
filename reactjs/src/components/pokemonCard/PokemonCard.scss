@@ -133,4 +133,22 @@
 			color: $light;
 		}
 	}
+	div.more {
+		grid-area: more;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		button {
+			margin-top: 0.75rem;
+			margin-top: 0.75rem;
+			font-size: 1rem;
+			background: none;
+			border: none;
+			color: $light;
+			&:nth-of-type(2) {
+				border: 0.25px solid $light;
+				border-radius: 0.975rem;
+			}
+		}
+	}
 }

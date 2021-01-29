@@ -11,7 +11,7 @@ import TypePills from '../typePills';
 import Shiny from '../../assets/images/icons/shiny.svg';
 import './PokemonCard.scss';
 
-const PokemonCard = ({ pokemon }) => {
+const PokemonCard = ({ pokemon, addTrade }) => {
 	const [expanded, setExpanded] = useState(false);
 	const pokePath = require(`../../assets/images/icons/pokemon/${
 		pokemon.shiny ? 'shiny/' : 'regular/'
@@ -74,8 +74,10 @@ const PokemonCard = ({ pokemon }) => {
 				</div>
 				<div className="em">
 					<h3>Egg Moves:</h3>
-					{pokemon.eggMoves.map((move) => (
-						<p key={Object.keys(move)}>
+					{pokemon.eggMoves.map((move, i) => (
+						// I want this to say the number of each move for the key
+						//  eslint-disable-next-line
+						<p key={`move-${i}`}>
 							<TypePills
 								variant="round"
 								type={Object.keys(move).toString()}
@@ -85,16 +87,34 @@ const PokemonCard = ({ pokemon }) => {
 					))}
 				</div>
 			</div>
-			<button
-				type="button"
-				className="more"
-				onClick={() => setExpanded(!expanded)}
-			>
-				View {expanded ? 'Less' : 'More'}{' '}
-				<BiChevronDown
-					style={expanded && { transform: 'rotate(180deg)' }}
-				/>
-			</button>
+			{addTrade ? (
+				<div className="more">
+					<button
+						type="button"
+						className="more"
+						onClick={() => setExpanded(!expanded)}
+					>
+						View {expanded ? 'Less' : 'More'}{' '}
+						<BiChevronDown
+							style={expanded && { transform: 'rotate(180deg)' }}
+						/>
+					</button>
+					<button type="button" onClick={() => addTrade(pokemon)}>
+						Add
+					</button>
+				</div>
+			) : (
+				<button
+					type="button"
+					className="more"
+					onClick={() => setExpanded(!expanded)}
+				>
+					View {expanded ? 'Less' : 'More'}{' '}
+					<BiChevronDown
+						style={expanded && { transform: 'rotate(180deg)' }}
+					/>
+				</button>
+			)}
 		</article>
 	);
 };
@@ -108,6 +128,11 @@ PokemonCard.propTypes = {
 			PropTypes.array,
 		])
 	).isRequired,
+	addTrade: PropTypes.func,
+};
+
+PokemonCard.defaultProps = {
+	addTrade: null,
 };
 
 export default PokemonCard;
