@@ -58,6 +58,9 @@
 		margin-top: 1.5rem;
 		a {
 			color: $light-70;
+			&:nth-of-type(n + 2) {
+				margin: 0;
+			}
 		}
 	}
 }
