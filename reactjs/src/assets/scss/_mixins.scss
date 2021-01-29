@@ -1,3 +1,4 @@
+@import './colors';
 @mixin btnBg($color) {
 	background-color: $color;
 	&:hover {
@@ -44,6 +45,19 @@
 			padding-top: 0.75rem;
 			padding-bottom: 0.75rem;
 			text-align: center;
+		}
+	}
+	form {
+		.FormControl {
+			&:last-of-type {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+	p {
+		margin-top: 1.5rem;
+		a {
+			color: $light-70;
 		}
 	}
 }
