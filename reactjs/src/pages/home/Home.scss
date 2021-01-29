@@ -1,4 +1,20 @@
 @import '../../assets/scss/mixins';
 .Home {
 	@extend %logForm;
+	@media (min-width: 48rem) {
+		grid-template-areas: 'img img' 'head head' 'btn1 btn2';
+		grid-column-gap: 2rem;
+		img {
+			grid-area: img;
+		}
+		h1 {
+			grid-area: head;
+		}
+		a {
+			grid-area: btn2;
+			&:first-of-type {
+				grid-area: btn1;
+			}
+		}
+	}
 }
