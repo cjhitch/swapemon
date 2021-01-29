@@ -1,3 +1,4 @@
+@import './colors';
 @mixin btnBg($color) {
 	background-color: $color;
 	&:hover {
@@ -11,4 +12,70 @@
 @mixin px($pad) {
 	padding-left: $pad;
 	padding-right: $pad;
+}
+%logForm {
+	text-align: center;
+	img {
+		display: block;
+		margin: 0 auto;
+		@media (max-width: 47.9375rem) {
+			max-width: 12.625rem;
+		}
+	}
+	h1 {
+		text-align: center;
+		max-width: 26.875rem;
+		margin: -0.5rem auto 1.5rem auto;
+		@media (max-width: 47.9375rem) {
+			font-size: 2.5rem;
+		}
+	}
+	a {
+		&:nth-of-type(n + 2) {
+			margin-left: 2rem;
+			@media (max-width: 47.9375rem) {
+				margin-left: 0;
+				button {
+					margin-top: 1.25rem;
+				}
+			}
+		}
+		button {
+			min-width: 12.5rem;
+			padding-top: 0.75rem;
+			padding-bottom: 0.75rem;
+			text-align: center;
+		}
+	}
+	form {
+		p {
+			margin-bottom: 1rem;
+		}
+		.FormControl {
+			&:last-of-type {
+				margin-bottom: 1.5rem;
+			}
+			&:nth-of-type(n + 2) {
+				margin-top: -0.5rem;
+			}
+			input {
+				max-height: 2.5rem;
+				max-width: 26.875rem;
+				margin: 0 auto;
+				@media (max-width: 47.9375rem) {
+					max-width: 15.1875rem;
+				}
+			}
+		}
+	}
+	p {
+		margin-top: 1.25rem;
+		margin-bottom: 0;
+		a {
+			color: $light-70;
+			&:nth-of-type(n + 2) {
+				margin: 0;
+			}
+		}
+	}
 }

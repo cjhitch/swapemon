@@ -1,1 +1,30 @@
 @import './assets/scss/custom.scss';
+.App {
+	background: $primary-dark;
+	background: radial-gradient(circle, $primary 0%, $primary-dark 70%);
+	display: grid;
+	grid-template-areas: 'head' 'main' 'foot';
+	grid-template-columns: 100vw;
+	grid-template-rows: minmax(auto, 3.5rem) minmax(min-content, 100vh) minmax(
+			auto,
+			2.5rem
+		);
+	justify-items: center;
+	align-items: center;
+	color: $light;
+	height: 100vh;
+	width: 100vw;
+	> section {
+		grid-area: main;
+		width: 100%;
+		height: 100%;
+	}
+	.Header {
+		grid-area: head;
+		width: 100%;
+	}
+	.Footer {
+		grid-area: foot;
+		width: 100%;
+	}
+}
