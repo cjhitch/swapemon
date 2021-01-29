@@ -2,10 +2,27 @@
 .App {
 	background: $primary-dark;
 	background: radial-gradient(circle, $primary 0%, $primary-dark 70%);
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-areas: 'head' 'main' 'foot';
+	grid-template-columns: 100vw;
+	grid-template-rows: minmax(auto, 3.5rem) minmax(min-content, 100vh) minmax(
+			auto,
+			2.5rem
+		);
+	justify-items: center;
 	align-items: center;
-	width: 100vw;
-	height: 100vh;
 	color: $light;
+	height: 100vh;
+	section {
+		grid-area: main;
+		width: 100vw;
+	}
+	.Header {
+		grid-area: head;
+		width: 100vw;
+	}
+	.Footer {
+		grid-area: foot;
+		width: 100vw;
+	}
 }

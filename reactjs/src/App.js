@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './components/header';
+import Footer from './components/footer';
 import Home from './pages/home';
 import Login from './pages/login';
 import Forgot from './pages/forgot';
 import Create from './pages/create';
-// import Header from './components/header';
+import Dashboard from './pages/dashboard';
 // import TypePills from './components/typePills';
 // import PokemonCard from './components/pokemonCard';
 // import Logo from './components/logo';
@@ -12,7 +14,6 @@ import Create from './pages/create';
 // import Profile from './components/profile';
 // import Messages from './components/messages';
 // import Trade from './components/trade';
-// import Footer from './components/footer';
 import './App.scss';
 
 function App() {
@@ -74,6 +75,13 @@ function App() {
 		<div className="App">
 			<Router>
 				<Switch>
+					<Route path="/dashboard">
+						<>
+							<Header />
+							<Dashboard />
+							<Footer />
+						</>
+					</Route>
 					<Route path="/login">
 						<Login />
 					</Route>
