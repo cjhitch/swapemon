@@ -140,6 +140,7 @@ const Trade = ({ myTrades }) => {
 				</Button>
 
 				<Modal
+					className="modal-trade"
 					show={show}
 					onHide={() => setShow(false)}
 					// dialogClassName="modal-90w"

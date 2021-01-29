@@ -1,3 +1,6 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/mixins';
+
 .Trade {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -33,6 +36,26 @@
 			border-radius: 0.625rem;
 			font-size: 1.5rem;
 			font-weight: bold;
+		}
+	}
+}
+.modal-trade {
+	color: $light;
+	border-radius: 0.625rem;
+	.close {
+		color: $light;
+	}
+	.modal-content {
+		background-color: $primary-dark;
+		border-radius: 0.625rem;
+		.modal-body {
+			justify-content: center;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			.PokemonCard {
+				margin-bottom: 0.5rem;
+			}
 		}
 	}
 }
