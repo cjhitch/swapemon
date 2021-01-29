@@ -74,8 +74,10 @@ const PokemonCard = ({ pokemon }) => {
 				</div>
 				<div className="em">
 					<h3>Egg Moves:</h3>
-					{pokemon.eggMoves.map((move) => (
-						<p key={Object.keys(move)}>
+					{pokemon.eggMoves.map((move, i) => (
+						// I want this to say the number of each move for the key
+						//  eslint-disable-next-line
+						<p key={`move-${i}`}>
 							<TypePills
 								variant="round"
 								type={Object.keys(move).toString()}
