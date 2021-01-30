@@ -42,6 +42,12 @@
 				}
 				@media (max-width: 47.9375rem) {
 					justify-content: center;
+					flex-direction: column;
+					button {
+						&:nth-of-type(2) {
+							margin-top: 1.25rem;
+						}
+					}
 				}
 			}
 			button {
@@ -56,6 +62,45 @@
 						display: none;
 					}
 				}
+			}
+		}
+	}
+}
+.modal-content {
+	background-color: $primary !important;
+	color: $light;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	.modal-header {
+		margin-left: -1rem;
+		margin-right: -1rem;
+		border: none;
+		h1 {
+			font-size: 2.5rem;
+		}
+	}
+	.AddPokemon {
+		.form-group,
+		.Autocomplete {
+			margin-bottom: 0.625rem;
+		}
+		input,
+		select,
+		label {
+			max-height: 2.375rem;
+		}
+		.level-iv-shiny {
+			.FormControl {
+				&.shiny {
+					margin-top: 0.25rem;
+				}
+			}
+		}
+		label {
+			padding-top: 9px !important;
+			padding-bottom: 9px !important;
+			&.form-check-label {
+				margin-top: -0.325rem !important;
 			}
 		}
 	}

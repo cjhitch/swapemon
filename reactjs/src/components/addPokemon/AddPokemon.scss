@@ -1,6 +1,16 @@
 @import '../../assets/scss/colors';
 @import '../../assets/scss/mixins';
 .AddPokemon {
+	&.lg {
+		@media (max-width: 47.9375rem) {
+			display: none;
+		}
+		.buttons {
+			@media (max-width: 47.9375rem) {
+				display: none !important;
+			}
+		}
+	}
 	display: grid;
 	grid-template-areas: 'name gender ivarea' 'ball abil ivarea' 'move move move' 'btn btn . ';
 	grid-template-columns: 1fr 1fr 2fr;
@@ -182,6 +192,9 @@
 		flex-direction: row;
 		align-items: center;
 		flex-wrap: wrap;
+		@media (max-width: 47.9375rem) {
+			justify-content: center;
+		}
 		h2 {
 			@include py(0.75rem);
 			font-size: 1.25rem;
@@ -192,6 +205,28 @@
 		}
 		.TypePills {
 			flex-shrink: 0;
+			@media (max-width: 47.9375rem) {
+				display: none;
+			}
+		}
+		.ems {
+			width: 100%;
+			@media (min-width: 48rem) {
+				display: none;
+			}
+			#ems {
+				max-height: 45px;
+			}
+		}
+	}
+	.buttons {
+		@media (max-width: 47.9375rem) {
+			margin-top: 0.75rem;
+			margin-bottom: 0.85rem;
+			button {
+				margin: 0 auto;
+				display: block;
+			}
 		}
 	}
 }

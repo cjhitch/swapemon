@@ -7,7 +7,7 @@ import FormControl from '../formControl';
 import TypePills from '../typePills';
 import './AddPokemon.scss';
 
-const AddPokemon = ({ pokemon }) => {
+const AddPokemon = ({ id, setMyPokemon, pokemon }) => {
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
 	const [autoValue, setAutoValue] = useState('');
 	const [isDisabled, setIsDisabled] = useState(true);
@@ -151,7 +151,7 @@ const AddPokemon = ({ pokemon }) => {
 	};
 
 	return (
-		<div className="AddPokemon">
+		<div className={`AddPokemon ${id}`}>
 			<div className="Autocomplete">
 				<Autocomplete
 					className="Autocomplete"
@@ -301,9 +301,27 @@ const AddPokemon = ({ pokemon }) => {
 						name={Object.values(move)[0]}
 					/>
 				))}
+				<FormControl
+					type="select"
+					placeholder="Select Up to 4 Egg Moves"
+					disabled={isDisabled}
+					options={pickedData.moves.map((move) =>
+						Object.values(move)
+					)}
+					value={newPokemon.moves}
+					update={update}
+					id="ems"
+					resetSelect={resetSelect}
+					multiple
+				/>
 			</section>
 			<div className="buttons">
-				<Button variant="secondary" size="lg" disabled>
+				<Button
+					onClick={setMyPokemon}
+					variant="secondary"
+					size="lg"
+					disabled
+				>
 					Submit
 				</Button>
 			</div>
@@ -312,6 +330,7 @@ const AddPokemon = ({ pokemon }) => {
 };
 
 AddPokemon.propTypes = {
+	id: PropTypes.string,
 	pokemon: PropTypes.objectOf(
 		PropTypes.oneOfType([
 			PropTypes.string,
@@ -320,9 +339,11 @@ AddPokemon.propTypes = {
 			PropTypes.array,
 		])
 	),
+	setMyPokemon: PropTypes.func.isRequired,
 };
 
 AddPokemon.defaultProps = {
+	id: '',
 	pokemon: null,
 };
 
