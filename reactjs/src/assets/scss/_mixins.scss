@@ -15,6 +15,8 @@
 }
 %logForm {
 	text-align: center;
+	display: grid;
+	align-content: center;
 	img {
 		display: block;
 		margin: 0 auto;
@@ -32,7 +34,7 @@
 	}
 	a {
 		&:nth-of-type(n + 2) {
-			margin-left: 2rem;
+			// margin-left: 2rem;
 			@media (max-width: 47.9375rem) {
 				margin-left: 0;
 				button {
