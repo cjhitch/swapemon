@@ -65,6 +65,10 @@
 			}
 		}
 	}
+	.pokemon-list {
+		display: flex;
+		flex-direction: row;
+	}
 }
 .modal-content {
 	background-color: $primary !important;
