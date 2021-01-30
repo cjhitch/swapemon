@@ -46,7 +46,8 @@
 	&.fairy {
 		@include btnBg($fairy);
 	}
-	&.fight {
+	&.fight,
+	&.fighting {
 		@include btnBg($fight);
 	}
 	&.fire {

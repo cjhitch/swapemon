@@ -1,4 +1,107 @@
 @import '../../assets/scss/colors';
+@import '../../assets/scss/mixins';
 .Dashboard {
 	background-color: $primary-dark;
+	padding: 2.25rem;
+	@media (max-width: 47.9375rem) {
+		padding: 1.25rem 0.625rem;
+	}
+	> div {
+		@include px(2.5rem);
+		h1 {
+			text-align: center;
+		}
+		@media (max-width: 47.9375rem) {
+			@include px(1rem);
+			h1 {
+				font-size: 2.5rem;
+			}
+		}
+		padding-top: 0.325rem;
+		padding-bottom: 2.5rem;
+		background-color: $primary;
+		border-radius: 0.625rem;
+
+		.buttons {
+			grid-area: btn;
+			display: flex;
+			justify-content: flex-end;
+			margin-top: 2rem;
+			&.filter-modal {
+				margin-top: 0;
+				justify-content: flex-start;
+				@media (min-width: 48rem) {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					justify-content: flex-start;
+					button {
+						grid-column: 2 / 3;
+						max-width: 0;
+						margin-top: -3.5rem;
+					}
+				}
+				@media (max-width: 47.9375rem) {
+					justify-content: center;
+					flex-direction: column;
+					button {
+						&:nth-of-type(2) {
+							margin-top: 1.25rem;
+						}
+					}
+				}
+			}
+			button {
+				min-width: 12.5rem;
+				padding-top: 0.75rem;
+				padding-bottom: 0.75rem;
+				text-align: center;
+				margin-left: 1.25rem;
+				margin-right: 1.25rem;
+				&.add {
+					@media (min-width: 48rem) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+.modal-content {
+	background-color: $primary !important;
+	color: $light;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	.modal-header {
+		margin-left: -1rem;
+		margin-right: -1rem;
+		border: none;
+		h1 {
+			font-size: 2.5rem;
+		}
+	}
+	.AddPokemon {
+		.form-group,
+		.Autocomplete {
+			margin-bottom: 0.625rem;
+		}
+		input,
+		select,
+		label {
+			max-height: 2.375rem;
+		}
+		.level-iv-shiny {
+			.FormControl {
+				&.shiny {
+					margin-top: 0.25rem;
+				}
+			}
+		}
+		label {
+			padding-top: 9px !important;
+			padding-bottom: 9px !important;
+			&.form-check-label {
+				margin-top: -0.325rem !important;
+			}
+		}
+	}
 }

@@ -8,9 +8,10 @@
 	},
 	"scripts": {
 		"start": "cd api && npm install && node server.js",
+		"start:react": "cd reactjs && yarn start",
 		"heroku-postbuild": "cd reactjs && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
 		"build": "cd reactjs && react-scripts build",
-		"dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn start\"",
+		"dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn start:react\"",
 		"test:react": "rcd reactjs && eact-scripts test",
 		"eject": "cd reactjs && react-scripts eject",
 		"format": "cd reactjs && npm run prettier --write",
@@ -33,5 +34,8 @@
 	"homepage": "https://github.com/fs-tech-degs/capstone-project-2101-cjhitch#readme",
 	"devDependencies": {
 		"concurrently": "^5.3.0"
+	},
+	"dependencies": {
+		"kill-port": "^1.6.1"
 	}
 }

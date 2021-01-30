@@ -11,11 +11,17 @@ const FormControl = ({
 	label,
 	options,
 	placeholder,
+	disabled,
+	num,
+	max,
+	multiple,
+	resetSelect,
 }) => {
 	return (
-		<div className="FormControl">
+		<div className={`FormControl ${id}`}>
 			{type === 'checkbox' ? (
 				<Form.Check
+					disabled={disabled}
 					type={type}
 					id={id}
 					label={label}
@@ -26,9 +32,15 @@ const FormControl = ({
 				<Form.Group controlId={id}>
 					{label && <Form.Label>{label}</Form.Label>}
 					<Form.Control
+						multiple={multiple}
+						disabled={disabled}
 						as="select"
+						value={
+							value === '' || resetSelect ? placeholder : value
+						}
 						onChange={(e) => update(id, e.target.value)}
 					>
+						<option disabled>{placeholder}</option>
 						{options &&
 							options.map((opt) => (
 								<option key={opt}>{opt}</option>
@@ -39,11 +51,15 @@ const FormControl = ({
 				<Form.Group>
 					{label && <Form.Label htmlFor={id}>{label}</Form.Label>}
 					<Form.Control
+						disabled={disabled}
 						value={value}
 						onChange={(e) => update(id, e.target.value)}
-						as={type}
+						as="input"
+						type={type}
 						placeholder={placeholder}
 						id={id}
+						max={max !== -1 ? max : ''}
+						pattern={num ? '[0-9]*' : ''}
 					/>
 				</Form.Group>
 			)}
@@ -56,21 +72,32 @@ FormControl.propTypes = {
 		PropTypes.string,
 		PropTypes.number,
 		PropTypes.bool,
-	]).isRequired,
+	]),
 	update: PropTypes.func.isRequired,
 	type: PropTypes.string,
 	id: PropTypes.string,
 	label: PropTypes.string,
 	placeholder: PropTypes.string,
 	options: PropTypes.arrayOf(PropTypes.string),
+	disabled: PropTypes.bool,
+	num: PropTypes.bool,
+	max: PropTypes.number,
+	multiple: PropTypes.bool,
+	resetSelect: PropTypes.bool,
 };
 
 FormControl.defaultProps = {
+	value: '',
 	id: null,
 	type: 'select',
 	label: null,
 	placeholder: null,
 	options: [],
+	disabled: false,
+	num: false,
+	max: -1,
+	multiple: false,
+	resetSelect: false,
 };
 
 export default FormControl;
