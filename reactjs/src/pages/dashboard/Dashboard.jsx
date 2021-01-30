@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import PokemonCard from '../../components/pokemonCard';
 import AddPokemon from '../../components/addPokemon';
+import FormControl from '../../components/formControl';
 import './Dashboard.scss';
 
 const Dashboard = () => {
@@ -18,8 +19,8 @@ const Dashboard = () => {
 		gender: '',
 		ability: '',
 		ball: '',
-		level: '',
 		// going to filter off this later
+		// level: '',
 		// maxhp: '',
 		// maxatk: '',
 		// maxdef: '',
@@ -33,6 +34,7 @@ const Dashboard = () => {
 		// minspdef: '',
 		// minspd: '',
 	});
+	// seed data - to later be replaced with store
 	const [myPokemon, setMyPokemon] = useState([
 		{
 			id: 'ed35a614-bb4f-4295-bee9-3a4c0c2a6328',
@@ -147,7 +149,7 @@ const Dashboard = () => {
 			level: '66',
 			types: [{ type: 'flying', name: 'Flying' }],
 			gender: ['female', '87.5%'],
-			ability: 'Solar Power (Hidden)',
+			ability: 'Big Pecks (Hidden)',
 			ivs: [
 				{ HP: 31 },
 				{ Atk: 'N/A' },
@@ -189,10 +191,28 @@ const Dashboard = () => {
 			],
 		},
 	]);
+	// eslint-disable-next-line
 	const [filteredPokemon, setFilteredPokemon] = useState(myPokemon);
 	const filterPokemon = () => {
-		setFilteredPokemon(filteredPokemon);
+		const newPokeArr = [];
+		Object.keys(filters).forEach((filter) => {
+			if (filters[filter] !== '') {
+				newPokeArr.push(
+					filteredPokemon.filter(
+						(pokemon) => pokemon[filter] === filters[filter]
+					)
+				);
+			}
+		});
+		// TODO: this needs to become a spread operator, it also needs to use && for the array instead of just adding everything
+		// eslint-disable-next-line
+		const merged = [].concat.apply([], newPokeArr);
+		console.log(merged);
+		setFilteredPokemon(merged);
 	};
+	useEffect(() => {
+		console.log(filteredPokemon);
+	}, [filteredPokemon]);
 	useEffect(() => {
 		if (myPokemon.length > 0) {
 			setIsDisabled(false);
@@ -222,6 +242,10 @@ const Dashboard = () => {
 			return match.toUpperCase();
 		});
 		return newVal;
+	};
+
+	const update = (id, val) => {
+		setFilters({ ...filters, [id]: val });
 	};
 
 	// handler for the autocomplete - this goes through each pokemon when a value is typed in
@@ -294,47 +318,80 @@ const Dashboard = () => {
 			>
 				<Modal.Header closeButton>
 					<h1>Filter</h1>
-					<div className="Autocomplete">
-						<Autocomplete
-							className="Autocomplete"
-							value={autoValue}
-							inputProps={{
-								placeholder: 'Select Pokemon',
-							}}
-							items={filteredPokemon.map((el) => el.name)}
-							getItemValue={(item) => item}
-							shouldItemRender={renderPokemonName}
-							renderMenu={(item) => (
-								<div
-									key={`pokemon-${item}`}
-									className="dropdown"
-								>
-									{item}
-								</div>
-							)}
-							renderItem={(item, isHighlighted) => (
-								<div
-									key={`${item}-div`}
-									className={`item ${
-										isHighlighted ? 'selected-item' : ''
-									}`}
-								>
-									{item}
-								</div>
-							)}
-							onChange={changeHandler}
-							onSelect={changeHandler}
-						/>
-					</div>
-					<Button
-						variant="tertiary"
-						size="lg"
-						disabled={filterDisabled}
-						onClick={filterPokemon}
-					>
-						Filter
-					</Button>
 				</Modal.Header>
+				<div className="Autocomplete">
+					<Autocomplete
+						className="Autocomplete"
+						value={autoValue}
+						inputProps={{
+							placeholder: 'Select Pokemon',
+						}}
+						items={filteredPokemon.map((el) => el.name)}
+						getItemValue={(item) => item}
+						shouldItemRender={renderPokemonName}
+						renderMenu={(item) => (
+							<div key={`pokemon-${item}`} className="dropdown">
+								{item}
+							</div>
+						)}
+						renderItem={(item, isHighlighted) => (
+							<div
+								key={`${item}-div`}
+								className={`item ${
+									isHighlighted ? 'selected-item' : ''
+								}`}
+							>
+								{item}
+							</div>
+						)}
+						onChange={changeHandler}
+						onSelect={changeHandler}
+					/>
+					<FormControl
+						type="select"
+						placeholder="Select Gender"
+						disabled={isDisabled}
+						options={[`male`, `female`]}
+						value={filters.gender}
+						update={update}
+						id="gender"
+						// resetSelect={resetSelect}
+					/>
+					<FormControl
+						type="select"
+						placeholder="Select Ability"
+						disabled={isDisabled}
+						options={filteredPokemon.map((el) => el.ability)}
+						value={filters.ability}
+						update={update}
+						id="ability"
+						// resetSelect={resetSelect}
+					/>
+					<FormControl
+						type="select"
+						placeholder="Select Pokeball"
+						options={filteredPokemon.map((el) => el.ball)}
+						value={filters.ball}
+						update={update}
+						id="ball"
+					/>
+				</div>
+				<Button
+					variant="tertiary"
+					size="lg"
+					disabled={filterDisabled}
+					onClick={filterPokemon}
+				>
+					Filter
+				</Button>
+				<Button
+					variant="secondary"
+					size="lg"
+					// disabled={filterDisabled}
+					onClick={() => setFilteredPokemon(myPokemon)}
+				>
+					Reset
+				</Button>
 			</Modal>
 		</section>
 	);
