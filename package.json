@@ -35,7 +35,5 @@
 	"devDependencies": {
 		"concurrently": "^5.3.0"
 	},
-	"dependencies": {
-		"kill-port": "^1.6.1"
-	}
+	"dependencies": {}
 }
