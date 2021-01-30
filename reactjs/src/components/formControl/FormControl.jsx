@@ -11,11 +11,15 @@ const FormControl = ({
 	label,
 	options,
 	placeholder,
+	disabled,
+	num,
+	max,
 }) => {
 	return (
 		<div className="FormControl">
 			{type === 'checkbox' ? (
 				<Form.Check
+					disabled={disabled}
 					type={type}
 					id={id}
 					label={label}
@@ -26,11 +30,12 @@ const FormControl = ({
 				<Form.Group controlId={id}>
 					{label && <Form.Label>{label}</Form.Label>}
 					<Form.Control
+						disabled={disabled}
 						as="select"
-						value={value === '' ? 'Please Select Option' : value}
+						value={value === '' ? placeholder : value}
 						onChange={(e) => update(id, e.target.value)}
 					>
-						<option disabled>Please Select Option</option>
+						<option disabled>{placeholder}</option>
 						{options &&
 							options.map((opt) => (
 								<option key={opt}>{opt}</option>
@@ -41,11 +46,14 @@ const FormControl = ({
 				<Form.Group>
 					{label && <Form.Label htmlFor={id}>{label}</Form.Label>}
 					<Form.Control
+						disabled={disabled}
 						value={value}
 						onChange={(e) => update(id, e.target.value)}
 						as={type}
 						placeholder={placeholder}
 						id={id}
+						max={max !== -1 ? max : ''}
+						pattern={num ? '[0-9]*' : ''}
 					/>
 				</Form.Group>
 			)}
@@ -65,6 +73,9 @@ FormControl.propTypes = {
 	label: PropTypes.string,
 	placeholder: PropTypes.string,
 	options: PropTypes.arrayOf(PropTypes.string),
+	disabled: PropTypes.bool,
+	num: PropTypes.bool,
+	max: PropTypes.number,
 };
 
 FormControl.defaultProps = {
@@ -73,6 +84,9 @@ FormControl.defaultProps = {
 	label: null,
 	placeholder: null,
 	options: [],
+	disabled: false,
+	num: false,
+	max: -1,
 };
 
 export default FormControl;

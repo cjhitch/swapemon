@@ -12,17 +12,23 @@
 			width: 100%;
 			height: calc(1.5em + 1rem + 2px);
 			padding: 0.375rem 0.75rem;
+			padding-left: 1.125rem;
 			font-weight: 400;
 			line-height: 1.5;
-			background-clip: padding-box;
 			border-radius: 0.25rem;
-			transition: border-color 0.15s ease-in-out,
-				box-shadow 0.15s ease-in-out;
-			background-size: contain;
-			background-repeat: no-repeat;
-			padding-left: 3rem;
-			background-origin: content-box;
-			background-position-x: -17%;
+			font-size: 1.125rem;
+			background-color: $primary-dark;
+			color: $primary;
+			border: none;
+			// transition: border-color 0.15s ease-in-out,
+			// 	box-shadow 0.15s ease-in-out;
+			// decided to not do background image at the current time - saving for later
+			// background-clip: padding-box;
+			// background-size: contain;
+			// background-repeat: no-repeat;
+			// padding-left: 3rem;
+			// background-origin: content-box;
+			// background-position-x: -17%;
 			&:focus {
 				color: $dark;
 				background-color: $light;
@@ -59,12 +65,8 @@
 		}
 	}
 
-	select.Form-Control,
+	select.form-control,
 	input {
-		background-color: $primary-dark;
-		color: $primary-light;
-		font-size: 1.125rem;
-		border: none;
 		&:disabled {
 			opacity: 50%;
 		}
@@ -74,6 +76,6 @@
 	}
 	label,
 	span {
-		color: #fff;
+		color: $light;
 	}
 }

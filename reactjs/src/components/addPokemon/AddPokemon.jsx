@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Autocomplete from 'react-autocomplete';
 import pokemonData from '../../assets/data/pokemon_info.json';
@@ -6,11 +6,8 @@ import FormControl from '../formControl';
 import './AddPokemon.scss';
 
 const AddPokemon = ({ pokemon }) => {
-	// temp disable eslint to render w/out applying both values
-	// eslint-disable-next-line
 	const [autoValue, setAutoValue] = useState('');
-	// temp disable eslint to render w/out applying both values
-	// eslint-disable-next-line
+	const [isDisabled, setIsDisabled] = useState(true);
 	const [newPokemon, setNewPokemon] = useState({
 		autoValue: '',
 		name: '',
@@ -29,6 +26,33 @@ const AddPokemon = ({ pokemon }) => {
 		],
 		level: 1,
 	});
+	const [pickedData, setPickedData] = useState({
+		gender: '',
+		ability: '',
+		hiddenAbility: '',
+		moves: '',
+	});
+
+	useEffect(() => {
+		if (newPokemon.name !== '') {
+			const abilArr = pokemonData.pokemon[newPokemon.name].ability.filter(
+				(abil) => abil !== '----'
+			);
+			if (
+				pokemonData.pokemon[newPokemon.name].hidden_ability !== '----'
+			) {
+				abilArr.push(
+					pokemonData.pokemon[newPokemon.name].hidden_ability
+				);
+			}
+			const newData = {
+				gender: pokemonData.pokemon[newPokemon.name].gender,
+				abilities: abilArr,
+				moves: pokemonData.pokemon[newPokemon.name].egg_moves,
+			};
+			setPickedData(newData);
+		}
+	}, [newPokemon.name]);
 
 	const update = (inputId, value) => {
 		console.log(inputId, value);
@@ -43,6 +67,10 @@ const AddPokemon = ({ pokemon }) => {
 		}
 	};
 
+	useEffect(() => {
+		console.log(pickedData);
+	}, [pickedData]);
+
 	const renderPokemonName = (state, val) =>
 		state.toLowerCase().indexOf(val.toLowerCase()) !== -1;
 
@@ -53,14 +81,16 @@ const AddPokemon = ({ pokemon }) => {
 		return newVal;
 	};
 
-	const changeHandler = (val) => {
+	const changeHandler = (e, val) => {
 		console.log(val);
 		setAutoValue(val);
 		Object.keys(pokemonData.pokemon).forEach((poke) => {
 			if (val.toLowerCase() === poke.toString().toLowerCase()) {
 				setNewPokemon({ ...newPokemon, name: properNameCase(val) });
+				setIsDisabled(false);
 			} else if (newPokemon.name !== '') {
 				setNewPokemon({ ...newPokemon, name: '' });
+				setIsDisabled(true);
 			}
 		});
 	};
@@ -99,11 +129,32 @@ const AddPokemon = ({ pokemon }) => {
 			</div>
 			<FormControl
 				type="select"
-				placeholder="Pokeball"
+				placeholder="Select Pokeball"
 				options={pokemonData.balls}
 				value={newPokemon.ball}
 				update={update}
 				id="ball"
+			/>
+			<FormControl
+				type="select"
+				placeholder="Select Gender"
+				disabled={isDisabled}
+				options={[
+					`♂ ${pickedData.gender.male}%`,
+					`♀ ${pickedData.gender.female}%`,
+				]}
+				value={newPokemon.gender}
+				update={update}
+				id="gender"
+			/>
+			<FormControl
+				type="select"
+				placeholder="Select Ability"
+				disabled={isDisabled}
+				options={pickedData.abilities}
+				value={newPokemon.ability}
+				update={update}
+				id="gender"
 			/>
 		</div>
 	);
