@@ -64,6 +64,26 @@
 			}
 		}
 	}
+	.level-iv-shiny {
+		.FormControl {
+			.form-group {
+				display: flex;
+				label {
+					width: 70px;
+					text-align: right;
+					background: #545454;
+					padding: 9px 9px 9px 0;
+					border-top-left-radius: 10px;
+					border-bottom-left-radius: 10px;
+					height: 38px;
+				}
+				input {
+					width: 66px;
+					height: 38px;
+				}
+			}
+		}
+	}
 
 	select.form-control,
 	input {

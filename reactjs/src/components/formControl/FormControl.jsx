@@ -49,7 +49,8 @@ const FormControl = ({
 						disabled={disabled}
 						value={value}
 						onChange={(e) => update(id, e.target.value)}
-						as={type}
+						as="input"
+						type={type}
 						placeholder={placeholder}
 						id={id}
 						max={max !== -1 ? max : ''}

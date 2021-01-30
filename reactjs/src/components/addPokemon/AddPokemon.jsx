@@ -9,21 +9,18 @@ const AddPokemon = ({ pokemon }) => {
 	const [autoValue, setAutoValue] = useState('');
 	const [isDisabled, setIsDisabled] = useState(true);
 	const [newPokemon, setNewPokemon] = useState({
-		autoValue: '',
 		name: '',
 		ball: '',
 		gender: '',
 		ability: '',
 		shiny: '',
 		moves: '',
-		iv: [
-			{ hp: -1 },
-			{ atk: -1 },
-			{ def: -1 },
-			{ spAtk: -1 },
-			{ spDef: -1 },
-			{ spd: -1 },
-		],
+		hp: -1,
+		atk: -1,
+		def: -1,
+		spAtk: -1,
+		spDef: -1,
+		spd: -1,
 		level: 1,
 	});
 	const [pickedData, setPickedData] = useState({
@@ -32,6 +29,25 @@ const AddPokemon = ({ pokemon }) => {
 		hiddenAbility: '',
 		moves: '',
 	});
+	useEffect(() => {
+		if (pokemon !== null) {
+			setNewPokemon({
+				name: pokemon.name,
+				ball: pokemon.ball,
+				gender: pokemon.gender[1],
+				ability: pokemon.ability,
+				shiny: pokemon.shiny,
+				moves: pokemon.eggMoves,
+				hp: pokemon.ivs.HP,
+				atk: pokemon.ivs.Atk,
+				def: pokemon.ivs.Def,
+				spAtk: pokemon.ivs.SpAtk,
+				spDef: pokemon.ivs.SpDef,
+				spd: pokemon.ivs.Spd,
+				level: pokemon.level,
+			});
+		}
+	}, [pokemon]);
 
 	useEffect(() => {
 		if (newPokemon.name !== '') {
@@ -66,10 +82,6 @@ const AddPokemon = ({ pokemon }) => {
 			setNewPokemon({ ...newPokemon, [inputId]: value });
 		}
 	};
-
-	useEffect(() => {
-		console.log(pickedData);
-	}, [pickedData]);
 
 	const renderPokemonName = (state, val) =>
 		state.toLowerCase().indexOf(val.toLowerCase()) !== -1;
@@ -129,14 +141,6 @@ const AddPokemon = ({ pokemon }) => {
 			</div>
 			<FormControl
 				type="select"
-				placeholder="Select Pokeball"
-				options={pokemonData.balls}
-				value={newPokemon.ball}
-				update={update}
-				id="ball"
-			/>
-			<FormControl
-				type="select"
 				placeholder="Select Gender"
 				disabled={isDisabled}
 				options={[
@@ -156,6 +160,86 @@ const AddPokemon = ({ pokemon }) => {
 				update={update}
 				id="gender"
 			/>
+			<FormControl
+				type="select"
+				placeholder="Select Pokeball"
+				options={pokemonData.balls}
+				value={newPokemon.ball}
+				update={update}
+				id="ball"
+			/>
+			<div className="level-iv-shiny">
+				<FormControl
+					type="text"
+					label="Level"
+					id="level"
+					value={newPokemon.level}
+					update={update}
+					num
+					max={3}
+				/>
+				<FormControl
+					value={newPokemon.shiny}
+					update={update}
+					type="checkbox"
+					id="shiny"
+					label="Shiny"
+				/>
+				<FormControl
+					type="text"
+					label="HP"
+					id="hp"
+					value={newPokemon.hp}
+					update={update}
+					num
+					max={2}
+				/>
+				<FormControl
+					type="text"
+					label="Atk"
+					id="atk"
+					value={newPokemon.atk}
+					update={update}
+					num
+					max={2}
+				/>
+				<FormControl
+					type="text"
+					label="Def"
+					id="def"
+					value={newPokemon.def}
+					update={update}
+					num
+					max={2}
+				/>
+				<FormControl
+					type="text"
+					label="Sp Atk"
+					id="spAtk"
+					value={newPokemon.spAtk}
+					update={update}
+					num
+					max={2}
+				/>
+				<FormControl
+					type="text"
+					label="Sp Def"
+					id="spDef"
+					value={newPokemon.spDef}
+					update={update}
+					num
+					max={2}
+				/>
+				<FormControl
+					type="text"
+					label="Speed"
+					id="spd"
+					value={newPokemon.spd}
+					update={update}
+					num
+					max={2}
+				/>
+			</div>
 		</div>
 	);
 };
