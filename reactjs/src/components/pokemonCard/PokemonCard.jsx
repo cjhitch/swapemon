@@ -24,13 +24,12 @@ const PokemonCard = ({ pokemon, addTrade }) => {
 			<Image className="pokemon" src={pokePath.default} />
 			<h2>
 				{pokemon.name}
-				{pokemon.shiny ||
-					(pokemon.shiny === 0 && (
-						<span>
-							{' '}
-							<Image src={Shiny} />
-						</span>
-					))}
+				{(pokemon.shiny || pokemon.shiny === 0) && (
+					<span>
+						{' '}
+						<Image src={Shiny} />
+					</span>
+				)}
 			</h2>
 			<p className="dex">
 				Dex:
