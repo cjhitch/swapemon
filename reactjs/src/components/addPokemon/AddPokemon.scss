@@ -1,7 +1,8 @@
 @import '../../assets/scss/colors';
+@import '../../assets/scss/mixins';
 .AddPokemon {
 	display: grid;
-	grid-template-areas: 'name gender ivarea' 'ball abil ivarea' 'move move move';
+	grid-template-areas: 'name gender ivarea' 'ball abil ivarea' 'move move move' 'btn btn . ';
 	grid-template-columns: 1fr 1fr 2fr;
 	@media (max-width: 47.9375rem) {
 		grid-template-columns: 1fr;
@@ -113,6 +114,11 @@
 						width: 2rem;
 						height: 2rem;
 					}
+					&:after {
+						top: 0.55em;
+						left: 0.15em;
+						font-size: 2rem;
+					}
 				}
 			}
 			&.hp {
@@ -169,5 +175,23 @@
 	label,
 	span {
 		color: $light;
+	}
+	.moves {
+		grid-area: move;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		h2 {
+			@include py(0.75rem);
+			font-size: 1.25rem;
+			align-items: center;
+			flex-shrink: 0;
+			margin-bottom: 0;
+			margin-right: 2rem;
+		}
+		.TypePills {
+			flex-shrink: 0;
+		}
 	}
 }

@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Autocomplete from 'react-autocomplete';
+import Button from 'react-bootstrap/Button';
 import pokemonData from '../../assets/data/pokemon_info.json';
 import FormControl from '../formControl';
 import TypePills from '../typePills';
 import './AddPokemon.scss';
 
 const AddPokemon = ({ pokemon }) => {
+	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
 	const [autoValue, setAutoValue] = useState('');
 	const [isDisabled, setIsDisabled] = useState(true);
+	const [resetSelect, setResetSelect] = useState(false);
 	const [newPokemon, setNewPokemon] = useState({
 		name: '',
 		ball: '',
@@ -30,6 +33,10 @@ const AddPokemon = ({ pokemon }) => {
 		hiddenAbility: '',
 		moves: [],
 	});
+	// useEffect(() => {
+	// 	console.log(newPokemon);
+	// }, [newPokemon]);
+	// if the object has been passed in that means this is being edited - set the state to existing
 	useEffect(() => {
 		if (pokemon !== null) {
 			setNewPokemon({
@@ -50,6 +57,7 @@ const AddPokemon = ({ pokemon }) => {
 		}
 	}, [pokemon]);
 
+	// run through the data and get types based on the move name - this will be fixed in the database
 	const getType = (move) => {
 		let type;
 		// eslint-disable-next-line
@@ -62,8 +70,12 @@ const AddPokemon = ({ pokemon }) => {
 		return type;
 	};
 
+	// check when the pokemon name is set in state
+	// once that is done get an array of abilities - this should be fixed in the database
+	// set the picked data to set for the dropdowns
 	useEffect(() => {
 		if (newPokemon.name !== '') {
+			setResetSelect(false);
 			const abilArr = pokemonData.pokemon[newPokemon.name].ability.filter(
 				(abil) => abil !== '----'
 			);
@@ -86,9 +98,19 @@ const AddPokemon = ({ pokemon }) => {
 				moves: moveArr,
 			};
 			setPickedData(newData);
+		} else {
+			setResetSelect(true);
+			setPickedData({
+				gender: '',
+				ability: '',
+				hiddenAbility: '',
+				moves: [],
+			});
 		}
 	}, [newPokemon.name]);
 
+	// update function this checks if it is a checkbox and updates that accordingly
+	// otherwise it uses the key to update the correct part of the state
 	const update = (inputId, value) => {
 		if (inputId === 'shiny') {
 			if (value === '0') {
@@ -101,9 +123,11 @@ const AddPokemon = ({ pokemon }) => {
 		}
 	};
 
+	// from autocomplete - this is how they show to write for the shouldItemRender
 	const renderPokemonName = (state, val) =>
 		state.toLowerCase().indexOf(val.toLowerCase()) !== -1;
 
+	// function to correct casing and allow user to type in lower or uppercase and still use autocomplete
 	const properNameCase = (val) => {
 		const newVal = val.replace(/(^|[\s-])\S/g, (match) => {
 			return match.toUpperCase();
@@ -111,6 +135,8 @@ const AddPokemon = ({ pokemon }) => {
 		return newVal;
 	};
 
+	// handler for the autocomplete - this goes through each pokemon when a value is typed in
+	// if the pokemon is a complete match it sets the state value for name otherwise it clears the value
 	const changeHandler = (e, val) => {
 		setAutoValue(val);
 		Object.keys(pokemonData.pokemon).forEach((poke) => {
@@ -166,6 +192,7 @@ const AddPokemon = ({ pokemon }) => {
 				value={newPokemon.gender}
 				update={update}
 				id="gender"
+				resetSelect={resetSelect}
 			/>
 			<FormControl
 				type="select"
@@ -175,6 +202,7 @@ const AddPokemon = ({ pokemon }) => {
 				value={newPokemon.ability}
 				update={update}
 				id="ability"
+				resetSelect={resetSelect}
 			/>
 			<FormControl
 				type="select"
@@ -193,6 +221,7 @@ const AddPokemon = ({ pokemon }) => {
 					update={update}
 					num
 					max={3}
+					disabled={isDisabled}
 				/>
 				<FormControl
 					value={newPokemon.shiny}
@@ -200,6 +229,7 @@ const AddPokemon = ({ pokemon }) => {
 					type="checkbox"
 					id="shiny"
 					label="Shiny"
+					disabled={isDisabled}
 				/>
 				<FormControl
 					type="text"
@@ -209,6 +239,7 @@ const AddPokemon = ({ pokemon }) => {
 					update={update}
 					num
 					max={2}
+					disabled={isDisabled}
 				/>
 				<FormControl
 					type="text"
@@ -218,6 +249,7 @@ const AddPokemon = ({ pokemon }) => {
 					update={update}
 					num
 					max={2}
+					disabled={isDisabled}
 				/>
 				<FormControl
 					type="text"
@@ -227,6 +259,7 @@ const AddPokemon = ({ pokemon }) => {
 					update={update}
 					num
 					max={2}
+					disabled={isDisabled}
 				/>
 				<FormControl
 					type="text"
@@ -236,6 +269,7 @@ const AddPokemon = ({ pokemon }) => {
 					update={update}
 					num
 					max={2}
+					disabled={isDisabled}
 				/>
 				<FormControl
 					type="text"
@@ -245,6 +279,7 @@ const AddPokemon = ({ pokemon }) => {
 					update={update}
 					num
 					max={2}
+					disabled={isDisabled}
 				/>
 				<FormControl
 					type="text"
@@ -254,18 +289,24 @@ const AddPokemon = ({ pokemon }) => {
 					update={update}
 					num
 					max={2}
+					disabled={isDisabled}
 				/>
 			</div>
 			<section className="moves">
 				<h2>Select Moves: </h2>
 				{pickedData.moves.map((move) => (
 					<TypePills
-						key={Object.values(move)}
+						key={Object.values(move)[0]}
 						type={Object.keys(move)[0].toLowerCase()}
-						name={Object.values(move)}
+						name={Object.values(move)[0]}
 					/>
 				))}
 			</section>
+			<div className="buttons">
+				<Button variant="secondary" size="lg" disabled>
+					Submit
+				</Button>
+			</div>
 		</div>
 	);
 };

@@ -15,6 +15,7 @@ const FormControl = ({
 	num,
 	max,
 	multiple,
+	resetSelect,
 }) => {
 	return (
 		<div className={`FormControl ${id}`}>
@@ -34,7 +35,9 @@ const FormControl = ({
 						multiple={multiple}
 						disabled={disabled}
 						as="select"
-						value={value === '' ? placeholder : value}
+						value={
+							value === '' || resetSelect ? placeholder : value
+						}
 						onChange={(e) => update(id, e.target.value)}
 					>
 						<option disabled>{placeholder}</option>
@@ -80,6 +83,7 @@ FormControl.propTypes = {
 	num: PropTypes.bool,
 	max: PropTypes.number,
 	multiple: PropTypes.bool,
+	resetSelect: PropTypes.bool,
 };
 
 FormControl.defaultProps = {
@@ -93,6 +97,7 @@ FormControl.defaultProps = {
 	num: false,
 	max: -1,
 	multiple: false,
+	resetSelect: false,
 };
 
 export default FormControl;
