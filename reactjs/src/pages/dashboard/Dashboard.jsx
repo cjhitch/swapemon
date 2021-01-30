@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Autocomplete from 'react-autocomplete';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import PokemonCard from '../../components/pokemonCard';
@@ -6,11 +7,35 @@ import AddPokemon from '../../components/addPokemon';
 import './Dashboard.scss';
 
 const Dashboard = () => {
+	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
+	const [autoValue, setAutoValue] = useState('');
 	const [show, setShow] = useState(false);
-	const [filterShow, setFilterShow] = useState(false);
+	const [filterShow, setFilterShow] = useState(true);
 	const [isDisabled, setIsDisabled] = useState(true);
+	const [filterDisabled, setFilterDisabled] = useState(true);
+	const [filters, setFilters] = useState({
+		name: '',
+		gender: '',
+		ability: '',
+		ball: '',
+		level: '',
+		// going to filter off this later
+		// maxhp: '',
+		// maxatk: '',
+		// maxdef: '',
+		// maxspatk: '',
+		// maxspdef: '',
+		// maxspd: '',
+		// minhp: '',
+		// minatk: '',
+		// mindef: '',
+		// minspatk: '',
+		// minspdef: '',
+		// minspd: '',
+	});
 	const [myPokemon, setMyPokemon] = useState([
 		{
+			id: 'ed35a614-bb4f-4295-bee9-3a4c0c2a6328',
 			name: 'Charizard',
 			shiny: true,
 			dex: '006',
@@ -38,6 +63,7 @@ const Dashboard = () => {
 			],
 		},
 		{
+			id: 'bbd2a3a9-6251-4349-8c44-45111c91943a',
 			name: 'Venusaur',
 			shiny: false,
 			dex: '003',
@@ -65,6 +91,7 @@ const Dashboard = () => {
 			],
 		},
 		{
+			id: 'b24e25b2-31b7-4b18-8022-cb4564fb06be',
 			name: 'Arcanine',
 			shiny: true,
 			dex: '059',
@@ -89,6 +116,7 @@ const Dashboard = () => {
 			],
 		},
 		{
+			id: '29a28fd5-7d2a-4798-9268-734915b8110e',
 			name: 'Beedrill',
 			shiny: false,
 			dex: '015',
@@ -111,6 +139,7 @@ const Dashboard = () => {
 			eggMoves: [],
 		},
 		{
+			id: '45b381c0-2b9f-4459-8806-a0c8f52b82d3',
 			name: 'Pidgeotto',
 			shiny: false,
 			dex: '017',
@@ -135,6 +164,7 @@ const Dashboard = () => {
 			],
 		},
 		{
+			id: 'd5ec9ee1-59a7-45eb-98fd-91db594af3b6',
 			name: 'Vulpix-Alola',
 			shiny: true,
 			dex: '037',
@@ -159,6 +189,10 @@ const Dashboard = () => {
 			],
 		},
 	]);
+	const [filteredPokemon, setFilteredPokemon] = useState(myPokemon);
+	const filterPokemon = () => {
+		setFilteredPokemon(filteredPokemon);
+	};
 	useEffect(() => {
 		if (myPokemon.length > 0) {
 			setIsDisabled(false);
@@ -166,6 +200,43 @@ const Dashboard = () => {
 			setIsDisabled(true);
 		}
 	}, [myPokemon]);
+	useEffect(() => {
+		// eslint-disable-next-line
+		for (const [key, value] of Object.entries(filters)) {
+			if (value !== '') {
+				setFilterDisabled(false);
+				break;
+			} else {
+				setFilterDisabled(true);
+			}
+		}
+	}, [filters]);
+
+	// from autocomplete - this is how they show to write for the shouldItemRender
+	const renderPokemonName = (state, val) =>
+		state.toLowerCase().indexOf(val.toLowerCase()) !== -1;
+
+	// function to correct casing and allow user to type in lower or uppercase and still use autocomplete
+	const properNameCase = (val) => {
+		const newVal = val.replace(/(^|[\s-])\S/g, (match) => {
+			return match.toUpperCase();
+		});
+		return newVal;
+	};
+
+	// handler for the autocomplete - this goes through each pokemon when a value is typed in
+	// if the pokemon is a complete match it sets the state value for name otherwise it clears the value
+	const changeHandler = (e, val) => {
+		setAutoValue(val);
+		filteredPokemon.forEach((poke) => {
+			if (val.toLowerCase() === poke.name.toLowerCase()) {
+				setFilters({ ...filters, name: properNameCase(val) });
+				setIsDisabled(false);
+			} else if (filters.name !== '') {
+				setFilters({ ...filters, name: '' });
+			}
+		});
+	};
 	return (
 		<section className="Dashboard">
 			<div>
@@ -195,11 +266,11 @@ const Dashboard = () => {
 				</div>
 				<hr />
 				<div className="pokemon-list">
-					{myPokemon.map((pokemon) => (
+					{filteredPokemon.map((pokemon) => (
 						<PokemonCard
 							key={pokemon.id}
 							pokemon={pokemon}
-							myPokemon={myPokemon}
+							filteredPokemon={filteredPokemon}
 						/>
 					))}
 				</div>
@@ -217,14 +288,53 @@ const Dashboard = () => {
 			</Modal>
 			<Modal
 				show={filterShow}
-				onHide={() => setFilterShow(false)}
+				onHide={() => setFilterShow(true)}
 				dialogClassName="modal-90w"
 				aria-labelledby="example-custom-modal-styling-title"
 			>
 				<Modal.Header closeButton>
-					<h1>Add Pokemon</h1>
+					<h1>Filter</h1>
+					<div className="Autocomplete">
+						<Autocomplete
+							className="Autocomplete"
+							value={autoValue}
+							inputProps={{
+								placeholder: 'Select Pokemon',
+							}}
+							items={filteredPokemon.map((el) => el.name)}
+							getItemValue={(item) => item}
+							shouldItemRender={renderPokemonName}
+							renderMenu={(item) => (
+								<div
+									key={`pokemon-${item}`}
+									className="dropdown"
+								>
+									{item}
+								</div>
+							)}
+							renderItem={(item, isHighlighted) => (
+								<div
+									key={`${item}-div`}
+									className={`item ${
+										isHighlighted ? 'selected-item' : ''
+									}`}
+								>
+									{item}
+								</div>
+							)}
+							onChange={changeHandler}
+							onSelect={changeHandler}
+						/>
+					</div>
+					<Button
+						variant="tertiary"
+						size="lg"
+						disabled={filterDisabled}
+						onClick={filterPokemon}
+					>
+						Filter
+					</Button>
 				</Modal.Header>
-				<AddPokemon setMyPokemon={setMyPokemon} />
 			</Modal>
 		</section>
 	);
