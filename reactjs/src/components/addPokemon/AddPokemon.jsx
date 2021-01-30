@@ -7,17 +7,20 @@ import FormControl from '../formControl';
 import TypePills from '../typePills';
 import './AddPokemon.scss';
 
-const AddPokemon = ({ id, setMyPokemon, pokemon }) => {
+const AddPokemon = ({ id, setMyPokemon, myPokemon, pokemon }) => {
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
 	const [autoValue, setAutoValue] = useState('');
 	const [isDisabled, setIsDisabled] = useState(true);
+	const [btnDisabled, setBtnDisabled] = useState(true);
 	const [resetSelect, setResetSelect] = useState(false);
 	const [newPokemon, setNewPokemon] = useState({
 		name: '',
+		dex: '',
 		ball: '',
 		gender: '',
 		ability: '',
 		shiny: '',
+		types: '',
 		moves: '',
 		hp: '',
 		atk: '',
@@ -33,18 +36,17 @@ const AddPokemon = ({ id, setMyPokemon, pokemon }) => {
 		hiddenAbility: '',
 		moves: [],
 	});
-	// useEffect(() => {
-	// 	console.log(newPokemon);
-	// }, [newPokemon]);
 	// if the object has been passed in that means this is being edited - set the state to existing
 	useEffect(() => {
 		if (pokemon !== null) {
 			setNewPokemon({
 				name: pokemon.name,
+				dex: pokemon.dex,
 				ball: pokemon.ball,
 				gender: pokemon.gender[1],
 				ability: pokemon.ability,
 				shiny: pokemon.shiny,
+				types: pokemon.types,
 				moves: pokemon.eggMoves,
 				hp: pokemon.ivs.HP,
 				atk: pokemon.ivs.Atk,
@@ -56,6 +58,22 @@ const AddPokemon = ({ id, setMyPokemon, pokemon }) => {
 			});
 		}
 	}, [pokemon]);
+	// check if the correct items are selected in state - disable/enable button depending
+	useEffect(() => {
+		if (newPokemon.name !== '') {
+			if (
+				newPokemon.gender !== '' &&
+				newPokemon.ability !== '' &&
+				newPokemon.ball !== ''
+			) {
+				setBtnDisabled(false);
+			} else {
+				setBtnDisabled(true);
+			}
+		} else {
+			setBtnDisabled(true);
+		}
+	}, [newPokemon]);
 
 	// run through the data and get types based on the move name - this will be fixed in the database
 	const getType = (move) => {
@@ -98,6 +116,14 @@ const AddPokemon = ({ id, setMyPokemon, pokemon }) => {
 				moves: moveArr,
 			};
 			setPickedData(newData);
+			setNewPokemon({
+				...newPokemon,
+				dex: pokemonData.pokemon[newPokemon.name].dex,
+			});
+			setNewPokemon({
+				...newPokemon,
+				types: pokemonData.pokemon[newPokemon.name].types,
+			});
 		} else {
 			setResetSelect(true);
 			setPickedData({
@@ -148,6 +174,41 @@ const AddPokemon = ({ id, setMyPokemon, pokemon }) => {
 				setIsDisabled(true);
 			}
 		});
+	};
+	// assign values and submit
+	const submitHandler = (e) => {
+		e.preventDefault();
+		const ball = newPokemon.ball
+			.substr(0, newPokemon.ball.indexOf(' '))
+			.toLowerCase();
+		const addPoke = {
+			name: newPokemon.name,
+			shiny: newPokemon.shiny,
+			dex: newPokemon.dex,
+			ball,
+			level: newPokemon.level,
+			types: [
+				{ type: 'fire', name: 'Fire' },
+				{ type: 'flying', name: 'Flying' },
+			],
+			gender: ['female', '87.5%'],
+			ability: newPokemon.ability,
+			ivs: [
+				{ HP: newPokemon.hp },
+				{ Atk: newPokemon.atk },
+				{ Def: newPokemon.def },
+				{ SpAtk: newPokemon.spAtk },
+				{ SpDef: newPokemon.spDef },
+				{ Spd: newPokemon.spd },
+			],
+			eggMoves: [
+				{ normal: 'Belly Drum' },
+				{ dark: 'Bite' },
+				{ dragon: 'Dragon Tail' },
+				{ flying: 'Wing Attack' },
+			],
+		};
+		setMyPokemon([...myPokemon, addPoke]);
 	};
 
 	return (
@@ -317,10 +378,10 @@ const AddPokemon = ({ id, setMyPokemon, pokemon }) => {
 			</section>
 			<div className="buttons">
 				<Button
-					onClick={setMyPokemon}
+					onClick={submitHandler}
 					variant="secondary"
 					size="lg"
-					disabled
+					disabled={btnDisabled}
 				>
 					Submit
 				</Button>

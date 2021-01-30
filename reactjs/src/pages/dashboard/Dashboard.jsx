@@ -12,7 +12,11 @@ const Dashboard = () => {
 		<section className="Dashboard">
 			<div>
 				<h1>Add Pokemon</h1>
-				<AddPokemon id="lg" setMyPokemon={setMyPokemon} />
+				<AddPokemon
+					id="lg"
+					setMyPokemon={setMyPokemon}
+					myPokemon={myPokemon}
+				/>
 				<div className="buttons filter-modal">
 					<Button
 						className="add"
@@ -40,7 +44,11 @@ const Dashboard = () => {
 				<AddPokemon setMyPokemon={setMyPokemon} />
 			</Modal>
 			{myPokemon.map((pokemon) => (
-				<PokemonCard key={pokemon.id} pokemon={pokemon} />
+				<PokemonCard
+					key={pokemon.id}
+					pokemon={pokemon}
+					myPokemon={myPokemon}
+				/>
 			))}
 		</section>
 	);
