@@ -1,0 +1,12 @@
+@import '../../assets/scss/colors';
+
+.Footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $primary;
+	color: $light;
+	p {
+		margin: 0;
+	}
+}
