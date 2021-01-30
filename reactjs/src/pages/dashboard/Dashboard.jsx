@@ -7,6 +7,8 @@ import './Dashboard.scss';
 
 const Dashboard = () => {
 	const [show, setShow] = useState(false);
+	const [filterShow, setFilterShow] = useState(false);
+	const [isDisabled, setIsDisabled] = useState(true);
 	const [myPokemon, setMyPokemon] = useState([
 		{
 			name: 'Charizard',
@@ -158,7 +160,11 @@ const Dashboard = () => {
 		},
 	]);
 	useEffect(() => {
-		console.log(myPokemon);
+		if (myPokemon.length > 0) {
+			setIsDisabled(false);
+		} else {
+			setIsDisabled(true);
+		}
 	}, [myPokemon]);
 	return (
 		<section className="Dashboard">
@@ -178,7 +184,12 @@ const Dashboard = () => {
 					>
 						Add Pokemon
 					</Button>
-					<Button variant="tertiary" size="lg" disabled>
+					<Button
+						variant="tertiary"
+						size="lg"
+						disabled={isDisabled}
+						onClick={() => setFilterShow(true)}
+					>
 						Filter
 					</Button>
 				</div>
@@ -196,6 +207,17 @@ const Dashboard = () => {
 			<Modal
 				show={show}
 				onHide={() => setShow(false)}
+				dialogClassName="modal-90w"
+				aria-labelledby="example-custom-modal-styling-title"
+			>
+				<Modal.Header closeButton>
+					<h1>Add Pokemon</h1>
+				</Modal.Header>
+				<AddPokemon setMyPokemon={setMyPokemon} />
+			</Modal>
+			<Modal
+				show={filterShow}
+				onHide={() => setFilterShow(false)}
 				dialogClassName="modal-90w"
 				aria-labelledby="example-custom-modal-styling-title"
 			>
