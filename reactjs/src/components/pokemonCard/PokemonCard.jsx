@@ -14,7 +14,7 @@ import './PokemonCard.scss';
 const PokemonCard = ({ pokemon, addTrade }) => {
 	const [expanded, setExpanded] = useState(false);
 	const pokePath = require(`../../assets/images/icons/pokemon/${
-		pokemon.shiny ? 'shiny/' : 'regular/'
+		pokemon.shiny || pokemon.shiny === 0 ? 'shiny/' : 'regular/'
 	}${pokemon.name}.svg`);
 
 	const ballPath = require(`../../assets/images/icons/balls/${pokemon.ball}.svg`);
@@ -24,12 +24,13 @@ const PokemonCard = ({ pokemon, addTrade }) => {
 			<Image className="pokemon" src={pokePath.default} />
 			<h2>
 				{pokemon.name}
-				{pokemon.shiny && (
-					<span>
-						{' '}
-						<Image src={Shiny} />
-					</span>
-				)}
+				{pokemon.shiny ||
+					(pokemon.shiny === 0 && (
+						<span>
+							{' '}
+							<Image src={Shiny} />
+						</span>
+					))}
 			</h2>
 			<p className="dex">
 				Dex:

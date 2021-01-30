@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import PokemonCard from '../../components/pokemonCard';
@@ -8,6 +8,9 @@ import './Dashboard.scss';
 const Dashboard = () => {
 	const [show, setShow] = useState(false);
 	const [myPokemon, setMyPokemon] = useState([]);
+	useEffect(() => {
+		console.log(myPokemon);
+	}, [myPokemon]);
 	return (
 		<section className="Dashboard">
 			<div>
@@ -31,6 +34,15 @@ const Dashboard = () => {
 					</Button>
 				</div>
 				<hr />
+				<div className="pokemon-list">
+					{myPokemon.map((pokemon) => (
+						<PokemonCard
+							key={pokemon.id}
+							pokemon={pokemon}
+							myPokemon={myPokemon}
+						/>
+					))}
+				</div>
 			</div>
 			<Modal
 				show={show}
@@ -43,13 +55,6 @@ const Dashboard = () => {
 				</Modal.Header>
 				<AddPokemon setMyPokemon={setMyPokemon} />
 			</Modal>
-			{myPokemon.map((pokemon) => (
-				<PokemonCard
-					key={pokemon.id}
-					pokemon={pokemon}
-					myPokemon={myPokemon}
-				/>
-			))}
 		</section>
 	);
 };
