@@ -1,3 +1,4 @@
+@import '../../assets/scss/colors';
 .AddPokemon {
 	.Autocomplete {
 		width: 100%;
@@ -23,9 +24,9 @@
 			background-origin: content-box;
 			background-position-x: -17%;
 			&:focus {
-				color: #495057;
-				background-color: #fff;
-				border-color: #80bdff;
+				color: $dark;
+				background-color: $light;
+				border-color: $primary-light;
 				outline: 0;
 				box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 			}
@@ -38,7 +39,7 @@
 			max-height: 280px;
 			overflow: hidden;
 			overflow-y: auto;
-			background-color: #122330;
+			background-color: $primary-dark;
 			border-top: none;
 			position: absolute;
 			.item {
@@ -47,12 +48,12 @@
 				font-size: 14px;
 				padding: 15px;
 				&.selected-item {
-					background-color: lighten($color: #122330, $amount: 20);
-					color: #fafbfc;
+					background-color: $primary-lighten;
+					color: $light;
 				}
 				&:hover {
-					background-color: lighten($color: #122330, $amount: 20);
-					color: #fafbfc;
+					background-color: $primary-lighten;
+					color: $light;
 				}
 			}
 		}
@@ -60,8 +61,8 @@
 
 	select.Form-Control,
 	input {
-		background-color: #122330;
-		color: #2888b1;
+		background-color: $primary-dark;
+		color: $primary-light;
 		font-size: 1.125rem;
 		border: none;
 		&:disabled {

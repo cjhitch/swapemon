@@ -14,6 +14,7 @@ const AddPokemon = ({ pokemon }) => {
 	const [newPokemon, setNewPokemon] = useState({
 		autoValue: '',
 		name: '',
+		ball: '',
 		gender: '',
 		ability: '',
 		shiny: '',
@@ -29,6 +30,19 @@ const AddPokemon = ({ pokemon }) => {
 		level: 1,
 	});
 
+	const update = (inputId, value) => {
+		console.log(inputId, value);
+		if (inputId === 'shiny') {
+			if (value === '0') {
+				setNewPokemon({ ...newPokemon, [inputId]: 1 });
+			} else {
+				setNewPokemon({ ...newPokemon, [inputId]: 0 });
+			}
+		} else {
+			setNewPokemon({ ...newPokemon, [inputId]: value });
+		}
+	};
+
 	const renderPokemonName = (state, val) =>
 		state.toLowerCase().indexOf(val.toLowerCase()) !== -1;
 
@@ -39,9 +53,10 @@ const AddPokemon = ({ pokemon }) => {
 		return newVal;
 	};
 
-	const changeHandler = (e, val) => {
+	const changeHandler = (val) => {
+		console.log(val);
 		setAutoValue(val);
-		Object.keys(pokemonData).forEach((poke) => {
+		Object.keys(pokemonData.pokemon).forEach((poke) => {
 			if (val.toLowerCase() === poke.toString().toLowerCase()) {
 				setNewPokemon({ ...newPokemon, name: properNameCase(val) });
 			} else if (newPokemon.name !== '') {
@@ -82,7 +97,14 @@ const AddPokemon = ({ pokemon }) => {
 					onSelect={changeHandler}
 				/>
 			</div>
-			<FormControl type="select" placeholder="" />
+			<FormControl
+				type="select"
+				placeholder="Pokeball"
+				options={pokemonData.balls}
+				value={newPokemon.ball}
+				update={update}
+				id="ball"
+			/>
 		</div>
 	);
 };

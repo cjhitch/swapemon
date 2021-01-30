@@ -27,8 +27,10 @@ const FormControl = ({
 					{label && <Form.Label>{label}</Form.Label>}
 					<Form.Control
 						as="select"
+						value={value === '' ? 'Please Select Option' : value}
 						onChange={(e) => update(id, e.target.value)}
 					>
+						<option disabled>Please Select Option</option>
 						{options &&
 							options.map((opt) => (
 								<option key={opt}>{opt}</option>
