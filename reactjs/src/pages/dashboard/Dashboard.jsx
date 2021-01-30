@@ -5,8 +5,10 @@ import './Dashboard.scss';
 const Dashboard = () => {
 	return (
 		<section className="Dashboard">
-			<h1>Add Pokemon</h1>
-			<AddPokemon />
+			<div>
+				<h1>Add Pokemon</h1>
+				<AddPokemon />
+			</div>
 		</section>
 	);
 };

@@ -1,6 +1,15 @@
 @import '../../assets/scss/colors';
 .AddPokemon {
+	display: grid;
+	grid-template-areas: 'name gender ivarea' 'ball abil ivarea' 'move move move';
+	grid-template-columns: 1fr 1fr 2fr;
+	@media (max-width: 47.9375rem) {
+		grid-template-columns: 1fr;
+		grid-template-areas: 'name' 'gender' 'abil' 'ball' 'ivarea' 'move';
+	}
+	grid-column-gap: 1.25rem;
 	.Autocomplete {
+		grid-area: name;
 		width: 100%;
 		position: relative;
 		display: inline-block;
@@ -20,9 +29,9 @@
 			background-color: $primary-dark;
 			color: $primary;
 			border: none;
+			// decided to not do background image at the current time - saving for later
 			// transition: border-color 0.15s ease-in-out,
 			// 	box-shadow 0.15s ease-in-out;
-			// decided to not do background image at the current time - saving for later
 			// background-clip: padding-box;
 			// background-size: contain;
 			// background-repeat: no-repeat;
@@ -64,22 +73,83 @@
 			}
 		}
 	}
+	.FormControl {
+		&.gender {
+			grid-area: gender;
+		}
+		&.ability {
+			grid-area: abil;
+		}
+		&.ball {
+			grid-area: ball;
+		}
+	}
 	.level-iv-shiny {
+		grid-area: ivarea;
+		display: grid;
+		grid-template-areas:
+			'lvl hp atk def'
+			'shiny spatk spdef spd';
+		@media (max-width: 47.9375rem) {
+			grid-template-areas:
+				'lvl shiny'
+				'hp atk'
+				'def spatk'
+				'spdef spd';
+		}
+		// grid-template-columns: repeat(4 1fr);
+		grid-column-gap: 1.25rem;
 		.FormControl {
+			&.level {
+				grid-area: lvl;
+			}
+			&.shiny {
+				margin-top: 0.5rem;
+				grid-area: shiny;
+				label {
+					margin-top: 0.35rem;
+					padding-left: 1rem;
+					&::before {
+						width: 2rem;
+						height: 2rem;
+					}
+				}
+			}
+			&.hp {
+				grid-area: hp;
+			}
+			&.atk {
+				grid-area: atk;
+			}
+			&.def {
+				grid-area: def;
+			}
+			&.spAtk {
+				grid-area: spatk;
+			}
+			&.spDef {
+				grid-area: spdef;
+			}
+			&.spd {
+				grid-area: spd;
+			}
 			.form-group {
 				display: flex;
 				label {
-					width: 70px;
+					flex: 0 0 4.375rem;
 					text-align: right;
-					background: #545454;
-					padding: 9px 9px 9px 0;
-					border-top-left-radius: 10px;
-					border-bottom-left-radius: 10px;
-					height: 38px;
+					background: $dark-54;
+					padding: 0.78125rem 0.5625rem 0.78125rem 0;
+					border-top-left-radius: 0.625rem;
+					border-bottom-left-radius: 0.625rem;
+					height: 2.8125rem;
+					align-self: center;
+					margin-bottom: 0;
+					color: $light-70;
 				}
 				input {
-					width: 66px;
-					height: 38px;
+					// width: 66px;
+					height: 2.8125rem;
 				}
 			}
 		}
@@ -87,8 +157,10 @@
 
 	select.form-control,
 	input {
+		appearance: none;
 		&:disabled {
-			opacity: 50%;
+			opacity: 25%;
+			// filter: brightness(0.15);
 		}
 	}
 	select.Form-Control {

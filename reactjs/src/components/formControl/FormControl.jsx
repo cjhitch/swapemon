@@ -16,7 +16,7 @@ const FormControl = ({
 	max,
 }) => {
 	return (
-		<div className="FormControl">
+		<div className={`FormControl ${id}`}>
 			{type === 'checkbox' ? (
 				<Form.Check
 					disabled={disabled}
@@ -67,7 +67,7 @@ FormControl.propTypes = {
 		PropTypes.string,
 		PropTypes.number,
 		PropTypes.bool,
-	]).isRequired,
+	]),
 	update: PropTypes.func.isRequired,
 	type: PropTypes.string,
 	id: PropTypes.string,
@@ -80,6 +80,7 @@ FormControl.propTypes = {
 };
 
 FormControl.defaultProps = {
+	value: '',
 	id: null,
 	type: 'select',
 	label: null,

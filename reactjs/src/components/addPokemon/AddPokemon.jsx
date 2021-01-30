@@ -15,12 +15,12 @@ const AddPokemon = ({ pokemon }) => {
 		ability: '',
 		shiny: '',
 		moves: '',
-		hp: -1,
-		atk: -1,
-		def: -1,
-		spAtk: -1,
-		spDef: -1,
-		spd: -1,
+		hp: '',
+		atk: '',
+		def: '',
+		spAtk: '',
+		spDef: '',
+		spd: '',
 		level: 1,
 	});
 	const [pickedData, setPickedData] = useState({
@@ -71,7 +71,6 @@ const AddPokemon = ({ pokemon }) => {
 	}, [newPokemon.name]);
 
 	const update = (inputId, value) => {
-		console.log(inputId, value);
 		if (inputId === 'shiny') {
 			if (value === '0') {
 				setNewPokemon({ ...newPokemon, [inputId]: 1 });
@@ -94,7 +93,6 @@ const AddPokemon = ({ pokemon }) => {
 	};
 
 	const changeHandler = (e, val) => {
-		console.log(val);
 		setAutoValue(val);
 		Object.keys(pokemonData.pokemon).forEach((poke) => {
 			if (val.toLowerCase() === poke.toString().toLowerCase()) {
@@ -107,7 +105,6 @@ const AddPokemon = ({ pokemon }) => {
 		});
 	};
 
-	console.log(pokemon);
 	return (
 		<div className="AddPokemon">
 			<div className="Autocomplete">
@@ -158,7 +155,7 @@ const AddPokemon = ({ pokemon }) => {
 				options={pickedData.abilities}
 				value={newPokemon.ability}
 				update={update}
-				id="gender"
+				id="ability"
 			/>
 			<FormControl
 				type="select"
