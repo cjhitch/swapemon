@@ -313,7 +313,7 @@ const Dashboard = () => {
 			<Modal
 				show={filterShow}
 				onHide={() => setFilterShow(true)}
-				dialogClassName="modal-90w"
+				dialogClassName="modal-90w filter"
 				aria-labelledby="example-custom-modal-styling-title"
 			>
 				<Modal.Header closeButton>
@@ -347,35 +347,35 @@ const Dashboard = () => {
 						onChange={changeHandler}
 						onSelect={changeHandler}
 					/>
-					<FormControl
-						type="select"
-						placeholder="Select Gender"
-						disabled={isDisabled}
-						options={[`male`, `female`]}
-						value={filters.gender}
-						update={update}
-						id="gender"
-						// resetSelect={resetSelect}
-					/>
-					<FormControl
-						type="select"
-						placeholder="Select Ability"
-						disabled={isDisabled}
-						options={filteredPokemon.map((el) => el.ability)}
-						value={filters.ability}
-						update={update}
-						id="ability"
-						// resetSelect={resetSelect}
-					/>
-					<FormControl
-						type="select"
-						placeholder="Select Pokeball"
-						options={filteredPokemon.map((el) => el.ball)}
-						value={filters.ball}
-						update={update}
-						id="ball"
-					/>
 				</div>
+				<FormControl
+					type="select"
+					placeholder="Select Gender"
+					disabled={isDisabled}
+					options={[`male`, `female`]}
+					value={filters.gender}
+					update={update}
+					id="gender"
+					// resetSelect={resetSelect}
+				/>
+				<FormControl
+					type="select"
+					placeholder="Select Ability"
+					disabled={isDisabled}
+					options={filteredPokemon.map((el) => el.ability)}
+					value={filters.ability}
+					update={update}
+					id="ability"
+					// resetSelect={resetSelect}
+				/>
+				<FormControl
+					type="select"
+					placeholder="Select Pokeball"
+					options={filteredPokemon.map((el) => el.ball)}
+					value={filters.ball}
+					update={update}
+					id="ball"
+				/>
 				<Button
 					variant="tertiary"
 					size="lg"
