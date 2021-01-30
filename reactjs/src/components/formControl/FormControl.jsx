@@ -14,6 +14,7 @@ const FormControl = ({
 	disabled,
 	num,
 	max,
+	multiple,
 }) => {
 	return (
 		<div className={`FormControl ${id}`}>
@@ -30,6 +31,7 @@ const FormControl = ({
 				<Form.Group controlId={id}>
 					{label && <Form.Label>{label}</Form.Label>}
 					<Form.Control
+						multiple={multiple}
 						disabled={disabled}
 						as="select"
 						value={value === '' ? placeholder : value}
@@ -77,6 +79,7 @@ FormControl.propTypes = {
 	disabled: PropTypes.bool,
 	num: PropTypes.bool,
 	max: PropTypes.number,
+	multiple: PropTypes.bool,
 };
 
 FormControl.defaultProps = {
@@ -89,6 +92,7 @@ FormControl.defaultProps = {
 	disabled: false,
 	num: false,
 	max: -1,
+	multiple: false,
 };
 
 export default FormControl;

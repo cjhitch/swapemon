@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Autocomplete from 'react-autocomplete';
 import pokemonData from '../../assets/data/pokemon_info.json';
 import FormControl from '../formControl';
+import TypePills from '../typePills';
 import './AddPokemon.scss';
 
 const AddPokemon = ({ pokemon }) => {
@@ -27,7 +28,7 @@ const AddPokemon = ({ pokemon }) => {
 		gender: '',
 		ability: '',
 		hiddenAbility: '',
-		moves: '',
+		moves: [],
 	});
 	useEffect(() => {
 		if (pokemon !== null) {
@@ -49,6 +50,18 @@ const AddPokemon = ({ pokemon }) => {
 		}
 	}, [pokemon]);
 
+	const getType = (move) => {
+		let type;
+		// eslint-disable-next-line
+		for (const [key, value] of Object.entries(pokemonData.moves)) {
+			if (key === move) {
+				type = value.type;
+				break;
+			}
+		}
+		return type;
+	};
+
 	useEffect(() => {
 		if (newPokemon.name !== '') {
 			const abilArr = pokemonData.pokemon[newPokemon.name].ability.filter(
@@ -61,10 +74,16 @@ const AddPokemon = ({ pokemon }) => {
 					pokemonData.pokemon[newPokemon.name].hidden_ability
 				);
 			}
+			// this is not efficient currently but should be better when pulling from the database
+			const moveArr = [];
+			pokemonData.pokemon[newPokemon.name].egg_moves.forEach((move) => {
+				const newMove = { [getType(move)]: move };
+				moveArr.push(newMove);
+			});
 			const newData = {
 				gender: pokemonData.pokemon[newPokemon.name].gender,
 				abilities: abilArr,
-				moves: pokemonData.pokemon[newPokemon.name].egg_moves,
+				moves: moveArr,
 			};
 			setPickedData(newData);
 		}
@@ -237,6 +256,16 @@ const AddPokemon = ({ pokemon }) => {
 					max={2}
 				/>
 			</div>
+			<section className="moves">
+				<h2>Select Moves: </h2>
+				{pickedData.moves.map((move) => (
+					<TypePills
+						key={Object.values(move)}
+						type={Object.keys(move)[0].toLowerCase()}
+						name={Object.values(move)}
+					/>
+				))}
+			</section>
 		</div>
 	);
 };
