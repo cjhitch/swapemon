@@ -11,7 +11,7 @@ const Dashboard = () => {
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
 	const [autoValue, setAutoValue] = useState('');
 	const [show, setShow] = useState(false);
-	const [filterShow, setFilterShow] = useState(true);
+	const [filterShow, setFilterShow] = useState(false);
 	const [isDisabled, setIsDisabled] = useState(true);
 	const [filterDisabled, setFilterDisabled] = useState(true);
 	const [filters, setFilters] = useState({
@@ -312,7 +312,7 @@ const Dashboard = () => {
 			</Modal>
 			<Modal
 				show={filterShow}
-				onHide={() => setFilterShow(true)}
+				onHide={() => setFilterShow(false)}
 				dialogClassName="modal-90w filter"
 				aria-labelledby="example-custom-modal-styling-title"
 			>
