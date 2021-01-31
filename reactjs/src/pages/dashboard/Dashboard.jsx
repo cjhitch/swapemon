@@ -207,12 +207,11 @@ const Dashboard = () => {
 		// TODO: this needs to become a spread operator, it also needs to use && for the array instead of just adding everything
 		// eslint-disable-next-line
 		const merged = [].concat.apply([], newPokeArr);
-		console.log(merged);
 		setFilteredPokemon(merged);
 	};
-	useEffect(() => {
-		console.log(filteredPokemon);
-	}, [filteredPokemon]);
+	// useEffect(() => {
+	// 	console.log(filteredPokemon);
+	// }, [filteredPokemon]);
 	useEffect(() => {
 		if (myPokemon.length > 0) {
 			setIsDisabled(false);
