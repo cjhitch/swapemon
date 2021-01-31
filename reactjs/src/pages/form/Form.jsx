@@ -6,7 +6,7 @@ import container from './container';
 // import './ItemForm.scss';
 
 const ItemForm = ({ filters, ...props }) => {
-	console.log(container);
+	// console.log(container);
 	const [form, setForm] = useState({
 		title: '',
 		description: '',
@@ -42,6 +42,7 @@ const ItemForm = ({ filters, ...props }) => {
 	};
 
 	const save = (e) => {
+		console.log('in save');
 		e.preventDefault();
 		const {
 			createItem,
@@ -56,18 +57,19 @@ const ItemForm = ({ filters, ...props }) => {
 		} else {
 			createItem({ title, description, type });
 		}
+		console.log('ran through the save function');
 	};
 
 	useEffect(() => {
 		loadData();
-	}, []);
+	});
 
 	return (
 		<Container className="ItemForm my-4">
 			<h1>Item Form</h1>
 			<Form onSubmit={save}>
 				<Form.Group>
-					<Form.Label htmlfor="title">Title</Form.Label>
+					<Form.Label htmlFor="title">Title</Form.Label>
 					<Form.Control
 						type="text"
 						name="title"
@@ -77,7 +79,7 @@ const ItemForm = ({ filters, ...props }) => {
 					/>
 				</Form.Group>
 				<Form.Group>
-					<Form.Label htmlfor="description">Description</Form.Label>
+					<Form.Label htmlFor="description">Description</Form.Label>
 					<Form.Control
 						type="textarea"
 						name="description"
@@ -87,7 +89,7 @@ const ItemForm = ({ filters, ...props }) => {
 					/>
 				</Form.Group>
 				<Form.Group>
-					<Form.Label htmlfor="type">Select</Form.Label>
+					<Form.Label htmlFor="type">Select</Form.Label>
 					<Form.Control
 						as="select"
 						name="type"
@@ -102,7 +104,7 @@ const ItemForm = ({ filters, ...props }) => {
 						))}
 					</Form.Control>
 				</Form.Group>
-				<Button>Submit</Button>
+				<Button type="submit">Submit</Button>
 			</Form>
 		</Container>
 	);
