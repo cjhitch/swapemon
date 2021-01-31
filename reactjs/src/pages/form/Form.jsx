@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import { Container, Form, Button } from 'react-bootstrap';
 import container from './container';
@@ -150,4 +151,4 @@ ItemForm.defaultProps = {
 	],
 };
 
-export default container(ItemForm);
+export default withRouter(container(ItemForm));
