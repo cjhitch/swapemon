@@ -9,10 +9,12 @@ import callAPI from './helpers/callAPIMiddleware';
 
 // pull our reducers
 import items from './items/reducer';
+import users from './users/reducer';
 
 // combine multiple reducers into one
 const rootReducer = combineReducers({
 	items,
+	users,
 });
 
 // set up middleware

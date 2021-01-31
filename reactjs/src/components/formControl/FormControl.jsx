@@ -12,7 +12,7 @@ const FormControl = ({
 	options,
 	placeholder,
 	disabled,
-	num,
+	// num,
 	max,
 	multiple,
 	resetSelect,
@@ -59,7 +59,6 @@ const FormControl = ({
 						placeholder={placeholder}
 						id={id}
 						max={max !== -1 ? max : ''}
-						pattern={num ? '[0-9]*' : ''}
 					/>
 				</Form.Group>
 			)}
@@ -80,7 +79,7 @@ FormControl.propTypes = {
 	placeholder: PropTypes.string,
 	options: PropTypes.arrayOf(PropTypes.string),
 	disabled: PropTypes.bool,
-	num: PropTypes.bool,
+	// num: PropTypes.bool,
 	max: PropTypes.number,
 	multiple: PropTypes.bool,
 	resetSelect: PropTypes.bool,
@@ -94,7 +93,7 @@ FormControl.defaultProps = {
 	placeholder: null,
 	options: [],
 	disabled: false,
-	num: false,
+	// num: false,
 	max: -1,
 	multiple: false,
 	resetSelect: false,

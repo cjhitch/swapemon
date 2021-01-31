@@ -16,7 +16,7 @@ import {
 } from '../actionTypes';
 
 const initialState = {
-	// will hold each item with ids as keys
+	// will hold each user with ids as keys
 	byId: {},
 	// an array of all the ids
 	allIds: [],
@@ -29,7 +29,7 @@ const initialState = {
 };
 
 // eslint-disable-next-line
-const itemsPending = (state, action) => {
+const usersPending = (state, action) => {
 	// set loading state and clear error
 	return {
 		...state,
@@ -38,8 +38,8 @@ const itemsPending = (state, action) => {
 	};
 };
 
-const itemsSuccess = (state, action) => {
-	// clear loading and error, update cache time, add items
+const usersSuccess = (state, action) => {
+	// clear loading and error, update cache time, add users
 	return {
 		...state,
 		isLoading: false,
@@ -48,12 +48,12 @@ const itemsSuccess = (state, action) => {
 		byId: {
 			...state.byId,
 			...action.data.reduce(
-				(items, item) => ({
+				(users, user) => ({
 					// keep the current object
-					...items,
-					// add the item id as the key and an item object for loading
-					[item.id]: {
-						data: item,
+					...users,
+					// add the user id as the key and an user object for loading
+					[user.id]: {
+						data: user,
 						isLoading: false,
 						loadedAt: Date.now(),
 						error: null,
@@ -63,12 +63,12 @@ const itemsSuccess = (state, action) => {
 			),
 		},
 		allIds: [
-			...new Set([...state.allIds, action.data.map((item) => item.id)]),
+			...new Set([...state.allIds, action.data.map((user) => user.id)]),
 		],
 	};
 };
 
-const itemsError = (state, action) => {
+const usersError = (state, action) => {
 	// clear loading and set error
 	return {
 		...state,
@@ -78,7 +78,7 @@ const itemsError = (state, action) => {
 };
 
 // eslint-disable-next-line
-const itemPending = (state, action) => {
+const userPending = (state, action) => {
 	// set loading state and clear error
 	return {
 		...state,
@@ -93,8 +93,8 @@ const itemPending = (state, action) => {
 	};
 };
 
-const itemSuccess = (state, action) => {
-	// clear loading and error, update cache time, add items
+const userSuccess = (state, action) => {
+	// clear loading and error, update cache time, add users
 	return {
 		...state,
 		byId: {
@@ -107,12 +107,12 @@ const itemSuccess = (state, action) => {
 			},
 		},
 		allIds: [
-			...new Set([...state.allIds, action.data.map((item) => item.id)]),
+			...new Set([...state.allIds, action.data.map((user) => user.id)]),
 		],
 	};
 };
 
-const itemError = (state, action) => {
+const userError = (state, action) => {
 	// clear loading and set error
 	return {
 		...state,
@@ -128,16 +128,16 @@ const itemError = (state, action) => {
 };
 
 export default createReducer(initialState, {
-	[REQ_USERS_PENDING]: itemsPending,
-	[REQ_USERS_SUCCESS]: itemsSuccess,
-	[REQ_USERS_ERROR]: itemsError,
-	[REQ_USER_PENDING]: itemPending,
-	[REQ_USER_SUCCESS]: itemSuccess,
-	[REQ_USER_ERROR]: itemError,
-	[ADD_USER_PENDING]: itemPending,
-	[ADD_USER_SUCCESS]: itemSuccess,
-	[ADD_USER_ERROR]: itemError,
-	[UPDATE_USER_PENDING]: itemPending,
-	[UPDATE_USER_SUCCESS]: itemSuccess,
-	[UPDATE_USER_ERROR]: itemError,
+	[REQ_USERS_PENDING]: usersPending,
+	[REQ_USERS_SUCCESS]: usersSuccess,
+	[REQ_USERS_ERROR]: usersError,
+	[REQ_USER_PENDING]: userPending,
+	[REQ_USER_SUCCESS]: userSuccess,
+	[REQ_USER_ERROR]: userError,
+	[ADD_USER_PENDING]: userPending,
+	[ADD_USER_SUCCESS]: userSuccess,
+	[ADD_USER_ERROR]: userError,
+	[UPDATE_USER_PENDING]: userPending,
+	[UPDATE_USER_SUCCESS]: userSuccess,
+	[UPDATE_USER_ERROR]: userError,
 });
