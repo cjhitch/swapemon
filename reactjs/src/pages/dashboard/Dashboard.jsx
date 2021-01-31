@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import Autocomplete from 'react-autocomplete';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { store } from '../../providers/store';
 import PokemonCard from '../../components/pokemonCard';
 import AddPokemon from '../../components/addPokemon';
 import FormControl from '../../components/formControl';
@@ -191,6 +192,8 @@ const Dashboard = () => {
 			],
 		},
 	]);
+	const globalState = useContext(store);
+	console.log(globalState);
 	// eslint-disable-next-line
 	const [filteredPokemon, setFilteredPokemon] = useState(myPokemon);
 	const filterPokemon = () => {
