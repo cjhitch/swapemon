@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import Autocomplete from 'react-autocomplete';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import PokemonCard from '../../components/pokemonCard';
 import AddPokemon from '../../components/addPokemon';
 import FormControl from '../../components/formControl';
+import container from '../../components/containers/container';
 import './Dashboard.scss';
 
-const Dashboard = () => {
+// eslint-disable-next-line no-unused-vars
+const Dashboard = ({ fetchItems, items }) => {
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
 	const [autoValue, setAutoValue] = useState('');
 	const [show, setShow] = useState(false);
@@ -397,4 +400,20 @@ const Dashboard = () => {
 	);
 };
 
-export default Dashboard;
+Dashboard.propTypes = {
+	fetchItems: PropTypes.func.isRequired,
+	items: PropTypes.arrayOf(
+		PropTypes.shape({
+			title: PropTypes.string,
+			descriptions: PropTypes.string,
+			image: PropTypes.string,
+			id: PropTypes.string,
+		})
+	),
+};
+
+Dashboard.defaultProps = {
+	items: [],
+};
+
+export default container(Dashboard);
