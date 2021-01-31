@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
@@ -10,6 +10,7 @@ import Logo from '../../assets/images/logo.png';
 import './Create.scss';
 
 const Create = ({ ...props }) => {
+	const history = useHistory();
 	const [user, setUser] = useState({
 		name: '',
 		first: '',
@@ -36,6 +37,7 @@ const Create = ({ ...props }) => {
 		} else {
 			createUser({ name, first, last, email, password });
 		}
+		history.push('/login');
 	};
 	return (
 		<section className="Create">
@@ -84,11 +86,9 @@ const Create = ({ ...props }) => {
 					id="confirm"
 					update={update}
 				/>
-				{/* <Link to="/login"> */}
 				<Button type="submit" variant="secondary">
 					Submit
 				</Button>
-				{/* </Link> */}
 			</Form>
 			<p>
 				<Link to="/forgot">Forgot Password?</Link> |{' '}
