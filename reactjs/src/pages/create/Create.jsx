@@ -36,7 +36,6 @@ const Create = ({ ...props }) => {
 		} else {
 			createUser({ name, first, last, email, password });
 		}
-		console.log('ran through the save function');
 	};
 	return (
 		<section className="Create">

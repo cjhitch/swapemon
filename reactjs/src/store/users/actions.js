@@ -34,7 +34,6 @@ export const fetchUsers = () => ({
 });
 
 export const createUser = (user) => {
-	console.log('create user called');
 	// create a uuid for this user so that we can use it in the reducers for pending and loading
 	const id = v4;
 	console.log(id);

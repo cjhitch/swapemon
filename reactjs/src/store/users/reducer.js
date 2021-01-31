@@ -77,7 +77,6 @@ const usersError = (state, action) => {
 	};
 };
 
-// eslint-disable-next-line
 const userPending = (state, action) => {
 	// set loading state and clear error
 	return {
@@ -106,9 +105,7 @@ const userSuccess = (state, action) => {
 				data: action.data,
 			},
 		},
-		allIds: [
-			...new Set([...state.allIds, action.data.map((user) => user.id)]),
-		],
+		allIds: [...new Set([...state.allIds, action.payload.id])],
 	};
 };
 
