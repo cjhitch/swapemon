@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import { fetchItem, createItem, updateItem } from '../../store/items/actions';
 
 const mapStateToProps = (state, props) => {
-	console.log('state: ', state, 'props: ', props);
 	const {
 		match: {
 			params: { id },

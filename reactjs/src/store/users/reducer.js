@@ -63,7 +63,10 @@ const usersSuccess = (state, action) => {
 			),
 		},
 		allIds: [
-			...new Set([...state.allIds, action.data.map((user) => user.id)]),
+			...new Set([
+				...state.allIds,
+				...action.data.map((user) => user.id),
+			]),
 		],
 	};
 };
