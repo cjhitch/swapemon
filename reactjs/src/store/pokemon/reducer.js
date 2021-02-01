@@ -43,7 +43,15 @@ const pokemonsPending = (state, action) => {
 
 const pokemonsSuccess = (state, action) => {
 	// clear loading and error, update cache time, add pokes
-	// console.log('action data: ', action.data);
+	// eslint-disable-next-line
+	// Object.values(action.data).reduce((pokemons, pokemon) => {
+	// 	console.log(pokemons);
+	// 	console.log(pokemon);
+	// 	console.log(typeof Object.values(action.data));
+	// });
+	// Object.values(action.data).forEach((element) => {
+	// 	console.log({ [element.name]: element });
+	// });
 	return {
 		...state,
 		isLoading: false,
@@ -56,7 +64,7 @@ const pokemonsSuccess = (state, action) => {
 					// keep the current object
 					...pokemons,
 					// add the poke id as the key and an poke object for loading
-					[pokemon.id]: {
+					[pokemon.name]: {
 						data: pokemon,
 						isLoading: false,
 						loadedAt: Date.now(),
@@ -69,7 +77,7 @@ const pokemonsSuccess = (state, action) => {
 		allIds: [
 			...new Set([
 				...state.allIds,
-				...Object.values(action.data).map((pokemon) => pokemon.id),
+				...Object.values(action.data).map((pokemon) => pokemon.name),
 			]),
 		],
 	};

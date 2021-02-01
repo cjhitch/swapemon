@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
@@ -7,11 +8,24 @@ import pokemonData from '../../assets/data/pokemon_info.json';
 import FormControl from '../formControl';
 import TypePills from '../typePills';
 import { updateUsermon, createUsermon } from '../../store/usermons/actions';
+import { fetchPokemons } from '../../store/pokemon/actions';
 import './AddPokemon.scss';
 
 const AddPokemon = ({ id, pokeId }) => {
 	const pokeData = useSelector((state) => state.usermons);
+	const pokes = useSelector((state) => state.pokemon);
+	const [pokemon, setPokemon] = useState([]);
 	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(fetchPokemons());
+	}, []);
+	useEffect(() => {
+		if (pokes.allIds.length > 0) {
+			setPokemon(pokes.byId);
+		}
+	}, [pokes]);
+	console.log(pokemon);
 	// TODO: this will be once the user logged in
 	const username = 'JamesEarlJones';
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
@@ -98,41 +112,34 @@ const AddPokemon = ({ id, pokeId }) => {
 		return type;
 	};
 
-	// check when the pokemon name is set in state
-	// once that is done get an array of abilities - this should be fixed in the database
 	// set the picked data to set for the dropdowns
 	useEffect(() => {
-		if (newPokemon.name !== '') {
+		if (pokemon[newPokemon.name]) {
+			const poke = pokemon[newPokemon.name].data;
 			setResetSelect(false);
-			const abilArr = pokemonData.pokemon[newPokemon.name].ability.filter(
-				(abil) => abil !== '----'
-			);
-			if (
-				pokemonData.pokemon[newPokemon.name].hidden_ability !== '----'
-			) {
-				abilArr.push(
-					pokemonData.pokemon[newPokemon.name].hidden_ability
-				);
+			const abilArr = poke.ability.filter((abil) => abil !== '----');
+			if (poke.hidden_ability !== '----') {
+				abilArr.push(poke.hidden_ability);
 			}
 			// this is not efficient currently but should be better when pulling from the database
 			const moveArr = [];
-			pokemonData.pokemon[newPokemon.name].egg_moves.forEach((move) => {
+			poke.egg_moves.forEach((move) => {
 				const newMove = { [getType(move)]: move };
 				moveArr.push(newMove);
 			});
 			const newData = {
-				gender: pokemonData.pokemon[newPokemon.name].gender,
+				gender: poke.gender,
 				abilities: abilArr,
 				moves: moveArr,
 			};
 			setPickedData(newData);
 			setNewPokemon({
 				...newPokemon,
-				dex: pokemonData.pokemon[newPokemon.name].dex,
+				dex: poke.dex,
 			});
 			setNewPokemon({
 				...newPokemon,
-				types: pokemonData.pokemon[newPokemon.name].types,
+				types: poke.types,
 			});
 		} else {
 			setResetSelect(true);
@@ -148,6 +155,7 @@ const AddPokemon = ({ id, pokeId }) => {
 	// update function this checks if it is a checkbox and updates that accordingly
 	// otherwise it uses the key to update the correct part of the state
 	const update = (inputId, value) => {
+		console.log(inputId, value);
 		if (inputId === 'shiny') {
 			if (value === '0') {
 				setNewPokemon({ ...newPokemon, [inputId]: 1 });
@@ -175,7 +183,7 @@ const AddPokemon = ({ id, pokeId }) => {
 	// if the pokemon is a complete match it sets the state value for name otherwise it clears the value
 	const changeHandler = (e, val) => {
 		setAutoValue(val);
-		Object.keys(pokemonData.pokemon).forEach((poke) => {
+		Object.keys(pokemon).forEach((poke) => {
 			if (val.toLowerCase() === poke.toString().toLowerCase()) {
 				setNewPokemon({ ...newPokemon, name: properNameCase(val) });
 				setIsDisabled(false);
@@ -236,7 +244,7 @@ const AddPokemon = ({ id, pokeId }) => {
 					inputProps={{
 						placeholder: 'Select Pokemon',
 					}}
-					items={Object.keys(pokemonData.pokemon)}
+					items={Object.keys(pokemon)}
 					getItemValue={(item) => item}
 					shouldItemRender={renderPokemonName}
 					renderMenu={(item) => (
