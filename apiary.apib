@@ -306,7 +306,10 @@ Update user details.
     
 + Response 204        
 
-## User Pokemon Collection [/users/790fe8b3-3ce3-444a-99c2-6eca0d28c65a/pokemon]
+## User Pokemon Collection [/users/{username}/pokemon]
+
++ Parameters
+    + username (string) - username the pokemon belongs to
 
 ### List all user Pokemon [GET]
 
@@ -641,19 +644,61 @@ You may create your own user Pokemon.
 + Request (application/json)
 
         {
-            "userId": "1c562767-10fe-4c7f-bc2b-9125112e72b1",
-            "name": "Venusaur",
-            "shiny": true,
-            "gender": {
-                "type": "female",
-                "amount": "87.5",
-            },
-            "pokeType": "grass",
-            "abiliity": {
-                "name": "Chlorophyll",
-                "hidden": true,
-            },
-            "eggMoves": ["Skull Bash", "Petal Dance", "Curse", "Ingrain"]
+                "id":"c45bf35c-8dec-469d-88c4-b36713869a41",
+                "name":"Rapidash-Galar",
+                "shiny":true,
+                "dex":"078",
+                "ball":"safari",
+                "level":"22",
+                "types":[
+                    {
+                        "type":"psychic",
+                        "name":"Psychic"
+                    },
+                    {
+                        "type":"fairy",
+                        "name":"Fairy"
+                    }
+                ],
+                "gender":[
+                    "female",
+                    "50%"
+                ],
+                "ability":"Anticipation (Hidden)",
+                "ivs":[
+                    {
+                        "HP":31
+                    },
+                    {
+                        "Atk":"N/A"
+                    },
+                    {
+                        "Def":31
+                    },
+                    {
+                        "SpAtk":"N/A"
+                    },
+                    {
+                        "SpDef":30
+                    },
+                    {
+                        "Spd":30
+                    }
+                ],
+                "eggMoves":[
+                    {
+                        "psychic":"Hypnosis"
+                    },
+                    {
+                        "fight":"Double Kick"
+                    },
+                    {
+                        "normal":"Horn Drill"
+                    },
+                    {
+                        "normal":"Morning Sun"
+                    }
+                ]
         }
 
 + Response 201 (application/json)
@@ -665,22 +710,70 @@ You may create your own user Pokemon.
     + Body
 
             {
-                "userId": "1c562767-10fe-4c7f-bc2b-9125112e72b1",
-                "name": "Venusaur",
-                "shiny": true,
-                "gender": {
-                    "type": "female",
-                    "amount": "87.5",
-                },
-                "pokeType": "grass",
-                "abiliity": {
-                    "name": "Chlorophyll",
-                    "hidden": true,
-                },
-                "eggMoves": ["Skull Bash", "Petal Dance", "Curse", "Ingrain"]
+               
+                "id":"c45bf35c-8dec-469d-88c4-b36713869a41",
+                "name":"Rapidash-Galar",
+                "shiny":true,
+                "dex":"078",
+                "ball":"safari",
+                "level":"22",
+                "types":[
+                    {
+                        "type":"psychic",
+                        "name":"Psychic"
+                    },
+                    {
+                        "type":"fairy",
+                        "name":"Fairy"
+                    }
+                ],
+                "gender":[
+                    "female",
+                    "50%"
+                ],
+                "ability":"Anticipation (Hidden)",
+                "ivs":[
+                    {
+                        "HP":31
+                    },
+                    {
+                        "Atk":"N/A"
+                    },
+                    {
+                        "Def":31
+                    },
+                    {
+                        "SpAtk":"N/A"
+                    },
+                    {
+                        "SpDef":30
+                    },
+                    {
+                        "Spd":30
+                    }
+                ],
+                "eggMoves":[
+                    {
+                        "psychic":"Hypnosis"
+                    },
+                    {
+                        "fight":"Double Kick"
+                    },
+                    {
+                        "normal":"Horn Drill"
+                    },
+                    {
+                        "normal":"Morning Sun"
+                    }
+                ]
+                
             }
 
 ## User Pokemon [/users/{username}/pokemon/{id}]
+
++ Parameters
+    + username (string) - username the pokemon belongs to
+    + id (string) - id of the pokemon being edited
             
 ### Edit a User Pokemon [POST]
 
@@ -689,20 +782,63 @@ You may edit your own user Pokemon.
 + Request (application/json)
 
         {
-            "id": "d404f13e-630f-4389-97dd-3cb9d297f512",
-            "userId": "1c562767-10fe-4c7f-bc2b-9125112e72b1",
-            "name": "Venusaur",
-            "shiny": true,
-            "gender": {
-                "type": "female",
-                "amount": "87.5",
-            },
-            "pokeType": "grass",
-            "abiliity": {
-                "name": "Chlorophyll",
-                "hidden": true,
-            },
-            "eggMoves": ["Skull Bash", "Petal Dance", "Curse", "Ingrain"]
+            
+                "id":"ed35a614-bb4f-4295-bee9-3a4c0c2a6328",
+                "name":"harizard",
+                "shiny":true,
+                "dex":"006",
+                "ball":"dream",
+                "level":"100",
+                "types":[
+                    {
+                        "type":"fire",
+                        "name":"Fire"
+                    },
+                    {
+                        "type":"flying",
+                        "name":"Flying"
+                    }
+                ],
+                "gender":[
+                    "male",
+                    "87.5%"
+                ],
+                "ability":"Solar Power (Hidden)",
+                "ivs":[
+                    {
+                        "HP":31
+                    },
+                    {
+                        "Atk":"N/A"
+                    },
+                    {
+                        "Def":31
+                    },
+                    {
+                        "SpAtk":"N/A"
+                    },
+                    {
+                        "SpDef":30
+                    },
+                    {
+                        "Spd":30
+                    }
+                ],
+                "eggMoves":[
+                    {
+                        "normal":"Belly Drum"
+                    },
+                    {
+                        "dark":"Bite"
+                    },
+                    {
+                        "dragon":"Dragon Tail"
+                    },
+                    {
+                        "flying":"Wing Attack"
+                    }
+                ]
+            
         }
 
 + Response 201 (application/json)
@@ -714,21 +850,68 @@ You may edit your own user Pokemon.
     + Body
 
             {
-                "id": "d404f13e-630f-4389-97dd-3cb9d297f512"
-                "userId": "1c562767-10fe-4c7f-bc2b-9125112e72b1",
-                "name": "Venusaur",
-                "shiny": true,
-                "gender": {
-                    "type": "female",
-                    "amount": "87.5",
-                },
-                "pokeType": "grass",
-                "abiliity": {
-                    "name": "Chlorophyll",
-                    "hidden": true,
-                },
-                "eggMoves": ["Skull Bash", "Petal Dance", "Curse", "Ingrain"]
+
+                    "id":"ed35a614-bb4f-4295-bee9-3a4c0c2a6328",
+                    "name":"harizard",
+                    "shiny":true,
+                    "dex":"006",
+                    "ball":"dream",
+                    "level":"100",
+                    "types":[
+                        {
+                            "type":"fire",
+                            "name":"Fire"
+                        },
+                        {
+                            "type":"flying",
+                            "name":"Flying"
+                        }
+                    ],
+                    "gender":[
+                        "male",
+                        "87.5%"
+                    ],
+                    "ability":"Solar Power (Hidden)",
+                    "ivs":[
+                        {
+                            "HP":31
+                        },
+                        {
+                            "Atk":"N/A"
+                        },
+                        {
+                            "Def":31
+                        },
+                        {
+                            "SpAtk":"N/A"
+                        },
+                        {
+                            "SpDef":30
+                        },
+                        {
+                            "Spd":30
+                        }
+                    ],
+                    "eggMoves":[
+                        {
+                            "normal":"Belly Drum"
+                        },
+                        {
+                            "dark":"Bite"
+                        },
+                        {
+                            "dragon":"Dragon Tail"
+                        },
+                        {
+                            "flying":"Wing Attack"
+                        }
+                    ]
+                
             }
+            
+### Remove a user Pokemon [DELETE]
+    
++ Response 204    
             
 ## Pokeball Collection [/balls]
 
