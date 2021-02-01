@@ -11,12 +11,14 @@ import callAPI from './helpers/callAPIMiddleware';
 import items from './items/reducer';
 import users from './users/reducer';
 import usermons from './usermons/reducer';
+import pokemon from './pokemon/reducer';
 
 // combine multiple reducers into one
 const rootReducer = combineReducers({
 	items,
 	users,
 	usermons,
+	pokemon,
 });
 
 // set up middleware
