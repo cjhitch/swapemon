@@ -39,12 +39,18 @@ const usermonsPending = (state, action) => {
 };
 
 const usermonsSuccess = (state, action) => {
+	Object.values(action.data).map((usermons, usermon) => {
+		console.log('usermon', usermon);
+		return console.log('usermons', usermons);
+	});
 	// clear loading and error, update cache time, add users
+	// console.log('action data: ', action.data);
 	return {
 		...state,
 		isLoading: false,
 		error: null,
 		loadedAt: Date.now(),
+		allmons: { ...action.data },
 		byId: {
 			...state.byId,
 			...Object.values(action.data).reduce(

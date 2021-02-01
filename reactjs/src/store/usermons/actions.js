@@ -17,11 +17,11 @@ import {
 
 const CACHE_TIME = 1000 * 60 * 5;
 
-export const fetchUsermons = (id) => ({
+export const fetchUsermons = (username) => ({
 	// types for this action - "request, success, error"
 	types: [REQ_USERMONS_PENDING, REQ_USERMONS_SUCCESS, REQ_USERMONS_ERROR],
 	// a function used to call the api
-	callAPI: () => API.get(`/users/${id}/pokemon`),
+	callAPI: () => API.get(`/users/${username}/pokemon`),
 	// receives the current app state and returns true if we should call the api
 	shouldCallAPI: (state) => {
 		const { loadedAt, isLoading } = state.users;
@@ -33,13 +33,14 @@ export const fetchUsermons = (id) => ({
 	},
 });
 
-export const createUsermon = (pokemon) => {
+export const createUsermon = (username, pokemon) => {
 	// create a uuid for this pokemon so that we can use it in the reducers for pending and loading
 	const id = v4();
 	return {
 		types: [ADD_USERMON_PENDING, ADD_USERMON_SUCCESS, ADD_USERMON_ERROR],
-		callAPI: () => API.post(`/users/${id}`, { id, ...pokemon }),
-		payload: { id },
+		callAPI: () =>
+			API.post(`/users/${username}/pokemon`, { id, ...pokemon }),
+		payload: { pokemon },
 	};
 };
 
@@ -56,12 +57,12 @@ export const fetchUsermon = (id, pokeId) => ({
 	payload: { id },
 });
 
-export const updateUser = (user) => ({
+export const updateUsermon = (username, pokemon) => ({
 	types: [
 		UPDATE_USERMON_PENDING,
 		UPDATE_USERMON_SUCCESS,
 		UPDATE_USERMON_ERROR,
 	],
-	callAPI: () => API.put(`/users/${user.id}`, user),
-	payload: { id: user.id },
+	callAPI: () => API.put(`/users/${username}/pokemon/${pokemon.id}`, pokemon),
+	payload: { id: pokemon.id },
 });

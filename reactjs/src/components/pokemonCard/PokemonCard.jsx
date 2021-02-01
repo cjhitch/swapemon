@@ -1,27 +1,40 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import {
 	BiFemaleSign,
 	BiMaleSign,
 	BiCircle,
 	BiChevronDown,
+	BiPencil,
+	BiTrash,
+	BiShare,
 } from 'react-icons/bi';
 import TypePills from '../typePills';
 import Shiny from '../../assets/images/icons/shiny.svg';
 import './PokemonCard.scss';
 
-const PokemonCard = ({ pokemon, addTrade }) => {
+const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 	const [expanded, setExpanded] = useState(false);
-	const pokePath = require(`../../assets/images/icons/pokemon/${
-		pokemon.shiny || pokemon.shiny === 0 ? 'shiny/' : 'regular/'
-	}${pokemon.name}.svg`);
+	const pokePath = () => {
+		try {
+			return require(`../../assets/images/icons/pokemon/${
+				pokemon.shiny || pokemon.shiny === 0 ? 'shiny/' : 'regular/'
+			}${pokemon.name}.svg`);
+		} catch (err) {
+			return null;
+		}
+	};
+	const pokeImg = pokePath();
 
 	const ballPath = require(`../../assets/images/icons/balls/${pokemon.ball}.svg`);
-
 	return (
 		<article className="PokemonCard">
-			<Image className="pokemon" src={pokePath.default} />
+			<Image
+				className="pokemon"
+				src={pokeImg !== null ? pokeImg.default : ''}
+			/>
 			<h2>
 				{pokemon.name}
 				{(pokemon.shiny || pokemon.shiny === 0) && (
@@ -104,16 +117,25 @@ const PokemonCard = ({ pokemon, addTrade }) => {
 					</button>
 				</div>
 			) : (
-				<button
-					type="button"
-					className="more"
-					onClick={() => setExpanded(!expanded)}
-				>
-					View {expanded ? 'Less' : 'More'}{' '}
-					<BiChevronDown
-						style={expanded && { transform: 'rotate(180deg)' }}
-					/>
-				</button>
+				<div className="more edit">
+					<div>
+						<BiPencil onClick={() => setPokeId(pokemon.id)} />
+						<Link to="/trades">
+							<BiShare />
+						</Link>
+					</div>
+					<button
+						type="button"
+						className="more"
+						onClick={() => setExpanded(!expanded)}
+					>
+						View {expanded ? 'Less' : 'More'}{' '}
+						<BiChevronDown
+							style={expanded && { transform: 'rotate(180deg)' }}
+						/>
+					</button>
+					<BiTrash />
+				</div>
 			)}
 		</article>
 	);

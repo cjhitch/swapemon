@@ -135,13 +135,29 @@
 		}
 	}
 	div.more {
+		margin-top: 0.75rem;
 		grid-area: more;
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
+		svg {
+			cursor: pointer;
+		}
+		&.edit {
+			justify-content: space-between;
+			> div {
+				a {
+					padding-left: 0.5rem;
+					svg {
+						margin-right: -0.75rem;
+						color: $light;
+					}
+				}
+			}
+		}
 		button {
-			margin-top: 0.75rem;
-			margin-top: 0.75rem;
+			margin-top: 0rem;
+			margin-right: 0 !important;
 			font-size: 1rem;
 			background: none;
 			border: none;

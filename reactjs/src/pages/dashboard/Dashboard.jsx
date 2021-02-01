@@ -16,6 +16,8 @@ const Dashboard = () => {
 	const [filterShow, setFilterShow] = useState(false);
 	const [isDisabled, setIsDisabled] = useState(true);
 	const [filterDisabled, setFilterDisabled] = useState(true);
+	// eslint-disable-next-line no-unused-vars
+	const [pokeId, setPokeId] = useState(false);
 	const [filters, setFilters] = useState({
 		name: '',
 		gender: '',
@@ -42,23 +44,27 @@ const Dashboard = () => {
 	const dispatch = useDispatch();
 	useEffect(() => {
 		// TODO: this needs a better way to find user
-		dispatch(fetchUsermons('790fe8b3-3ce3-444a-99c2-6eca0d28c65a'));
+		dispatch(fetchUsermons('JamesEarlJones'));
 		// this is intentionally left as empty array to run once on load like a componentDidMount()
 		// eslint-disable-next-line
 	}, []);
 	useEffect(() => {
 		const pokeArr = [];
 		if (pokeData.allIds.length > 0) {
-			Object.values(pokeData.byId).forEach((obj) =>
-				pokeArr.push(obj.data)
-			);
+			Object.values(pokeData.byId).forEach((obj) => {
+				if (obj.data !== undefined) {
+					console.log(obj.data);
+					pokeArr.push(obj.data);
+				}
+			});
 			setMyPokemon(pokeArr);
 		}
 	}, [pokeData]);
 	const [filteredPokemon, setFilteredPokemon] = useState(null);
 	useEffect(() => {
 		setFilteredPokemon(myPokemon);
-	}, [myPokemon, setFilteredPokemon]);
+		console.log(myPokemon);
+	}, [myPokemon]);
 	const filterPokemon = () => {
 		const newPokeArr = [];
 		Object.keys(filters).forEach((filter) => {
@@ -127,11 +133,7 @@ const Dashboard = () => {
 		<section className="Dashboard">
 			<div>
 				<h1>Add Pokemon</h1>
-				<AddPokemon
-					id="lg"
-					setMyPokemon={setMyPokemon}
-					myPokemon={myPokemon}
-				/>
+				<AddPokemon id="lg" pokeId={pokeId} />
 				<div className="buttons filter-modal">
 					<Button
 						className="add"
@@ -161,6 +163,7 @@ const Dashboard = () => {
 									key={pokemon.id}
 									pokemon={pokemon}
 									filteredPokemon={filteredPokemon}
+									setPokeId={setPokeId}
 								/>
 							))}
 					</div>
@@ -175,7 +178,7 @@ const Dashboard = () => {
 				<Modal.Header closeButton>
 					<h1>Add Pokemon</h1>
 				</Modal.Header>
-				<AddPokemon setMyPokemon={setMyPokemon} />
+				<AddPokemon pokeId={pokeId} />
 			</Modal>
 			<Modal
 				show={filterShow}
@@ -272,7 +275,6 @@ const Dashboard = () => {
 					Reset
 				</Button>
 			</Modal>
-			)
 		</section>
 	);
 };
