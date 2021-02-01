@@ -46,7 +46,7 @@ export const createUser = (user) => {
 
 export const fetchUser = (id) => ({
 	types: [REQ_USER_PENDING, REQ_USER_SUCCESS, REQ_USER_ERROR],
-	callAPI: () => API.get(`/users${id}`),
+	callAPI: () => API.get(`/users/${id}`),
 	shouldCallAPI: (state) => {
 		const user = state.users.byId[id] || {};
 		const { loadedAt, isLoading } = user;

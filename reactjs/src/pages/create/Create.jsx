@@ -37,6 +37,7 @@ const Create = ({ ...props }) => {
 		} else {
 			createUser({ name, first, last, email, password });
 		}
+		// TODO: there needs to be error handling on this to ensure user was actually created
 		history.push('/login');
 	};
 	return (

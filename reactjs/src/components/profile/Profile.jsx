@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+// import React, { useState } from 'react';
+import { withRouter } from 'react-router';
 import Button from 'react-bootstrap/Button';
 import User from '../user';
 import FormControl from '../formControl';
+import container from './container';
 import './Profile.scss';
 
-const Profile = () => {
+const Profile = ({ ...props }) => {
 	const initialState = {
 		gameName: '',
 		gameCode: '',
@@ -57,6 +60,12 @@ const Profile = () => {
 			},
 		],
 	});
+	useEffect(() => {
+		const { fetchUser } = props;
+		fetchUser('790fe8b3-3ce3-444a-99c2-6eca0d28c65a');
+		const { users } = props;
+		console.log(users);
+	}, []);
 
 	const update = (inputId, value) => {
 		setFormState({ ...formState, [inputId]: value });
@@ -89,84 +98,93 @@ const Profile = () => {
 		<section className="Profile">
 			<h1>Profile</h1>
 			<p>View and update account settings</p>
-			<User username={user.username} image={`${user.id}.jpg`} />
-			<p>
-				<b>
-					{user.system.name} - {user.system.id}
-				</b>
-			</p>
-			<h2>Games</h2>
-			{user.games.map((game) => (
-				<p key={game.id}>
-					{game.name} - {game.id}
-				</p>
-			))}
-			<form id="addGame" action="">
-				<h2>Add Game</h2>
-				<FormControl
-					value={formState.gameName}
-					type="input"
-					id="gameName"
-					update={update}
-					placeholder="name"
-				/>
-				<FormControl
-					value={formState.code}
-					type="input"
-					id="gameCode"
-					update={update}
-					placeholder="code"
-				/>
-				<Button onClick={addGame} variant="primary-light">
-					add game
-				</Button>
-			</form>
-			<form id="updateEmail" action="">
-				<p>Update Email</p>
-				<FormControl
-					value={formState.email}
-					type="input"
-					id="email"
-					update={update}
-					placeholder="email@email.com"
-				/>
-				<Button
-					// eslint-disable-next-line
-					onClick={updateEmail}
-					variant="primary-light"
-				>
-					update email
-				</Button>
-			</form>
-			<form id="updatePassword" action="">
-				<p>Change Password</p>
-				<FormControl
-					value={formState.curPw}
-					type="input"
-					id="curPw"
-					update={update}
-					placeholder="current password"
-				/>
-				<FormControl
-					value={formState.newPw}
-					type="input"
-					id="newPw"
-					update={update}
-					placeholder="new password"
-				/>
-				<FormControl
-					value={formState.conPw}
-					type="input"
-					id="conPw"
-					update={update}
-					placeholder="confirm password"
-				/>
-				<Button onClick={updatePassword} variant="primary-light">
-					change password
-				</Button>
-			</form>
+			{user === '' || user === undefined ? (
+				<h1>...Loading</h1>
+			) : (
+				<>
+					<User username={user.username} image={`${user.id}.jpg`} />
+					<p>
+						<b>
+							{user.system.name} - {user.system.id}
+						</b>
+					</p>
+					<h2>Games</h2>
+					{user.games.map((game) => (
+						<p key={game.id}>
+							{game.name} - {game.id}
+						</p>
+					))}
+					<form id="addGame" action="">
+						<h2>Add Game</h2>
+						<FormControl
+							value={formState.gameName}
+							type="input"
+							id="gameName"
+							update={update}
+							placeholder="name"
+						/>
+						<FormControl
+							value={formState.code}
+							type="input"
+							id="gameCode"
+							update={update}
+							placeholder="code"
+						/>
+						<Button onClick={addGame} variant="primary-light">
+							add game
+						</Button>
+					</form>
+					<form id="updateEmail" action="">
+						<p>Update Email</p>
+						<FormControl
+							value={formState.email}
+							type="input"
+							id="email"
+							update={update}
+							placeholder="email@email.com"
+						/>
+						<Button
+							// eslint-disable-next-line
+							onClick={updateEmail}
+							variant="primary-light"
+						>
+							update email
+						</Button>
+					</form>
+					<form id="updatePassword" action="">
+						<p>Change Password</p>
+						<FormControl
+							value={formState.curPw}
+							type="input"
+							id="curPw"
+							update={update}
+							placeholder="current password"
+						/>
+						<FormControl
+							value={formState.newPw}
+							type="input"
+							id="newPw"
+							update={update}
+							placeholder="new password"
+						/>
+						<FormControl
+							value={formState.conPw}
+							type="input"
+							id="conPw"
+							update={update}
+							placeholder="confirm password"
+						/>
+						<Button
+							onClick={updatePassword}
+							variant="primary-light"
+						>
+							change password
+						</Button>
+					</form>
+				</>
+			)}
 		</section>
 	);
 };
 
-export default Profile;
+export default withRouter(container(Profile));

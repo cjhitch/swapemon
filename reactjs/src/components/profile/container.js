@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
-import { fetchUser, createUser, updateUser } from '../../store/users/actions';
+import { fetchUser, updateUser } from '../../store/users/actions';
 
 const mapStateToProps = (state, props) => {
-	console.log('state: ', state, 'props: ', props);
 	const {
 		match: {
 			params: { id },
@@ -17,6 +16,6 @@ const mapStateToProps = (state, props) => {
 };
 
 // set the actions we need in this component
-const mapDispatchToProps = { fetchUser, createUser, updateUser };
+const mapDispatchToProps = { fetchUser, updateUser };
 
 export default connect(mapStateToProps, mapDispatchToProps);
