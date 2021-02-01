@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import Autocomplete from 'react-autocomplete';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -11,8 +9,7 @@ import FormControl from '../../components/formControl';
 import { fetchUsermons } from '../../store/usermons/actions';
 import './Dashboard.scss';
 
-// eslint-disable-next-line no-unused-vars
-const Dashboard = ({ fetchItems, items }) => {
+const Dashboard = () => {
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
 	const [autoValue, setAutoValue] = useState('');
 	const [show, setShow] = useState(false);
@@ -278,21 +275,6 @@ const Dashboard = ({ fetchItems, items }) => {
 			)
 		</section>
 	);
-};
-
-Dashboard.propTypes = {
-	items: PropTypes.arrayOf(
-		PropTypes.shape({
-			title: PropTypes.string,
-			descriptions: PropTypes.string,
-			image: PropTypes.string,
-			id: PropTypes.string,
-		})
-	),
-};
-
-Dashboard.defaultProps = {
-	items: [],
 };
 
 export default Dashboard;
