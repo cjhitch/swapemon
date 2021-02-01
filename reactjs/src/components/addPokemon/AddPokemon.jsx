@@ -19,13 +19,14 @@ const AddPokemon = ({ id, pokeId }) => {
 
 	useEffect(() => {
 		dispatch(fetchPokemons());
+		// this should only run once to run similar to componentDidMount()
+		// eslint-disable-next-line
 	}, []);
 	useEffect(() => {
 		if (pokes.allIds.length > 0) {
 			setPokemon(pokes.byId);
 		}
 	}, [pokes]);
-	console.log(pokemon);
 	// TODO: this will be once the user logged in
 	const username = 'JamesEarlJones';
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
@@ -81,6 +82,8 @@ const AddPokemon = ({ id, pokeId }) => {
 				});
 			}
 		}
+		// this should only ever run if pokeId is supplied never anytime else
+		// eslint-disable-next-line
 	}, [pokeId]);
 	// check if the correct items are selected in state - disable/enable button depending
 	useEffect(() => {
@@ -150,6 +153,8 @@ const AddPokemon = ({ id, pokeId }) => {
 				moves: [],
 			});
 		}
+		// this should only ever run if name is changed never anytime else
+		// eslint-disable-next-line
 	}, [newPokemon.name]);
 
 	// update function this checks if it is a checkbox and updates that accordingly

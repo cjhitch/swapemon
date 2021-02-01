@@ -42,16 +42,6 @@ const pokemonsPending = (state, action) => {
 };
 
 const pokemonsSuccess = (state, action) => {
-	// clear loading and error, update cache time, add pokes
-	// eslint-disable-next-line
-	// Object.values(action.data).reduce((pokemons, pokemon) => {
-	// 	console.log(pokemons);
-	// 	console.log(pokemon);
-	// 	console.log(typeof Object.values(action.data));
-	// });
-	// Object.values(action.data).forEach((element) => {
-	// 	console.log({ [element.name]: element });
-	// });
 	return {
 		...state,
 		isLoading: false,
