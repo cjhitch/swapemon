@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { withRouter } from 'react-router';
+// import { withRouter } from 'react-router';
 import Button from 'react-bootstrap/Button';
 import User from '../user';
 import FormControl from '../formControl';
-import container from './container';
+// import container from './container';
 import './Profile.scss';
 import { fetchUser } from '../../store/users/actions';
 
@@ -156,4 +156,4 @@ const Profile = () => {
 	);
 };
 
-export default withRouter(container(Profile));
+export default Profile;
