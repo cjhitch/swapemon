@@ -47,7 +47,7 @@ const usermonsSuccess = (state, action) => {
 		loadedAt: Date.now(),
 		byId: {
 			...state.byId,
-			...action.data.reduce(
+			...Object.values(action.data).reduce(
 				(usermons, usermon) => ({
 					// keep the current object
 					...usermons,
@@ -65,7 +65,7 @@ const usermonsSuccess = (state, action) => {
 		allIds: [
 			...new Set([
 				...state.allIds,
-				...action.data.map((usermon) => usermon.id),
+				...Object.values(action.data).map((usermon) => usermon.id),
 			]),
 		],
 	};
