@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchItem, createItem, updateItem } from '../../store/items/actions';
+import { fetchUser, updateUser } from '../../store/users/actions';
 
 const mapStateToProps = (state, props) => {
 	const {
@@ -8,14 +8,14 @@ const mapStateToProps = (state, props) => {
 		},
 	} = props;
 	const {
-		items: {
-			byId: { [id]: { data: item } = {} },
+		users: {
+			byId: { [id]: { data: user } = {} },
 		},
 	} = state;
-	return { item };
+	return { user };
 };
 
 // set the actions we need in this component
-const mapDispatchToProps = { fetchItem, createItem, updateItem };
+const mapDispatchToProps = { fetchUser, updateUser };
 
 export default connect(mapStateToProps, mapDispatchToProps);

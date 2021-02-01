@@ -17,7 +17,6 @@ import {
 
 const CACHE_TIME = 1000 * 60 * 5;
 
-// eslint-disable-next-line
 export const fetchUsers = () => ({
 	// types for this action - "request, success, error"
 	types: [REQ_USERS_PENDING, REQ_USERS_SUCCESS, REQ_USERS_ERROR],
@@ -34,33 +33,32 @@ export const fetchUsers = () => ({
 	},
 });
 
-export const createItem = (item) => {
-	console.log('create item called');
-	// create a uuid for this item so that we can use it in the reducers for pending and loading
-	const id = v4;
+export const createUser = (user) => {
+	// create a uuid for this user so that we can use it in the reducers for pending and loading
+	const id = v4();
 	console.log(id);
 	return {
 		types: [ADD_USER_PENDING, ADD_USER_SUCCESS, ADD_USER_ERROR],
-		callAPI: () => API.post('/items', { id, ...item }),
+		callAPI: () => API.post('/users', { id, ...user }),
 		payload: { id },
 	};
 };
 
-export const fetchItem = (id) => ({
+export const fetchUser = (id) => ({
 	types: [REQ_USER_PENDING, REQ_USER_SUCCESS, REQ_USER_ERROR],
-	callAPI: () => API.get(`/items${id}`),
+	callAPI: () => API.get(`/users/${id}`),
 	shouldCallAPI: (state) => {
-		const item = state.items.byId[id] || {};
-		const { loadedAt, isLoading } = item;
-		if (!item || isLoading) return false;
+		const user = state.users.byId[id] || {};
+		const { loadedAt, isLoading } = user;
+		if (!user || isLoading) return false;
 		const isCached = Date.now() - loadedAt < CACHE_TIME;
 		return !loadedAt || !isCached;
 	},
 	payload: { id },
 });
 
-export const updateItem = (item) => ({
+export const updateUser = (user) => ({
 	types: [UPDATE_USER_PENDING, UPDATE_USER_SUCCESS, UPDATE_USER_ERROR],
-	callAPI: () => API.put(`/items/${item.id}`, item),
-	payload: { id: item.id },
+	callAPI: () => API.put(`/users/${user.id}`, user),
+	payload: { id: user.id },
 });
