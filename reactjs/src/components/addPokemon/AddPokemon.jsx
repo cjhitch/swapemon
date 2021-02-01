@@ -12,6 +12,7 @@ import './AddPokemon.scss';
 const AddPokemon = ({ id, pokeId }) => {
 	const pokeData = useSelector((state) => state.usermons);
 	const dispatch = useDispatch();
+	// TODO: this will be once the user logged in
 	const username = 'JamesEarlJones';
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
 	const [autoValue, setAutoValue] = useState('');
@@ -44,8 +45,9 @@ const AddPokemon = ({ id, pokeId }) => {
 	// if the object has been passed in that means this is being edited - set the state to existing
 	useEffect(() => {
 		if (pokeId) {
+			console.log(pokeId);
 			if (pokeData.allIds.length > 0) {
-				const editPoke = pokeData.byId[id].data;
+				const editPoke = pokeData.byId[pokeId].data;
 				setNewPokemon({
 					name: editPoke.name,
 					dex: editPoke.dex,
@@ -65,7 +67,7 @@ const AddPokemon = ({ id, pokeId }) => {
 				});
 			}
 		}
-	}, [id]);
+	}, [pokeId]);
 	// check if the correct items are selected in state - disable/enable button depending
 	useEffect(() => {
 		if (newPokemon.name !== '') {
@@ -217,8 +219,8 @@ const AddPokemon = ({ id, pokeId }) => {
 			],
 		};
 		if (pokeId) {
-			console.log('shouldnt be hitting this', id);
-			dispatch(updateUsermon(username, addPoke));
+			const editPoke = { id: pokeId, ...addPoke };
+			dispatch(updateUsermon(username, editPoke));
 		} else {
 			dispatch(createUsermon(username, addPoke));
 		}

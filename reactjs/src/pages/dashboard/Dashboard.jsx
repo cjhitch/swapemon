@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import Autocomplete from 'react-autocomplete';
 import Button from 'react-bootstrap/Button';
@@ -53,7 +54,6 @@ const Dashboard = () => {
 		if (pokeData.allIds.length > 0) {
 			Object.values(pokeData.byId).forEach((obj) => {
 				if (obj.data !== undefined) {
-					console.log(obj.data);
 					pokeArr.push(obj.data);
 				}
 			});
@@ -63,7 +63,6 @@ const Dashboard = () => {
 	const [filteredPokemon, setFilteredPokemon] = useState(null);
 	useEffect(() => {
 		setFilteredPokemon(myPokemon);
-		console.log(myPokemon);
 	}, [myPokemon]);
 	const filterPokemon = () => {
 		const newPokeArr = [];
@@ -169,7 +168,7 @@ const Dashboard = () => {
 					</div>
 				)}
 			</div>
-			<Modal
+			{/* <Modal
 				show={show}
 				onHide={() => setShow(false)}
 				dialogClassName="modal-90w"
@@ -274,7 +273,7 @@ const Dashboard = () => {
 				>
 					Reset
 				</Button>
-			</Modal>
+			</Modal> */}
 		</section>
 	);
 };

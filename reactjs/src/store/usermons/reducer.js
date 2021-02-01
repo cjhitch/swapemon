@@ -13,6 +13,9 @@ import {
 	UPDATE_USERMON_PENDING,
 	UPDATE_USERMON_SUCCESS,
 	UPDATE_USERMON_ERROR,
+	DELETE_USERMON_PENDING,
+	DELETE_USERMON_SUCCESS,
+	DELETE_USERMON_ERROR,
 } from '../actionTypes';
 
 const initialState = {
@@ -39,10 +42,6 @@ const usermonsPending = (state, action) => {
 };
 
 const usermonsSuccess = (state, action) => {
-	Object.values(action.data).map((usermons, usermon) => {
-		console.log('usermon', usermon);
-		return console.log('usermons', usermons);
-	});
 	// clear loading and error, update cache time, add users
 	// console.log('action data: ', action.data);
 	return {
@@ -50,7 +49,6 @@ const usermonsSuccess = (state, action) => {
 		isLoading: false,
 		error: null,
 		loadedAt: Date.now(),
-		allmons: { ...action.data },
 		byId: {
 			...state.byId,
 			...Object.values(action.data).reduce(
@@ -118,6 +116,19 @@ const usermonSuccess = (state, action) => {
 	};
 };
 
+const usermonDelete = (state, action) => {
+	console.log('state: ', state, 'action: ', action);
+	const newAll = state.allIds;
+	const newBy = state.byId;
+	newAll.splice(state.allIds.indexOf(action.payload.id), 1);
+	delete newBy[action.payload.id];
+	return {
+		...state,
+		byId: newBy,
+		allIds: newAll,
+	};
+};
+
 const usermonError = (state, action) => {
 	// clear loading and set error
 	return {
@@ -146,4 +157,7 @@ export default createReducer(initialState, {
 	[UPDATE_USERMON_PENDING]: usermonPending,
 	[UPDATE_USERMON_SUCCESS]: usermonSuccess,
 	[UPDATE_USERMON_ERROR]: usermonError,
+	[DELETE_USERMON_PENDING]: usermonPending,
+	[DELETE_USERMON_SUCCESS]: usermonDelete,
+	[DELETE_USERMON_ERROR]: usermonError,
 });

@@ -13,6 +13,9 @@ import {
 	UPDATE_USERMON_PENDING,
 	UPDATE_USERMON_SUCCESS,
 	UPDATE_USERMON_ERROR,
+	DELETE_USERMON_PENDING,
+	DELETE_USERMON_SUCCESS,
+	DELETE_USERMON_ERROR,
 } from '../actionTypes';
 
 const CACHE_TIME = 1000 * 60 * 5;
@@ -63,6 +66,17 @@ export const updateUsermon = (username, pokemon) => ({
 		UPDATE_USERMON_SUCCESS,
 		UPDATE_USERMON_ERROR,
 	],
-	callAPI: () => API.put(`/users/${username}/pokemon/${pokemon.id}`, pokemon),
+	callAPI: () =>
+		API.post(`/users/${username}/pokemon/${pokemon.id}`, pokemon),
 	payload: { id: pokemon.id },
+});
+
+export const deleteUsermon = (username, id) => ({
+	types: [
+		DELETE_USERMON_PENDING,
+		DELETE_USERMON_SUCCESS,
+		DELETE_USERMON_ERROR,
+	],
+	callAPI: () => API.delete(`/users/${username}/pokemon/${id}`),
+	payload: { id },
 });
