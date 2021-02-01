@@ -47,7 +47,7 @@ const itemsSuccess = (state, action) => {
 		loadedAt: Date.now(),
 		byId: {
 			...state.byId,
-			...action.data.reduce(
+			...Object.values(action.data).reduce(
 				(items, item) => ({
 					// keep the current object
 					...items,
@@ -63,7 +63,10 @@ const itemsSuccess = (state, action) => {
 			),
 		},
 		allIds: [
-			...new Set([...state.allIds, action.data.map((item) => item.id)]),
+			...new Set([
+				...state.allIds,
+				...Object.values(action.data).map((item) => item.id),
+			]),
 		],
 	};
 };

@@ -1,18 +1,21 @@
 import createReducer from '../helpers/createReducer';
 
 import {
-	REQ_USERS_PENDING,
-	REQ_USERS_SUCCESS,
-	REQ_USERS_ERROR,
-	REQ_USER_PENDING,
-	REQ_USER_SUCCESS,
-	REQ_USER_ERROR,
-	ADD_USER_PENDING,
-	ADD_USER_SUCCESS,
-	ADD_USER_ERROR,
-	UPDATE_USER_PENDING,
-	UPDATE_USER_SUCCESS,
-	UPDATE_USER_ERROR,
+	REQ_USERMONS_PENDING,
+	REQ_USERMONS_SUCCESS,
+	REQ_USERMONS_ERROR,
+	REQ_USERMON_PENDING,
+	REQ_USERMON_SUCCESS,
+	REQ_USERMON_ERROR,
+	ADD_USERMON_PENDING,
+	ADD_USERMON_SUCCESS,
+	ADD_USERMON_ERROR,
+	UPDATE_USERMON_PENDING,
+	UPDATE_USERMON_SUCCESS,
+	UPDATE_USERMON_ERROR,
+	DELETE_USERMON_PENDING,
+	DELETE_USERMON_SUCCESS,
+	DELETE_USERMON_ERROR,
 } from '../actionTypes';
 
 const initialState = {
@@ -29,7 +32,7 @@ const initialState = {
 };
 
 // eslint-disable-next-line
-const usersPending = (state, action) => {
+const usermonsPending = (state, action) => {
 	// set loading state and clear error
 	return {
 		...state,
@@ -38,8 +41,9 @@ const usersPending = (state, action) => {
 	};
 };
 
-const usersSuccess = (state, action) => {
+const usermonsSuccess = (state, action) => {
 	// clear loading and error, update cache time, add users
+	// console.log('action data: ', action.data);
 	return {
 		...state,
 		isLoading: false,
@@ -48,12 +52,12 @@ const usersSuccess = (state, action) => {
 		byId: {
 			...state.byId,
 			...Object.values(action.data).reduce(
-				(users, user) => ({
+				(usermons, usermon) => ({
 					// keep the current object
-					...users,
+					...usermons,
 					// add the user id as the key and an user object for loading
-					[user.id]: {
-						data: user,
+					[usermon.id]: {
+						data: usermon,
 						isLoading: false,
 						loadedAt: Date.now(),
 						error: null,
@@ -65,13 +69,13 @@ const usersSuccess = (state, action) => {
 		allIds: [
 			...new Set([
 				...state.allIds,
-				...Object.values(action.data).map((user) => user.id),
+				...Object.values(action.data).map((usermon) => usermon.id),
 			]),
 		],
 	};
 };
 
-const usersError = (state, action) => {
+const usermonsError = (state, action) => {
 	// clear loading and set error
 	return {
 		...state,
@@ -80,7 +84,7 @@ const usersError = (state, action) => {
 	};
 };
 
-const userPending = (state, action) => {
+const usermonPending = (state, action) => {
 	// set loading state and clear error
 	return {
 		...state,
@@ -95,7 +99,7 @@ const userPending = (state, action) => {
 	};
 };
 
-const userSuccess = (state, action) => {
+const usermonSuccess = (state, action) => {
 	// clear loading and error, update cache time, add users
 	return {
 		...state,
@@ -112,7 +116,20 @@ const userSuccess = (state, action) => {
 	};
 };
 
-const userError = (state, action) => {
+const usermonDelete = (state, action) => {
+	console.log('state: ', state, 'action: ', action);
+	const newAll = state.allIds;
+	const newBy = state.byId;
+	newAll.splice(state.allIds.indexOf(action.payload.id), 1);
+	delete newBy[action.payload.id];
+	return {
+		...state,
+		byId: newBy,
+		allIds: newAll,
+	};
+};
+
+const usermonError = (state, action) => {
 	// clear loading and set error
 	return {
 		...state,
@@ -128,16 +145,19 @@ const userError = (state, action) => {
 };
 
 export default createReducer(initialState, {
-	[REQ_USERS_PENDING]: usersPending,
-	[REQ_USERS_SUCCESS]: usersSuccess,
-	[REQ_USERS_ERROR]: usersError,
-	[REQ_USER_PENDING]: userPending,
-	[REQ_USER_SUCCESS]: userSuccess,
-	[REQ_USER_ERROR]: userError,
-	[ADD_USER_PENDING]: userPending,
-	[ADD_USER_SUCCESS]: userSuccess,
-	[ADD_USER_ERROR]: userError,
-	[UPDATE_USER_PENDING]: userPending,
-	[UPDATE_USER_SUCCESS]: userSuccess,
-	[UPDATE_USER_ERROR]: userError,
+	[REQ_USERMONS_PENDING]: usermonsPending,
+	[REQ_USERMONS_SUCCESS]: usermonsSuccess,
+	[REQ_USERMONS_ERROR]: usermonsError,
+	[REQ_USERMON_PENDING]: usermonPending,
+	[REQ_USERMON_SUCCESS]: usermonSuccess,
+	[REQ_USERMON_ERROR]: usermonError,
+	[ADD_USERMON_PENDING]: usermonPending,
+	[ADD_USERMON_SUCCESS]: usermonSuccess,
+	[ADD_USERMON_ERROR]: usermonError,
+	[UPDATE_USERMON_PENDING]: usermonPending,
+	[UPDATE_USERMON_SUCCESS]: usermonSuccess,
+	[UPDATE_USERMON_ERROR]: usermonError,
+	[DELETE_USERMON_PENDING]: usermonPending,
+	[DELETE_USERMON_SUCCESS]: usermonDelete,
+	[DELETE_USERMON_ERROR]: usermonError,
 });

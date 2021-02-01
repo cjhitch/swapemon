@@ -1,22 +1,24 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import Autocomplete from 'react-autocomplete';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { useSelector, useDispatch } from 'react-redux';
 import PokemonCard from '../../components/pokemonCard';
 import AddPokemon from '../../components/addPokemon';
 import FormControl from '../../components/formControl';
-import container from '../../components/containers/container';
+import { fetchUsermons } from '../../store/usermons/actions';
 import './Dashboard.scss';
 
-// eslint-disable-next-line no-unused-vars
-const Dashboard = ({ fetchItems, items }) => {
+const Dashboard = () => {
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
 	const [autoValue, setAutoValue] = useState('');
 	const [show, setShow] = useState(false);
 	const [filterShow, setFilterShow] = useState(false);
 	const [isDisabled, setIsDisabled] = useState(true);
 	const [filterDisabled, setFilterDisabled] = useState(true);
+	// eslint-disable-next-line no-unused-vars
+	const [pokeId, setPokeId] = useState(false);
 	const [filters, setFilters] = useState({
 		name: '',
 		gender: '',
@@ -38,164 +40,30 @@ const Dashboard = ({ fetchItems, items }) => {
 		// minspd: '',
 	});
 	// seed data - to later be replaced with store
-	const [myPokemon, setMyPokemon] = useState([
-		{
-			id: 'ed35a614-bb4f-4295-bee9-3a4c0c2a6328',
-			name: 'Charizard',
-			shiny: true,
-			dex: '006',
-			ball: 'dream',
-			level: '100',
-			types: [
-				{ type: 'fire', name: 'Fire' },
-				{ type: 'flying', name: 'Flying' },
-			],
-			gender: ['male', '87.5%'],
-			ability: 'Solar Power (Hidden)',
-			ivs: [
-				{ HP: 31 },
-				{ Atk: 'N/A' },
-				{ Def: 31 },
-				{ SpAtk: 'N/A' },
-				{ SpDef: 30 },
-				{ Spd: 30 },
-			],
-			eggMoves: [
-				{ normal: 'Belly Drum' },
-				{ dark: 'Bite' },
-				{ dragon: 'Dragon Tail' },
-				{ flying: 'Wing Attack' },
-			],
-		},
-		{
-			id: 'bbd2a3a9-6251-4349-8c44-45111c91943a',
-			name: 'Venusaur',
-			shiny: false,
-			dex: '003',
-			ball: 'beast',
-			level: '85',
-			types: [
-				{ type: 'grass', name: 'Grass' },
-				{ type: 'poison', name: 'Poison' },
-			],
-			gender: ['female', '12.5%'],
-			ability: 'Chlorophyll (Hidden)',
-			ivs: [
-				{ HP: 31 },
-				{ Atk: 'N/A' },
-				{ Def: 31 },
-				{ SpAtk: 'N/A' },
-				{ SpDef: 30 },
-				{ Spd: 30 },
-			],
-			eggMoves: [
-				{ normal: 'Skull Bash' },
-				{ grass: 'Petal Dance' },
-				{ ghost: 'Curse' },
-				{ grass: 'Ingrain' },
-			],
-		},
-		{
-			id: 'b24e25b2-31b7-4b18-8022-cb4564fb06be',
-			name: 'Arcanine',
-			shiny: true,
-			dex: '059',
-			ball: 'love',
-			level: '45',
-			types: [{ type: 'fire', name: 'Fire' }],
-			gender: ['male', '75%'],
-			ability: 'Intimidate',
-			ivs: [
-				{ HP: 31 },
-				{ Atk: 'N/A' },
-				{ Def: 31 },
-				{ SpAtk: 'N/A' },
-				{ SpDef: 30 },
-				{ Spd: 30 },
-			],
-			eggMoves: [
-				{ normal: 'Thrash' },
-				{ normal: 'Double-Edge' },
-				{ normal: 'Morning Sun' },
-				{ normal: 'Covet' },
-			],
-		},
-		{
-			id: '29a28fd5-7d2a-4798-9268-734915b8110e',
-			name: 'Beedrill',
-			shiny: false,
-			dex: '015',
-			ball: 'pokeball',
-			level: '15',
-			types: [
-				{ type: 'bug', name: 'Bug' },
-				{ type: 'poison', name: 'Poison' },
-			],
-			gender: ['female', '50%'],
-			ability: 'Sniper (Hidden)',
-			ivs: [
-				{ HP: 31 },
-				{ Atk: 'N/A' },
-				{ Def: 31 },
-				{ SpAtk: 'N/A' },
-				{ SpDef: 30 },
-				{ Spd: 30 },
-			],
-			eggMoves: [],
-		},
-		{
-			id: '45b381c0-2b9f-4459-8806-a0c8f52b82d3',
-			name: 'Pidgeotto',
-			shiny: false,
-			dex: '017',
-			ball: 'moon',
-			level: '66',
-			types: [{ type: 'flying', name: 'Flying' }],
-			gender: ['female', '87.5%'],
-			ability: 'Big Pecks (Hidden)',
-			ivs: [
-				{ HP: 31 },
-				{ Atk: 'N/A' },
-				{ Def: 31 },
-				{ SpAtk: 'N/A' },
-				{ SpDef: 30 },
-				{ Spd: 30 },
-			],
-			eggMoves: [
-				{ flying: 'Air Cutter' },
-				{ flying: 'Brave Bird' },
-				{ dark: 'Feint Attack' },
-				{ psychic: 'Foresight' },
-			],
-		},
-		{
-			id: 'd5ec9ee1-59a7-45eb-98fd-91db594af3b6',
-			name: 'Vulpix-Alola',
-			shiny: true,
-			dex: '037',
-			ball: 'friend',
-			level: '22',
-			types: [{ type: 'ice', name: 'Ice' }],
-			gender: ['female', '75%'],
-			ability: 'Snow Warning (Hidden)',
-			ivs: [
-				{ HP: 31 },
-				{ Atk: 'N/A' },
-				{ Def: 31 },
-				{ SpAtk: 'N/A' },
-				{ SpDef: 30 },
-				{ Spd: 30 },
-			],
-			eggMoves: [
-				{ psychic: 'Agility' },
-				{ fairy: 'Charm' },
-				{ normal: 'Disable' },
-				{ normal: 'Encore' },
-			],
-		},
-	]);
-	// eslint-disable-next-line
-	const [filteredPokemon, setFilteredPokemon] = useState(myPokemon);
+	const [myPokemon, setMyPokemon] = useState([]);
+	const pokeData = useSelector((state) => state.usermons);
+	const dispatch = useDispatch();
+	useEffect(() => {
+		// TODO: this needs a better way to find user
+		dispatch(fetchUsermons('JamesEarlJones'));
+		// this is intentionally left as empty array to run once on load like a componentDidMount()
+		// eslint-disable-next-line
+	}, []);
+	useEffect(() => {
+		const pokeArr = [];
+		if (pokeData.allIds.length > 0) {
+			Object.values(pokeData.byId).forEach((obj) => {
+				if (obj.data !== undefined) {
+					pokeArr.push(obj.data);
+				}
+			});
+			setMyPokemon(pokeArr);
+		}
+	}, [pokeData]);
+	const [filteredPokemon, setFilteredPokemon] = useState(null);
+	useEffect(() => {
+		setFilteredPokemon(myPokemon);
+	}, [myPokemon]);
 	const filterPokemon = () => {
 		const newPokeArr = [];
 		Object.keys(filters).forEach((filter) => {
@@ -212,9 +80,6 @@ const Dashboard = ({ fetchItems, items }) => {
 		const merged = [].concat.apply([], newPokeArr);
 		setFilteredPokemon(merged);
 	};
-	// useEffect(() => {
-	// 	console.log(filteredPokemon);
-	// }, [filteredPokemon]);
 	useEffect(() => {
 		if (myPokemon.length > 0) {
 			setIsDisabled(false);
@@ -267,11 +132,7 @@ const Dashboard = ({ fetchItems, items }) => {
 		<section className="Dashboard">
 			<div>
 				<h1>Add Pokemon</h1>
-				<AddPokemon
-					id="lg"
-					setMyPokemon={setMyPokemon}
-					myPokemon={myPokemon}
-				/>
+				<AddPokemon id="lg" pokeId={pokeId} />
 				<div className="buttons filter-modal">
 					<Button
 						className="add"
@@ -291,17 +152,23 @@ const Dashboard = ({ fetchItems, items }) => {
 					</Button>
 				</div>
 				<hr />
-				<div className="pokemon-list">
-					{filteredPokemon.map((pokemon) => (
-						<PokemonCard
-							key={pokemon.id}
-							pokemon={pokemon}
-							filteredPokemon={filteredPokemon}
-						/>
-					))}
-				</div>
+				{filteredPokemon === null ? (
+					<h1>...Loading</h1>
+				) : (
+					<div className="pokemon-list">
+						{filteredPokemon !== null &&
+							filteredPokemon.map((pokemon) => (
+								<PokemonCard
+									key={pokemon.id}
+									pokemon={pokemon}
+									filteredPokemon={filteredPokemon}
+									setPokeId={setPokeId}
+								/>
+							))}
+					</div>
+				)}
 			</div>
-			<Modal
+			{/* <Modal
 				show={show}
 				onHide={() => setShow(false)}
 				dialogClassName="modal-90w"
@@ -310,7 +177,7 @@ const Dashboard = ({ fetchItems, items }) => {
 				<Modal.Header closeButton>
 					<h1>Add Pokemon</h1>
 				</Modal.Header>
-				<AddPokemon setMyPokemon={setMyPokemon} />
+				<AddPokemon pokeId={pokeId} />
 			</Modal>
 			<Modal
 				show={filterShow}
@@ -328,7 +195,11 @@ const Dashboard = ({ fetchItems, items }) => {
 						inputProps={{
 							placeholder: 'Select Pokemon',
 						}}
-						items={filteredPokemon.map((el) => el.name)}
+						items={
+							filteredPokemon === null
+								? []
+								: filteredPokemon.map((el) => el.name)
+						}
 						getItemValue={(item) => item}
 						shouldItemRender={renderPokemonName}
 						renderMenu={(item) => (
@@ -364,7 +235,11 @@ const Dashboard = ({ fetchItems, items }) => {
 					type="select"
 					placeholder="Select Ability"
 					disabled={isDisabled}
-					options={filteredPokemon.map((el) => el.ability)}
+					options={
+						filteredPokemon === null
+							? []
+							: filteredPokemon.map((el) => el.ability)
+					}
 					value={filters.ability}
 					update={update}
 					id="ability"
@@ -373,7 +248,11 @@ const Dashboard = ({ fetchItems, items }) => {
 				<FormControl
 					type="select"
 					placeholder="Select Pokeball"
-					options={filteredPokemon.map((el) => el.ball)}
+					options={
+						filteredPokemon === null
+							? []
+							: filteredPokemon.map((el) => el.ball)
+					}
 					value={filters.ball}
 					update={update}
 					id="ball"
@@ -389,30 +268,14 @@ const Dashboard = ({ fetchItems, items }) => {
 				<Button
 					variant="secondary"
 					size="lg"
-					// disabled={filterDisabled}
+					disabled={filterDisabled}
 					onClick={() => setFilteredPokemon(myPokemon)}
 				>
 					Reset
 				</Button>
-			</Modal>
+			</Modal> */}
 		</section>
 	);
 };
 
-Dashboard.propTypes = {
-	fetchItems: PropTypes.func.isRequired,
-	items: PropTypes.arrayOf(
-		PropTypes.shape({
-			title: PropTypes.string,
-			descriptions: PropTypes.string,
-			image: PropTypes.string,
-			id: PropTypes.string,
-		})
-	),
-};
-
-Dashboard.defaultProps = {
-	items: [],
-};
-
-export default container(Dashboard);
+export default Dashboard;

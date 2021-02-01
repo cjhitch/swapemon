@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
 import Autocomplete from 'react-autocomplete';
 import Button from 'react-bootstrap/Button';
 import pokemonData from '../../assets/data/pokemon_info.json';
 import FormControl from '../formControl';
 import TypePills from '../typePills';
+import { updateUsermon, createUsermon } from '../../store/usermons/actions';
 import './AddPokemon.scss';
 
-const AddPokemon = ({ id, setMyPokemon, myPokemon, pokemon }) => {
+const AddPokemon = ({ id, pokeId }) => {
+	const pokeData = useSelector((state) => state.usermons);
+	const dispatch = useDispatch();
+	// TODO: this will be once the user logged in
+	const username = 'JamesEarlJones';
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
 	const [autoValue, setAutoValue] = useState('');
 	const [isDisabled, setIsDisabled] = useState(true);
@@ -38,26 +44,30 @@ const AddPokemon = ({ id, setMyPokemon, myPokemon, pokemon }) => {
 	});
 	// if the object has been passed in that means this is being edited - set the state to existing
 	useEffect(() => {
-		if (pokemon !== null) {
-			setNewPokemon({
-				name: pokemon.name,
-				dex: pokemon.dex,
-				ball: pokemon.ball,
-				gender: pokemon.gender[1],
-				ability: pokemon.ability,
-				shiny: pokemon.shiny,
-				types: pokemon.types,
-				moves: pokemon.eggMoves,
-				hp: pokemon.ivs.HP,
-				atk: pokemon.ivs.Atk,
-				def: pokemon.ivs.Def,
-				spAtk: pokemon.ivs.SpAtk,
-				spDef: pokemon.ivs.SpDef,
-				spd: pokemon.ivs.Spd,
-				level: pokemon.level,
-			});
+		if (pokeId) {
+			console.log(pokeId);
+			if (pokeData.allIds.length > 0) {
+				const editPoke = pokeData.byId[pokeId].data;
+				setNewPokemon({
+					name: editPoke.name,
+					dex: editPoke.dex,
+					ball: editPoke.ball,
+					gender: editPoke.gender[1],
+					ability: editPoke.ability,
+					shiny: editPoke.shiny,
+					types: editPoke.types,
+					moves: editPoke.eggMoves,
+					hp: editPoke.ivs.HP,
+					atk: editPoke.ivs.Atk,
+					def: editPoke.ivs.Def,
+					spAtk: editPoke.ivs.SpAtk,
+					spDef: editPoke.ivs.SpDef,
+					spd: editPoke.ivs.Spd,
+					level: editPoke.level,
+				});
+			}
 		}
-	}, [pokemon]);
+	}, [pokeId]);
 	// check if the correct items are selected in state - disable/enable button depending
 	useEffect(() => {
 		if (newPokemon.name !== '') {
@@ -208,7 +218,13 @@ const AddPokemon = ({ id, setMyPokemon, myPokemon, pokemon }) => {
 				{ flying: 'Wing Attack' },
 			],
 		};
-		setMyPokemon([...myPokemon, addPoke]);
+		if (pokeId) {
+			const editPoke = { id: pokeId, ...addPoke };
+			dispatch(updateUsermon(username, editPoke));
+		} else {
+			dispatch(createUsermon(username, addPoke));
+		}
+		// setMyPokemon([...myPokemon, addPoke]);
 	};
 
 	return (
@@ -392,20 +408,22 @@ const AddPokemon = ({ id, setMyPokemon, myPokemon, pokemon }) => {
 
 AddPokemon.propTypes = {
 	id: PropTypes.string,
-	pokemon: PropTypes.objectOf(
-		PropTypes.oneOfType([
-			PropTypes.string,
-			PropTypes.number,
-			PropTypes.bool,
-			PropTypes.array,
-		])
-	),
-	setMyPokemon: PropTypes.func.isRequired,
+	pokeId: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+	// pokemon: PropTypes.objectOf(
+	// 	PropTypes.oneOfType([
+	// 		PropTypes.string,
+	// 		PropTypes.number,
+	// 		PropTypes.bool,
+	// 		PropTypes.array,
+	// 	])
+	// ),
+	// setMyPokemon: PropTypes.func.isRequired,
 };
 
 AddPokemon.defaultProps = {
 	id: '',
-	pokemon: null,
+	pokeId: false,
+	// pokemon: null,
 };
 
 export default AddPokemon;
