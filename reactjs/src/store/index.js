@@ -12,6 +12,7 @@ import items from './items/reducer';
 import users from './users/reducer';
 import usermons from './usermons/reducer';
 import pokemon from './pokemon/reducer';
+import moves from './moves/reducer';
 
 // combine multiple reducers into one
 const rootReducer = combineReducers({
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
 	users,
 	usermons,
 	pokemon,
+	moves,
 });
 
 // set up middleware

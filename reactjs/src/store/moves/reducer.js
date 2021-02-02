@@ -42,6 +42,8 @@ const movesPending = (state, action) => {
 };
 
 const movesSuccess = (state, action) => {
+	console.log('state: ', state);
+	console.log('action: ', action);
 	return {
 		...state,
 		isLoading: false,

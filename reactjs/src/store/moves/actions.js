@@ -24,7 +24,7 @@ export const fetchMoves = () => ({
 	// types for this action - "request, success, error"
 	types: [REQ_MOVES_PENDING, REQ_MOVES_SUCCESS, REQ_MOVES_ERROR],
 	// a function used to call the api
-	callAPI: () => API.get(`/move`),
+	callAPI: () => API.get(`/moves`),
 	// receives the current app state and returns true if we should call the api
 	shouldCallAPI: (state) => {
 		const { loadedAt, isLoading } = state.users;
@@ -41,14 +41,14 @@ export const createMove = (move) => {
 	const id = v4();
 	return {
 		types: [ADD_MOVE_PENDING, ADD_MOVE_SUCCESS, ADD_MOVE_ERROR],
-		callAPI: () => API.post(`/move`, { id, ...move }),
+		callAPI: () => API.post(`/moves`, { id, ...move }),
 		payload: { move },
 	};
 };
 
 export const fetchmove = (id) => ({
 	types: [REQ_MOVE_PENDING, REQ_MOVE_SUCCESS, REQ_MOVE_ERROR],
-	callAPI: () => API.get(`/move/${id}`),
+	callAPI: () => API.get(`/moves/${id}`),
 	shouldCallAPI: (state) => {
 		const move = state.moves.byId[id] || {};
 		const { loadedAt, isLoading } = move;
@@ -61,12 +61,12 @@ export const fetchmove = (id) => ({
 
 export const updateUsermon = (move) => ({
 	types: [UPDATE_MOVE_PENDING, UPDATE_MOVE_SUCCESS, UPDATE_MOVE_ERROR],
-	callAPI: () => API.post(`/move/${move.id}`, move),
+	callAPI: () => API.post(`/moves/${move.id}`, move),
 	payload: { id: move.id },
 });
 
 export const deleteUsermon = (id) => ({
 	types: [DELETE_MOVE_PENDING, DELETE_MOVE_SUCCESS, DELETE_MOVE_ERROR],
-	callAPI: () => API.delete(`/move/${id}`),
+	callAPI: () => API.delete(`/moves/${id}`),
 	payload: { id },
 });

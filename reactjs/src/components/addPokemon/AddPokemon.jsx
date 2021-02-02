@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
@@ -9,16 +8,20 @@ import FormControl from '../formControl';
 import TypePills from '../typePills';
 import { updateUsermon, createUsermon } from '../../store/usermons/actions';
 import { fetchPokemons } from '../../store/pokemon/actions';
+import { fetchMoves } from '../../store/moves/actions';
 import './AddPokemon.scss';
 
 const AddPokemon = ({ id, pokeId }) => {
 	const pokeData = useSelector((state) => state.usermons);
 	const pokes = useSelector((state) => state.pokemon);
+	const pokeMoves = useSelector((state) => state.moves);
+	const [moves, setMoves] = useState([]);
 	const [pokemon, setPokemon] = useState([]);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
 		dispatch(fetchPokemons());
+		dispatch(fetchMoves());
 		// this should only run once to run similar to componentDidMount()
 		// eslint-disable-next-line
 	}, []);
@@ -26,7 +29,10 @@ const AddPokemon = ({ id, pokeId }) => {
 		if (pokes.allIds.length > 0) {
 			setPokemon(pokes.byId);
 		}
-	}, [pokes]);
+		if (pokeMoves.allIds.length > 0) {
+			setMoves(pokeMoves.byId);
+		}
+	}, [pokes, pokeMoves]);
 	// TODO: this will be once the user logged in
 	const username = 'JamesEarlJones';
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
@@ -60,7 +66,6 @@ const AddPokemon = ({ id, pokeId }) => {
 	// if the object has been passed in that means this is being edited - set the state to existing
 	useEffect(() => {
 		if (pokeId) {
-			console.log(pokeId);
 			if (pokeData.allIds.length > 0) {
 				const editPoke = pokeData.byId[pokeId].data;
 				setNewPokemon({
@@ -104,15 +109,7 @@ const AddPokemon = ({ id, pokeId }) => {
 
 	// run through the data and get types based on the move name - this will be fixed in the database
 	const getType = (move) => {
-		let type;
-		// eslint-disable-next-line
-		for (const [key, value] of Object.entries(pokemonData.moves)) {
-			if (key === move) {
-				type = value.type;
-				break;
-			}
-		}
-		return type;
+		return moves[move].data.type;
 	};
 
 	// set the picked data to set for the dropdowns
@@ -160,7 +157,6 @@ const AddPokemon = ({ id, pokeId }) => {
 	// update function this checks if it is a checkbox and updates that accordingly
 	// otherwise it uses the key to update the correct part of the state
 	const update = (inputId, value) => {
-		console.log(inputId, value);
 		if (inputId === 'shiny') {
 			if (value === '0') {
 				setNewPokemon({ ...newPokemon, [inputId]: 1 });
@@ -237,7 +233,6 @@ const AddPokemon = ({ id, pokeId }) => {
 		} else {
 			dispatch(createUsermon(username, addPoke));
 		}
-		// setMyPokemon([...myPokemon, addPoke]);
 	};
 
 	return (
