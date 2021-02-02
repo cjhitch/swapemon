@@ -35,10 +35,8 @@ export const fetchItems = () => ({
 });
 
 export const createItem = (item) => {
-	console.log('create item called');
 	// create a uuid for this item so that we can use it in the reducers for pending and loading
 	const id = v4;
-	console.log(id);
 	return {
 		types: [ADD_ITEM_PENDING, ADD_ITEM_SUCCESS, ADD_ITEM_ERROR],
 		callAPI: () => API.post('/items', { id, ...item }),

@@ -1,21 +1,21 @@
 import createReducer from '../helpers/createReducer';
 
 import {
-	REQ_USERMONS_PENDING,
-	REQ_USERMONS_SUCCESS,
-	REQ_USERMONS_ERROR,
-	REQ_USERMON_PENDING,
-	REQ_USERMON_SUCCESS,
-	REQ_USERMON_ERROR,
-	ADD_USERMON_PENDING,
-	ADD_USERMON_SUCCESS,
-	ADD_USERMON_ERROR,
-	UPDATE_USERMON_PENDING,
-	UPDATE_USERMON_SUCCESS,
-	UPDATE_USERMON_ERROR,
-	DELETE_USERMON_PENDING,
-	DELETE_USERMON_SUCCESS,
-	DELETE_USERMON_ERROR,
+	REQ_MOVES_PENDING,
+	REQ_MOVES_SUCCESS,
+	REQ_MOVES_ERROR,
+	REQ_MOVE_PENDING,
+	REQ_MOVE_SUCCESS,
+	REQ_MOVE_ERROR,
+	ADD_MOVE_PENDING,
+	ADD_MOVE_SUCCESS,
+	ADD_MOVE_ERROR,
+	UPDATE_MOVE_PENDING,
+	UPDATE_MOVE_SUCCESS,
+	UPDATE_MOVE_ERROR,
+	DELETE_MOVE_PENDING,
+	DELETE_MOVE_SUCCESS,
+	DELETE_MOVE_ERROR,
 } from '../actionTypes';
 
 const initialState = {
@@ -32,7 +32,7 @@ const initialState = {
 };
 
 // eslint-disable-next-line
-const usermonsPending = (state, action) => {
+const movesPending = (state, action) => {
 	// set loading state and clear error
 	return {
 		...state,
@@ -41,8 +41,7 @@ const usermonsPending = (state, action) => {
 	};
 };
 
-const usermonsSuccess = (state, action) => {
-	// clear loading and error, update cache time, add users
+const movesSuccess = (state, action) => {
 	return {
 		...state,
 		isLoading: false,
@@ -51,12 +50,12 @@ const usermonsSuccess = (state, action) => {
 		byId: {
 			...state.byId,
 			...Object.values(action.data).reduce(
-				(usermons, usermon) => ({
+				(moves, move) => ({
 					// keep the current object
-					...usermons,
-					// add the user id as the key and an user object for loading
-					[usermon.id]: {
-						data: usermon,
+					...moves,
+					// add the poke id as the key and an poke object for loading
+					[move.name]: {
+						data: move,
 						isLoading: false,
 						loadedAt: Date.now(),
 						error: null,
@@ -68,13 +67,13 @@ const usermonsSuccess = (state, action) => {
 		allIds: [
 			...new Set([
 				...state.allIds,
-				...Object.values(action.data).map((usermon) => usermon.id),
+				...Object.values(action.data).map((move) => move.name),
 			]),
 		],
 	};
 };
 
-const usermonsError = (state, action) => {
+const movesError = (state, action) => {
 	// clear loading and set error
 	return {
 		...state,
@@ -83,7 +82,7 @@ const usermonsError = (state, action) => {
 	};
 };
 
-const usermonPending = (state, action) => {
+const movePending = (state, action) => {
 	// set loading state and clear error
 	return {
 		...state,
@@ -98,8 +97,8 @@ const usermonPending = (state, action) => {
 	};
 };
 
-const usermonSuccess = (state, action) => {
-	// clear loading and error, update cache time, add users
+const moveSuccess = (state, action) => {
+	// clear loading and error, update cache time, add pokes
 	return {
 		...state,
 		byId: {
@@ -115,7 +114,7 @@ const usermonSuccess = (state, action) => {
 	};
 };
 
-const usermonDelete = (state, action) => {
+const moveDelete = (state, action) => {
 	const newAll = state.allIds;
 	const newBy = state.byId;
 	newAll.splice(state.allIds.indexOf(action.payload.id), 1);
@@ -127,7 +126,7 @@ const usermonDelete = (state, action) => {
 	};
 };
 
-const usermonError = (state, action) => {
+const moveError = (state, action) => {
 	// clear loading and set error
 	return {
 		...state,
@@ -143,19 +142,19 @@ const usermonError = (state, action) => {
 };
 
 export default createReducer(initialState, {
-	[REQ_USERMONS_PENDING]: usermonsPending,
-	[REQ_USERMONS_SUCCESS]: usermonsSuccess,
-	[REQ_USERMONS_ERROR]: usermonsError,
-	[REQ_USERMON_PENDING]: usermonPending,
-	[REQ_USERMON_SUCCESS]: usermonSuccess,
-	[REQ_USERMON_ERROR]: usermonError,
-	[ADD_USERMON_PENDING]: usermonPending,
-	[ADD_USERMON_SUCCESS]: usermonSuccess,
-	[ADD_USERMON_ERROR]: usermonError,
-	[UPDATE_USERMON_PENDING]: usermonPending,
-	[UPDATE_USERMON_SUCCESS]: usermonSuccess,
-	[UPDATE_USERMON_ERROR]: usermonError,
-	[DELETE_USERMON_PENDING]: usermonPending,
-	[DELETE_USERMON_SUCCESS]: usermonDelete,
-	[DELETE_USERMON_ERROR]: usermonError,
+	[REQ_MOVES_PENDING]: movesPending,
+	[REQ_MOVES_SUCCESS]: movesSuccess,
+	[REQ_MOVES_ERROR]: movesError,
+	[REQ_MOVE_PENDING]: movePending,
+	[REQ_MOVE_SUCCESS]: moveSuccess,
+	[REQ_MOVE_ERROR]: moveError,
+	[ADD_MOVE_PENDING]: movePending,
+	[ADD_MOVE_SUCCESS]: moveSuccess,
+	[ADD_MOVE_ERROR]: moveError,
+	[UPDATE_MOVE_PENDING]: movePending,
+	[UPDATE_MOVE_SUCCESS]: moveSuccess,
+	[UPDATE_MOVE_ERROR]: moveError,
+	[DELETE_MOVE_PENDING]: movePending,
+	[DELETE_MOVE_SUCCESS]: moveDelete,
+	[DELETE_MOVE_ERROR]: moveError,
 });
