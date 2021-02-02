@@ -36,7 +36,6 @@ export const fetchUsers = () => ({
 export const createUser = (user) => {
 	// create a uuid for this user so that we can use it in the reducers for pending and loading
 	const id = v4();
-	console.log(id);
 	return {
 		types: [ADD_USER_PENDING, ADD_USER_SUCCESS, ADD_USER_ERROR],
 		callAPI: () => API.post('/users', { id, ...user }),

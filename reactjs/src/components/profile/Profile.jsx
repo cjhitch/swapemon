@@ -28,7 +28,6 @@ const Profile = () => {
 		// eslint-disable-next-line
 	}, []);
 	useEffect(() => {
-		console.log(storeData);
 		if (storeData.allIds.length > 0) {
 			setUser(
 				storeData.byId['790fe8b3-3ce3-444a-99c2-6eca0d28c65a'].data

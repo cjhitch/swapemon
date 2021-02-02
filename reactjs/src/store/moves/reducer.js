@@ -42,8 +42,6 @@ const movesPending = (state, action) => {
 };
 
 const movesSuccess = (state, action) => {
-	console.log('state: ', state);
-	console.log('action: ', action);
 	return {
 		...state,
 		isLoading: false,
@@ -117,7 +115,6 @@ const moveSuccess = (state, action) => {
 };
 
 const moveDelete = (state, action) => {
-	console.log('state: ', state, 'action: ', action);
 	const newAll = state.allIds;
 	const newBy = state.byId;
 	newAll.splice(state.allIds.indexOf(action.payload.id), 1);

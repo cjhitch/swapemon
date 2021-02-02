@@ -48,7 +48,7 @@ const AddPokemon = ({ id, pokeId }) => {
 		ability: '',
 		shiny: '',
 		types: '',
-		moves: '',
+		moves: [],
 		hp: '',
 		atk: '',
 		def: '',

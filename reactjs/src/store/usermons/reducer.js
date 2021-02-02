@@ -43,7 +43,6 @@ const usermonsPending = (state, action) => {
 
 const usermonsSuccess = (state, action) => {
 	// clear loading and error, update cache time, add users
-	// console.log('action data: ', action.data);
 	return {
 		...state,
 		isLoading: false,
@@ -117,7 +116,6 @@ const usermonSuccess = (state, action) => {
 };
 
 const usermonDelete = (state, action) => {
-	console.log('state: ', state, 'action: ', action);
 	const newAll = state.allIds;
 	const newBy = state.byId;
 	newAll.splice(state.allIds.indexOf(action.payload.id), 1);

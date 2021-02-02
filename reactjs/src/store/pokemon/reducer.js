@@ -115,7 +115,6 @@ const pokemonSuccess = (state, action) => {
 };
 
 const pokemonDelete = (state, action) => {
-	console.log('state: ', state, 'action: ', action);
 	const newAll = state.allIds;
 	const newBy = state.byId;
 	newAll.splice(state.allIds.indexOf(action.payload.id), 1);
