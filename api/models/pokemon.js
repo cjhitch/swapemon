@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
 			name: {
 				defaultValue: DataTypes.STRING,
 				primaryKey: true,
-				allowNull: false,
+				allowNull: { args: false, msg: 'Name is required' },
 				type: DataTypes.STRING,
 				validate: {
 					len: { args: [3, 120], msg: 'Pokemon name is required' },
@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
 			},
 			male: {
 				defaultValue: DataTypes.FLOAT,
-				allowNull: false,
+				allowNull: { args: false, msg: 'Male value is required' },
 				type: DataTypes.FLOAT,
 				validate: {
 					is: /^(\d{1,3})[.]{0,1}(\d{0,2})/,
@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
 			},
 			female: {
 				defaultValue: DataTypes.FLOAT,
-				allowNull: false,
+				allowNull: { args: false, msg: 'Female value is required' },
 				type: DataTypes.FLOAT,
 				validate: {
 					is: /^(\d{1,3})[.]{0,1}(\d{0,2})/,
@@ -56,7 +56,7 @@ module.exports = (sequelize, DataTypes) => {
 			},
 			type: {
 				defaultValue: DataTypes.ARRAY(DataTypes.STRING),
-				allowNull: false,
+				allowNull: { args: false, msg: 'Type is required' },
 				type: DataTypes.ARRAY(DataTypes.STRING),
 				validate: {
 					isIn: [
@@ -86,7 +86,7 @@ module.exports = (sequelize, DataTypes) => {
 			},
 			hatch_steps: {
 				defaultValue: DataTypes.INTEGER,
-				allowNull: false,
+				allowNull: { args: false, msg: 'Hatch steps is required' },
 				type: DataTypes.INTEGER,
 				validate: {
 					isInt: true,
@@ -97,7 +97,7 @@ module.exports = (sequelize, DataTypes) => {
 			},
 			egg_group: {
 				defaultValue: DataTypes.ARRAY(DataTypes.STRING),
-				allowNull: false,
+				allowNull: { args: false, msg: 'Egg group is required' },
 				type: DataTypes.ARRAY(DataTypes.STRING),
 				validate: {
 					isIn: [
@@ -122,7 +122,7 @@ module.exports = (sequelize, DataTypes) => {
 			},
 			ability_1: {
 				defaultValue: DataTypes.STRING,
-				allowNull: false,
+				allowNull: { args: false, msg: 'Ability is required' },
 				type: DataTypes.STRING,
 				validate: {
 					len: { args: [3, 120], msg: 'Ability is required!' },
@@ -140,7 +140,7 @@ module.exports = (sequelize, DataTypes) => {
 			},
 			base_egg_hatch: {
 				defaultValue: DataTypes.STRING,
-				allowNull: false,
+				allowNull: { args: false, msg: 'Base egg hatch is required' },
 				type: DataTypes.STRING,
 				validate: {
 					len: { args: [3, 120], msg: 'Base hatch may not be left empty' },
