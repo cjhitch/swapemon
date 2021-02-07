@@ -9,6 +9,7 @@ const cors = require('cors');
 // routes
 const pokemonRouter = require('./routes/pokemon.routes');
 const pokeballsRouter = require('./routes/pokeballs.routes');
+const movesRouter = require('./routes/moves.routes');
 // create express app
 const app = express();
 const port = process.env.PORT || 5000;
@@ -25,6 +26,8 @@ app.use(morganDebug('api:request', 'dev'));
 app.use('/pokemon', pokemonRouter);
 // pokeballs route
 app.use('/pokeballs', pokeballsRouter);
+// moves route
+app.use('/moves', movesRouter);
 
 // API calls
 app.get('/api/hello', (req, res) => {
