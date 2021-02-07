@@ -117,8 +117,8 @@ const AddPokemon = ({ id, pokeId }) => {
 		if (pokemon[newPokemon.name]) {
 			const poke = pokemon[newPokemon.name].data;
 			setResetSelect(false);
-			const abilArr = poke.ability.filter((abil) => abil !== '----');
-			if (poke.hidden_ability !== '----') {
+			const abilArr = poke.ability.filter((abil) => abil.length !== 0);
+			if (poke.hidden_ability.length !== 0) {
 				abilArr.push(poke.hidden_ability);
 			}
 			// this is not efficient currently but should be better when pulling from the database

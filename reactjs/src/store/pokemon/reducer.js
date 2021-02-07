@@ -41,7 +41,22 @@ const pokemonsPending = (state, action) => {
 	};
 };
 
+// send array back with items that have values and no null vals
+const returnValue = (val, val2 = null) => {
+	const arr = [];
+	if (val !== null) {
+		if (val2 === 'hidden_ability') {
+			arr.push(`${val} (hidden)`);
+		} else {
+			arr.push(val);
+		}
+	}
+	if (val2 !== null && val2 !== 'hidden_ability') arr.push(val2);
+	return arr;
+};
+
 const pokemonsSuccess = (state, action) => {
+	console.log(action);
 	return {
 		...state,
 		isLoading: false,
@@ -55,7 +70,33 @@ const pokemonsSuccess = (state, action) => {
 					...pokemons,
 					// add the poke id as the key and an poke object for loading
 					[pokemon.name]: {
-						data: pokemon,
+						data: {
+							name: pokemon.name,
+							dex: pokemon.dex,
+							gender: {
+								male: pokemon.male,
+								female: pokemon.female,
+							},
+							type: returnValue(pokemon.type_1, pokemon.type_2),
+							hatch_steps: pokemon.hatch_steps,
+							egg_group: returnValue(
+								pokemon.egg_group_1,
+								pokemon.egg_group_2
+							),
+							ability: returnValue(
+								pokemon.ability_1,
+								pokemon.ability_2
+							),
+							hidden_ability: returnValue(
+								pokemon.hidden_ability,
+								'hidden_ability'
+							),
+							base_egg_hatch: pokemon.base_egg_hatch,
+							egg_moves:
+								pokemon.egg_moves !== null
+									? pokemon.egg_moves
+									: [],
+						},
 						isLoading: false,
 						loadedAt: Date.now(),
 						error: null,

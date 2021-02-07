@@ -1,7 +1,7 @@
 'use strict';
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-	class Pokeballs extends Model {
+	class Moves extends Model {
 		/**
 		 * Helper method for defining associations.
 		 * This method is not a part of Sequelize lifecycle.
@@ -11,32 +11,32 @@ module.exports = (sequelize, DataTypes) => {
 			// define association here
 		}
 	}
-	Pokeballs.init(
+	Moves.init(
 		{
 			name: {
 				defaultValue: DataTypes.STRING,
 				primaryKey: true,
-				allowNull: { args: false, msg: 'Pokeball name is required' },
+				allowNull: { args: false, msg: 'Move name is required' },
 				type: DataTypes.STRING,
 				validate: {
 					len: {
 						args: [3, 70],
-						msg: 'Pokeball name must be at least 3 characters.',
+						msg: 'Move name must be at least 3 characters.',
 					},
 				},
 			},
-			sprite: {
+			type: {
 				allowNull: {
 					args: false,
-					msg: 'Pokeball sprite must be at least 3 characters',
+					msg: 'Type must be at least 3 characters',
 				},
 				type: DataTypes.STRING,
 			},
 		},
 		{
 			sequelize,
-			modelName: 'Pokeballs',
+			modelName: 'Moves',
 		},
 	);
-	return Pokeballs;
+	return Moves;
 };
