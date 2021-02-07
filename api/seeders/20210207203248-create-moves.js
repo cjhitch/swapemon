@@ -163,7 +163,7 @@ module.exports = {
 				},
 				{
 					name: 'Assist',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -235,13 +235,13 @@ module.exports = {
 				},
 				{
 					name: 'Barrage',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Barrier',
-					type: 'Unusable',
+					type: 'Psychic',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -277,13 +277,13 @@ module.exports = {
 				},
 				{
 					name: 'Bestow',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Bide',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -355,7 +355,7 @@ module.exports = {
 				},
 				{
 					name: 'Bone Club',
-					type: 'Unusable',
+					type: 'Ground',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -415,7 +415,7 @@ module.exports = {
 				},
 				{
 					name: 'Bubble',
-					type: 'Unusable',
+					type: 'Water',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -475,13 +475,13 @@ module.exports = {
 				},
 				{
 					name: 'Camouflage',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Captivate',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -523,7 +523,7 @@ module.exports = {
 				},
 				{
 					name: 'Chip Away',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -535,7 +535,7 @@ module.exports = {
 				},
 				{
 					name: 'Clamp',
-					type: 'Unusable',
+					type: 'Water',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -565,7 +565,7 @@ module.exports = {
 				},
 				{
 					name: 'Comet Punch',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -589,7 +589,7 @@ module.exports = {
 				},
 				{
 					name: 'Constrict',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -811,7 +811,7 @@ module.exports = {
 				},
 				{
 					name: 'Dizzy Punch',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -835,7 +835,7 @@ module.exports = {
 				},
 				{
 					name: 'Double Slap',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -895,7 +895,7 @@ module.exports = {
 				},
 				{
 					name: 'Dragon Rage',
-					type: 'Unusable',
+					type: 'Dragon',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -979,7 +979,7 @@ module.exports = {
 				},
 				{
 					name: 'Egg Bomb',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1009,7 +1009,7 @@ module.exports = {
 				},
 				{
 					name: 'Embargo',
-					type: 'Unusable',
+					type: 'Dark',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1129,7 +1129,7 @@ module.exports = {
 				},
 				{
 					name: 'Feint Attack',
-					type: 'Unusable',
+					type: 'Dark',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1207,7 +1207,7 @@ module.exports = {
 				},
 				{
 					name: 'Flame Burst',
-					type: 'Unusable',
+					type: 'Fire',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1237,7 +1237,7 @@ module.exports = {
 				},
 				{
 					name: 'Flash',
-					type: 'Unusable',
+					type: 'Electric',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1321,7 +1321,7 @@ module.exports = {
 				},
 				{
 					name: 'Foresight',
-					type: 'Unusable',
+					type: 'Psychic',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1363,7 +1363,7 @@ module.exports = {
 				},
 				{
 					name: 'Frustration',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1477,7 +1477,7 @@ module.exports = {
 				},
 				{
 					name: 'Grass Whistle',
-					type: 'Unusable',
+					type: 'Grass',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1609,13 +1609,13 @@ module.exports = {
 				},
 				{
 					name: 'Heal Block',
-					type: 'Unusable',
+					type: 'Psychic',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Heal Order',
-					type: 'Unusable',
+					type: 'Bug',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1633,7 +1633,7 @@ module.exports = {
 				},
 				{
 					name: 'Heart Stamp',
-					type: 'Unusable',
+					type: 'Psychic',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1675,7 +1675,7 @@ module.exports = {
 				},
 				{
 					name: 'Hidden Power',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1753,7 +1753,7 @@ module.exports = {
 				},
 				{
 					name: 'Hydro Vortex',
-					type: 'Unusable',
+					type: 'Water',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1795,7 +1795,7 @@ module.exports = {
 				},
 				{
 					name: 'Ice Ball',
-					type: 'Unusable',
+					type: 'Ice',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1873,7 +1873,7 @@ module.exports = {
 				},
 				{
 					name: 'Inferno Overdrive',
-					type: 'Unusable',
+					type: 'Fire',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1897,7 +1897,7 @@ module.exports = {
 				},
 				{
 					name: 'Ion Deluge',
-					type: 'Unusable',
+					type: 'Electric',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -1927,19 +1927,19 @@ module.exports = {
 				},
 				{
 					name: 'Jump Kick',
-					type: 'Unusable',
+					type: 'Fighting',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Karate Chop',
-					type: 'Unusable',
+					type: 'Fighting',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Kinesis',
-					type: 'Unusable',
+					type: 'Psychic',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2071,7 +2071,7 @@ module.exports = {
 				},
 				{
 					name: 'Lucky Chant',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2125,7 +2125,7 @@ module.exports = {
 				},
 				{
 					name: 'Magnet Bomb',
-					type: 'Unusable',
+					type: 'Steel',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2143,7 +2143,7 @@ module.exports = {
 				},
 				{
 					name: 'Magnitude',
-					type: 'Unusable',
+					type: 'Ground',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2161,7 +2161,7 @@ module.exports = {
 				},
 				{
 					name: 'Me First',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2173,7 +2173,7 @@ module.exports = {
 				},
 				{
 					name: 'Meditate',
-					type: 'Unusable',
+					type: 'Psychic',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2263,7 +2263,7 @@ module.exports = {
 				},
 				{
 					name: 'Miracle Eye',
-					type: 'Unusable',
+					type: 'Psychic',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2275,13 +2275,13 @@ module.exports = {
 				},
 				{
 					name: 'Mirror Move',
-					type: 'Unusable',
+					type: 'Flying',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Mirror Shot',
-					type: 'Unusable',
+					type: 'Steel',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2329,7 +2329,7 @@ module.exports = {
 				},
 				{
 					name: 'Mud Bomb',
-					type: 'Unusable',
+					type: 'Ground',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2341,7 +2341,7 @@ module.exports = {
 				},
 				{
 					name: 'Mud Sport',
-					type: 'Unusable',
+					type: 'Ground',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2377,7 +2377,7 @@ module.exports = {
 				},
 				{
 					name: 'Natural Gift',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2395,7 +2395,7 @@ module.exports = {
 				},
 				{
 					name: 'Needle Arm',
-					type: 'Unusable',
+					type: 'Grass',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2425,7 +2425,7 @@ module.exports = {
 				},
 				{
 					name: 'Nightmare',
-					type: 'Unusable',
+					type: 'Ghost',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2461,13 +2461,13 @@ module.exports = {
 				},
 				{
 					name: 'Odor Sleuth',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Ominous Wind',
-					type: 'Unusable',
+					type: 'Ghost',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2761,7 +2761,7 @@ module.exports = {
 				},
 				{
 					name: 'Psywave',
-					type: 'Unusable',
+					type: 'Psychic',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2773,7 +2773,7 @@ module.exports = {
 				},
 				{
 					name: 'Punishment',
-					type: 'Unusable',
+					type: 'Dark',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2785,7 +2785,7 @@ module.exports = {
 				},
 				{
 					name: 'Pursuit',
-					type: 'Unusable',
+					type: 'Dark',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2815,7 +2815,7 @@ module.exports = {
 				},
 				{
 					name: 'Rage',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2851,7 +2851,7 @@ module.exports = {
 				},
 				{
 					name: 'Razor Wind',
-					type: 'Unusable',
+					type: 'Grass',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2881,7 +2881,7 @@ module.exports = {
 				},
 				{
 					name: 'Refresh',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2905,7 +2905,7 @@ module.exports = {
 				},
 				{
 					name: 'Return',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2947,7 +2947,7 @@ module.exports = {
 				},
 				{
 					name: 'Rock Climb',
-					type: 'Unusable',
+					type: 'Rock',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -2995,7 +2995,7 @@ module.exports = {
 				},
 				{
 					name: 'Rolling Kick',
-					type: 'Unusable',
+					type: 'Fighting',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3013,7 +3013,7 @@ module.exports = {
 				},
 				{
 					name: 'Rototiller',
-					type: 'Unusable',
+					type: 'Ground',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3097,7 +3097,7 @@ module.exports = {
 				},
 				{
 					name: 'Secret Power',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3169,7 +3169,7 @@ module.exports = {
 				},
 				{
 					name: 'Sharpen',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3217,13 +3217,13 @@ module.exports = {
 				},
 				{
 					name: 'Signal Beam',
-					type: 'Unusable',
+					type: 'Bug',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Silver Wind',
-					type: 'Unusable',
+					type: 'Bug',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3271,13 +3271,13 @@ module.exports = {
 				},
 				{
 					name: 'Sky Drop',
-					type: 'Unusable',
+					type: 'Flying',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Sky Uppercut',
-					type: 'Unusable',
+					type: 'Fighting',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3343,7 +3343,7 @@ module.exports = {
 				},
 				{
 					name: 'Smelling Salts',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3367,7 +3367,7 @@ module.exports = {
 				},
 				{
 					name: 'Snatch',
-					type: 'Unusable',
+					type: 'Dark',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3403,7 +3403,7 @@ module.exports = {
 				},
 				{
 					name: 'Sonic Boom',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3445,13 +3445,13 @@ module.exports = {
 				},
 				{
 					name: 'Spider Web',
-					type: 'Unusable',
+					type: 'Bug',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Spike Cannon',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3499,7 +3499,7 @@ module.exports = {
 				},
 				{
 					name: 'Spotlight',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3517,7 +3517,7 @@ module.exports = {
 				},
 				{
 					name: 'Steamroller',
-					type: 'Unusable',
+					type: 'Bug',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3721,7 +3721,7 @@ module.exports = {
 				},
 				{
 					name: 'Synchronoise',
-					type: 'Unusable',
+					type: 'Psychic',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3799,7 +3799,7 @@ module.exports = {
 				},
 				{
 					name: 'Telekinesis',
-					type: 'Unusable',
+					type: 'Psychic',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -3955,13 +3955,13 @@ module.exports = {
 				},
 				{
 					name: 'Trump Card',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					name: 'Twineedle',
-					type: 'Unusable',
+					type: 'Bug',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -4045,7 +4045,7 @@ module.exports = {
 				},
 				{
 					name: 'Wake-Up Slap',
-					type: 'Unusable',
+					type: 'Fighting',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -4075,7 +4075,7 @@ module.exports = {
 				},
 				{
 					name: 'Water Sport',
-					type: 'Unusable',
+					type: 'Water',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
@@ -4177,7 +4177,7 @@ module.exports = {
 				},
 				{
 					name: 'Wring Out',
-					type: 'Unusable',
+					type: 'Normal',
 					createdAt: Sequelize.literal('NOW()'),
 					updatedAt: Sequelize.literal('NOW()'),
 				},
