@@ -8,8 +8,6 @@ module.exports = {
 				{
 					name: 'Bulbasaur',
 					dex: '001',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -22,7 +20,7 @@ module.exports = {
 					hidden_ability: 'Chlorophyll',
 					base_egg_hatch: 'Bulbasaur',
 					egg_moves: [
-						'skull Bash',
+						'Skull Bash',
 						'Petal Dance',
 						'Curse',
 						'Ingrain',
@@ -33,8 +31,6 @@ module.exports = {
 				{
 					name: 'Ivysaur',
 					dex: '002',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -58,8 +54,6 @@ module.exports = {
 				{
 					name: 'Venusaur',
 					dex: '003',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -83,8 +77,6 @@ module.exports = {
 				{
 					name: 'Mega Venusaur',
 					dex: '003',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -108,8 +100,6 @@ module.exports = {
 				{
 					name: 'Charmander',
 					dex: '004',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -135,8 +125,6 @@ module.exports = {
 				{
 					name: 'Charmeleon',
 					dex: '005',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -162,8 +150,6 @@ module.exports = {
 				{
 					name: 'Charizard',
 					dex: '006',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -189,8 +175,6 @@ module.exports = {
 				{
 					name: 'Mega Charizard X',
 					dex: '006',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -216,8 +200,6 @@ module.exports = {
 				{
 					name: 'Mega Charizard Y',
 					dex: '006',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -243,8 +225,6 @@ module.exports = {
 				{
 					name: 'Squirtle',
 					dex: '007',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -272,8 +252,6 @@ module.exports = {
 				{
 					name: 'Wartortle',
 					dex: '008',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -301,8 +279,6 @@ module.exports = {
 				{
 					name: 'Blastoise',
 					dex: '009',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -330,8 +306,6 @@ module.exports = {
 				{
 					name: 'Mega Blastoise',
 					dex: '009',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -359,8 +333,6 @@ module.exports = {
 				{
 					name: 'Caterpie',
 					dex: '010',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -377,8 +349,6 @@ module.exports = {
 				{
 					name: 'Metapod',
 					dex: '011',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -395,8 +365,6 @@ module.exports = {
 				{
 					name: 'Butterfree',
 					dex: '012',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -413,8 +381,6 @@ module.exports = {
 				{
 					name: 'Weedle',
 					dex: '013',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -431,8 +397,6 @@ module.exports = {
 				{
 					name: 'Kakuna',
 					dex: '014',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -449,8 +413,6 @@ module.exports = {
 				{
 					name: 'Beedrill',
 					dex: '015',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -467,8 +429,6 @@ module.exports = {
 				{
 					name: 'Mega Beedrill',
 					dex: '015',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -485,8 +445,6 @@ module.exports = {
 				{
 					name: 'Pidgey',
 					dex: '016',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -509,8 +467,6 @@ module.exports = {
 				{
 					name: 'Pidgeotto',
 					dex: '017',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -533,8 +489,6 @@ module.exports = {
 				{
 					name: 'Pidgeot',
 					dex: '018',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -557,8 +511,6 @@ module.exports = {
 				{
 					name: 'Mega Pidgeot',
 					dex: '018',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -581,8 +533,6 @@ module.exports = {
 				{
 					name: 'Rattata',
 					dex: '019',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -608,8 +558,6 @@ module.exports = {
 				{
 					name: 'Rattata-Alola',
 					dex: '019',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -636,8 +584,6 @@ module.exports = {
 				{
 					name: 'Raticate',
 					dex: '020',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -663,8 +609,6 @@ module.exports = {
 				{
 					name: 'Raticate-Alola',
 					dex: '020',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -691,8 +635,6 @@ module.exports = {
 				{
 					name: 'Spearow',
 					dex: '021',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -718,8 +660,6 @@ module.exports = {
 				{
 					name: 'Fearow',
 					dex: '022',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -745,8 +685,6 @@ module.exports = {
 				{
 					name: 'Ekans',
 					dex: '023',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -773,8 +711,6 @@ module.exports = {
 				{
 					name: 'Arbok',
 					dex: '024',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -801,8 +737,6 @@ module.exports = {
 				{
 					name: 'Pikachu',
 					dex: '025',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -828,8 +762,6 @@ module.exports = {
 				{
 					name: 'Pikachu-Original-Cap',
 					dex: '025',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -855,8 +787,6 @@ module.exports = {
 				{
 					name: 'Pikachu-Hoenn-Cap',
 					dex: '025',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -882,8 +812,6 @@ module.exports = {
 				{
 					name: 'Pikachu-Sinnoh-Cap',
 					dex: '025',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -909,8 +837,6 @@ module.exports = {
 				{
 					name: 'Pikachu-Unova-Cap',
 					dex: '025',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -936,8 +862,6 @@ module.exports = {
 				{
 					name: 'Pikachu-Kalos-Cap',
 					dex: '025',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -963,8 +887,6 @@ module.exports = {
 				{
 					name: 'Pikachu-Alola-Cap',
 					dex: '025',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -990,8 +912,6 @@ module.exports = {
 				{
 					name: 'Pikachu-Partner-Cap',
 					dex: '025',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -1017,8 +937,6 @@ module.exports = {
 				{
 					name: 'Raichu',
 					dex: '026',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -1044,8 +962,6 @@ module.exports = {
 				{
 					name: 'Raichu-Alola',
 					dex: '026',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -1071,8 +987,6 @@ module.exports = {
 				{
 					name: 'Sandshrew',
 					dex: '027',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -1100,8 +1014,6 @@ module.exports = {
 				{
 					name: 'Sandshrew-Alola',
 					dex: '027',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -1128,8 +1040,6 @@ module.exports = {
 				{
 					name: 'Sandslash',
 					dex: '028',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -1157,8 +1067,6 @@ module.exports = {
 				{
 					name: 'Sandslash-Alola',
 					dex: '028',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -1185,8 +1093,6 @@ module.exports = {
 				{
 					name: 'Nidoran ♀',
 					dex: '029',
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Poison',
@@ -1216,8 +1122,6 @@ module.exports = {
 				{
 					name: 'Nidorina',
 					dex: '030',
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Poison',
@@ -1247,8 +1151,6 @@ module.exports = {
 				{
 					name: 'Nidoqueen',
 					dex: '031',
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Poison',
@@ -1278,8 +1180,6 @@ module.exports = {
 				{
 					name: 'Nidoran ♂',
 					dex: '032',
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Poison',
@@ -1309,8 +1209,6 @@ module.exports = {
 				{
 					name: 'Nidorino',
 					dex: '033',
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Poison',
@@ -1340,8 +1238,6 @@ module.exports = {
 				{
 					name: 'Nidoking',
 					dex: '034',
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Poison',
@@ -1371,8 +1267,6 @@ module.exports = {
 				{
 					name: 'Clefairy',
 					dex: '035',
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fairy',
@@ -1395,8 +1289,6 @@ module.exports = {
 				{
 					name: 'Clefable',
 					dex: '036',
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fairy',
@@ -1419,8 +1311,6 @@ module.exports = {
 				{
 					name: 'Vulpix',
 					dex: '037',
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fire',
@@ -1445,8 +1335,6 @@ module.exports = {
 				{
 					name: 'Vulpix-Alola',
 					dex: '037',
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Ice',
@@ -1476,8 +1364,6 @@ module.exports = {
 				{
 					name: 'Ninetales',
 					dex: '038',
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fire',
@@ -1502,8 +1388,6 @@ module.exports = {
 				{
 					name: 'Ninetales-Alola',
 					dex: '038',
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Ice',
@@ -1533,8 +1417,6 @@ module.exports = {
 				{
 					name: 'Jigglypuff',
 					dex: '039',
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fairy',
@@ -1561,8 +1443,6 @@ module.exports = {
 				{
 					name: 'Wigglytuff',
 					dex: '040',
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fairy',
@@ -1589,8 +1469,6 @@ module.exports = {
 				{
 					name: 'Zubat',
 					dex: '041',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -1618,8 +1496,6 @@ module.exports = {
 				{
 					name: 'Golbat',
 					dex: '042',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -1647,8 +1523,6 @@ module.exports = {
 				{
 					name: 'Oddish',
 					dex: '043',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -1676,8 +1550,6 @@ module.exports = {
 				{
 					name: 'Gloom',
 					dex: '044',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -1705,8 +1577,6 @@ module.exports = {
 				{
 					name: 'Vileplume',
 					dex: '045',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -1734,8 +1604,6 @@ module.exports = {
 				{
 					name: 'Paras',
 					dex: '046',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -1768,8 +1636,6 @@ module.exports = {
 				{
 					name: 'Parasect',
 					dex: '047',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -1802,8 +1668,6 @@ module.exports = {
 				{
 					name: 'Venonat',
 					dex: '048',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -1828,8 +1692,6 @@ module.exports = {
 				{
 					name: 'Venomoth',
 					dex: '049',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -1854,8 +1716,6 @@ module.exports = {
 				{
 					name: 'Diglett',
 					dex: '050',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -1878,8 +1738,6 @@ module.exports = {
 				{
 					name: 'Diglett-Alola',
 					dex: '050',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -1908,8 +1766,6 @@ module.exports = {
 				{
 					name: 'Dugtrio',
 					dex: '051',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -1932,8 +1788,6 @@ module.exports = {
 				{
 					name: 'Dugtrio-Alola',
 					dex: '051',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -1962,8 +1816,6 @@ module.exports = {
 				{
 					name: 'Meowth',
 					dex: '052',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -1987,8 +1839,6 @@ module.exports = {
 				{
 					name: 'Meowth-Alola',
 					dex: '052',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -2014,8 +1864,6 @@ module.exports = {
 				{
 					name: 'Persian',
 					dex: '053',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -2039,8 +1887,6 @@ module.exports = {
 				{
 					name: 'Persian-Alola',
 					dex: '053',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -2066,8 +1912,6 @@ module.exports = {
 				{
 					name: 'Psyduck',
 					dex: '054',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -2092,8 +1936,6 @@ module.exports = {
 				{
 					name: 'Golduck',
 					dex: '055',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -2118,8 +1960,6 @@ module.exports = {
 				{
 					name: 'Mankey',
 					dex: '056',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -2150,8 +1990,6 @@ module.exports = {
 				{
 					name: 'Primeape',
 					dex: '057',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -2182,8 +2020,6 @@ module.exports = {
 				{
 					name: 'Growlithe',
 					dex: '058',
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fire',
@@ -2206,8 +2042,6 @@ module.exports = {
 				{
 					name: 'Arcanine',
 					dex: '059',
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fire',
@@ -2230,8 +2064,6 @@ module.exports = {
 				{
 					name: 'Poliwag',
 					dex: '060',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -2256,8 +2088,6 @@ module.exports = {
 				{
 					name: 'Poliwhirl',
 					dex: '061',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -2282,8 +2112,6 @@ module.exports = {
 				{
 					name: 'Poliwrath',
 					dex: '062',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -2308,8 +2136,6 @@ module.exports = {
 				{
 					name: 'Abra',
 					dex: '063',
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Psychic',
@@ -2334,8 +2160,6 @@ module.exports = {
 				{
 					name: 'Kadabra',
 					dex: '064',
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Psychic',
@@ -2360,8 +2184,6 @@ module.exports = {
 				{
 					name: 'Alakazam',
 					dex: '065',
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Psychic',
@@ -2386,8 +2208,6 @@ module.exports = {
 				{
 					name: 'Mega Alakazam',
 					dex: '065',
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Psychic',
@@ -2412,8 +2232,6 @@ module.exports = {
 				{
 					name: 'Machop',
 					dex: '066',
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fighting',
@@ -2438,8 +2256,6 @@ module.exports = {
 				{
 					name: 'Machoke',
 					dex: '067',
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fighting',
@@ -2464,8 +2280,6 @@ module.exports = {
 				{
 					name: 'Machamp',
 					dex: '068',
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fighting',
@@ -2490,8 +2304,6 @@ module.exports = {
 				{
 					name: 'Bellsprout',
 					dex: '069',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -2517,8 +2329,6 @@ module.exports = {
 				{
 					name: 'Weepinbell',
 					dex: '070',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -2544,8 +2354,6 @@ module.exports = {
 				{
 					name: 'Victreebel',
 					dex: '071',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -2571,8 +2379,6 @@ module.exports = {
 				{
 					name: 'Tentacool',
 					dex: '072',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -2603,8 +2409,6 @@ module.exports = {
 				{
 					name: 'Tentacruel',
 					dex: '073',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -2635,8 +2439,6 @@ module.exports = {
 				{
 					name: 'Geodude',
 					dex: '074',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -2664,8 +2466,6 @@ module.exports = {
 				{
 					name: 'Geodude-Alola',
 					dex: '074',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -2691,8 +2491,6 @@ module.exports = {
 				{
 					name: 'Graveler',
 					dex: '075',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -2720,8 +2518,6 @@ module.exports = {
 				{
 					name: 'Graveler-Alola',
 					dex: '075',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -2747,8 +2543,6 @@ module.exports = {
 				{
 					name: 'Golem',
 					dex: '076',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -2776,8 +2570,6 @@ module.exports = {
 				{
 					name: 'Golem-Alola',
 					dex: '076',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -2803,8 +2595,6 @@ module.exports = {
 				{
 					name: 'Ponyta',
 					dex: '077',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -2828,8 +2618,6 @@ module.exports = {
 				{
 					name: 'Rapidash',
 					dex: '078',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -2853,8 +2641,6 @@ module.exports = {
 				{
 					name: 'Slowpoke',
 					dex: '079',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -2878,8 +2664,6 @@ module.exports = {
 				{
 					name: 'Slowbro',
 					dex: '080',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -2903,8 +2687,6 @@ module.exports = {
 				{
 					name: 'Mega Slowbro',
 					dex: '080',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -2928,8 +2710,6 @@ module.exports = {
 				{
 					name: 'Magnemite',
 					dex: '081',
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -2946,8 +2726,6 @@ module.exports = {
 				{
 					name: 'Magneton',
 					dex: '082',
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -2964,8 +2742,6 @@ module.exports = {
 				{
 					name: "Farfetch'd",
 					dex: '083',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -2997,8 +2773,6 @@ module.exports = {
 				{
 					name: 'Doduo',
 					dex: '084',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -3024,8 +2798,6 @@ module.exports = {
 				{
 					name: 'Dodrio',
 					dex: '085',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -3051,8 +2823,6 @@ module.exports = {
 				{
 					name: 'Seel',
 					dex: '086',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -3082,8 +2852,6 @@ module.exports = {
 				{
 					name: 'Dewgong',
 					dex: '087',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -3113,8 +2881,6 @@ module.exports = {
 				{
 					name: 'Grimer',
 					dex: '088',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -3145,8 +2911,6 @@ module.exports = {
 				{
 					name: 'Grimer-Alola',
 					dex: '088',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -3176,8 +2940,6 @@ module.exports = {
 				{
 					name: 'Muk',
 					dex: '089',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -3208,8 +2970,6 @@ module.exports = {
 				{
 					name: 'Muk-Alola',
 					dex: '089',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -3239,8 +2999,6 @@ module.exports = {
 				{
 					name: 'Shellder',
 					dex: '090',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -3257,8 +3015,6 @@ module.exports = {
 				{
 					name: 'Cloyster',
 					dex: '091',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -3275,8 +3031,6 @@ module.exports = {
 				{
 					name: 'Gastly',
 					dex: '092',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -3303,8 +3057,6 @@ module.exports = {
 				{
 					name: 'Haunter',
 					dex: '093',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -3331,8 +3083,6 @@ module.exports = {
 				{
 					name: 'Gengar',
 					dex: '094',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -3359,8 +3109,6 @@ module.exports = {
 				{
 					name: 'Mega Gengar',
 					dex: '094',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -3387,8 +3135,6 @@ module.exports = {
 				{
 					name: 'Onix',
 					dex: '095',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -3413,8 +3159,6 @@ module.exports = {
 				{
 					name: 'Drowzee',
 					dex: '096',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -3440,8 +3184,6 @@ module.exports = {
 				{
 					name: 'Hypno',
 					dex: '097',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -3467,8 +3209,6 @@ module.exports = {
 				{
 					name: 'Krabby',
 					dex: '098',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -3491,8 +3231,6 @@ module.exports = {
 				{
 					name: 'Kingler',
 					dex: '099',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -3515,8 +3253,6 @@ module.exports = {
 				{
 					name: 'Voltorb',
 					dex: 100,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -3533,8 +3269,6 @@ module.exports = {
 				{
 					name: 'Electrode',
 					dex: 101,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -3551,8 +3285,6 @@ module.exports = {
 				{
 					name: 'Exeggcute',
 					dex: 102,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -3577,8 +3309,6 @@ module.exports = {
 				{
 					name: 'Exeggutor',
 					dex: 103,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -3603,8 +3333,6 @@ module.exports = {
 				{
 					name: 'Exeggutor-Alola',
 					dex: 103,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -3629,8 +3357,6 @@ module.exports = {
 				{
 					name: 'Cubone',
 					dex: 104,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -3658,8 +3384,6 @@ module.exports = {
 				{
 					name: 'Marowak',
 					dex: 105,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -3687,8 +3411,6 @@ module.exports = {
 				{
 					name: 'Marowak-Alola',
 					dex: 105,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -3716,8 +3438,6 @@ module.exports = {
 				{
 					name: 'Hitmonlee',
 					dex: 106,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Fighting',
@@ -3743,8 +3463,6 @@ module.exports = {
 				{
 					name: 'Hitmonchan',
 					dex: 107,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Fighting',
@@ -3770,8 +3488,6 @@ module.exports = {
 				{
 					name: 'Lickitung',
 					dex: 108,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -3799,8 +3515,6 @@ module.exports = {
 				{
 					name: 'Koffing',
 					dex: 109,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -3826,8 +3540,6 @@ module.exports = {
 				{
 					name: 'Weezing',
 					dex: 110,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -3853,8 +3565,6 @@ module.exports = {
 				{
 					name: 'Rhyhorn',
 					dex: 111,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -3879,8 +3589,6 @@ module.exports = {
 				{
 					name: 'Rhydon',
 					dex: 112,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -3905,8 +3613,6 @@ module.exports = {
 				{
 					name: 'Chansey',
 					dex: 113,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Normal',
@@ -3932,8 +3638,6 @@ module.exports = {
 				{
 					name: 'Tangela',
 					dex: 114,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -3959,8 +3663,6 @@ module.exports = {
 				{
 					name: 'Kangaskhan',
 					dex: 115,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Normal',
@@ -3988,8 +3690,6 @@ module.exports = {
 				{
 					name: 'Mega Kangaskhan',
 					dex: 115,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Normal',
@@ -4017,8 +3717,6 @@ module.exports = {
 				{
 					name: 'Horsea',
 					dex: 116,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -4046,8 +3744,6 @@ module.exports = {
 				{
 					name: 'Seadra',
 					dex: 117,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -4075,8 +3771,6 @@ module.exports = {
 				{
 					name: 'Goldeen',
 					dex: 118,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -4099,8 +3793,6 @@ module.exports = {
 				{
 					name: 'Seaking',
 					dex: 119,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -4123,8 +3815,6 @@ module.exports = {
 				{
 					name: 'Staryu',
 					dex: 120,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -4141,8 +3831,6 @@ module.exports = {
 				{
 					name: 'Starmie',
 					dex: 121,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -4159,8 +3847,6 @@ module.exports = {
 				{
 					name: 'Mr. Mime',
 					dex: 122,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -4183,8 +3869,6 @@ module.exports = {
 				{
 					name: 'Scyther',
 					dex: 123,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -4209,8 +3893,6 @@ module.exports = {
 				{
 					name: 'Jynx',
 					dex: 124,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Ice',
@@ -4234,8 +3916,6 @@ module.exports = {
 				{
 					name: 'Electabuzz',
 					dex: 125,
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Electric',
@@ -4261,8 +3941,6 @@ module.exports = {
 				{
 					name: 'Magmar',
 					dex: 126,
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fire',
@@ -4292,8 +3970,6 @@ module.exports = {
 				{
 					name: 'Pinsir',
 					dex: 127,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -4318,8 +3994,6 @@ module.exports = {
 				{
 					name: 'Mega Pinsir',
 					dex: 127,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -4344,8 +4018,6 @@ module.exports = {
 				{
 					name: 'Tauros',
 					dex: 128,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Normal',
@@ -4362,8 +4034,6 @@ module.exports = {
 				{
 					name: 'Magikarp',
 					dex: 129,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -4380,8 +4050,6 @@ module.exports = {
 				{
 					name: 'Gyarados',
 					dex: 130,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -4398,8 +4066,6 @@ module.exports = {
 				{
 					name: 'Mega Gyarados',
 					dex: 130,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -4416,8 +4082,6 @@ module.exports = {
 				{
 					name: 'Lapras',
 					dex: 131,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -4442,8 +4106,6 @@ module.exports = {
 				{
 					name: 'Ditto',
 					dex: 132,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Normal',
@@ -4460,8 +4122,6 @@ module.exports = {
 				{
 					name: 'Eevee',
 					dex: 133,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Normal',
@@ -4487,8 +4147,6 @@ module.exports = {
 				{
 					name: 'Vaporeon',
 					dex: 134,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -4514,8 +4172,6 @@ module.exports = {
 				{
 					name: 'Jolteon',
 					dex: 135,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Electric',
@@ -4541,8 +4197,6 @@ module.exports = {
 				{
 					name: 'Flareon',
 					dex: 136,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -4568,8 +4222,6 @@ module.exports = {
 				{
 					name: 'Porygon',
 					dex: 137,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Normal',
@@ -4586,8 +4238,6 @@ module.exports = {
 				{
 					name: 'Omanyte',
 					dex: 138,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -4617,8 +4267,6 @@ module.exports = {
 				{
 					name: 'Omastar',
 					dex: 139,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -4648,8 +4296,6 @@ module.exports = {
 				{
 					name: 'Kabuto',
 					dex: 140,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -4675,8 +4321,6 @@ module.exports = {
 				{
 					name: 'Kabutops',
 					dex: 141,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -4702,8 +4346,6 @@ module.exports = {
 				{
 					name: 'Aerodactyl',
 					dex: 142,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -4728,8 +4370,6 @@ module.exports = {
 				{
 					name: 'Mega Aerodactyl',
 					dex: 142,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -4754,8 +4394,6 @@ module.exports = {
 				{
 					name: 'Snorlax',
 					dex: 143,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Normal',
@@ -4778,8 +4416,6 @@ module.exports = {
 				{
 					name: 'Articuno',
 					dex: 144,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ice',
@@ -4796,8 +4432,6 @@ module.exports = {
 				{
 					name: 'Zapdos',
 					dex: 145,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -4814,8 +4448,6 @@ module.exports = {
 				{
 					name: 'Moltres',
 					dex: 146,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fire',
@@ -4832,8 +4464,6 @@ module.exports = {
 				{
 					name: 'Dratini',
 					dex: 147,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -4857,8 +4487,6 @@ module.exports = {
 				{
 					name: 'Dragonair',
 					dex: 148,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -4882,8 +4510,6 @@ module.exports = {
 				{
 					name: 'Dragonite',
 					dex: 149,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -4907,8 +4533,6 @@ module.exports = {
 				{
 					name: 'Mewtwo',
 					dex: 150,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -4925,8 +4549,6 @@ module.exports = {
 				{
 					name: 'Mega Mewtwo X',
 					dex: 150,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -4943,8 +4565,6 @@ module.exports = {
 				{
 					name: 'Mega Mewtwo Y',
 					dex: 150,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -4961,8 +4581,6 @@ module.exports = {
 				{
 					name: 'Mew',
 					dex: 151,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -4979,8 +4597,6 @@ module.exports = {
 				{
 					name: 'Chikorita',
 					dex: 152,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -5010,8 +4626,6 @@ module.exports = {
 				{
 					name: 'Bayleef',
 					dex: 153,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -5041,8 +4655,6 @@ module.exports = {
 				{
 					name: 'Meganium',
 					dex: 154,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -5072,8 +4684,6 @@ module.exports = {
 				{
 					name: 'Cyndaquil',
 					dex: 155,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -5101,8 +4711,6 @@ module.exports = {
 				{
 					name: 'Quilava',
 					dex: 156,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -5130,8 +4738,6 @@ module.exports = {
 				{
 					name: 'Typhlosion',
 					dex: 157,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -5159,8 +4765,6 @@ module.exports = {
 				{
 					name: 'Totodile',
 					dex: 158,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -5186,8 +4790,6 @@ module.exports = {
 				{
 					name: 'Croconaw',
 					dex: 159,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -5213,8 +4815,6 @@ module.exports = {
 				{
 					name: 'Feraligatr',
 					dex: 160,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -5240,8 +4840,6 @@ module.exports = {
 				{
 					name: 'Sentret',
 					dex: 161,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -5269,8 +4867,6 @@ module.exports = {
 				{
 					name: 'Furret',
 					dex: 162,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -5298,8 +4894,6 @@ module.exports = {
 				{
 					name: 'Hoothoot',
 					dex: 163,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -5323,8 +4917,6 @@ module.exports = {
 				{
 					name: 'Noctowl',
 					dex: 164,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -5348,8 +4940,6 @@ module.exports = {
 				{
 					name: 'Ledyba',
 					dex: 165,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -5374,8 +4964,6 @@ module.exports = {
 				{
 					name: 'Ledian',
 					dex: 166,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -5400,8 +4988,6 @@ module.exports = {
 				{
 					name: 'Spinarak',
 					dex: 167,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -5430,8 +5016,6 @@ module.exports = {
 				{
 					name: 'Ariados',
 					dex: 168,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -5460,8 +5044,6 @@ module.exports = {
 				{
 					name: 'Crobat',
 					dex: 169,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -5489,8 +5071,6 @@ module.exports = {
 				{
 					name: 'Chinchou',
 					dex: 170,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -5507,8 +5087,6 @@ module.exports = {
 				{
 					name: 'Lanturn',
 					dex: 171,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -5525,8 +5103,6 @@ module.exports = {
 				{
 					name: 'Pichu',
 					dex: 172,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -5552,8 +5128,6 @@ module.exports = {
 				{
 					name: 'Cleffa',
 					dex: 173,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Normal',
@@ -5576,8 +5150,6 @@ module.exports = {
 				{
 					name: 'Igglybuff',
 					dex: 174,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Normal',
@@ -5604,8 +5176,6 @@ module.exports = {
 				{
 					name: 'Togepi',
 					dex: 175,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fairy',
@@ -5629,8 +5199,6 @@ module.exports = {
 				{
 					name: 'Togetic',
 					dex: 176,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fairy',
@@ -5654,8 +5222,6 @@ module.exports = {
 				{
 					name: 'Natu',
 					dex: 177,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -5679,8 +5245,6 @@ module.exports = {
 				{
 					name: 'Xatu',
 					dex: 178,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -5704,8 +5268,6 @@ module.exports = {
 				{
 					name: 'Mareep',
 					dex: 179,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -5731,8 +5293,6 @@ module.exports = {
 				{
 					name: 'Flaaffy',
 					dex: 180,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -5758,8 +5318,6 @@ module.exports = {
 				{
 					name: 'Ampharos',
 					dex: 181,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -5785,8 +5343,6 @@ module.exports = {
 				{
 					name: 'Mega Ampharos',
 					dex: 181,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -5812,8 +5368,6 @@ module.exports = {
 				{
 					name: 'Bellossom',
 					dex: 182,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -5841,8 +5395,6 @@ module.exports = {
 				{
 					name: 'Marill',
 					dex: 183,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -5871,8 +5423,6 @@ module.exports = {
 				{
 					name: 'Azumarill',
 					dex: 184,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -5901,8 +5451,6 @@ module.exports = {
 				{
 					name: 'Sudowoodo',
 					dex: 185,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -5926,8 +5474,6 @@ module.exports = {
 				{
 					name: 'Politoed',
 					dex: 186,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -5952,8 +5498,6 @@ module.exports = {
 				{
 					name: 'Hoppip',
 					dex: 187,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -5980,8 +5524,6 @@ module.exports = {
 				{
 					name: 'Skiploom',
 					dex: 188,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -6008,8 +5550,6 @@ module.exports = {
 				{
 					name: 'Jumpluff',
 					dex: 189,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -6036,8 +5576,6 @@ module.exports = {
 				{
 					name: 'Aipom',
 					dex: 190,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -6065,8 +5603,6 @@ module.exports = {
 				{
 					name: 'Sunkern',
 					dex: 191,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -6091,8 +5627,6 @@ module.exports = {
 				{
 					name: 'Sunflora',
 					dex: 192,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -6117,8 +5651,6 @@ module.exports = {
 				{
 					name: 'Yanma',
 					dex: 193,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -6142,8 +5674,6 @@ module.exports = {
 				{
 					name: 'Wooper',
 					dex: 194,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -6172,8 +5702,6 @@ module.exports = {
 				{
 					name: 'Quagsire',
 					dex: 195,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -6202,8 +5730,6 @@ module.exports = {
 				{
 					name: 'Espeon',
 					dex: 196,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Psychic',
@@ -6229,8 +5755,6 @@ module.exports = {
 				{
 					name: 'Umbreon',
 					dex: 197,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Dark',
@@ -6256,8 +5780,6 @@ module.exports = {
 				{
 					name: 'Murkrow',
 					dex: 198,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -6286,8 +5808,6 @@ module.exports = {
 				{
 					name: 'Slowking',
 					dex: 199,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -6311,8 +5831,6 @@ module.exports = {
 				{
 					name: 'Misdreavus',
 					dex: 200,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -6340,8 +5858,6 @@ module.exports = {
 				{
 					name: 'Unown-A',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6358,8 +5874,6 @@ module.exports = {
 				{
 					name: 'Unown-B',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6376,8 +5890,6 @@ module.exports = {
 				{
 					name: 'Unown-C',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6394,8 +5906,6 @@ module.exports = {
 				{
 					name: 'Unown-D',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6412,8 +5922,6 @@ module.exports = {
 				{
 					name: 'Unown-E',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6430,8 +5938,6 @@ module.exports = {
 				{
 					name: 'Unown-F',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6448,8 +5954,6 @@ module.exports = {
 				{
 					name: 'Unown-G',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6466,8 +5970,6 @@ module.exports = {
 				{
 					name: 'Unown-H',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6484,8 +5986,6 @@ module.exports = {
 				{
 					name: 'Unown-I',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6502,8 +6002,6 @@ module.exports = {
 				{
 					name: 'Unown-J',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6520,8 +6018,6 @@ module.exports = {
 				{
 					name: 'Unown-K',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6538,8 +6034,6 @@ module.exports = {
 				{
 					name: 'Unown-L',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6556,8 +6050,6 @@ module.exports = {
 				{
 					name: 'Unown-M',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6574,8 +6066,6 @@ module.exports = {
 				{
 					name: 'Unown-N',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6592,8 +6082,6 @@ module.exports = {
 				{
 					name: 'Unown-O',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6610,8 +6098,6 @@ module.exports = {
 				{
 					name: 'Unown-P',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6628,8 +6114,6 @@ module.exports = {
 				{
 					name: 'Unown-Q',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6646,8 +6130,6 @@ module.exports = {
 				{
 					name: 'Unown-R',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6664,8 +6146,6 @@ module.exports = {
 				{
 					name: 'Unown-S',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6682,8 +6162,6 @@ module.exports = {
 				{
 					name: 'Unown-T',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6700,8 +6178,6 @@ module.exports = {
 				{
 					name: 'Unown-U',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6718,8 +6194,6 @@ module.exports = {
 				{
 					name: 'Unown-V',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6736,8 +6210,6 @@ module.exports = {
 				{
 					name: 'Unown-W',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6754,8 +6226,6 @@ module.exports = {
 				{
 					name: 'Unown-X',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6772,8 +6242,6 @@ module.exports = {
 				{
 					name: 'Unown-Y',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6790,8 +6258,6 @@ module.exports = {
 				{
 					name: 'Unown-Z',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6808,8 +6274,6 @@ module.exports = {
 				{
 					name: 'Unown-!',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6826,8 +6290,6 @@ module.exports = {
 				{
 					name: 'Unown-?',
 					dex: 201,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -6844,8 +6306,6 @@ module.exports = {
 				{
 					name: 'Wobbuffet',
 					dex: 202,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -6862,8 +6322,6 @@ module.exports = {
 				{
 					name: 'Girafarig',
 					dex: 203,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -6894,8 +6352,6 @@ module.exports = {
 				{
 					name: 'Pineco',
 					dex: 204,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -6921,8 +6377,6 @@ module.exports = {
 				{
 					name: 'Forretress',
 					dex: 205,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -6948,8 +6402,6 @@ module.exports = {
 				{
 					name: 'Dunsparce',
 					dex: 206,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -6976,8 +6428,6 @@ module.exports = {
 				{
 					name: 'Gligar',
 					dex: 207,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -7008,8 +6458,6 @@ module.exports = {
 				{
 					name: 'Steelix',
 					dex: 208,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -7034,8 +6482,6 @@ module.exports = {
 				{
 					name: 'Mega Steelix',
 					dex: 208,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -7060,8 +6506,6 @@ module.exports = {
 				{
 					name: 'Snubbull',
 					dex: 209,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fairy',
@@ -7087,8 +6531,6 @@ module.exports = {
 				{
 					name: 'Granbull',
 					dex: 210,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fairy',
@@ -7114,8 +6556,6 @@ module.exports = {
 				{
 					name: 'Qwilfish',
 					dex: 211,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -7141,8 +6581,6 @@ module.exports = {
 				{
 					name: 'Scizor',
 					dex: 212,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -7167,8 +6605,6 @@ module.exports = {
 				{
 					name: 'Mega Scizor',
 					dex: 212,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -7193,8 +6629,6 @@ module.exports = {
 				{
 					name: 'Shuckle',
 					dex: 213,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -7221,8 +6655,6 @@ module.exports = {
 				{
 					name: 'Heracross',
 					dex: 214,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -7248,8 +6680,6 @@ module.exports = {
 				{
 					name: 'Mega Heracross',
 					dex: 214,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -7275,8 +6705,6 @@ module.exports = {
 				{
 					name: 'Sneasel',
 					dex: 215,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -7302,8 +6730,6 @@ module.exports = {
 				{
 					name: 'Teddiursa',
 					dex: 216,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -7334,8 +6760,6 @@ module.exports = {
 				{
 					name: 'Ursaring',
 					dex: 217,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -7366,8 +6790,6 @@ module.exports = {
 				{
 					name: 'Slugma',
 					dex: 218,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -7395,8 +6817,6 @@ module.exports = {
 				{
 					name: 'Magcargo',
 					dex: 219,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -7424,8 +6844,6 @@ module.exports = {
 				{
 					name: 'Swinub',
 					dex: 220,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -7450,8 +6868,6 @@ module.exports = {
 				{
 					name: 'Piloswine',
 					dex: 221,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -7476,8 +6892,6 @@ module.exports = {
 				{
 					name: 'Corsola',
 					dex: 222,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Water',
@@ -7501,8 +6915,6 @@ module.exports = {
 				{
 					name: 'Remoraid',
 					dex: 223,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -7526,8 +6938,6 @@ module.exports = {
 				{
 					name: 'Octillery',
 					dex: 224,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -7551,8 +6961,6 @@ module.exports = {
 				{
 					name: 'Delibird',
 					dex: 225,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -7581,8 +6989,6 @@ module.exports = {
 				{
 					name: 'Mantine',
 					dex: 226,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -7607,8 +7013,6 @@ module.exports = {
 				{
 					name: 'Skarmory',
 					dex: 227,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -7634,8 +7038,6 @@ module.exports = {
 				{
 					name: 'Houndour',
 					dex: 228,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -7662,8 +7064,6 @@ module.exports = {
 				{
 					name: 'Houndoom',
 					dex: 229,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -7690,8 +7090,6 @@ module.exports = {
 				{
 					name: 'Mega Houndoom',
 					dex: 229,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -7718,8 +7116,6 @@ module.exports = {
 				{
 					name: 'Kingdra',
 					dex: 230,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -7747,8 +7143,6 @@ module.exports = {
 				{
 					name: 'Phanpy',
 					dex: 231,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -7777,8 +7171,6 @@ module.exports = {
 				{
 					name: 'Donphan',
 					dex: 232,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -7807,8 +7199,6 @@ module.exports = {
 				{
 					name: 'Porygon2',
 					dex: 233,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Normal',
@@ -7825,8 +7215,6 @@ module.exports = {
 				{
 					name: 'Stantler',
 					dex: 234,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -7852,8 +7240,6 @@ module.exports = {
 				{
 					name: 'Smeargle',
 					dex: 235,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -7870,8 +7256,6 @@ module.exports = {
 				{
 					name: 'Tyrogue',
 					dex: 236,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Fighting',
@@ -7897,8 +7281,6 @@ module.exports = {
 				{
 					name: 'Hitmontop',
 					dex: 237,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Fighting',
@@ -7924,8 +7306,6 @@ module.exports = {
 				{
 					name: 'Smoochum',
 					dex: 238,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Ice',
@@ -7949,8 +7329,6 @@ module.exports = {
 				{
 					name: 'Elekid',
 					dex: 239,
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Electric',
@@ -7976,8 +7354,6 @@ module.exports = {
 				{
 					name: 'Magby',
 					dex: 240,
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fire',
@@ -8007,8 +7383,6 @@ module.exports = {
 				{
 					name: 'Miltank',
 					dex: 241,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Normal',
@@ -8038,8 +7412,6 @@ module.exports = {
 				{
 					name: 'Blissey',
 					dex: 242,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Normal',
@@ -8065,8 +7437,6 @@ module.exports = {
 				{
 					name: 'Raikou',
 					dex: 243,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -8083,8 +7453,6 @@ module.exports = {
 				{
 					name: 'Entei',
 					dex: 244,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fire',
@@ -8101,8 +7469,6 @@ module.exports = {
 				{
 					name: 'Suicune',
 					dex: 245,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -8119,8 +7485,6 @@ module.exports = {
 				{
 					name: 'Larvitar',
 					dex: 246,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -8137,8 +7501,6 @@ module.exports = {
 				{
 					name: 'Pupitar',
 					dex: 247,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -8155,8 +7517,6 @@ module.exports = {
 				{
 					name: 'Tyranitar',
 					dex: 248,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -8173,8 +7533,6 @@ module.exports = {
 				{
 					name: 'Mega Tyranitar',
 					dex: 248,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -8191,8 +7549,6 @@ module.exports = {
 				{
 					name: 'Lugia',
 					dex: 249,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -8209,8 +7565,6 @@ module.exports = {
 				{
 					name: 'Ho-Oh',
 					dex: 250,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fire',
@@ -8227,8 +7581,6 @@ module.exports = {
 				{
 					name: 'Celebi',
 					dex: 251,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -8245,8 +7597,6 @@ module.exports = {
 				{
 					name: 'Treecko',
 					dex: 252,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -8276,8 +7626,6 @@ module.exports = {
 				{
 					name: 'Grovyle',
 					dex: 253,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -8307,8 +7655,6 @@ module.exports = {
 				{
 					name: 'Sceptile',
 					dex: 254,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -8338,8 +7684,6 @@ module.exports = {
 				{
 					name: 'Mega Sceptile',
 					dex: 254,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -8369,8 +7713,6 @@ module.exports = {
 				{
 					name: 'Torchic',
 					dex: 255,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -8399,8 +7741,6 @@ module.exports = {
 				{
 					name: 'Combusken',
 					dex: 256,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -8429,8 +7769,6 @@ module.exports = {
 				{
 					name: 'Blaziken',
 					dex: 257,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -8459,8 +7797,6 @@ module.exports = {
 				{
 					name: 'Mega Blaziken',
 					dex: 257,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -8489,8 +7825,6 @@ module.exports = {
 				{
 					name: 'Mudkip',
 					dex: 258,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -8522,8 +7856,6 @@ module.exports = {
 				{
 					name: 'Marshtomp',
 					dex: 259,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -8555,8 +7887,6 @@ module.exports = {
 				{
 					name: 'Swampert',
 					dex: 260,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -8588,8 +7918,6 @@ module.exports = {
 				{
 					name: 'Mega Swampert',
 					dex: 260,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -8621,8 +7949,6 @@ module.exports = {
 				{
 					name: 'Poochyena',
 					dex: 261,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -8639,8 +7965,6 @@ module.exports = {
 				{
 					name: 'Mightyena',
 					dex: 262,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -8657,8 +7981,6 @@ module.exports = {
 				{
 					name: 'Zigzagoon',
 					dex: 263,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -8675,8 +7997,6 @@ module.exports = {
 				{
 					name: 'Linoone',
 					dex: 264,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -8693,8 +8013,6 @@ module.exports = {
 				{
 					name: 'Wurmple',
 					dex: 265,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -8711,8 +8029,6 @@ module.exports = {
 				{
 					name: 'Silcoon',
 					dex: 266,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -8729,8 +8045,6 @@ module.exports = {
 				{
 					name: 'Beautifly',
 					dex: 267,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -8747,8 +8061,6 @@ module.exports = {
 				{
 					name: 'Cascoon',
 					dex: 268,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -8765,8 +8077,6 @@ module.exports = {
 				{
 					name: 'Dustox',
 					dex: 269,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -8783,8 +8093,6 @@ module.exports = {
 				{
 					name: 'Lotad',
 					dex: 270,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -8809,8 +8117,6 @@ module.exports = {
 				{
 					name: 'Lombre',
 					dex: 271,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -8835,8 +8141,6 @@ module.exports = {
 				{
 					name: 'Ludicolo',
 					dex: 272,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -8861,8 +8165,6 @@ module.exports = {
 				{
 					name: 'Seedot',
 					dex: 273,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -8886,8 +8188,6 @@ module.exports = {
 				{
 					name: 'Nuzleaf',
 					dex: 274,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -8911,8 +8211,6 @@ module.exports = {
 				{
 					name: 'Shiftry',
 					dex: 275,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -8936,8 +8234,6 @@ module.exports = {
 				{
 					name: 'Taillow',
 					dex: 276,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -8963,8 +8259,6 @@ module.exports = {
 				{
 					name: 'Swellow',
 					dex: 277,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -8990,8 +8284,6 @@ module.exports = {
 				{
 					name: 'Wingull',
 					dex: 278,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -9017,8 +8309,6 @@ module.exports = {
 				{
 					name: 'Pelipper',
 					dex: 279,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -9044,8 +8334,6 @@ module.exports = {
 				{
 					name: 'Ralts',
 					dex: 280,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -9071,8 +8359,6 @@ module.exports = {
 				{
 					name: 'Kirlia',
 					dex: 281,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -9098,8 +8384,6 @@ module.exports = {
 				{
 					name: 'Gardevoir',
 					dex: 282,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -9125,8 +8409,6 @@ module.exports = {
 				{
 					name: 'Mega Gardevoir',
 					dex: 282,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -9152,8 +8434,6 @@ module.exports = {
 				{
 					name: 'Surskit',
 					dex: 283,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -9180,8 +8460,6 @@ module.exports = {
 				{
 					name: 'Masquerain',
 					dex: 284,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -9208,8 +8486,6 @@ module.exports = {
 				{
 					name: 'Shroomish',
 					dex: 285,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -9232,8 +8508,6 @@ module.exports = {
 				{
 					name: 'Breloom',
 					dex: 286,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -9256,8 +8530,6 @@ module.exports = {
 				{
 					name: 'Slakoth',
 					dex: 287,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -9281,8 +8553,6 @@ module.exports = {
 				{
 					name: 'Vigoroth',
 					dex: 288,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -9306,8 +8576,6 @@ module.exports = {
 				{
 					name: 'Slaking',
 					dex: 289,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -9331,8 +8599,6 @@ module.exports = {
 				{
 					name: 'Nincada',
 					dex: 290,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -9355,8 +8621,6 @@ module.exports = {
 				{
 					name: 'Ninjask',
 					dex: 291,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -9379,8 +8643,6 @@ module.exports = {
 				{
 					name: 'Shedinja',
 					dex: 292,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Bug',
@@ -9403,8 +8665,6 @@ module.exports = {
 				{
 					name: 'Whismur',
 					dex: 293,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -9431,8 +8691,6 @@ module.exports = {
 				{
 					name: 'Loudred',
 					dex: 294,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -9459,8 +8717,6 @@ module.exports = {
 				{
 					name: 'Exploud',
 					dex: 295,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -9487,8 +8743,6 @@ module.exports = {
 				{
 					name: 'Makuhita',
 					dex: 296,
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fighting',
@@ -9517,8 +8771,6 @@ module.exports = {
 				{
 					name: 'Hariyama',
 					dex: 297,
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fighting',
@@ -9547,8 +8799,6 @@ module.exports = {
 				{
 					name: 'Azurill',
 					dex: 298,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Normal',
@@ -9577,8 +8827,6 @@ module.exports = {
 				{
 					name: 'Nosepass',
 					dex: 299,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -9595,8 +8843,6 @@ module.exports = {
 				{
 					name: 'Skitty',
 					dex: 300,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Normal',
@@ -9622,8 +8868,6 @@ module.exports = {
 				{
 					name: 'Delcatty',
 					dex: 301,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Normal',
@@ -9649,8 +8893,6 @@ module.exports = {
 				{
 					name: 'Sableye',
 					dex: 302,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -9674,8 +8916,6 @@ module.exports = {
 				{
 					name: 'Mega Sableye',
 					dex: 302,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -9699,8 +8939,6 @@ module.exports = {
 				{
 					name: 'Mawile',
 					dex: 303,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -9723,8 +8961,6 @@ module.exports = {
 				{
 					name: 'Mega Mawile',
 					dex: 303,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -9747,8 +8983,6 @@ module.exports = {
 				{
 					name: 'Aron',
 					dex: 304,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -9774,8 +9008,6 @@ module.exports = {
 				{
 					name: 'Lairon',
 					dex: 305,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -9801,8 +9033,6 @@ module.exports = {
 				{
 					name: 'Aggron',
 					dex: 306,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -9828,8 +9058,6 @@ module.exports = {
 				{
 					name: 'Mega Aggron',
 					dex: 306,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -9855,8 +9083,6 @@ module.exports = {
 				{
 					name: 'Meditite',
 					dex: 307,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -9884,8 +9110,6 @@ module.exports = {
 				{
 					name: 'Medicham',
 					dex: 308,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -9913,8 +9137,6 @@ module.exports = {
 				{
 					name: 'Mega Medicham',
 					dex: 308,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -9942,8 +9164,6 @@ module.exports = {
 				{
 					name: 'Electrike',
 					dex: 309,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -9960,8 +9180,6 @@ module.exports = {
 				{
 					name: 'Manectric',
 					dex: 310,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -9978,8 +9196,6 @@ module.exports = {
 				{
 					name: 'Mega Manectric',
 					dex: 310,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -9996,8 +9212,6 @@ module.exports = {
 				{
 					name: 'Plusle',
 					dex: 311,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -10021,8 +9235,6 @@ module.exports = {
 				{
 					name: 'Minun',
 					dex: 312,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -10046,8 +9258,6 @@ module.exports = {
 				{
 					name: 'Volbeat',
 					dex: 313,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Bug',
@@ -10071,8 +9281,6 @@ module.exports = {
 				{
 					name: 'Illumise',
 					dex: 314,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Bug',
@@ -10097,8 +9305,6 @@ module.exports = {
 				{
 					name: 'Roselia',
 					dex: 315,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -10121,8 +9327,6 @@ module.exports = {
 				{
 					name: 'Gulpin',
 					dex: 316,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -10145,8 +9349,6 @@ module.exports = {
 				{
 					name: 'Swalot',
 					dex: 317,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -10169,8 +9371,6 @@ module.exports = {
 				{
 					name: 'Carvanha',
 					dex: 318,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -10196,8 +9396,6 @@ module.exports = {
 				{
 					name: 'Sharpedo',
 					dex: 319,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -10223,8 +9421,6 @@ module.exports = {
 				{
 					name: 'Mega Sharpedo',
 					dex: 319,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -10250,8 +9446,6 @@ module.exports = {
 				{
 					name: 'Wailmer',
 					dex: 320,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -10278,8 +9472,6 @@ module.exports = {
 				{
 					name: 'Wailord',
 					dex: 321,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -10306,8 +9498,6 @@ module.exports = {
 				{
 					name: 'Numel',
 					dex: 322,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -10339,8 +9529,6 @@ module.exports = {
 				{
 					name: 'Camerupt',
 					dex: 323,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -10372,8 +9560,6 @@ module.exports = {
 				{
 					name: 'Mega Camerupt',
 					dex: 323,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -10405,8 +9591,6 @@ module.exports = {
 				{
 					name: 'Torkoal',
 					dex: 324,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -10429,8 +9613,6 @@ module.exports = {
 				{
 					name: 'Spoink',
 					dex: 325,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -10456,8 +9638,6 @@ module.exports = {
 				{
 					name: 'Grumpig',
 					dex: 326,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -10483,8 +9663,6 @@ module.exports = {
 				{
 					name: 'Spinda',
 					dex: 327,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -10515,8 +9693,6 @@ module.exports = {
 				{
 					name: 'Trapinch',
 					dex: 328,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -10541,8 +9717,6 @@ module.exports = {
 				{
 					name: 'Vibrava',
 					dex: 329,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -10567,8 +9741,6 @@ module.exports = {
 				{
 					name: 'Flygon',
 					dex: 330,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -10593,8 +9765,6 @@ module.exports = {
 				{
 					name: 'Cacnea',
 					dex: 331,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -10626,8 +9796,6 @@ module.exports = {
 				{
 					name: 'Cacturne',
 					dex: 332,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -10659,8 +9827,6 @@ module.exports = {
 				{
 					name: 'Swablu',
 					dex: 333,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -10686,8 +9852,6 @@ module.exports = {
 				{
 					name: 'Altaria',
 					dex: 334,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -10713,8 +9877,6 @@ module.exports = {
 				{
 					name: 'Mega Altaria',
 					dex: 334,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -10740,8 +9902,6 @@ module.exports = {
 				{
 					name: 'Zangoose',
 					dex: 335,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -10773,8 +9933,6 @@ module.exports = {
 				{
 					name: 'Seviper',
 					dex: 336,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -10801,8 +9959,6 @@ module.exports = {
 				{
 					name: 'Lunatone',
 					dex: 337,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -10819,8 +9975,6 @@ module.exports = {
 				{
 					name: 'Solrock',
 					dex: 338,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -10837,8 +9991,6 @@ module.exports = {
 				{
 					name: 'Barboach',
 					dex: 339,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -10855,8 +10007,6 @@ module.exports = {
 				{
 					name: 'Whiscash',
 					dex: 340,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -10873,8 +10023,6 @@ module.exports = {
 				{
 					name: 'Corphish',
 					dex: 341,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -10898,8 +10046,6 @@ module.exports = {
 				{
 					name: 'Crawdaunt',
 					dex: 342,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -10923,8 +10069,6 @@ module.exports = {
 				{
 					name: 'Baltoy',
 					dex: 343,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ground',
@@ -10941,8 +10085,6 @@ module.exports = {
 				{
 					name: 'Claydol',
 					dex: 344,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ground',
@@ -10959,8 +10101,6 @@ module.exports = {
 				{
 					name: 'Lileep',
 					dex: 345,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -10985,8 +10125,6 @@ module.exports = {
 				{
 					name: 'Cradily',
 					dex: 346,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -11011,8 +10149,6 @@ module.exports = {
 				{
 					name: 'Anorith',
 					dex: 347,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -11036,8 +10172,6 @@ module.exports = {
 				{
 					name: 'Armaldo',
 					dex: 348,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -11061,8 +10195,6 @@ module.exports = {
 				{
 					name: 'Feebas',
 					dex: 349,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -11087,8 +10219,6 @@ module.exports = {
 				{
 					name: 'Milotic',
 					dex: 350,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -11113,8 +10243,6 @@ module.exports = {
 				{
 					name: 'Castform',
 					dex: 351,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -11142,8 +10270,6 @@ module.exports = {
 				{
 					name: 'Castform-Sunny',
 					dex: 351,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -11171,8 +10297,6 @@ module.exports = {
 				{
 					name: 'Castform-Rainy',
 					dex: 351,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -11200,8 +10324,6 @@ module.exports = {
 				{
 					name: 'Castform-Snowy',
 					dex: 351,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -11229,8 +10351,6 @@ module.exports = {
 				{
 					name: 'Kecleon',
 					dex: 352,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -11254,8 +10374,6 @@ module.exports = {
 				{
 					name: 'Shuppet',
 					dex: 353,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -11281,8 +10399,6 @@ module.exports = {
 				{
 					name: 'Banette',
 					dex: 354,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -11308,8 +10424,6 @@ module.exports = {
 				{
 					name: 'Mega Banette',
 					dex: 354,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -11335,8 +10449,6 @@ module.exports = {
 				{
 					name: 'Duskull',
 					dex: 355,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -11353,8 +10465,6 @@ module.exports = {
 				{
 					name: 'Dusclops',
 					dex: 356,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -11371,8 +10481,6 @@ module.exports = {
 				{
 					name: 'Tropius',
 					dex: 357,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -11399,8 +10507,6 @@ module.exports = {
 				{
 					name: 'Chimecho',
 					dex: 358,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -11428,8 +10534,6 @@ module.exports = {
 				{
 					name: 'Absol',
 					dex: 359,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -11457,8 +10561,6 @@ module.exports = {
 				{
 					name: 'Mega Absol',
 					dex: 359,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -11486,8 +10588,6 @@ module.exports = {
 				{
 					name: 'Wynaut',
 					dex: 360,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -11504,8 +10604,6 @@ module.exports = {
 				{
 					name: 'Snorunt',
 					dex: 361,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -11528,8 +10626,6 @@ module.exports = {
 				{
 					name: 'Glalie',
 					dex: 362,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -11552,8 +10648,6 @@ module.exports = {
 				{
 					name: 'Mega Glalie',
 					dex: 362,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -11576,8 +10670,6 @@ module.exports = {
 				{
 					name: 'Spheal',
 					dex: 363,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -11604,8 +10696,6 @@ module.exports = {
 				{
 					name: 'Sealeo',
 					dex: 364,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -11632,8 +10722,6 @@ module.exports = {
 				{
 					name: 'Walrein',
 					dex: 365,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -11660,8 +10748,6 @@ module.exports = {
 				{
 					name: 'Clamperl',
 					dex: 366,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -11689,8 +10775,6 @@ module.exports = {
 				{
 					name: 'Huntail',
 					dex: 367,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -11718,8 +10802,6 @@ module.exports = {
 				{
 					name: 'Gorebyss',
 					dex: 368,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -11747,8 +10829,6 @@ module.exports = {
 				{
 					name: 'Relicanth',
 					dex: 369,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -11774,8 +10854,6 @@ module.exports = {
 				{
 					name: 'Luvdisc',
 					dex: 370,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Water',
@@ -11801,8 +10879,6 @@ module.exports = {
 				{
 					name: 'Bagon',
 					dex: 371,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -11828,8 +10904,6 @@ module.exports = {
 				{
 					name: 'Shelgon',
 					dex: 372,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -11855,8 +10929,6 @@ module.exports = {
 				{
 					name: 'Salamence',
 					dex: 373,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -11882,8 +10954,6 @@ module.exports = {
 				{
 					name: 'Mega Salamence',
 					dex: 373,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -11909,8 +10979,6 @@ module.exports = {
 				{
 					name: 'Beldum',
 					dex: 374,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -11927,8 +10995,6 @@ module.exports = {
 				{
 					name: 'Metang',
 					dex: 375,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -11945,8 +11011,6 @@ module.exports = {
 				{
 					name: 'Metagross',
 					dex: 376,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -11963,8 +11027,6 @@ module.exports = {
 				{
 					name: 'Mega Metagross',
 					dex: 376,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -11981,8 +11043,6 @@ module.exports = {
 				{
 					name: 'Regirock',
 					dex: 377,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -11999,8 +11059,6 @@ module.exports = {
 				{
 					name: 'Regice',
 					dex: 378,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ice',
@@ -12017,8 +11075,6 @@ module.exports = {
 				{
 					name: 'Registeel',
 					dex: 379,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -12035,8 +11091,6 @@ module.exports = {
 				{
 					name: 'Latias',
 					dex: 380,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Dragon',
@@ -12053,8 +11107,6 @@ module.exports = {
 				{
 					name: 'Mega Latias',
 					dex: 380,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Dragon',
@@ -12071,8 +11123,6 @@ module.exports = {
 				{
 					name: 'Latios',
 					dex: 381,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Dragon',
@@ -12089,8 +11139,6 @@ module.exports = {
 				{
 					name: 'Mega Latios',
 					dex: 381,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Dragon',
@@ -12107,8 +11155,6 @@ module.exports = {
 				{
 					name: 'Kyogre',
 					dex: 382,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -12125,8 +11171,6 @@ module.exports = {
 				{
 					name: 'Kyogre-Primal',
 					dex: 382,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -12143,8 +11187,6 @@ module.exports = {
 				{
 					name: 'Groudon',
 					dex: 383,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ground',
@@ -12161,8 +11203,6 @@ module.exports = {
 				{
 					name: 'Groudon-Primal',
 					dex: 383,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ground',
@@ -12179,8 +11219,6 @@ module.exports = {
 				{
 					name: 'Rayquaza',
 					dex: 384,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -12197,8 +11235,6 @@ module.exports = {
 				{
 					name: 'Mega Rayquaza',
 					dex: 384,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -12215,8 +11251,6 @@ module.exports = {
 				{
 					name: 'Jirachi',
 					dex: 385,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -12233,8 +11267,6 @@ module.exports = {
 				{
 					name: 'Deoxys',
 					dex: 386,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -12251,8 +11283,6 @@ module.exports = {
 				{
 					name: 'Deoxys-Attack',
 					dex: 386,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -12269,8 +11299,6 @@ module.exports = {
 				{
 					name: 'Deoxys-Defense',
 					dex: 386,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -12287,8 +11315,6 @@ module.exports = {
 				{
 					name: 'Deoxys-Speed',
 					dex: 386,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -12305,8 +11331,6 @@ module.exports = {
 				{
 					name: 'Turtwig',
 					dex: 387,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -12337,8 +11361,6 @@ module.exports = {
 				{
 					name: 'Grotle',
 					dex: 388,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -12369,8 +11391,6 @@ module.exports = {
 				{
 					name: 'Torterra',
 					dex: 389,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -12401,8 +11421,6 @@ module.exports = {
 				{
 					name: 'Chimchar',
 					dex: 390,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -12430,8 +11448,6 @@ module.exports = {
 				{
 					name: 'Monferno',
 					dex: 391,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -12459,8 +11475,6 @@ module.exports = {
 				{
 					name: 'Infernape',
 					dex: 392,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -12488,8 +11502,6 @@ module.exports = {
 				{
 					name: 'Piplup',
 					dex: 393,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -12517,8 +11529,6 @@ module.exports = {
 				{
 					name: 'Prinplup',
 					dex: 394,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -12546,8 +11556,6 @@ module.exports = {
 				{
 					name: 'Empoleon',
 					dex: 395,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -12575,8 +11583,6 @@ module.exports = {
 				{
 					name: 'Starly',
 					dex: 396,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -12604,8 +11610,6 @@ module.exports = {
 				{
 					name: 'Staravia',
 					dex: 397,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -12633,8 +11637,6 @@ module.exports = {
 				{
 					name: 'Staraptor',
 					dex: 398,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -12662,8 +11664,6 @@ module.exports = {
 				{
 					name: 'Bidoof',
 					dex: 399,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -12690,8 +11690,6 @@ module.exports = {
 				{
 					name: 'Bibarel',
 					dex: 400,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -12718,8 +11716,6 @@ module.exports = {
 				{
 					name: 'Kricketot',
 					dex: 401,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -12736,8 +11732,6 @@ module.exports = {
 				{
 					name: 'Kricketune',
 					dex: 402,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -12754,8 +11748,6 @@ module.exports = {
 				{
 					name: 'Shinx',
 					dex: 403,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -12783,8 +11775,6 @@ module.exports = {
 				{
 					name: 'Luxio',
 					dex: 404,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -12812,8 +11802,6 @@ module.exports = {
 				{
 					name: 'Luxray',
 					dex: 405,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -12841,8 +11829,6 @@ module.exports = {
 				{
 					name: 'Budew',
 					dex: 406,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -12865,8 +11851,6 @@ module.exports = {
 				{
 					name: 'Roserade',
 					dex: 407,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -12889,8 +11873,6 @@ module.exports = {
 				{
 					name: 'Cranidos',
 					dex: 408,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -12916,8 +11898,6 @@ module.exports = {
 				{
 					name: 'Rampardos',
 					dex: 409,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -12943,8 +11923,6 @@ module.exports = {
 				{
 					name: 'Shieldon',
 					dex: 410,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -12974,8 +11952,6 @@ module.exports = {
 				{
 					name: 'Bastiodon',
 					dex: 411,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -13005,8 +11981,6 @@ module.exports = {
 				{
 					name: 'Burmy-Plant',
 					dex: 412,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -13023,8 +11997,6 @@ module.exports = {
 				{
 					name: 'Burmy-Trash',
 					dex: 412,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -13041,8 +12013,6 @@ module.exports = {
 				{
 					name: 'Burmy-Sandy',
 					dex: 412,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -13059,8 +12029,6 @@ module.exports = {
 				{
 					name: 'Wormadam-Plant',
 					dex: 413,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -13077,8 +12045,6 @@ module.exports = {
 				{
 					name: 'Wormadam-Trash',
 					dex: 413,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -13095,8 +12061,6 @@ module.exports = {
 				{
 					name: 'Wormadam-Sandy',
 					dex: 413,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -13113,8 +12077,6 @@ module.exports = {
 				{
 					name: 'Mothim',
 					dex: 414,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Bug',
@@ -13131,8 +12093,6 @@ module.exports = {
 				{
 					name: 'Combee',
 					dex: 415,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Bug',
@@ -13149,8 +12109,6 @@ module.exports = {
 				{
 					name: 'Vespiquen',
 					dex: 416,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Bug',
@@ -13167,8 +12125,6 @@ module.exports = {
 				{
 					name: 'Pachirisu',
 					dex: 417,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -13198,8 +12154,6 @@ module.exports = {
 				{
 					name: 'Buizel',
 					dex: 418,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -13230,8 +12184,6 @@ module.exports = {
 				{
 					name: 'Floatzel',
 					dex: 419,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -13262,8 +12214,6 @@ module.exports = {
 				{
 					name: 'Cherubi',
 					dex: 420,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -13291,8 +12241,6 @@ module.exports = {
 				{
 					name: 'Cherrim',
 					dex: 421,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -13320,8 +12268,6 @@ module.exports = {
 				{
 					name: 'Shellos-West',
 					dex: 422,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -13350,8 +12296,6 @@ module.exports = {
 				{
 					name: 'Shellos-East',
 					dex: 422,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -13380,8 +12324,6 @@ module.exports = {
 				{
 					name: 'Gastrodon-West',
 					dex: 423,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -13410,8 +12352,6 @@ module.exports = {
 				{
 					name: 'Gastrodon-East',
 					dex: 423,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -13440,8 +12380,6 @@ module.exports = {
 				{
 					name: 'Ambipom',
 					dex: 424,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -13469,8 +12407,6 @@ module.exports = {
 				{
 					name: 'Drifloon',
 					dex: 425,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -13494,8 +12430,6 @@ module.exports = {
 				{
 					name: 'Drifblim',
 					dex: 426,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -13519,8 +12453,6 @@ module.exports = {
 				{
 					name: 'Buneary',
 					dex: 427,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -13552,8 +12484,6 @@ module.exports = {
 				{
 					name: 'Lopunny',
 					dex: 428,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -13585,8 +12515,6 @@ module.exports = {
 				{
 					name: 'Mega Lopunny',
 					dex: 428,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -13618,8 +12546,6 @@ module.exports = {
 				{
 					name: 'Mismagius',
 					dex: 429,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -13647,8 +12573,6 @@ module.exports = {
 				{
 					name: 'Honchkrow',
 					dex: 430,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -13677,8 +12601,6 @@ module.exports = {
 				{
 					name: 'Glameow',
 					dex: 431,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Normal',
@@ -13704,8 +12626,6 @@ module.exports = {
 				{
 					name: 'Purugly',
 					dex: 432,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Normal',
@@ -13731,8 +12651,6 @@ module.exports = {
 				{
 					name: 'Chingling',
 					dex: 433,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -13760,8 +12678,6 @@ module.exports = {
 				{
 					name: 'Stunky',
 					dex: 434,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -13785,8 +12701,6 @@ module.exports = {
 				{
 					name: 'Skuntank',
 					dex: 435,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -13810,8 +12724,6 @@ module.exports = {
 				{
 					name: 'Bronzor',
 					dex: 436,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -13828,8 +12740,6 @@ module.exports = {
 				{
 					name: 'Bronzong',
 					dex: 437,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -13846,8 +12756,6 @@ module.exports = {
 				{
 					name: 'Bonsly',
 					dex: 438,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -13871,8 +12779,6 @@ module.exports = {
 				{
 					name: 'Mime Jr.',
 					dex: 439,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -13895,8 +12801,6 @@ module.exports = {
 				{
 					name: 'Happiny',
 					dex: 440,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Normal',
@@ -13922,8 +12826,6 @@ module.exports = {
 				{
 					name: 'Chatot',
 					dex: 441,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -13948,8 +12850,6 @@ module.exports = {
 				{
 					name: 'Spiritomb',
 					dex: 442,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -13974,8 +12874,6 @@ module.exports = {
 				{
 					name: 'Gible',
 					dex: 443,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -14002,8 +12900,6 @@ module.exports = {
 				{
 					name: 'Gabite',
 					dex: 444,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -14030,8 +12926,6 @@ module.exports = {
 				{
 					name: 'Garchomp',
 					dex: 445,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -14058,8 +12952,6 @@ module.exports = {
 				{
 					name: 'Mega Garchomp',
 					dex: 445,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -14086,8 +12978,6 @@ module.exports = {
 				{
 					name: 'Munchlax',
 					dex: 446,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Normal',
@@ -14110,8 +13000,6 @@ module.exports = {
 				{
 					name: 'Riolu',
 					dex: 447,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fighting',
@@ -14138,8 +13026,6 @@ module.exports = {
 				{
 					name: 'Lucario',
 					dex: 448,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fighting',
@@ -14166,8 +13052,6 @@ module.exports = {
 				{
 					name: 'Mega Lucario',
 					dex: 448,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fighting',
@@ -14194,8 +13078,6 @@ module.exports = {
 				{
 					name: 'Hippopotas ♂',
 					dex: 449,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -14212,8 +13094,6 @@ module.exports = {
 				{
 					name: 'Hippopotas ♀',
 					dex: 449,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -14230,8 +13110,6 @@ module.exports = {
 				{
 					name: 'Hippowdon ♂',
 					dex: 450,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -14248,8 +13126,6 @@ module.exports = {
 				{
 					name: 'Hippowdon ♀',
 					dex: 450,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -14266,8 +13142,6 @@ module.exports = {
 				{
 					name: 'Skorupi',
 					dex: 451,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -14284,8 +13158,6 @@ module.exports = {
 				{
 					name: 'Drapion',
 					dex: 452,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -14302,8 +13174,6 @@ module.exports = {
 				{
 					name: 'Croagunk',
 					dex: 453,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -14330,8 +13200,6 @@ module.exports = {
 				{
 					name: 'Toxicroak',
 					dex: 454,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -14358,8 +13226,6 @@ module.exports = {
 				{
 					name: 'Carnivine',
 					dex: 455,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -14386,8 +13252,6 @@ module.exports = {
 				{
 					name: 'Finneon',
 					dex: 456,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -14415,8 +13279,6 @@ module.exports = {
 				{
 					name: 'Lumineon',
 					dex: 457,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -14444,8 +13306,6 @@ module.exports = {
 				{
 					name: 'Mantyke',
 					dex: 458,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -14470,8 +13330,6 @@ module.exports = {
 				{
 					name: 'Snover',
 					dex: 459,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -14494,8 +13352,6 @@ module.exports = {
 				{
 					name: 'Abomasnow',
 					dex: 460,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -14518,8 +13374,6 @@ module.exports = {
 				{
 					name: 'Mega Abomasnow',
 					dex: 460,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -14542,8 +13396,6 @@ module.exports = {
 				{
 					name: 'Weavile',
 					dex: 461,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -14569,8 +13421,6 @@ module.exports = {
 				{
 					name: 'Magnezone',
 					dex: 462,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -14587,8 +13437,6 @@ module.exports = {
 				{
 					name: 'Lickilicky',
 					dex: 463,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -14616,8 +13464,6 @@ module.exports = {
 				{
 					name: 'Rhyperior',
 					dex: 464,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -14642,8 +13488,6 @@ module.exports = {
 				{
 					name: 'Tangrowth',
 					dex: 465,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -14669,8 +13513,6 @@ module.exports = {
 				{
 					name: 'Electivire',
 					dex: 466,
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Electric',
@@ -14696,8 +13538,6 @@ module.exports = {
 				{
 					name: 'Magmortar',
 					dex: 467,
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fire',
@@ -14727,8 +13567,6 @@ module.exports = {
 				{
 					name: 'Togekiss',
 					dex: 468,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fairy',
@@ -14752,8 +13590,6 @@ module.exports = {
 				{
 					name: 'Yanmega',
 					dex: 469,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -14777,8 +13613,6 @@ module.exports = {
 				{
 					name: 'Leafeon',
 					dex: 470,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -14804,8 +13638,6 @@ module.exports = {
 				{
 					name: 'Glaceon',
 					dex: 471,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Ice',
@@ -14831,8 +13663,6 @@ module.exports = {
 				{
 					name: 'Gliscor',
 					dex: 472,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -14863,8 +13693,6 @@ module.exports = {
 				{
 					name: 'Mamoswine',
 					dex: 473,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -14889,8 +13717,6 @@ module.exports = {
 				{
 					name: 'Porygon-Z',
 					dex: 474,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Normal',
@@ -14907,8 +13733,6 @@ module.exports = {
 				{
 					name: 'Gallade',
 					dex: 475,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Psychic',
@@ -14934,8 +13758,6 @@ module.exports = {
 				{
 					name: 'Mega Gallade',
 					dex: 475,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Psychic',
@@ -14961,8 +13783,6 @@ module.exports = {
 				{
 					name: 'Probopass',
 					dex: 476,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -14979,8 +13799,6 @@ module.exports = {
 				{
 					name: 'Dusknoir',
 					dex: 477,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -14997,8 +13815,6 @@ module.exports = {
 				{
 					name: 'Froslass',
 					dex: 478,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Ice',
@@ -15021,8 +13837,6 @@ module.exports = {
 				{
 					name: 'Rotom',
 					dex: 479,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -15039,8 +13853,6 @@ module.exports = {
 				{
 					name: 'Rotom-Heat',
 					dex: 479,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fire',
@@ -15057,8 +13869,6 @@ module.exports = {
 				{
 					name: 'Rotom-Wash',
 					dex: 479,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -15075,8 +13885,6 @@ module.exports = {
 				{
 					name: 'Rotom-Frost',
 					dex: 479,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ice',
@@ -15093,8 +13901,6 @@ module.exports = {
 				{
 					name: 'Rotom-Fan',
 					dex: 479,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Flying',
@@ -15111,8 +13917,6 @@ module.exports = {
 				{
 					name: 'Rotom-Mow',
 					dex: 479,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Grass',
@@ -15129,8 +13933,6 @@ module.exports = {
 				{
 					name: 'Uxie',
 					dex: 480,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -15147,8 +13949,6 @@ module.exports = {
 				{
 					name: 'Mesprit',
 					dex: 481,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -15165,8 +13965,6 @@ module.exports = {
 				{
 					name: 'Azelf',
 					dex: 482,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -15183,8 +13981,6 @@ module.exports = {
 				{
 					name: 'Dialga',
 					dex: 483,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -15201,8 +13997,6 @@ module.exports = {
 				{
 					name: 'Palkia',
 					dex: 484,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -15219,8 +14013,6 @@ module.exports = {
 				{
 					name: 'Heatran',
 					dex: 485,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fire',
@@ -15237,8 +14029,6 @@ module.exports = {
 				{
 					name: 'Regigigas',
 					dex: 486,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Normal',
@@ -15255,8 +14045,6 @@ module.exports = {
 				{
 					name: 'Giratina',
 					dex: 487,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ghost',
@@ -15273,8 +14061,6 @@ module.exports = {
 				{
 					name: 'Giratina-Origin',
 					dex: 487,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ghost',
@@ -15291,8 +14077,6 @@ module.exports = {
 				{
 					name: 'Cresselia',
 					dex: 488,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Psychic',
@@ -15309,8 +14093,6 @@ module.exports = {
 				{
 					name: 'Phione',
 					dex: 489,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -15327,8 +14109,6 @@ module.exports = {
 				{
 					name: 'Manaphy',
 					dex: 490,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -15345,8 +14125,6 @@ module.exports = {
 				{
 					name: 'Darkrai',
 					dex: 491,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dark',
@@ -15363,8 +14141,6 @@ module.exports = {
 				{
 					name: 'Shaymin',
 					dex: 492,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Grass',
@@ -15381,8 +14157,6 @@ module.exports = {
 				{
 					name: 'Shaymin-Sky',
 					dex: 492,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Grass',
@@ -15399,8 +14173,6 @@ module.exports = {
 				{
 					name: 'Arceus',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Normal',
@@ -15417,8 +14189,6 @@ module.exports = {
 				{
 					name: 'Arceus-Bug',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Bug',
@@ -15435,8 +14205,6 @@ module.exports = {
 				{
 					name: 'Arceus-Dark',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dark',
@@ -15453,8 +14221,6 @@ module.exports = {
 				{
 					name: 'Arceus-Dragon',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -15471,8 +14237,6 @@ module.exports = {
 				{
 					name: 'Arceus-Electric',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -15489,8 +14253,6 @@ module.exports = {
 				{
 					name: 'Arceus-Fairy',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fairy',
@@ -15507,8 +14269,6 @@ module.exports = {
 				{
 					name: 'Arceus-Fighting',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fighting',
@@ -15525,8 +14285,6 @@ module.exports = {
 				{
 					name: 'Arceus-Fire',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fire',
@@ -15543,8 +14301,6 @@ module.exports = {
 				{
 					name: 'Arceus-Flying',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Flying',
@@ -15561,8 +14317,6 @@ module.exports = {
 				{
 					name: 'Arceus-Ghost',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ghost',
@@ -15579,8 +14333,6 @@ module.exports = {
 				{
 					name: 'Arceus-Grass',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Grass',
@@ -15597,8 +14349,6 @@ module.exports = {
 				{
 					name: 'Arceus-Ground',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ground',
@@ -15615,8 +14365,6 @@ module.exports = {
 				{
 					name: 'Arceus-Ice',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ice',
@@ -15633,8 +14381,6 @@ module.exports = {
 				{
 					name: 'Arceus-Poison',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Poison',
@@ -15651,8 +14397,6 @@ module.exports = {
 				{
 					name: 'Arceus-Psychic',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -15669,8 +14413,6 @@ module.exports = {
 				{
 					name: 'Arceus-Rock',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -15687,8 +14429,6 @@ module.exports = {
 				{
 					name: 'Arceus-Steel',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -15705,8 +14445,6 @@ module.exports = {
 				{
 					name: 'Arceus-Water',
 					dex: 493,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -15723,8 +14461,6 @@ module.exports = {
 				{
 					name: 'Victini',
 					dex: 494,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -15741,8 +14477,6 @@ module.exports = {
 				{
 					name: 'Snivy',
 					dex: 495,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -15770,8 +14504,6 @@ module.exports = {
 				{
 					name: 'Servine',
 					dex: 496,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -15799,8 +14531,6 @@ module.exports = {
 				{
 					name: 'Serperior',
 					dex: 497,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -15828,8 +14558,6 @@ module.exports = {
 				{
 					name: 'Tepig',
 					dex: 498,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -15855,8 +14583,6 @@ module.exports = {
 				{
 					name: 'Pignite',
 					dex: 499,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -15882,8 +14608,6 @@ module.exports = {
 				{
 					name: 'Emboar',
 					dex: 500,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -15909,8 +14633,6 @@ module.exports = {
 				{
 					name: 'Oshawott',
 					dex: 501,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -15937,8 +14659,6 @@ module.exports = {
 				{
 					name: 'Dewott',
 					dex: 502,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -15965,8 +14685,6 @@ module.exports = {
 				{
 					name: 'Samurott',
 					dex: 503,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -15993,8 +14711,6 @@ module.exports = {
 				{
 					name: 'Patrat',
 					dex: 504,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -16020,8 +14736,6 @@ module.exports = {
 				{
 					name: 'Watchog',
 					dex: 505,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -16047,8 +14761,6 @@ module.exports = {
 				{
 					name: 'Lillipup',
 					dex: 506,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -16075,8 +14787,6 @@ module.exports = {
 				{
 					name: 'Herdier',
 					dex: 507,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -16103,8 +14813,6 @@ module.exports = {
 				{
 					name: 'Stoutland',
 					dex: 508,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -16131,8 +14839,6 @@ module.exports = {
 				{
 					name: 'Purrloin',
 					dex: 509,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -16156,8 +14862,6 @@ module.exports = {
 				{
 					name: 'Liepard',
 					dex: 510,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -16181,8 +14885,6 @@ module.exports = {
 				{
 					name: 'Pansage',
 					dex: 511,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -16209,8 +14911,6 @@ module.exports = {
 				{
 					name: 'Simisage',
 					dex: 512,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -16237,8 +14937,6 @@ module.exports = {
 				{
 					name: 'Pansear',
 					dex: 513,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -16263,8 +14961,6 @@ module.exports = {
 				{
 					name: 'Simisear',
 					dex: 514,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -16289,8 +14985,6 @@ module.exports = {
 				{
 					name: 'Panpour',
 					dex: 515,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -16315,8 +15009,6 @@ module.exports = {
 				{
 					name: 'Simipour',
 					dex: 516,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -16341,8 +15033,6 @@ module.exports = {
 				{
 					name: 'Munna',
 					dex: 517,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -16359,8 +15049,6 @@ module.exports = {
 				{
 					name: 'Musharna',
 					dex: 518,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -16377,8 +15065,6 @@ module.exports = {
 				{
 					name: 'Pidove',
 					dex: 519,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -16401,8 +15087,6 @@ module.exports = {
 				{
 					name: 'Tranquill',
 					dex: 520,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -16425,8 +15109,6 @@ module.exports = {
 				{
 					name: 'Unfezant ♂',
 					dex: 521,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -16449,8 +15131,6 @@ module.exports = {
 				{
 					name: 'Unfezant ♀',
 					dex: 521,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -16473,8 +15153,6 @@ module.exports = {
 				{
 					name: 'Blitzle',
 					dex: 522,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -16501,8 +15179,6 @@ module.exports = {
 				{
 					name: 'Zebstrika',
 					dex: 523,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -16529,8 +15205,6 @@ module.exports = {
 				{
 					name: 'Roggenrola',
 					dex: 524,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -16553,8 +15227,6 @@ module.exports = {
 				{
 					name: 'Boldore',
 					dex: 525,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -16577,8 +15249,6 @@ module.exports = {
 				{
 					name: 'Gigalith',
 					dex: 526,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -16601,8 +15271,6 @@ module.exports = {
 				{
 					name: 'Woobat',
 					dex: 527,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -16625,8 +15293,6 @@ module.exports = {
 				{
 					name: 'Swoobat',
 					dex: 528,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -16649,8 +15315,6 @@ module.exports = {
 				{
 					name: 'Drilbur',
 					dex: 529,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -16667,8 +15331,6 @@ module.exports = {
 				{
 					name: 'Excadrill',
 					dex: 530,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -16685,8 +15347,6 @@ module.exports = {
 				{
 					name: 'Audino',
 					dex: 531,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -16713,8 +15373,6 @@ module.exports = {
 				{
 					name: 'Mega Audino',
 					dex: 531,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -16741,8 +15399,6 @@ module.exports = {
 				{
 					name: 'Timburr',
 					dex: 532,
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fighting',
@@ -16766,8 +15422,6 @@ module.exports = {
 				{
 					name: 'Gurdurr',
 					dex: 533,
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fighting',
@@ -16791,8 +15445,6 @@ module.exports = {
 				{
 					name: 'Conkeldurr',
 					dex: 534,
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fighting',
@@ -16816,8 +15468,6 @@ module.exports = {
 				{
 					name: 'Tympole',
 					dex: 535,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -16834,8 +15484,6 @@ module.exports = {
 				{
 					name: 'Palpitoad',
 					dex: 536,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -16852,8 +15500,6 @@ module.exports = {
 				{
 					name: 'Seismitoad',
 					dex: 537,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -16870,8 +15516,6 @@ module.exports = {
 				{
 					name: 'Throh',
 					dex: 538,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Fighting',
@@ -16888,8 +15532,6 @@ module.exports = {
 				{
 					name: 'Sawk',
 					dex: 539,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Fighting',
@@ -16906,8 +15548,6 @@ module.exports = {
 				{
 					name: 'Sewaddle',
 					dex: 540,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -16935,8 +15575,6 @@ module.exports = {
 				{
 					name: 'Swadloon',
 					dex: 541,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -16964,8 +15602,6 @@ module.exports = {
 				{
 					name: 'Leavanny',
 					dex: 542,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -16993,8 +15629,6 @@ module.exports = {
 				{
 					name: 'Venipede',
 					dex: 543,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -17017,8 +15651,6 @@ module.exports = {
 				{
 					name: 'Whirlipede',
 					dex: 544,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -17041,8 +15673,6 @@ module.exports = {
 				{
 					name: 'Scolipede',
 					dex: 545,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -17065,8 +15695,6 @@ module.exports = {
 				{
 					name: 'Cottonee',
 					dex: 546,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -17089,8 +15717,6 @@ module.exports = {
 				{
 					name: 'Whimsicott',
 					dex: 547,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -17113,8 +15739,6 @@ module.exports = {
 				{
 					name: 'Petilil',
 					dex: 548,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Grass',
@@ -17141,8 +15765,6 @@ module.exports = {
 				{
 					name: 'Lilligant',
 					dex: 549,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Grass',
@@ -17169,8 +15791,6 @@ module.exports = {
 				{
 					name: 'Basculin-Red',
 					dex: 550,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -17187,8 +15807,6 @@ module.exports = {
 				{
 					name: 'Basculin-Blue',
 					dex: 550,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -17205,8 +15823,6 @@ module.exports = {
 				{
 					name: 'Sandile',
 					dex: 551,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -17234,8 +15850,6 @@ module.exports = {
 				{
 					name: 'Krokorok',
 					dex: 552,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -17263,8 +15877,6 @@ module.exports = {
 				{
 					name: 'Krookodile',
 					dex: 553,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -17292,8 +15904,6 @@ module.exports = {
 				{
 					name: 'Darumaka',
 					dex: 554,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -17317,8 +15927,6 @@ module.exports = {
 				{
 					name: 'Darmanitan',
 					dex: 555,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -17342,8 +15950,6 @@ module.exports = {
 				{
 					name: 'Darmanitan-Zen',
 					dex: 555,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -17367,8 +15973,6 @@ module.exports = {
 				{
 					name: 'Maractus',
 					dex: 556,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -17385,8 +15989,6 @@ module.exports = {
 				{
 					name: 'Dwebble',
 					dex: 557,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -17410,8 +16012,6 @@ module.exports = {
 				{
 					name: 'Crustle',
 					dex: 558,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -17435,8 +16035,6 @@ module.exports = {
 				{
 					name: 'Scraggy',
 					dex: 559,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -17460,8 +16058,6 @@ module.exports = {
 				{
 					name: 'Scrafty',
 					dex: 560,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -17485,8 +16081,6 @@ module.exports = {
 				{
 					name: 'Sigilyph',
 					dex: 561,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -17503,8 +16097,6 @@ module.exports = {
 				{
 					name: 'Yamask',
 					dex: 562,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -17521,8 +16113,6 @@ module.exports = {
 				{
 					name: 'Cofagrigus',
 					dex: 563,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -17539,8 +16129,6 @@ module.exports = {
 				{
 					name: 'Tirtouga',
 					dex: 564,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -17564,8 +16152,6 @@ module.exports = {
 				{
 					name: 'Carracosta',
 					dex: 565,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -17589,8 +16175,6 @@ module.exports = {
 				{
 					name: 'Archen',
 					dex: 566,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -17607,8 +16191,6 @@ module.exports = {
 				{
 					name: 'Archeops',
 					dex: 567,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -17625,8 +16207,6 @@ module.exports = {
 				{
 					name: 'Trubbish',
 					dex: 568,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -17643,8 +16223,6 @@ module.exports = {
 				{
 					name: 'Garbodor',
 					dex: 569,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -17661,8 +16239,6 @@ module.exports = {
 				{
 					name: 'Zorua',
 					dex: 570,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Dark',
@@ -17687,8 +16263,6 @@ module.exports = {
 				{
 					name: 'Zoroark',
 					dex: 571,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Dark',
@@ -17713,8 +16287,6 @@ module.exports = {
 				{
 					name: 'Minccino',
 					dex: 572,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Normal',
@@ -17731,8 +16303,6 @@ module.exports = {
 				{
 					name: 'Cinccino',
 					dex: 573,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Normal',
@@ -17749,8 +16319,6 @@ module.exports = {
 				{
 					name: 'Gothita',
 					dex: 574,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Psychic',
@@ -17773,8 +16341,6 @@ module.exports = {
 				{
 					name: 'Gothorita',
 					dex: 575,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Psychic',
@@ -17797,8 +16363,6 @@ module.exports = {
 				{
 					name: 'Gothitelle',
 					dex: 576,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Psychic',
@@ -17821,8 +16385,6 @@ module.exports = {
 				{
 					name: 'Solosis',
 					dex: 577,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -17839,8 +16401,6 @@ module.exports = {
 				{
 					name: 'Duosion',
 					dex: 578,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -17857,8 +16417,6 @@ module.exports = {
 				{
 					name: 'Reuniclus',
 					dex: 579,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -17875,8 +16433,6 @@ module.exports = {
 				{
 					name: 'Ducklett',
 					dex: 580,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -17902,8 +16458,6 @@ module.exports = {
 				{
 					name: 'Swanna',
 					dex: 581,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -17929,8 +16483,6 @@ module.exports = {
 				{
 					name: 'Vanillite',
 					dex: 582,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -17954,8 +16506,6 @@ module.exports = {
 				{
 					name: 'Vanillish',
 					dex: 583,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -17979,8 +16529,6 @@ module.exports = {
 				{
 					name: 'Vanilluxe',
 					dex: 584,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -18004,8 +16552,6 @@ module.exports = {
 				{
 					name: 'Deerling-Spring',
 					dex: 585,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -18022,8 +16568,6 @@ module.exports = {
 				{
 					name: 'Deerling-Summer',
 					dex: 585,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -18040,8 +16584,6 @@ module.exports = {
 				{
 					name: 'Deerling-Autumn',
 					dex: 585,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -18058,8 +16600,6 @@ module.exports = {
 				{
 					name: 'Deerling-Winter',
 					dex: 585,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -18076,8 +16616,6 @@ module.exports = {
 				{
 					name: 'Sawsbuck-Spring',
 					dex: 586,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -18094,8 +16632,6 @@ module.exports = {
 				{
 					name: 'Sawsbuck-Summer',
 					dex: 586,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -18112,8 +16648,6 @@ module.exports = {
 				{
 					name: 'Sawsbuck-Autumn',
 					dex: 586,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -18130,8 +16664,6 @@ module.exports = {
 				{
 					name: 'Sawsbuck-Winter',
 					dex: 586,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -18148,8 +16680,6 @@ module.exports = {
 				{
 					name: 'Emolga',
 					dex: 587,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -18174,8 +16704,6 @@ module.exports = {
 				{
 					name: 'Karrablast',
 					dex: 588,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -18198,8 +16726,6 @@ module.exports = {
 				{
 					name: 'Escavalier',
 					dex: 589,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -18222,8 +16748,6 @@ module.exports = {
 				{
 					name: 'Foongus',
 					dex: 590,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -18247,8 +16771,6 @@ module.exports = {
 				{
 					name: 'Amoonguss',
 					dex: 591,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -18272,8 +16794,6 @@ module.exports = {
 				{
 					name: 'Frillish ♂',
 					dex: 592,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -18297,8 +16817,6 @@ module.exports = {
 				{
 					name: 'Frillish ♀',
 					dex: 592,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -18322,8 +16840,6 @@ module.exports = {
 				{
 					name: 'Jellicent ♂',
 					dex: 593,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -18347,8 +16863,6 @@ module.exports = {
 				{
 					name: 'Jellicent ♀',
 					dex: 593,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -18372,8 +16886,6 @@ module.exports = {
 				{
 					name: 'Alomomola',
 					dex: 594,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -18390,8 +16902,6 @@ module.exports = {
 				{
 					name: 'Joltik',
 					dex: 595,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -18414,8 +16924,6 @@ module.exports = {
 				{
 					name: 'Galvantula',
 					dex: 596,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -18438,8 +16946,6 @@ module.exports = {
 				{
 					name: 'Ferroseed',
 					dex: 597,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -18462,8 +16968,6 @@ module.exports = {
 				{
 					name: 'Ferrothorn',
 					dex: 598,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -18486,8 +16990,6 @@ module.exports = {
 				{
 					name: 'Klink',
 					dex: 599,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -18504,8 +17006,6 @@ module.exports = {
 				{
 					name: 'Klang',
 					dex: 600,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -18522,8 +17022,6 @@ module.exports = {
 				{
 					name: 'Klinklang',
 					dex: 601,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -18540,8 +17038,6 @@ module.exports = {
 				{
 					name: 'Tynamo',
 					dex: 602,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -18558,8 +17054,6 @@ module.exports = {
 				{
 					name: 'Eelektrik',
 					dex: 603,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -18576,8 +17070,6 @@ module.exports = {
 				{
 					name: 'Eelektross',
 					dex: 604,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -18594,8 +17086,6 @@ module.exports = {
 				{
 					name: 'Elgyem',
 					dex: 605,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -18612,8 +17102,6 @@ module.exports = {
 				{
 					name: 'Beheeyem',
 					dex: 606,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -18630,8 +17118,6 @@ module.exports = {
 				{
 					name: 'Litwick',
 					dex: 607,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -18648,8 +17134,6 @@ module.exports = {
 				{
 					name: 'Lampent',
 					dex: 608,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -18666,8 +17150,6 @@ module.exports = {
 				{
 					name: 'Chandelure',
 					dex: 609,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -18684,8 +17166,6 @@ module.exports = {
 				{
 					name: 'Axew',
 					dex: 610,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -18709,8 +17189,6 @@ module.exports = {
 				{
 					name: 'Fraxure',
 					dex: 611,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -18734,8 +17212,6 @@ module.exports = {
 				{
 					name: 'Haxorus',
 					dex: 612,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -18759,8 +17235,6 @@ module.exports = {
 				{
 					name: 'Cubchoo',
 					dex: 613,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -18777,8 +17251,6 @@ module.exports = {
 				{
 					name: 'Beartic',
 					dex: 614,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -18795,8 +17267,6 @@ module.exports = {
 				{
 					name: 'Cryogonal',
 					dex: 615,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ice',
@@ -18813,8 +17283,6 @@ module.exports = {
 				{
 					name: 'Shelmet',
 					dex: 616,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -18831,8 +17299,6 @@ module.exports = {
 				{
 					name: 'Accelgor',
 					dex: 617,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -18849,8 +17315,6 @@ module.exports = {
 				{
 					name: 'Stunfisk',
 					dex: 618,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -18875,8 +17339,6 @@ module.exports = {
 				{
 					name: 'Mienfoo',
 					dex: 619,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -18900,8 +17362,6 @@ module.exports = {
 				{
 					name: 'Mienshao',
 					dex: 620,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -18925,8 +17385,6 @@ module.exports = {
 				{
 					name: 'Druddigon',
 					dex: 621,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -18953,8 +17411,6 @@ module.exports = {
 				{
 					name: 'Golett',
 					dex: 622,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ground',
@@ -18971,8 +17427,6 @@ module.exports = {
 				{
 					name: 'Golurk',
 					dex: 623,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ground',
@@ -18989,8 +17443,6 @@ module.exports = {
 				{
 					name: 'Pawniard',
 					dex: 624,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -19007,8 +17459,6 @@ module.exports = {
 				{
 					name: 'Bisharp',
 					dex: 625,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -19025,8 +17475,6 @@ module.exports = {
 				{
 					name: 'Bouffalant',
 					dex: 626,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -19053,8 +17501,6 @@ module.exports = {
 				{
 					name: 'Rufflet',
 					dex: 627,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Normal',
@@ -19071,8 +17517,6 @@ module.exports = {
 				{
 					name: 'Braviary',
 					dex: 628,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Normal',
@@ -19089,8 +17533,6 @@ module.exports = {
 				{
 					name: 'Vullaby',
 					dex: 629,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -19107,8 +17549,6 @@ module.exports = {
 				{
 					name: 'Mandibuzz',
 					dex: 630,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -19125,8 +17565,6 @@ module.exports = {
 				{
 					name: 'Heatmor',
 					dex: 631,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -19149,8 +17587,6 @@ module.exports = {
 				{
 					name: 'Durant',
 					dex: 632,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -19173,8 +17609,6 @@ module.exports = {
 				{
 					name: 'Deino',
 					dex: 633,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -19191,8 +17625,6 @@ module.exports = {
 				{
 					name: 'Zweilous',
 					dex: 634,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -19209,8 +17641,6 @@ module.exports = {
 				{
 					name: 'Hydreigon',
 					dex: 635,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -19227,8 +17657,6 @@ module.exports = {
 				{
 					name: 'Larvesta',
 					dex: 636,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -19245,8 +17673,6 @@ module.exports = {
 				{
 					name: 'Volcarona',
 					dex: 637,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -19263,8 +17689,6 @@ module.exports = {
 				{
 					name: 'Cobalion',
 					dex: 638,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -19281,8 +17705,6 @@ module.exports = {
 				{
 					name: 'Terrakion',
 					dex: 639,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -19299,8 +17721,6 @@ module.exports = {
 				{
 					name: 'Virizion',
 					dex: 640,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Grass',
@@ -19317,8 +17737,6 @@ module.exports = {
 				{
 					name: 'Tornadus',
 					dex: 641,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Flying',
@@ -19335,8 +17753,6 @@ module.exports = {
 				{
 					name: 'Tornadus-Therian',
 					dex: 641,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Flying',
@@ -19353,8 +17769,6 @@ module.exports = {
 				{
 					name: 'Thundurus',
 					dex: 642,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Electric',
@@ -19371,8 +17785,6 @@ module.exports = {
 				{
 					name: 'Thundurus-Therian',
 					dex: 642,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Electric',
@@ -19389,8 +17801,6 @@ module.exports = {
 				{
 					name: 'Reshiram',
 					dex: 643,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -19407,8 +17817,6 @@ module.exports = {
 				{
 					name: 'Zekrom',
 					dex: 644,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -19425,8 +17833,6 @@ module.exports = {
 				{
 					name: 'Landorus',
 					dex: 645,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Ground',
@@ -19443,8 +17849,6 @@ module.exports = {
 				{
 					name: 'Landorus-Therian',
 					dex: 645,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Ground',
@@ -19461,8 +17865,6 @@ module.exports = {
 				{
 					name: 'Kyurem',
 					dex: 646,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -19479,8 +17881,6 @@ module.exports = {
 				{
 					name: 'Kyurem-Black',
 					dex: 646,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -19497,8 +17897,6 @@ module.exports = {
 				{
 					name: 'Kyurem-White',
 					dex: 646,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -19515,8 +17913,6 @@ module.exports = {
 				{
 					name: 'Keldeo',
 					dex: 647,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -19533,8 +17929,6 @@ module.exports = {
 				{
 					name: 'Keldeo-Resolute',
 					dex: 647,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -19551,8 +17945,6 @@ module.exports = {
 				{
 					name: 'Meloetta',
 					dex: 648,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Normal',
@@ -19569,8 +17961,6 @@ module.exports = {
 				{
 					name: 'Meloetta-Pirouette',
 					dex: 648,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Normal',
@@ -19587,8 +17977,6 @@ module.exports = {
 				{
 					name: 'Genesect',
 					dex: 649,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Bug',
@@ -19605,8 +17993,6 @@ module.exports = {
 				{
 					name: 'Genesect-Shock',
 					dex: 649,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Bug',
@@ -19623,8 +18009,6 @@ module.exports = {
 				{
 					name: 'Genesect-Burn',
 					dex: 649,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Bug',
@@ -19641,8 +18025,6 @@ module.exports = {
 				{
 					name: 'Genesect-Chill',
 					dex: 649,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Bug',
@@ -19659,8 +18041,6 @@ module.exports = {
 				{
 					name: 'Genesect-Douse',
 					dex: 649,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Bug',
@@ -19677,8 +18057,6 @@ module.exports = {
 				{
 					name: 'Chespin',
 					dex: 650,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -19701,8 +18079,6 @@ module.exports = {
 				{
 					name: 'Quilladin',
 					dex: 651,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -19725,8 +18101,6 @@ module.exports = {
 				{
 					name: 'Chesnaught',
 					dex: 652,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -19749,8 +18123,6 @@ module.exports = {
 				{
 					name: 'Fennekin',
 					dex: 653,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -19767,8 +18139,6 @@ module.exports = {
 				{
 					name: 'Braixen',
 					dex: 654,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -19785,8 +18155,6 @@ module.exports = {
 				{
 					name: 'Delphox',
 					dex: 655,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -19803,8 +18171,6 @@ module.exports = {
 				{
 					name: 'Froakie',
 					dex: 656,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -19829,8 +18195,6 @@ module.exports = {
 				{
 					name: 'Frogadier',
 					dex: 657,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -19855,8 +18219,6 @@ module.exports = {
 				{
 					name: 'Greninja',
 					dex: 658,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -19881,8 +18243,6 @@ module.exports = {
 				{
 					name: 'Greninja-Ash',
 					dex: 658,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Water',
@@ -19899,8 +18259,6 @@ module.exports = {
 				{
 					name: 'Bunnelby',
 					dex: 659,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -19917,8 +18275,6 @@ module.exports = {
 				{
 					name: 'Diggersby',
 					dex: 660,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -19935,8 +18291,6 @@ module.exports = {
 				{
 					name: 'Fletchling',
 					dex: 661,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -19953,8 +18307,6 @@ module.exports = {
 				{
 					name: 'Fletchinder',
 					dex: 662,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -19971,8 +18323,6 @@ module.exports = {
 				{
 					name: 'Talonflame',
 					dex: 663,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -19989,8 +18339,6 @@ module.exports = {
 				{
 					name: 'Scatterbug',
 					dex: 664,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20007,8 +18355,6 @@ module.exports = {
 				{
 					name: 'Spewpa',
 					dex: 665,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20025,8 +18371,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Archipelago',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20043,8 +18387,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Continental',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20061,8 +18403,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Elegant',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20079,8 +18419,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Garden',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20097,8 +18435,6 @@ module.exports = {
 				{
 					name: 'Vivillon-High-Plains',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20115,8 +18451,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Icy-Snow',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20133,8 +18467,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Jungle',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20151,8 +18483,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Marine',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20169,8 +18499,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Meadow',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20187,8 +18515,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Modern',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20205,8 +18531,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Monsoon',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20223,8 +18547,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Ocean',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20241,8 +18563,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Polar',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20259,8 +18579,6 @@ module.exports = {
 				{
 					name: 'Vivillon-River',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20277,8 +18595,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Sandstorm',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20295,8 +18611,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Savanna',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20313,8 +18627,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Sun',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20331,8 +18643,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Tundra',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20349,8 +18659,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Fancy',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20367,8 +18675,6 @@ module.exports = {
 				{
 					name: 'Vivillon-Poke-Ball',
 					dex: 666,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -20385,8 +18691,6 @@ module.exports = {
 				{
 					name: 'Litleo',
 					dex: 667,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fire',
@@ -20403,8 +18707,6 @@ module.exports = {
 				{
 					name: 'Pyroar ♂',
 					dex: 668,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fire',
@@ -20421,8 +18723,6 @@ module.exports = {
 				{
 					name: 'Pyroar ♀',
 					dex: 668,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fire',
@@ -20439,8 +18739,6 @@ module.exports = {
 				{
 					name: 'Flabébé-Red',
 					dex: 669,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20457,8 +18755,6 @@ module.exports = {
 				{
 					name: 'Flabébé-Orange',
 					dex: 669,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20475,8 +18771,6 @@ module.exports = {
 				{
 					name: 'Flabébé-Yellow',
 					dex: 669,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20493,8 +18787,6 @@ module.exports = {
 				{
 					name: 'Flabébé-White',
 					dex: 669,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20511,8 +18803,6 @@ module.exports = {
 				{
 					name: 'Flabébé-Blue',
 					dex: 669,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20529,8 +18819,6 @@ module.exports = {
 				{
 					name: 'Floette-Red',
 					dex: 670,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20547,8 +18835,6 @@ module.exports = {
 				{
 					name: 'Floette-Orange',
 					dex: 670,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20565,8 +18851,6 @@ module.exports = {
 				{
 					name: 'Floette-Yellow',
 					dex: 670,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20583,8 +18867,6 @@ module.exports = {
 				{
 					name: 'Floette-White',
 					dex: 670,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20601,8 +18883,6 @@ module.exports = {
 				{
 					name: 'Floette-Blue',
 					dex: 670,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20619,8 +18899,6 @@ module.exports = {
 				{
 					name: 'Floette-Eternal',
 					dex: 670,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20637,8 +18915,6 @@ module.exports = {
 				{
 					name: 'Florges-Red',
 					dex: 671,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20655,8 +18931,6 @@ module.exports = {
 				{
 					name: 'Florges-Orange',
 					dex: 671,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20673,8 +18947,6 @@ module.exports = {
 				{
 					name: 'Florges-Yellow',
 					dex: 671,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20691,8 +18963,6 @@ module.exports = {
 				{
 					name: 'Florges-White',
 					dex: 671,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20709,8 +18979,6 @@ module.exports = {
 				{
 					name: 'Florges-Blue',
 					dex: 671,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -20727,8 +18995,6 @@ module.exports = {
 				{
 					name: 'Skiddo',
 					dex: 672,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -20745,8 +19011,6 @@ module.exports = {
 				{
 					name: 'Gogoat',
 					dex: 673,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -20763,8 +19027,6 @@ module.exports = {
 				{
 					name: 'Pancham',
 					dex: 674,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -20787,8 +19049,6 @@ module.exports = {
 				{
 					name: 'Pangoro',
 					dex: 675,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -20811,8 +19071,6 @@ module.exports = {
 				{
 					name: 'Furfrou',
 					dex: 676,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -20829,8 +19087,6 @@ module.exports = {
 				{
 					name: 'Furfrou-Heart',
 					dex: 676,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -20847,8 +19103,6 @@ module.exports = {
 				{
 					name: 'Furfrou-Star',
 					dex: 676,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -20865,8 +19119,6 @@ module.exports = {
 				{
 					name: 'Furfrou-Diamond',
 					dex: 676,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -20883,8 +19135,6 @@ module.exports = {
 				{
 					name: 'Furfrou-Debutante',
 					dex: 676,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -20901,8 +19151,6 @@ module.exports = {
 				{
 					name: 'Furfrou-Matron',
 					dex: 676,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -20919,8 +19167,6 @@ module.exports = {
 				{
 					name: 'Furfrou-Dandy',
 					dex: 676,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -20937,8 +19183,6 @@ module.exports = {
 				{
 					name: 'Furfrou-La-Reine',
 					dex: 676,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -20955,8 +19199,6 @@ module.exports = {
 				{
 					name: 'Furfrou-Kabuki',
 					dex: 676,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -20973,8 +19215,6 @@ module.exports = {
 				{
 					name: 'Furfrou-Pharaoh',
 					dex: 676,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -20991,8 +19231,6 @@ module.exports = {
 				{
 					name: 'Espurr',
 					dex: 677,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -21009,8 +19247,6 @@ module.exports = {
 				{
 					name: 'Meowstic ♂',
 					dex: 678,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -21027,8 +19263,6 @@ module.exports = {
 				{
 					name: 'Meowstic ♀',
 					dex: 678,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -21045,8 +19279,6 @@ module.exports = {
 				{
 					name: 'Honedge',
 					dex: 679,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -21063,8 +19295,6 @@ module.exports = {
 				{
 					name: 'Doublade',
 					dex: 680,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -21081,8 +19311,6 @@ module.exports = {
 				{
 					name: 'Aegislash',
 					dex: 681,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -21099,8 +19327,6 @@ module.exports = {
 				{
 					name: 'Aegislash-Blade',
 					dex: 681,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -21117,8 +19343,6 @@ module.exports = {
 				{
 					name: 'Spritzee',
 					dex: 682,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fairy',
@@ -21135,8 +19359,6 @@ module.exports = {
 				{
 					name: 'Aromatisse',
 					dex: 683,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fairy',
@@ -21153,8 +19375,6 @@ module.exports = {
 				{
 					name: 'Swirlix',
 					dex: 684,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fairy',
@@ -21171,8 +19391,6 @@ module.exports = {
 				{
 					name: 'Slurpuff',
 					dex: 685,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fairy',
@@ -21189,8 +19407,6 @@ module.exports = {
 				{
 					name: 'Inkay',
 					dex: 686,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -21207,8 +19423,6 @@ module.exports = {
 				{
 					name: 'Malamar',
 					dex: 687,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -21225,8 +19439,6 @@ module.exports = {
 				{
 					name: 'Binacle',
 					dex: 688,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -21243,8 +19455,6 @@ module.exports = {
 				{
 					name: 'Barbaracle',
 					dex: 689,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -21261,8 +19471,6 @@ module.exports = {
 				{
 					name: 'Skrelp',
 					dex: 690,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -21285,8 +19493,6 @@ module.exports = {
 				{
 					name: 'Dragalge',
 					dex: 691,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -21309,8 +19515,6 @@ module.exports = {
 				{
 					name: 'Clauncher',
 					dex: 692,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -21327,8 +19531,6 @@ module.exports = {
 				{
 					name: 'Clawitzer',
 					dex: 693,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -21345,8 +19547,6 @@ module.exports = {
 				{
 					name: 'Helioptile',
 					dex: 694,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -21363,8 +19563,6 @@ module.exports = {
 				{
 					name: 'Heliolisk',
 					dex: 695,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -21381,8 +19579,6 @@ module.exports = {
 				{
 					name: 'Tyrunt',
 					dex: 696,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -21406,8 +19602,6 @@ module.exports = {
 				{
 					name: 'Tyrantrum',
 					dex: 697,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -21431,8 +19625,6 @@ module.exports = {
 				{
 					name: 'Amaura',
 					dex: 698,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -21449,8 +19641,6 @@ module.exports = {
 				{
 					name: 'Aurorus',
 					dex: 699,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Rock',
@@ -21467,8 +19657,6 @@ module.exports = {
 				{
 					name: 'Sylveon',
 					dex: 700,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fairy',
@@ -21494,8 +19682,6 @@ module.exports = {
 				{
 					name: 'Hawlucha',
 					dex: 701,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -21519,8 +19705,6 @@ module.exports = {
 				{
 					name: 'Dedenne',
 					dex: 702,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -21537,8 +19721,6 @@ module.exports = {
 				{
 					name: 'Carbink',
 					dex: 703,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -21555,8 +19737,6 @@ module.exports = {
 				{
 					name: 'Goomy',
 					dex: 704,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -21573,8 +19753,6 @@ module.exports = {
 				{
 					name: 'Sliggoo',
 					dex: 705,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -21591,8 +19769,6 @@ module.exports = {
 				{
 					name: 'Goodra',
 					dex: 706,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -21609,8 +19785,6 @@ module.exports = {
 				{
 					name: 'Klefki',
 					dex: 707,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -21627,8 +19801,6 @@ module.exports = {
 				{
 					name: 'Phantump',
 					dex: 708,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -21645,8 +19817,6 @@ module.exports = {
 				{
 					name: 'Trevenant',
 					dex: 709,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -21663,8 +19833,6 @@ module.exports = {
 				{
 					name: 'Pumpkaboo-Small',
 					dex: 710,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -21681,8 +19849,6 @@ module.exports = {
 				{
 					name: 'Pumpkaboo-Average',
 					dex: 710,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -21699,8 +19865,6 @@ module.exports = {
 				{
 					name: 'Pumpkaboo-Large',
 					dex: 710,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -21717,8 +19881,6 @@ module.exports = {
 				{
 					name: 'Pumpkaboo-Super',
 					dex: 710,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -21735,8 +19897,6 @@ module.exports = {
 				{
 					name: 'Gourgeist-Small',
 					dex: 711,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -21753,8 +19913,6 @@ module.exports = {
 				{
 					name: 'Gourgeist-Average',
 					dex: 711,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -21771,8 +19929,6 @@ module.exports = {
 				{
 					name: 'Gourgeist-Large',
 					dex: 711,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -21789,8 +19945,6 @@ module.exports = {
 				{
 					name: 'Gourgeist-Super',
 					dex: 711,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -21807,8 +19961,6 @@ module.exports = {
 				{
 					name: 'Bergmite',
 					dex: 712,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -21825,8 +19977,6 @@ module.exports = {
 				{
 					name: 'Avalugg',
 					dex: 713,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -21843,8 +19993,6 @@ module.exports = {
 				{
 					name: 'Noibat',
 					dex: 714,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Flying',
@@ -21861,8 +20009,6 @@ module.exports = {
 				{
 					name: 'Noivern',
 					dex: 715,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Flying',
@@ -21879,8 +20025,6 @@ module.exports = {
 				{
 					name: 'Xerneas',
 					dex: 716,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fairy',
@@ -21897,8 +20041,6 @@ module.exports = {
 				{
 					name: 'Xerneas-Active',
 					dex: 716,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fairy',
@@ -21915,8 +20057,6 @@ module.exports = {
 				{
 					name: 'Yveltal',
 					dex: 717,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dark',
@@ -21933,8 +20073,6 @@ module.exports = {
 				{
 					name: 'Zygarde',
 					dex: 718,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -21951,8 +20089,6 @@ module.exports = {
 				{
 					name: 'Zygarde-10%',
 					dex: 718,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -21969,8 +20105,6 @@ module.exports = {
 				{
 					name: 'Zygarde-Complete',
 					dex: 718,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -21987,8 +20121,6 @@ module.exports = {
 				{
 					name: 'Diancie',
 					dex: 719,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -22005,8 +20137,6 @@ module.exports = {
 				{
 					name: 'Mega Diancie',
 					dex: 719,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -22023,8 +20153,6 @@ module.exports = {
 				{
 					name: 'Hoopa',
 					dex: 720,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -22041,8 +20169,6 @@ module.exports = {
 				{
 					name: 'Hoopa-Unbound',
 					dex: 720,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -22059,8 +20185,6 @@ module.exports = {
 				{
 					name: 'Volcanion',
 					dex: 721,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fire',
@@ -22077,8 +20201,6 @@ module.exports = {
 				{
 					name: 'Rowlet',
 					dex: 722,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -22095,8 +20217,6 @@ module.exports = {
 				{
 					name: 'Dartrix',
 					dex: 723,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -22113,8 +20233,6 @@ module.exports = {
 				{
 					name: 'Decidueye',
 					dex: 724,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -22131,8 +20249,6 @@ module.exports = {
 				{
 					name: 'Litten',
 					dex: 725,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -22149,8 +20265,6 @@ module.exports = {
 				{
 					name: 'Torracat',
 					dex: 726,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -22167,8 +20281,6 @@ module.exports = {
 				{
 					name: 'Incineroar',
 					dex: 727,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -22185,8 +20297,6 @@ module.exports = {
 				{
 					name: 'Popplio',
 					dex: 728,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -22203,8 +20313,6 @@ module.exports = {
 				{
 					name: 'Brionne',
 					dex: 729,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -22221,8 +20329,6 @@ module.exports = {
 				{
 					name: 'Primarina',
 					dex: 730,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -22239,8 +20345,6 @@ module.exports = {
 				{
 					name: 'Pikipek',
 					dex: 731,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -22257,8 +20361,6 @@ module.exports = {
 				{
 					name: 'Trumbeak',
 					dex: 732,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -22275,8 +20377,6 @@ module.exports = {
 				{
 					name: 'Toucannon',
 					dex: 733,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -22293,8 +20393,6 @@ module.exports = {
 				{
 					name: 'Yungoos',
 					dex: 734,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -22311,8 +20409,6 @@ module.exports = {
 				{
 					name: 'Gumshoos',
 					dex: 735,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -22329,8 +20425,6 @@ module.exports = {
 				{
 					name: 'Grubbin',
 					dex: 736,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -22347,8 +20441,6 @@ module.exports = {
 				{
 					name: 'Charjabug',
 					dex: 737,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -22365,8 +20457,6 @@ module.exports = {
 				{
 					name: 'Vikavolt',
 					dex: 738,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -22383,8 +20473,6 @@ module.exports = {
 				{
 					name: 'Crabrawler',
 					dex: 739,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -22401,8 +20489,6 @@ module.exports = {
 				{
 					name: 'Crabominable',
 					dex: 740,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -22419,8 +20505,6 @@ module.exports = {
 				{
 					name: 'Oricorio-Baile',
 					dex: 741,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fire',
@@ -22437,8 +20521,6 @@ module.exports = {
 				{
 					name: 'Oricorio-Pom-Pom',
 					dex: 741,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Electric',
@@ -22455,8 +20537,6 @@ module.exports = {
 				{
 					name: "Oricorio-Pa'u",
 					dex: 741,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Psychic',
@@ -22473,8 +20553,6 @@ module.exports = {
 				{
 					name: 'Oricorio-Sensu',
 					dex: 741,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Ghost',
@@ -22491,8 +20569,6 @@ module.exports = {
 				{
 					name: 'Cutiefly',
 					dex: 742,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -22509,8 +20585,6 @@ module.exports = {
 				{
 					name: 'Ribombee',
 					dex: 743,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -22527,8 +20601,6 @@ module.exports = {
 				{
 					name: 'Rockruff',
 					dex: 744,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -22551,8 +20623,6 @@ module.exports = {
 				{
 					name: 'Rockruff-Dusk',
 					dex: 744,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -22575,8 +20645,6 @@ module.exports = {
 				{
 					name: 'Lycanroc-Midday',
 					dex: 745,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -22599,8 +20667,6 @@ module.exports = {
 				{
 					name: 'Lycanroc-Midnight',
 					dex: 745,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -22623,8 +20689,6 @@ module.exports = {
 				{
 					name: 'Lycanroc-Dusk',
 					dex: 745,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -22647,8 +20711,6 @@ module.exports = {
 				{
 					name: 'Wishiwashi',
 					dex: 746,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -22665,8 +20727,6 @@ module.exports = {
 				{
 					name: 'Wishiwashi-School',
 					dex: 746,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -22683,8 +20743,6 @@ module.exports = {
 				{
 					name: 'Mareanie',
 					dex: 747,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -22701,8 +20759,6 @@ module.exports = {
 				{
 					name: 'Toxapex',
 					dex: 748,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -22719,8 +20775,6 @@ module.exports = {
 				{
 					name: 'Mudbray',
 					dex: 749,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -22737,8 +20791,6 @@ module.exports = {
 				{
 					name: 'Mudsdale',
 					dex: 750,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -22755,8 +20807,6 @@ module.exports = {
 				{
 					name: 'Dewpider',
 					dex: 751,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -22773,8 +20823,6 @@ module.exports = {
 				{
 					name: 'Araquanid',
 					dex: 752,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -22791,8 +20839,6 @@ module.exports = {
 				{
 					name: 'Fomantis',
 					dex: 753,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -22809,8 +20855,6 @@ module.exports = {
 				{
 					name: 'Lurantis',
 					dex: 754,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -22827,8 +20871,6 @@ module.exports = {
 				{
 					name: 'Morelull',
 					dex: 755,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -22845,8 +20887,6 @@ module.exports = {
 				{
 					name: 'Shiinotic',
 					dex: 756,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -22863,8 +20903,6 @@ module.exports = {
 				{
 					name: 'Salandit',
 					dex: 757,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Poison',
@@ -22881,8 +20919,6 @@ module.exports = {
 				{
 					name: 'Salazzle',
 					dex: 758,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Poison',
@@ -22899,8 +20935,6 @@ module.exports = {
 				{
 					name: 'Stufful',
 					dex: 759,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -22917,8 +20951,6 @@ module.exports = {
 				{
 					name: 'Bewear',
 					dex: 760,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -22935,8 +20967,6 @@ module.exports = {
 				{
 					name: 'Bounsweet',
 					dex: 761,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Grass',
@@ -22953,8 +20983,6 @@ module.exports = {
 				{
 					name: 'Steenee',
 					dex: 762,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Grass',
@@ -22971,8 +20999,6 @@ module.exports = {
 				{
 					name: 'Tsareena',
 					dex: 763,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Grass',
@@ -22989,8 +21015,6 @@ module.exports = {
 				{
 					name: 'Comfey',
 					dex: 764,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Fairy',
@@ -23007,8 +21031,6 @@ module.exports = {
 				{
 					name: 'Oranguru',
 					dex: 765,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -23025,8 +21047,6 @@ module.exports = {
 				{
 					name: 'Passimian',
 					dex: 766,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -23051,8 +21071,6 @@ module.exports = {
 				{
 					name: 'Wimpod',
 					dex: 767,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -23075,8 +21093,6 @@ module.exports = {
 				{
 					name: 'Golisopod',
 					dex: 768,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -23099,8 +21115,6 @@ module.exports = {
 				{
 					name: 'Sandygast',
 					dex: 769,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -23125,8 +21139,6 @@ module.exports = {
 				{
 					name: 'Palossand',
 					dex: 770,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -23151,8 +21163,6 @@ module.exports = {
 				{
 					name: 'Pyukumuku',
 					dex: 771,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -23169,8 +21179,6 @@ module.exports = {
 				{
 					name: 'Type_1: Null',
 					dex: 772,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Normal',
@@ -23187,8 +21195,6 @@ module.exports = {
 				{
 					name: 'Silvally',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Normal',
@@ -23205,8 +21211,6 @@ module.exports = {
 				{
 					name: 'Silvally-Bug',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Bug',
@@ -23223,8 +21227,6 @@ module.exports = {
 				{
 					name: 'Silvally-Dark',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dark',
@@ -23241,8 +21243,6 @@ module.exports = {
 				{
 					name: 'Silvally-Dragon',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dragon',
@@ -23259,8 +21259,6 @@ module.exports = {
 				{
 					name: 'Silvally-Electric',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -23277,8 +21275,6 @@ module.exports = {
 				{
 					name: 'Silvally-Fairy',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fairy',
@@ -23295,8 +21291,6 @@ module.exports = {
 				{
 					name: 'Silvally-Fighting',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fighting',
@@ -23313,8 +21307,6 @@ module.exports = {
 				{
 					name: 'Silvally-Fire',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fire',
@@ -23331,8 +21323,6 @@ module.exports = {
 				{
 					name: 'Silvally-Flying',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Flying',
@@ -23349,8 +21339,6 @@ module.exports = {
 				{
 					name: 'Silvally-Ghost',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ghost',
@@ -23367,8 +21355,6 @@ module.exports = {
 				{
 					name: 'Silvally-Grass',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Grass',
@@ -23385,8 +21371,6 @@ module.exports = {
 				{
 					name: 'Silvally-Ground',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ground',
@@ -23403,8 +21387,6 @@ module.exports = {
 				{
 					name: 'Silvally-Ice',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ice',
@@ -23421,8 +21403,6 @@ module.exports = {
 				{
 					name: 'Silvally-Poison',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Poison',
@@ -23439,8 +21419,6 @@ module.exports = {
 				{
 					name: 'Silvally-Psychic',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -23457,8 +21435,6 @@ module.exports = {
 				{
 					name: 'Silvally-Rock',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -23475,8 +21451,6 @@ module.exports = {
 				{
 					name: 'Silvally-Steel',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -23493,8 +21467,6 @@ module.exports = {
 				{
 					name: 'Silvally-Water',
 					dex: 773,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -23511,8 +21483,6 @@ module.exports = {
 				{
 					name: 'Minior-Green',
 					dex: 774,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -23529,8 +21499,6 @@ module.exports = {
 				{
 					name: 'Minior-Blue',
 					dex: 774,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -23547,8 +21515,6 @@ module.exports = {
 				{
 					name: 'Minior-Indigo',
 					dex: 774,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -23565,8 +21531,6 @@ module.exports = {
 				{
 					name: 'Minior-Violet',
 					dex: 774,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -23583,8 +21547,6 @@ module.exports = {
 				{
 					name: 'Minior-Red',
 					dex: 774,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -23601,8 +21563,6 @@ module.exports = {
 				{
 					name: 'Minior-Orange',
 					dex: 774,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -23619,8 +21579,6 @@ module.exports = {
 				{
 					name: 'Minior-Yellow',
 					dex: 774,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -23637,8 +21595,6 @@ module.exports = {
 				{
 					name: 'Komala',
 					dex: 775,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -23655,8 +21611,6 @@ module.exports = {
 				{
 					name: 'Turtonator',
 					dex: 776,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -23673,8 +21627,6 @@ module.exports = {
 				{
 					name: 'Togedemaru',
 					dex: 777,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -23698,8 +21650,6 @@ module.exports = {
 				{
 					name: 'Mimikyu',
 					dex: 778,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -23716,8 +21666,6 @@ module.exports = {
 				{
 					name: 'Bruxish',
 					dex: 779,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -23734,8 +21682,6 @@ module.exports = {
 				{
 					name: 'Drampa',
 					dex: 780,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -23752,8 +21698,6 @@ module.exports = {
 				{
 					name: 'Dhelmise',
 					dex: 781,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ghost',
@@ -23770,8 +21714,6 @@ module.exports = {
 				{
 					name: 'Jangmo-o',
 					dex: 782,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -23788,8 +21730,6 @@ module.exports = {
 				{
 					name: 'Hakamo-o',
 					dex: 783,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -23806,8 +21746,6 @@ module.exports = {
 				{
 					name: 'Kommo-o',
 					dex: 784,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -23824,8 +21762,6 @@ module.exports = {
 				{
 					name: 'Tapu Koko',
 					dex: 785,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -23842,8 +21778,6 @@ module.exports = {
 				{
 					name: 'Tapu Lele',
 					dex: 786,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -23860,8 +21794,6 @@ module.exports = {
 				{
 					name: 'Tapu Bulu',
 					dex: 787,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Grass',
@@ -23878,8 +21810,6 @@ module.exports = {
 				{
 					name: 'Tapu Fini',
 					dex: 788,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -23896,8 +21826,6 @@ module.exports = {
 				{
 					name: 'Cosmog',
 					dex: 789,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -23914,8 +21842,6 @@ module.exports = {
 				{
 					name: 'Cosmoem',
 					dex: 790,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -23932,8 +21858,6 @@ module.exports = {
 				{
 					name: 'Solgaleo',
 					dex: 791,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -23950,8 +21874,6 @@ module.exports = {
 				{
 					name: 'Lunala',
 					dex: 792,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -23968,8 +21890,6 @@ module.exports = {
 				{
 					name: 'Nihilego',
 					dex: 793,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -23986,8 +21906,6 @@ module.exports = {
 				{
 					name: 'Buzzwole',
 					dex: 794,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Bug',
@@ -24004,8 +21922,6 @@ module.exports = {
 				{
 					name: 'Pheromosa',
 					dex: 795,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Bug',
@@ -24022,8 +21938,6 @@ module.exports = {
 				{
 					name: 'Xurkitree',
 					dex: 796,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -24040,8 +21954,6 @@ module.exports = {
 				{
 					name: 'Celesteela',
 					dex: 797,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -24058,8 +21970,6 @@ module.exports = {
 				{
 					name: 'Kartana',
 					dex: 798,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Grass',
@@ -24076,8 +21986,6 @@ module.exports = {
 				{
 					name: 'Guzzlord',
 					dex: 799,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Dark',
@@ -24094,8 +22002,6 @@ module.exports = {
 				{
 					name: 'Necrozma',
 					dex: 800,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -24112,8 +22018,6 @@ module.exports = {
 				{
 					name: 'Necrozma-Dusk',
 					dex: 800,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -24130,8 +22034,6 @@ module.exports = {
 				{
 					name: 'Necrozma-Dawn',
 					dex: 800,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -24148,8 +22050,6 @@ module.exports = {
 				{
 					name: 'Necrozma-Ultra',
 					dex: 800,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Psychic',
@@ -24166,8 +22066,6 @@ module.exports = {
 				{
 					name: 'Magearna',
 					dex: 801,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -24184,8 +22082,6 @@ module.exports = {
 				{
 					name: 'Magearna-Original',
 					dex: 801,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -24202,8 +22098,6 @@ module.exports = {
 				{
 					name: 'Marshadow',
 					dex: 802,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fighting',
@@ -24220,8 +22114,6 @@ module.exports = {
 				{
 					name: 'Poipole',
 					dex: 803,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Poison',
@@ -24238,8 +22130,6 @@ module.exports = {
 				{
 					name: 'Naganadel',
 					dex: 804,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Poison',
@@ -24256,8 +22146,6 @@ module.exports = {
 				{
 					name: 'Stakataka',
 					dex: 805,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Rock',
@@ -24274,8 +22162,6 @@ module.exports = {
 				{
 					name: 'Blacephalon',
 					dex: 806,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fire',
@@ -24292,8 +22178,6 @@ module.exports = {
 				{
 					name: 'Zeraora',
 					dex: 807,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -24310,8 +22194,6 @@ module.exports = {
 				{
 					name: 'Meltan',
 					dex: 808,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -24328,8 +22210,6 @@ module.exports = {
 				{
 					name: 'Melmetal',
 					dex: 809,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -24346,8 +22226,6 @@ module.exports = {
 				{
 					name: 'Grookey',
 					dex: 810,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -24372,8 +22250,6 @@ module.exports = {
 				{
 					name: 'Thwackey',
 					dex: 811,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -24398,8 +22274,6 @@ module.exports = {
 				{
 					name: 'Rillaboom',
 					dex: 812,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Grass',
@@ -24424,8 +22298,6 @@ module.exports = {
 				{
 					name: 'Scorbunny',
 					dex: 813,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -24447,8 +22319,6 @@ module.exports = {
 				{
 					name: 'Raboot',
 					dex: 814,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -24470,8 +22340,6 @@ module.exports = {
 				{
 					name: 'Cinderace',
 					dex: 815,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -24493,8 +22361,6 @@ module.exports = {
 				{
 					name: 'Sobble',
 					dex: 816,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -24519,8 +22385,6 @@ module.exports = {
 				{
 					name: 'Drizzile',
 					dex: 817,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -24545,8 +22409,6 @@ module.exports = {
 				{
 					name: 'Inteleon',
 					dex: 818,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Water',
@@ -24571,8 +22433,6 @@ module.exports = {
 				{
 					name: 'Skwovet',
 					dex: 819,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -24589,8 +22449,6 @@ module.exports = {
 				{
 					name: 'Greedent',
 					dex: 820,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -24607,8 +22465,6 @@ module.exports = {
 				{
 					name: 'Rookidee',
 					dex: 821,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Flying',
@@ -24633,8 +22489,6 @@ module.exports = {
 				{
 					name: 'Corvisquire',
 					dex: 822,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Flying',
@@ -24659,8 +22513,6 @@ module.exports = {
 				{
 					name: 'Corviknight',
 					dex: 823,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Flying',
@@ -24685,8 +22537,6 @@ module.exports = {
 				{
 					name: 'Blipbug',
 					dex: 824,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -24703,8 +22553,6 @@ module.exports = {
 				{
 					name: 'Dottler',
 					dex: 825,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -24721,8 +22569,6 @@ module.exports = {
 				{
 					name: 'Orbeetle',
 					dex: 826,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -24739,8 +22585,6 @@ module.exports = {
 				{
 					name: 'Nickit',
 					dex: 827,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -24757,8 +22601,6 @@ module.exports = {
 				{
 					name: 'Thievul',
 					dex: 828,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -24775,8 +22617,6 @@ module.exports = {
 				{
 					name: 'Gossifleur',
 					dex: 829,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -24800,8 +22640,6 @@ module.exports = {
 				{
 					name: 'Eldegoss',
 					dex: 830,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -24825,8 +22663,6 @@ module.exports = {
 				{
 					name: 'Wooloo',
 					dex: 831,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -24843,8 +22679,6 @@ module.exports = {
 				{
 					name: 'Dubwool',
 					dex: 832,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -24861,8 +22695,6 @@ module.exports = {
 				{
 					name: 'Chewtle',
 					dex: 833,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -24879,8 +22711,6 @@ module.exports = {
 				{
 					name: 'Drednaw',
 					dex: 834,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -24897,8 +22727,6 @@ module.exports = {
 				{
 					name: 'Yamper',
 					dex: 835,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -24921,8 +22749,6 @@ module.exports = {
 				{
 					name: 'Boltund',
 					dex: 836,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -24945,8 +22771,6 @@ module.exports = {
 				{
 					name: 'Rolycoly',
 					dex: 837,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -24963,8 +22787,6 @@ module.exports = {
 				{
 					name: 'Carkol',
 					dex: 838,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -24981,8 +22803,6 @@ module.exports = {
 				{
 					name: 'Coalossal',
 					dex: 839,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -24999,8 +22819,6 @@ module.exports = {
 				{
 					name: 'Applin',
 					dex: 840,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -25017,8 +22835,6 @@ module.exports = {
 				{
 					name: 'Flapple',
 					dex: 841,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -25035,8 +22851,6 @@ module.exports = {
 				{
 					name: 'Appletun',
 					dex: 842,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -25053,8 +22867,6 @@ module.exports = {
 				{
 					name: 'Silicobra',
 					dex: 843,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -25077,8 +22889,6 @@ module.exports = {
 				{
 					name: 'Sandaconda',
 					dex: 844,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -25101,8 +22911,6 @@ module.exports = {
 				{
 					name: 'Cramorant',
 					dex: 845,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Flying',
@@ -25125,8 +22933,6 @@ module.exports = {
 				{
 					name: 'Arrokuda',
 					dex: 846,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -25143,8 +22949,6 @@ module.exports = {
 				{
 					name: 'Barraskewda',
 					dex: 847,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -25161,8 +22965,6 @@ module.exports = {
 				{
 					name: 'Toxel',
 					dex: 848,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -25179,8 +22981,6 @@ module.exports = {
 				{
 					name: 'Toxtricity-Amped',
 					dex: 849,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -25197,8 +22997,6 @@ module.exports = {
 				{
 					name: 'Toxtricity-Low-Key',
 					dex: 849,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -25215,8 +23013,6 @@ module.exports = {
 				{
 					name: 'Sizzlipede',
 					dex: 850,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -25233,8 +23029,6 @@ module.exports = {
 				{
 					name: 'Centiskorch',
 					dex: 851,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -25251,8 +23045,6 @@ module.exports = {
 				{
 					name: 'Clobbopus',
 					dex: 852,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -25276,8 +23068,6 @@ module.exports = {
 				{
 					name: 'Grapploct',
 					dex: 853,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -25301,8 +23091,6 @@ module.exports = {
 				{
 					name: 'Sinistea',
 					dex: 854,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ghost',
@@ -25319,8 +23107,6 @@ module.exports = {
 				{
 					name: 'Sinistea-Antique',
 					dex: 854,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ghost',
@@ -25337,8 +23123,6 @@ module.exports = {
 				{
 					name: 'Polteageist',
 					dex: 855,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ghost',
@@ -25355,8 +23139,6 @@ module.exports = {
 				{
 					name: 'Polteageist-Antique',
 					dex: 855,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Ghost',
@@ -25373,8 +23155,6 @@ module.exports = {
 				{
 					name: 'Hatenna',
 					dex: 856,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Psychic',
@@ -25391,8 +23171,6 @@ module.exports = {
 				{
 					name: 'Hattrem',
 					dex: 857,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Psychic',
@@ -25409,8 +23187,6 @@ module.exports = {
 				{
 					name: 'Hatterene',
 					dex: 858,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Psychic',
@@ -25427,8 +23203,6 @@ module.exports = {
 				{
 					name: 'Impidimp',
 					dex: 859,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Dark',
@@ -25445,8 +23219,6 @@ module.exports = {
 				{
 					name: 'Morgrem',
 					dex: 860,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Dark',
@@ -25463,8 +23235,6 @@ module.exports = {
 				{
 					name: 'Grimmsnarl',
 					dex: 861,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Dark',
@@ -25481,8 +23251,6 @@ module.exports = {
 				{
 					name: 'Obstagoon',
 					dex: 862,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -25499,8 +23267,6 @@ module.exports = {
 				{
 					name: 'Perrserker',
 					dex: 863,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -25524,8 +23290,6 @@ module.exports = {
 				{
 					name: 'Cursola',
 					dex: 864,
-					icon: '',
-					shiny: '',
 					male: 25,
 					female: 75,
 					type_1: 'Ghost',
@@ -25549,8 +23313,6 @@ module.exports = {
 				{
 					name: "Sirfetch'd",
 					dex: 865,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -25578,8 +23340,6 @@ module.exports = {
 				{
 					name: 'Mr. Rime',
 					dex: 866,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -25596,8 +23356,6 @@ module.exports = {
 				{
 					name: 'Runerigus',
 					dex: 867,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -25614,8 +23372,6 @@ module.exports = {
 				{
 					name: 'Milcery',
 					dex: 868,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25632,8 +23388,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Vanilla-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25650,8 +23404,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Vanilla-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25668,8 +23420,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Vanilla-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25686,8 +23436,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Vanilla-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25704,8 +23452,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Vanilla-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25722,8 +23468,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Vanilla-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25740,8 +23484,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Vanilla-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25758,8 +23500,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25776,8 +23516,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25794,8 +23532,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25812,8 +23548,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25830,8 +23564,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25848,8 +23580,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25866,8 +23596,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25884,8 +23612,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Matcha-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25902,8 +23628,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Matcha-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25920,8 +23644,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Matcha-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25938,8 +23660,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Matcha-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25956,8 +23676,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Matcha-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25974,8 +23692,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Matcha-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -25992,8 +23708,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Matcha-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26010,8 +23724,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Mint-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26028,8 +23740,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Mint-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26046,8 +23756,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Mint-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26064,8 +23772,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Mint-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26082,8 +23788,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Mint-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26100,8 +23804,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Mint-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26118,8 +23820,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Mint-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26136,8 +23836,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Lemon-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26154,8 +23852,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Lemon-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26172,8 +23868,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Lemon-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26190,8 +23884,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Lemon-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26208,8 +23900,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Lemon-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26226,8 +23916,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Lemon-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26244,8 +23932,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Lemon-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26262,8 +23948,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Salted-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26280,8 +23964,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Salted-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26298,8 +23980,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Salted-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26316,8 +23996,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Salted-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26334,8 +24012,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Salted-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26352,8 +24028,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Salted-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26370,8 +24044,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Salted-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26388,8 +24060,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Swirl-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26406,8 +24076,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Swirl-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26424,8 +24092,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Swirl-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26442,8 +24108,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Swirl-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26460,8 +24124,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Swirl-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26478,8 +24140,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Swirl-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26496,8 +24156,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Ruby-Swirl-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26514,8 +24172,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Caramel-Swirl-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26532,8 +24188,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Caramel-Swirl-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26550,8 +24204,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Caramel-Swirl-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26568,8 +24220,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Caramel-Swirl-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26586,8 +24236,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Caramel-Swirl-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26604,8 +24252,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Caramel-Swirl-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26622,8 +24268,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Caramel-Swirl-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26640,8 +24284,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Rainbow-Swirl-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26658,8 +24300,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Rainbow-Swirl-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26676,8 +24316,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Rainbow-Swirl-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26694,8 +24332,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Rainbow-Swirl-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26712,8 +24348,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Rainbow-Swirl-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26730,8 +24364,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Rainbow-Swirl-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26748,8 +24380,6 @@ module.exports = {
 				{
 					name: 'Alcremie-Rainbow-Swirl-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -26766,8 +24396,6 @@ module.exports = {
 				{
 					name: 'Falinks',
 					dex: 870,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fighting',
@@ -26784,8 +24412,6 @@ module.exports = {
 				{
 					name: 'Pincurchin',
 					dex: 871,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -26802,8 +24428,6 @@ module.exports = {
 				{
 					name: 'Snom',
 					dex: 872,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -26820,8 +24444,6 @@ module.exports = {
 				{
 					name: 'Frosmoth',
 					dex: 873,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -26838,8 +24460,6 @@ module.exports = {
 				{
 					name: 'Stonjourner',
 					dex: 874,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -26856,8 +24476,6 @@ module.exports = {
 				{
 					name: 'Eiscue',
 					dex: 875,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -26881,8 +24499,6 @@ module.exports = {
 				{
 					name: 'Eiscue-Noice',
 					dex: 875,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -26906,8 +24522,6 @@ module.exports = {
 				{
 					name: 'Indeedee ♂',
 					dex: 876,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -26924,8 +24538,6 @@ module.exports = {
 				{
 					name: 'Indeedee ♀',
 					dex: 876,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -26942,8 +24554,6 @@ module.exports = {
 				{
 					name: 'Morpeko',
 					dex: 877,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -26969,8 +24579,6 @@ module.exports = {
 				{
 					name: 'Cufant',
 					dex: 878,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -26996,8 +24604,6 @@ module.exports = {
 				{
 					name: 'Copperajah',
 					dex: 879,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -27023,8 +24629,6 @@ module.exports = {
 				{
 					name: 'Dracozolt',
 					dex: 880,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -27041,8 +24645,6 @@ module.exports = {
 				{
 					name: 'Arctozolt',
 					dex: 881,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Electric',
@@ -27059,8 +24661,6 @@ module.exports = {
 				{
 					name: 'Dracovish',
 					dex: 882,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -27077,8 +24677,6 @@ module.exports = {
 				{
 					name: 'Arctovish',
 					dex: 883,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Water',
@@ -27095,8 +24693,6 @@ module.exports = {
 				{
 					name: 'Duraludon',
 					dex: 884,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -27113,8 +24709,6 @@ module.exports = {
 				{
 					name: 'Dreepy',
 					dex: 885,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -27139,8 +24733,6 @@ module.exports = {
 				{
 					name: 'Drakloak',
 					dex: 886,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -27157,8 +24749,6 @@ module.exports = {
 				{
 					name: 'Dragapult',
 					dex: 887,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dragon',
@@ -27183,8 +24773,6 @@ module.exports = {
 				{
 					name: 'Zacian',
 					dex: 888,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fairy',
@@ -27201,8 +24789,6 @@ module.exports = {
 				{
 					name: 'Zacian-Crowned',
 					dex: 888,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fairy',
@@ -27219,8 +24805,6 @@ module.exports = {
 				{
 					name: 'Zamazenta',
 					dex: 889,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fighting',
@@ -27237,8 +24821,6 @@ module.exports = {
 				{
 					name: 'Zamazenta-Crowned',
 					dex: 889,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Fighting',
@@ -27255,8 +24837,6 @@ module.exports = {
 				{
 					name: 'Eternatus',
 					dex: 890,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Poison',
@@ -27273,8 +24853,6 @@ module.exports = {
 				{
 					name: 'Meowth-Galar',
 					dex: '052',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -27298,8 +24876,6 @@ module.exports = {
 				{
 					name: 'Ponyta-Galar',
 					dex: '077',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -27323,8 +24899,6 @@ module.exports = {
 				{
 					name: 'Rapidash-Galar',
 					dex: '078',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -27348,8 +24922,6 @@ module.exports = {
 				{
 					name: 'Slowpoke-Galar',
 					dex: '079',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Psychic',
@@ -27366,8 +24938,6 @@ module.exports = {
 				{
 					name: "Farfetch'd-Galar",
 					dex: '083',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fighting',
@@ -27396,8 +24966,6 @@ module.exports = {
 				{
 					name: 'Weezing-Galar',
 					dex: 110,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -27423,8 +24991,6 @@ module.exports = {
 				{
 					name: 'Mr. Mime-Galar',
 					dex: 122,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -27441,8 +25007,6 @@ module.exports = {
 				{
 					name: 'Corsola-Galar',
 					dex: 222,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -27467,8 +25031,6 @@ module.exports = {
 				{
 					name: 'Zigzagoon-Galar',
 					dex: 263,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -27485,8 +25047,6 @@ module.exports = {
 				{
 					name: 'Linoone-Galar',
 					dex: 264,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Dark',
@@ -27503,8 +25063,6 @@ module.exports = {
 				{
 					name: 'Darumaka-Galar',
 					dex: 554,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -27530,8 +25088,6 @@ module.exports = {
 				{
 					name: 'Darmanitan-Galar',
 					dex: 555,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -27557,8 +25113,6 @@ module.exports = {
 				{
 					name: 'Darmanitan-Zen-Galar',
 					dex: 555,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ice',
@@ -27584,8 +25138,6 @@ module.exports = {
 				{
 					name: 'Yamask-Galar',
 					dex: 562,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -27602,8 +25154,6 @@ module.exports = {
 				{
 					name: 'Stunfisk-Galar',
 					dex: 618,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -27629,8 +25179,6 @@ module.exports = {
 				{
 					name: 'Gmax Charizard',
 					dex: '006',
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Fire',
@@ -27656,8 +25204,6 @@ module.exports = {
 				{
 					name: 'Gmax Butterfree',
 					dex: '012',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -27674,8 +25220,6 @@ module.exports = {
 				{
 					name: 'Gmax Pikachu',
 					dex: '025',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -27701,8 +25245,6 @@ module.exports = {
 				{
 					name: 'Gmax Meowth',
 					dex: '052',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Normal',
@@ -27726,8 +25268,6 @@ module.exports = {
 				{
 					name: 'Gmax Machamp',
 					dex: '068',
-					icon: '',
-					shiny: '',
 					male: 75,
 					female: 25,
 					type_1: 'Fighting',
@@ -27752,8 +25292,6 @@ module.exports = {
 				{
 					name: 'Gmax Gengar',
 					dex: '094',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ghost',
@@ -27780,8 +25318,6 @@ module.exports = {
 				{
 					name: 'Gmax Kingler',
 					dex: '099',
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -27804,8 +25340,6 @@ module.exports = {
 				{
 					name: 'Gmax Lapras',
 					dex: 131,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -27830,8 +25364,6 @@ module.exports = {
 				{
 					name: 'Gmax Eevee',
 					dex: 133,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Normal',
@@ -27857,8 +25389,6 @@ module.exports = {
 				{
 					name: 'Gmax Snorlax',
 					dex: 143,
-					icon: '',
-					shiny: '',
 					male: 87.5,
 					female: 12.5,
 					type_1: 'Normal',
@@ -27881,8 +25411,6 @@ module.exports = {
 				{
 					name: 'Gmax Garbodor',
 					dex: 569,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Poison',
@@ -27899,8 +25427,6 @@ module.exports = {
 				{
 					name: 'Gmax Melmetal',
 					dex: 809,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 0,
 					type_1: 'Steel',
@@ -27917,8 +25443,6 @@ module.exports = {
 				{
 					name: 'Gmax Corviknight',
 					dex: 823,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Flying',
@@ -27943,8 +25467,6 @@ module.exports = {
 				{
 					name: 'Gmax Orbeetle',
 					dex: 826,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Bug',
@@ -27961,8 +25483,6 @@ module.exports = {
 				{
 					name: 'Gmax Drednaw',
 					dex: 834,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Water',
@@ -27979,8 +25499,6 @@ module.exports = {
 				{
 					name: 'Gmax Coalossal',
 					dex: 839,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Rock',
@@ -27997,8 +25515,6 @@ module.exports = {
 				{
 					name: 'Gmax Flapple',
 					dex: 841,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -28015,8 +25531,6 @@ module.exports = {
 				{
 					name: 'Gmax Appletun',
 					dex: 842,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Grass',
@@ -28033,8 +25547,6 @@ module.exports = {
 				{
 					name: 'Gmax Sandaconda',
 					dex: 844,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Ground',
@@ -28057,8 +25569,6 @@ module.exports = {
 				{
 					name: 'Gmax Toxtricity-Amped',
 					dex: 849,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -28075,8 +25585,6 @@ module.exports = {
 				{
 					name: 'Gmax Toxtricity-Low-Key',
 					dex: 849,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Electric',
@@ -28093,8 +25601,6 @@ module.exports = {
 				{
 					name: 'Gmax Centiskorch',
 					dex: 851,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Fire',
@@ -28111,8 +25617,6 @@ module.exports = {
 				{
 					name: 'Gmax Hatterene',
 					dex: 858,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Psychic',
@@ -28129,8 +25633,6 @@ module.exports = {
 				{
 					name: 'Gmax Grimmsnarl',
 					dex: 861,
-					icon: '',
-					shiny: '',
 					male: 100,
 					female: 0,
 					type_1: 'Dark',
@@ -28147,8 +25649,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Vanilla-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28165,8 +25665,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Vanilla-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28183,8 +25681,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Vanilla-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28201,8 +25697,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Vanilla-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28219,8 +25713,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Vanilla-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28237,8 +25729,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Vanilla-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28255,8 +25745,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Vanilla-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28273,8 +25761,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28291,8 +25777,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28309,8 +25793,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28327,8 +25809,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28345,8 +25825,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28363,8 +25841,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28381,8 +25857,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28399,8 +25873,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Matcha-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28417,8 +25889,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Matcha-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28435,8 +25905,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Matcha-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28453,8 +25921,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Matcha-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28471,8 +25937,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Matcha-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28489,8 +25953,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Matcha-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28507,8 +25969,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Matcha-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28525,8 +25985,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Mint-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28543,8 +26001,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Mint-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28561,8 +26017,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Mint-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28579,8 +26033,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Mint-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28597,8 +26049,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Mint-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28615,8 +26065,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Mint-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28633,8 +26081,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Mint-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28651,8 +26097,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Lemon-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28669,8 +26113,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Lemon-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28687,8 +26129,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Lemon-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28705,8 +26145,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Lemon-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28723,8 +26161,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Lemon-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28741,8 +26177,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Lemon-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28759,8 +26193,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Lemon-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28777,8 +26209,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Salted-Cream-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28795,8 +26225,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Salted-Cream-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28813,8 +26241,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Salted-Cream-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28831,8 +26257,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Salted-Cream-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28849,8 +26273,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Salted-Cream-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28867,8 +26289,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Salted-Cream-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28885,8 +26305,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Salted-Cream-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28903,8 +26321,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Swirl-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28921,8 +26337,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Swirl-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28939,8 +26353,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Swirl-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28957,8 +26369,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Swirl-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28975,8 +26385,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Swirl-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -28993,8 +26401,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Swirl-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29011,8 +26417,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Ruby-Swirl-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29029,8 +26433,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Caramel-Swirl-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29047,8 +26449,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Caramel-Swirl-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29065,8 +26465,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Caramel-Swirl-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29083,8 +26481,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Caramel-Swirl-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29101,8 +26497,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Caramel-Swirl-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29119,8 +26513,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Caramel-Swirl-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29137,8 +26529,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Caramel-Swirl-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29155,8 +26545,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Rainbow-Swirl-Strawberry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29173,8 +26561,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Rainbow-Swirl-Berry',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29191,8 +26577,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Rainbow-Swirl-Love',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29209,8 +26593,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Rainbow-Swirl-Star',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29227,8 +26609,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Rainbow-Swirl-Clover',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29245,8 +26625,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Rainbow-Swirl-Flower',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29263,8 +26641,6 @@ module.exports = {
 				{
 					name: 'Gmax Alcremie-Rainbow-Swirl-Ribbon',
 					dex: 869,
-					icon: '',
-					shiny: '',
 					male: 0,
 					female: 100,
 					type_1: 'Fairy',
@@ -29281,8 +26657,6 @@ module.exports = {
 				{
 					name: 'Gmax Copperajah',
 					dex: 879,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
@@ -29308,8 +26682,6 @@ module.exports = {
 				{
 					name: 'Gmax Duraludon',
 					dex: 884,
-					icon: '',
-					shiny: '',
 					male: 50,
 					female: 50,
 					type_1: 'Steel',
