@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
 					isUUID: { args: 4, msg: 'Id not valid, please try again' },
 				},
 			},
-			username: {
+			userName: {
 				allowNull: { args: false, msg: 'Username is required' },
 				type: DataTypes.STRING,
 				validate: {

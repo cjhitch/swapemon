@@ -4,15 +4,14 @@ module.exports = {
 		await queryInterface.createTable('Conversations', {
 			id: {
 				allowNull: false,
-				autoIncrement: true,
 				primaryKey: true,
-				type: Sequelize.INTEGER,
+				type: Sequelize.UUID,
 			},
 			userId: {
 				allowNull: false,
 				type: Sequelize.UUID,
 			},
-			username: {
+			userName: {
 				allowNull: false,
 				type: Sequelize.STRING,
 			},
