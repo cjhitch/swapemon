@@ -8,6 +8,7 @@ const morganDebug = require('morgan-debug');
 const cors = require('cors');
 // routes
 const pokemonRouter = require('./routes/pokemon.routes');
+const pokeballsRouter = require('./routes/pokeballs.routes');
 // create express app
 const app = express();
 const port = process.env.PORT || 5000;
@@ -20,8 +21,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 // log all requests
 app.use(morganDebug('api:request', 'dev'));
-// setup the app to use the router at /pokemon
+// pokemon route
 app.use('/pokemon', pokemonRouter);
+// pokeballs route
+app.use('/pokeballs', pokeballsRouter);
 
 // API calls
 app.get('/api/hello', (req, res) => {
