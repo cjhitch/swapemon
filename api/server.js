@@ -1,12 +1,27 @@
+// load imports
+const error = require('debug')('api:error');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+const morganDebug = require('morgan-debug');
+const cors = require('cors');
+// routes
+const pokemonRouter = require('./routes/pokemon.routes');
+// create express app
 const app = express();
 const port = process.env.PORT || 5000;
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// check content type parse to req.body
+app.use(express.json());
+// log all requests
+app.use(morganDebug('api:request', 'dev'));
+// setup the app to use the router at /pokemon
+app.use('/pokemon', pokemonRouter);
 
 // API calls
 app.get('/api/hello', (req, res) => {
@@ -29,5 +44,10 @@ if (process.env.NODE_ENV === 'production') {
 		res.sendFile(path.join(__dirname, '../reactjs/build', 'index.html'));
 	});
 }
+
+app.use((err, req, res, next) => {
+	error('ERROR FOUND: ', err);
+	res.sendStatus(500);
+});
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
