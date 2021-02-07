@@ -10,6 +10,7 @@ const cors = require('cors');
 const pokemonRouter = require('./routes/pokemon.routes');
 const pokeballsRouter = require('./routes/pokeballs.routes');
 const movesRouter = require('./routes/moves.routes');
+const conversationsRouter = require('./routes/conversations.routes');
 // create express app
 const app = express();
 const port = process.env.PORT || 5000;
@@ -28,6 +29,8 @@ app.use('/pokemon', pokemonRouter);
 app.use('/pokeballs', pokeballsRouter);
 // moves route
 app.use('/moves', movesRouter);
+// conversations route
+app.use('/conversations', conversationsRouter);
 
 // API calls
 app.get('/api/hello', (req, res) => {
@@ -37,7 +40,7 @@ app.get('/api/hello', (req, res) => {
 app.post('/api/world', (req, res) => {
 	console.log(req.body);
 	res.send(
-		`I received your POST request. This is what you sent me: ${req.body.post}`,
+		`I received your POST request. This is what you sent me: ${req.body.post}`
 	);
 });
 
