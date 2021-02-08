@@ -8,5 +8,11 @@ const protectedRoute = require('../utils/protectedRoute');
 router.get('/', pokeCtrl.getPokeballs);
 // GET /pokeballs/:id
 router.get('/:id', pokeCtrl.getOneById);
+// POST /pokeballs
+router.post('/', protectedRoute, pokeballCtrl.createPokeball);
+// PUT /pokeballs/:id
+router.put('/:id', protectedRoute, pokeballCtrl.updatePokeball);
+// DELETE /pokeballs/:id
+router.delete('/:id', protectedRoute, pokeballCtrl.removePokeball);
 // export the routes from this file
 module.exports = router;

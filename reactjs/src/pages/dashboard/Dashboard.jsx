@@ -168,7 +168,7 @@ const Dashboard = () => {
 					</div>
 				)}
 			</div>
-			{/* <Modal
+			<Modal
 				show={show}
 				onHide={() => setShow(false)}
 				dialogClassName="modal-90w"
@@ -273,7 +273,7 @@ const Dashboard = () => {
 				>
 					Reset
 				</Button>
-			</Modal> */}
+			</Modal>
 		</section>
 	);
 };

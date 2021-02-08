@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,7 +14,7 @@ import {
 	BiTrash,
 	BiShare,
 } from 'react-icons/bi';
-import { fetchMoves } from '../../store/moves/actions';
+// import { fetchMoves } from '../../store/moves/actions';
 import { deleteUsermon } from '../../store/usermons/actions';
 import TypePills from '../typePills';
 import Shiny from '../../assets/images/icons/shiny.svg';
@@ -22,32 +22,31 @@ import './PokemonCard.scss';
 
 const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 	const pokeMoves = useSelector((state) => state.moves);
-	const [moves, setMoves] = useState([]);
+	// const [movesIsLoading, setMovesIsLoading] = useState(true);
 	// const pokeData = useSelector((state) => state.usermons);
 	const [show, setShow] = useState(false);
 	const dispatch = useDispatch();
 
-	useEffect(() => {
-		dispatch(fetchMoves());
-		// this should only run once to run similar to componentDidMount()
-		// eslint-disable-next-line
-	}, []);
-	useEffect(() => {
-		if (pokeMoves.allIds.length > 0) {
-			setMoves(pokeMoves.byId);
-		}
-	}, [pokeMoves]);
+	// useEffect(() => {
+	// 	// dispatch(fetchMoves());
+	// 	// this should only run once to run similar to componentDidMount()
+	// 	// eslint-disable-next-line
+	// }, []);
 
-	useEffect(() => {
-		console.log(moves);
-	}, [moves]);
+	// useEffect(() => {
+	// 	if (pokeMoves.isLoading === false) {
+	// 		setMovesIsLoading(false);
+	// 	} else {
+	// 		setMovesIsLoading(true);
+	// 	}
+	// 	console.log(pokeMoves);
+	// }, [pokeMoves]);
 
 	// TODO: this will be once the user logged in
 	const username = 'JamesEarlJones';
 	const [expanded, setExpanded] = useState(false);
 	const pokePath = () => {
 		try {
-			console.log(pokemon.name);
 			return require(`../../assets/images/icons/pokemon/${
 				pokemon.shiny || pokemon.shiny === 0 ? 'shiny/' : 'regular/'
 			}${pokemon.name}.svg`);
@@ -59,17 +58,25 @@ const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 
 	const ballPath = () => {
 		try {
-			console.log(pokemon.ball);
 			return require(`../../assets/images/icons/balls/${pokemon.ball}.svg`);
 		} catch (err) {
 			return null;
 		}
 	};
 
-	// run through the data and get types based on the move name - this will be fixed in the database
+	// run through the data and get types based on the move name
 	const getType = (move) => {
-		console.log('move: ', move, moves);
-		return moves[move].data.type;
+		return pokeMoves.byId[move].data.type;
+	};
+
+	// const Capitalize = (s) => {
+	// 	console.log(s);
+	// 	if (typeof s !== 'string') return;
+	// 	// eslint-disable-next-line consistent-return
+	// 	return s.charAt(0).toUpperCase() + s.slice(1);
+	// };
+	const unCapitalize = (s) => {
+		return s.toLowerCase();
 	};
 
 	const ball = ballPath();
@@ -102,14 +109,13 @@ const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 					{pokemon.level && pokemon.level}
 				</p>
 				<div className="type">
-					{pokemon.types &&
-						pokemon.types.map((type) => (
-							<TypePills
-								key={type.name}
-								type={type.type}
-								name={type.name}
-							/>
-						))}
+					{
+						// eslint-disable-next-line
+					(pokemon.types && !pokeMoves.isLoading) &&
+							pokemon.types.map((type) => (
+								<TypePills key={type} type={type} name={type} />
+							))
+					}
 				</div>
 				<p className="gender">
 					{pokemon.gender && pokemon.gender[0] === 'female' ? (
@@ -141,24 +147,23 @@ const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 						<h3>Egg Moves:</h3>
 						{
 							// eslint-disable-next-line
-						(pokemon.eggMoves && pokeMoves.allIds.length > 0 ) &&
-								pokemon.eggMoves.map((move, i) =>
-									console.log(pokemon.eggMoves)(
-										// I want this to say the number of each move for the key
-										//  eslint-disable-next-line
-						<p key={`move-${i}`}>
+						(pokemon.eggMoves && !pokeMoves.isLoading ) &&
+								pokemon.eggMoves.map((move, i) => (
+									// I want this to say the number of each move for the key
+									//  eslint-disable-next-line
+										<p key={`move-${i}`}>
+										{/* {moves.length > 0 && ( */}
+										{
 											<TypePills
 												variant="round"
-												type={getType(move)}
+												type={unCapitalize(
+													getType(move)
+												)}
 											/>
-											<span>
-												{move[
-													Object.keys(move)
-												].toString()}
-											</span>
-										</p>
-									)
-								)
+										}
+										<span>{move}</span>
+									</p>
+								))
 						}
 					</div>
 				</div>

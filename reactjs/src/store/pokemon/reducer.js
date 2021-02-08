@@ -56,7 +56,6 @@ const returnValue = (val, val2 = null) => {
 };
 
 const pokemonsSuccess = (state, action) => {
-	console.log(action);
 	return {
 		...state,
 		isLoading: false,
