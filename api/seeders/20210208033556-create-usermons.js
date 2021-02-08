@@ -27,6 +27,8 @@ module.exports = {
 						'Dragon Tail',
 						'Wing Attack',
 					],
+					createdAt: Sequelize.literal('NOW()'),
+					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					id: 'bbd2a3a9-6251-4349-8c44-45111c91943a',
@@ -45,6 +47,8 @@ module.exports = {
 					spDef: 30,
 					spd: 30,
 					eggMoves: ['Skull Bash', 'Petal Dance', 'Curse', 'Ingrain'],
+					createdAt: Sequelize.literal('NOW()'),
+					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					id: 'b24e25b2-31b7-4b18-8022-cb4564fb06be',
@@ -63,6 +67,8 @@ module.exports = {
 					spDef: 30,
 					spd: 30,
 					eggMoves: ['Thrash', 'Double-Edge', 'Morning Sun', 'Covet'],
+					createdAt: Sequelize.literal('NOW()'),
+					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					id: '29a28fd5-7d2a-4798-9268-734915b8110e',
@@ -80,7 +86,9 @@ module.exports = {
 					spAtk: null,
 					spDef: 30,
 					spd: 30,
-					eggMoves: [],
+					eggMoves: null,
+					createdAt: Sequelize.literal('NOW()'),
+					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					id: '45b381c0-2b9f-4459-8806-a0c8f52b82d3',
@@ -104,6 +112,8 @@ module.exports = {
 						'Feint Attack',
 						'Foresight',
 					],
+					createdAt: Sequelize.literal('NOW()'),
+					updatedAt: Sequelize.literal('NOW()'),
 				},
 				{
 					id: 'd5ec9ee1-59a7-45eb-98fd-91db594af3b6',
@@ -122,23 +132,15 @@ module.exports = {
 					spDef: 30,
 					spd: 30,
 					eggMoves: ['Agility', 'Charm', 'Disable', 'Encore'],
+					createdAt: Sequelize.literal('NOW()'),
+					updatedAt: Sequelize.literal('NOW()'),
 				},
 			],
 			{}
 		);
-		/**
-		 * Add seed commands here.
-		 *
-		 * Example:
-		 */
 	},
 
 	down: async (queryInterface, Sequelize) => {
 		await queryInterface.bulkDelete('Usermons', null, {});
-		/**
-		 * Add commands to revert seed here.
-		 *
-		 * Example:
-		 */
 	},
 };
