@@ -1,69 +1,83 @@
 'use strict';
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Usermons', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      name: {
-        type: Sequelize.STRING
-      },
-      shiny: {
-        type: Sequelize.BOOLEAN
-      },
-      dex: {
-        type: Sequelize.INTEGER
-      },
-      ball: {
-        type: Sequelize.STRING
-      },
-      level: {
-        type: Sequelize.INTEGER
-      },
-      types: {
-        type: Sequelize.ARRAY
-      },
-      gender: {
-        type: Sequelize.ARRAY
-      },
-      ability: {
-        type: Sequelize.STRING
-      },
-      hp: {
-        type: Sequelize.INTEGER
-      },
-      atk: {
-        type: Sequelize.INTEGER
-      },
-      def: {
-        type: Sequelize.INTEGER
-      },
-      spAtk: {
-        type: Sequelize.INTEGER
-      },
-      spDef: {
-        type: Sequelize.INTEGER
-      },
-      spd: {
-        type: Sequelize.INTEGER
-      },
-      eggMoves: {
-        type: Sequelize.ARRAY
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      }
-    });
-  },
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Usermons');
-  }
+	up: async (queryInterface, Sequelize) => {
+		await queryInterface.createTable('Usermons', {
+			id: {
+				allowNull: false,
+				primaryKey: true,
+				type: Sequelize.UUID,
+			},
+			name: {
+				allowNull: false,
+				type: Sequelize.STRING,
+			},
+			shiny: {
+				allowNull: true,
+				type: Sequelize.BOOLEAN,
+			},
+			dex: {
+				allowNull: false,
+				type: Sequelize.STRING,
+			},
+			ball: {
+				allowNull: false,
+				type: Sequelize.STRING,
+			},
+			level: {
+				allowNull: true,
+				type: Sequelize.INTEGER,
+			},
+			types: {
+				allowNull: false,
+				type: Sequelize.ARRAY(Sequelize.STRING),
+			},
+			gender: {
+				allowNull: false,
+				type: Sequelize.ARRAY(Sequelize.STRING),
+			},
+			ability: {
+				allowNull: false,
+				type: Sequelize.STRING,
+			},
+			hp: {
+				allowNull: true,
+				type: Sequelize.INTEGER,
+			},
+			atk: {
+				allowNull: true,
+				type: Sequelize.INTEGER,
+			},
+			def: {
+				allowNull: true,
+				type: Sequelize.INTEGER,
+			},
+			spAtk: {
+				allowNull: true,
+				type: Sequelize.INTEGER,
+			},
+			spDef: {
+				allowNull: true,
+				type: Sequelize.INTEGER,
+			},
+			spd: {
+				allowNull: true,
+				type: Sequelize.INTEGER,
+			},
+			eggMoves: {
+				allowNull: true,
+				type: Sequelize.ARRAY(Sequelize.STRING),
+			},
+			createdAt: {
+				allowNull: false,
+				type: Sequelize.DATE,
+			},
+			updatedAt: {
+				allowNull: false,
+				type: Sequelize.DATE,
+			},
+		});
+	},
+	down: async (queryInterface, Sequelize) => {
+		await queryInterface.dropTable('Usermons');
+	},
 };
