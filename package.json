@@ -7,14 +7,14 @@
 		"doc": "docs"
 	},
 	"scripts": {
-		"start": "cd api && npm install && node server.js",
+		"start": "cd api && yarn install && node server.js",
 		"start:react": "cd reactjs && yarn start",
-		"heroku-postbuild": "cd reactjs && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+		"heroku-postbuild": "cd reactjs && yarn install && yarn install --only=dev --no-shrinkwrap && yarn run build",
 		"build": "cd reactjs && react-scripts build",
 		"dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn start:react\"",
 		"test:react": "rcd reactjs && eact-scripts test",
 		"eject": "cd reactjs && react-scripts eject",
-		"format": "cd reactjs && npm run prettier --write",
+		"format": "cd reactjs && yarn run prettier --write",
 		"prettier": "cd reactjs && prettier \"src/**/*.{js,jsx,json,css}\"",
 		"lint": "cd reactjs && eslint \"src/**/*.{js,jsx,json}\"",
 		"lint:fix": "cd reactjs && eslint . --fix",
@@ -35,5 +35,7 @@
 	"devDependencies": {
 		"concurrently": "^5.3.0"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"nodemon": "^2.0.7"
+	}
 }

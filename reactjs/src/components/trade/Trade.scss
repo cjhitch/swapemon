@@ -21,7 +21,21 @@
 			margin-bottom: 1rem;
 		}
 		.PokemonCard {
-			margin-bottom: 0.5rem;
+			margin: 0 0 0.5rem 0;
+			.more.edit {
+				justify-content: center;
+				> div {
+					display: none;
+				}
+				svg {
+					display: none;
+				}
+				button {
+					svg {
+						display: inline;
+					}
+				}
+			}
 		}
 	}
 	button {
@@ -54,7 +68,7 @@
 			flex-direction: row;
 			flex-wrap: wrap;
 			.PokemonCard {
-				margin-bottom: 0.5rem;
+				margin: 0 0 0.5rem 0;
 			}
 		}
 	}

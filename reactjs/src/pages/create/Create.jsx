@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import container from './container';
 import FormControl from '../../components/formControl';
 import Logo from '../../assets/images/logo.png';
 import './Create.scss';
 
-const Create = () => {
+const Create = ({ ...props }) => {
+	const history = useHistory();
 	const [user, setUser] = useState({
 		name: '',
 		first: '',
@@ -18,11 +22,29 @@ const Create = () => {
 	const update = (id, val) => {
 		setUser({ ...user, [id]: val });
 	};
+	const save = (e) => {
+		e.preventDefault();
+		const {
+			createUser,
+			updateUser,
+			match: {
+				params: { id },
+			},
+		} = props;
+		const { name, first, last, email, password } = user;
+		if (id) {
+			updateUser({ id, name, first, last, email, password });
+		} else {
+			createUser({ name, first, last, email, password });
+		}
+		// TODO: there needs to be error handling on this to ensure user was actually created
+		history.push('/login');
+	};
 	return (
 		<section className="Create">
 			<Image src={Logo} />
 			<h1>Create Account</h1>
-			<form action="">
+			<Form onSubmit={save}>
 				<FormControl
 					placeholder="username"
 					value={user.name}
@@ -65,10 +87,10 @@ const Create = () => {
 					id="confirm"
 					update={update}
 				/>
-				<Link to="/login">
-					<Button variant="secondary">Submit</Button>
-				</Link>
-			</form>
+				<Button type="submit" variant="secondary">
+					Submit
+				</Button>
+			</Form>
 			<p>
 				<Link to="/forgot">Forgot Password?</Link> |{' '}
 				<Link to="/login">Have an Account?</Link>
@@ -77,4 +99,4 @@ const Create = () => {
 	);
 };
 
-export default Create;
+export default withRouter(container(Create));
