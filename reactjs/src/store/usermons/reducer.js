@@ -56,7 +56,27 @@ const usermonsSuccess = (state, action) => {
 					...usermons,
 					// add the user id as the key and an user object for loading
 					[usermon.id]: {
-						data: usermon,
+						data: {
+							id: usermon.id,
+							userId: usermon.userId,
+							name: usermon.name,
+							shiny: usermon.shiny,
+							dex: usermon.dex,
+							ball: usermon.ball,
+							level: usermon.level,
+							types: usermon.types,
+							gender: usermon.gender,
+							ability: usermon.ability,
+							ivs: [
+								{ HP: usermon.hp },
+								{ Atk: usermon.atk },
+								{ Def: usermon.def },
+								{ SpAtk: usermon.spAtk },
+								{ SpDef: usermon.spDef },
+								{ Spd: usermon.spd },
+							],
+							eggMoves: usermon.eggMoves,
+						},
 						isLoading: false,
 						loadedAt: Date.now(),
 						error: null,

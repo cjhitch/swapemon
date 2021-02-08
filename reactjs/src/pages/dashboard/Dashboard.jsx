@@ -45,7 +45,7 @@ const Dashboard = () => {
 	const dispatch = useDispatch();
 	useEffect(() => {
 		// TODO: this needs a better way to find user
-		dispatch(fetchUsermons('JamesEarlJones'));
+		dispatch(fetchUsermons('790fe8b3-3ce3-444a-99c2-6eca0d28c65a'));
 		// this is intentionally left as empty array to run once on load like a componentDidMount()
 		// eslint-disable-next-line
 	}, []);

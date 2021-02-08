@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Image from 'react-bootstrap/Image';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -14,20 +14,40 @@ import {
 	BiTrash,
 	BiShare,
 } from 'react-icons/bi';
+import { fetchMoves } from '../../store/moves/actions';
 import { deleteUsermon } from '../../store/usermons/actions';
 import TypePills from '../typePills';
 import Shiny from '../../assets/images/icons/shiny.svg';
 import './PokemonCard.scss';
 
 const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
+	const pokeMoves = useSelector((state) => state.moves);
+	const [moves, setMoves] = useState([]);
 	// const pokeData = useSelector((state) => state.usermons);
 	const [show, setShow] = useState(false);
 	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(fetchMoves());
+		// this should only run once to run similar to componentDidMount()
+		// eslint-disable-next-line
+	}, []);
+	useEffect(() => {
+		if (pokeMoves.allIds.length > 0) {
+			setMoves(pokeMoves.byId);
+		}
+	}, [pokeMoves]);
+
+	useEffect(() => {
+		console.log(moves);
+	}, [moves]);
+
 	// TODO: this will be once the user logged in
 	const username = 'JamesEarlJones';
 	const [expanded, setExpanded] = useState(false);
 	const pokePath = () => {
 		try {
+			console.log(pokemon.name);
 			return require(`../../assets/images/icons/pokemon/${
 				pokemon.shiny || pokemon.shiny === 0 ? 'shiny/' : 'regular/'
 			}${pokemon.name}.svg`);
@@ -39,10 +59,17 @@ const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 
 	const ballPath = () => {
 		try {
+			console.log(pokemon.ball);
 			return require(`../../assets/images/icons/balls/${pokemon.ball}.svg`);
 		} catch (err) {
 			return null;
 		}
+	};
+
+	// run through the data and get types based on the move name - this will be fixed in the database
+	const getType = (move) => {
+		console.log('move: ', move, moves);
+		return moves[move].data.type;
 	};
 
 	const ball = ballPath();
@@ -112,20 +139,27 @@ const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 					</div>
 					<div className="em">
 						<h3>Egg Moves:</h3>
-						{pokemon.eggMoves &&
-							pokemon.eggMoves.map((move, i) => (
-								// I want this to say the number of each move for the key
-								//  eslint-disable-next-line
+						{
+							// eslint-disable-next-line
+						(pokemon.eggMoves && pokeMoves.allIds.length > 0 ) &&
+								pokemon.eggMoves.map((move, i) =>
+									console.log(pokemon.eggMoves)(
+										// I want this to say the number of each move for the key
+										//  eslint-disable-next-line
 						<p key={`move-${i}`}>
-									<TypePills
-										variant="round"
-										type={Object.keys(move).toString()}
-									/>
-									<span>
-										{move[Object.keys(move)].toString()}
-									</span>
-								</p>
-							))}
+											<TypePills
+												variant="round"
+												type={getType(move)}
+											/>
+											<span>
+												{move[
+													Object.keys(move)
+												].toString()}
+											</span>
+										</p>
+									)
+								)
+						}
 					</div>
 				</div>
 				{addTrade ? (
