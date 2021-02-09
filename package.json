@@ -10,7 +10,6 @@
 		"start": "npm start --prefix api",
 		"start:react": "cd reactjs && yarn start",
 		"heroku-postbuild": "concurrently \"npm:install-*\"; concurrently \"npm:build-*\"; ",
-		"install": "npm install",
 		"install-reactjs": "npm install --prefix reactjs",
 		"install-api": "npm install --prefix api",
 		"build-reactjs": "npm run build --prefix reactjs",
