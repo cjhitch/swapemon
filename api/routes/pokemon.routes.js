@@ -7,12 +7,12 @@ const protectedRoute = require('../utils/protectedRoute');
 // GET /pokemon
 router.get('/', pokeCtrl.getPokemon);
 // GET /pokemon/:id
-router.get('/:id', pokemonCtrl.getOneById);
+router.get('/:id', pokeCtrl.getOneById);
 // POST /pokemons
-router.post('/', protectedRoute, pokemonCtrl.createPokemon);
+router.post('/', protectedRoute, pokeCtrl.createPokemon);
 // PUT /pokemons/:id
-router.put('/:id', protectedRoute, pokemonCtrl.updatePokemon);
+router.put('/:id', protectedRoute, pokeCtrl.updatePokemon);
 // DELETE /pokemons/:id
-router.delete('/:id', protectedRoute, pokemonCtrl.removePokemon);
+router.delete('/:id', protectedRoute, pokeCtrl.removePokemon);
 // export the routes from this file
 module.exports = router;
