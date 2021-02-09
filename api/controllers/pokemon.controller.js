@@ -12,7 +12,7 @@ exports.getOneById = async (req, res) => {
 	// get the id from the route params
 	const { id } = req.params;
 	// search our pokemon model for the pokemon
-	const pokemon = await Pokemons.findByPk(id);
+	const pokemon = await Pokemon.findByPk(id);
 	// if no pokemon is found
 	if (!pokemon) {
 		// return a 404 not found code
@@ -30,7 +30,7 @@ exports.createPokemon = async (req, res) => {
 	const { pokemon } = req.body;
 	try {
 		// create the item and save the new option
-		const newPokemon = await Pokemons.create({ pokemon });
+		const newPokemon = await Pokemon.create({ pokemon });
 		// send the new id back to the req
 		res.status(200).json({ id: newPokemon.id });
 	} catch (e) {
@@ -45,7 +45,7 @@ exports.updatePokemon = async (req, res) => {
 	// get the id from the route params
 	const { id } = req.params;
 	try {
-		const [, [updatedPokemon]] = await Pokemons.update(req.body, {
+		const [, [updatedPokemon]] = await Pokemon.update(req.body, {
 			// only update the row using the id in the url
 			where: { id },
 			// return the updated row
@@ -65,7 +65,7 @@ exports.removePokemon = async (req, res) => {
 	// get the id from the route
 	const { id } = req.params;
 	// remove the pokemon
-	await Pokemons.destroy({ where: { id } });
+	await Pokemon.destroy({ where: { id } });
 	// send a good status code
 	res.sendStatus(200);
 };

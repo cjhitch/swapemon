@@ -9,10 +9,10 @@ router.get('/', pokeCtrl.getPokeballs);
 // GET /pokeballs/:id
 router.get('/:id', pokeCtrl.getOneById);
 // POST /pokeballs
-router.post('/', protectedRoute, pokeballCtrl.createPokeball);
+router.post('/', protectedRoute, pokeCtrl.createPokeball);
 // PUT /pokeballs/:id
-router.put('/:id', protectedRoute, pokeballCtrl.updatePokeball);
+router.put('/:id', protectedRoute, pokeCtrl.updatePokeball);
 // DELETE /pokeballs/:id
-router.delete('/:id', protectedRoute, pokeballCtrl.removePokeball);
+router.delete('/:id', protectedRoute, pokeCtrl.removePokeball);
 // export the routes from this file
 module.exports = router;
