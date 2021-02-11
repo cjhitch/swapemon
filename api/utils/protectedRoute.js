@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 // creating a middleware
 const protectedRoute = (req, res, next) => {
 	// TODO: need to add this back in when login is valid

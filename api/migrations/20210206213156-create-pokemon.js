@@ -1,4 +1,6 @@
+// eslint-disable-next-line
 'use strict';
+
 module.exports = {
 	up: async (queryInterface, Sequelize) => {
 		await queryInterface.createTable('Pokemons', {
@@ -35,7 +37,7 @@ module.exports = {
 					'Psychic',
 					'Rock',
 					'Steel',
-					'Water',
+					'Water'
 				),
 			},
 			type_2: {
@@ -57,7 +59,7 @@ module.exports = {
 					'Psychic',
 					'Rock',
 					'Steel',
-					'Water',
+					'Water'
 				),
 				allowNull: true,
 			},
@@ -80,7 +82,7 @@ module.exports = {
 					'Water 2',
 					'Ditto',
 					'Dragon',
-					'Undiscovered',
+					'Undiscovered'
 				),
 			},
 			egg_group_2: {
@@ -99,7 +101,7 @@ module.exports = {
 					'Water 2',
 					'Ditto',
 					'Dragon',
-					'Undiscovered',
+					'Undiscovered'
 				),
 				allowNull: true,
 			},
@@ -130,6 +132,7 @@ module.exports = {
 			},
 		});
 	},
+	// eslint-disable-next-line no-unused-vars
 	down: async (queryInterface, Sequelize) => {
 		await queryInterface.dropTable('Pokemons');
 	},
