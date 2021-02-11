@@ -27,6 +27,7 @@ exports.getOneById = async (req, res) => {
 // add a new conversation
 exports.createConversation = async (req, res) => {
 	// get the post_id and user from the request body
+	// eslint-disable-next-line
 	const { post_id, user } = req.body;
 	try {
 		// create the item and save the new option

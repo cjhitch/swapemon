@@ -1,5 +1,5 @@
-'use strict';
 const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
 	class Pokemon extends Model {
 		/**
@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
 		 * This method is not a part of Sequelize lifecycle.
 		 * The `models/index` file will call this method automatically.
 		 */
+		// eslint-disable-next-line no-unused-vars
 		static associate(models) {
 			// define association here
 		}
@@ -71,7 +72,7 @@ module.exports = (sequelize, DataTypes) => {
 					'Psychic',
 					'Rock',
 					'Steel',
-					'Water',
+					'Water'
 				),
 				validate: {
 					isIn: {
@@ -121,7 +122,7 @@ module.exports = (sequelize, DataTypes) => {
 					'Psychic',
 					'Rock',
 					'Steel',
-					'Water',
+					'Water'
 				),
 				validate: {
 					isIn: {
@@ -178,7 +179,7 @@ module.exports = (sequelize, DataTypes) => {
 					'Water 2',
 					'Ditto',
 					'Dragon',
-					'Undiscovered',
+					'Undiscovered'
 				),
 				validate: {
 					isIn: {
@@ -201,7 +202,8 @@ module.exports = (sequelize, DataTypes) => {
 								'Undiscovered',
 							],
 						],
-						msg: 'The selection must be from one of the egg groups.',
+						msg:
+							'The selection must be from one of the egg groups.',
 					},
 				},
 			},
@@ -222,7 +224,7 @@ module.exports = (sequelize, DataTypes) => {
 					'Water 2',
 					'Ditto',
 					'Dragon',
-					'Undiscovered',
+					'Undiscovered'
 				),
 				validate: {
 					isIn: {
@@ -245,7 +247,8 @@ module.exports = (sequelize, DataTypes) => {
 								'Undiscovered',
 							],
 						],
-						msg: 'The selection must be from one of the egg groups.',
+						msg:
+							'The selection must be from one of the egg groups.',
 					},
 				},
 			},
@@ -268,7 +271,10 @@ module.exports = (sequelize, DataTypes) => {
 				allowNull: { args: false, msg: 'Base egg hatch is required' },
 				type: DataTypes.STRING,
 				validate: {
-					len: { args: [3, 120], msg: 'Base hatch may not be left empty' },
+					len: {
+						args: [3, 120],
+						msg: 'Base hatch may not be left empty',
+					},
 				},
 			},
 			egg_moves: {
@@ -279,7 +285,7 @@ module.exports = (sequelize, DataTypes) => {
 		{
 			sequelize,
 			modelName: 'Pokemon',
-		},
+		}
 	);
 	return Pokemon;
 };

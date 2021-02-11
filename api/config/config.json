@@ -15,6 +15,9 @@
 	},
 	"production": {
 		"use_env_variable": "DATABASE_URL",
+		"database": "d63nrepq3hqqu1",
+		"user": "vjgxtszlqcjajy",
+		"password": "07abc166d05877d467b13fbf7b49a44360a03845692a517a8b0b7af59351e0c4",
 		"ssl": true
 	},
 	"staging": {

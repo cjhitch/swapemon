@@ -12,6 +12,7 @@ const pokeballsRouter = require('./routes/pokeballs.routes');
 const movesRouter = require('./routes/moves.routes');
 const conversationsRouter = require('./routes/conversations.routes');
 const usermonsRouter = require('./routes/usermons.routes');
+
 // create express app
 const app = express();
 const port = process.env.PORT || 5000;
@@ -52,11 +53,11 @@ if (process.env.NODE_ENV === 'production') {
 	app.use(express.static(path.join(__dirname, '../reactjs/build')));
 
 	// Handle React routing, return all requests to React app
-	app.get('*', function (req, res) {
+	app.get('*', (req, res) => {
 		res.sendFile(path.join(__dirname, '../reactjs/build', 'index.html'));
 	});
 }
-
+// eslint-disable-next-line
 app.use((err, req, res, next) => {
 	error('ERROR FOUND: ', err);
 	res.sendStatus(500);
