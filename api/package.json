@@ -4,7 +4,7 @@
 	"description": "api for swapemon",
 	"main": "server.js",
 	"scripts": {
-		"db-update": "sequelize db:migrate; concurrently \"db-seed\"",
+		"db-update": "sequelize db:migrate;",
 		"db-seed": "sequelize db:seed:all",
 		"server": "nodemon server.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
