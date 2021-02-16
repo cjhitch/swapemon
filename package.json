@@ -6,6 +6,9 @@
 	"directories": {
 		"doc": "docs"
 	},
+	"engines": {
+		"node": "12.12.0"
+	},
 	"scripts": {
 		"start": "npm start --prefix api",
 		"start:react": "cd reactjs && yarn start",
@@ -14,7 +17,7 @@
 		"install-api": "npm install --prefix api",
 		"build-reactjs": "npm run build --prefix reactjs",
 		"build-api": "npm run db-update --prefix api",
-		"seed-db": "npm run db-update --prefix api",
+		"seed-db": "npm run db-seed --prefix api",
 		"dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn start:react\"",
 		"test:react": "rcd reactjs && eact-scripts test",
 		"eject": "cd reactjs && react-scripts eject",
