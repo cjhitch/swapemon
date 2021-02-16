@@ -13,7 +13,7 @@
 		"install-reactjs": "npm install --prefix reactjs",
 		"install-api": "npm install --prefix api",
 		"build-reactjs": "npm run build --prefix reactjs",
-		"build-api": "npm run db-update --prefix api",
+		"build-api": "npm run db-seed --prefix api",
 		"dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn start:react\"",
 		"test:react": "rcd reactjs && eact-scripts test",
 		"eject": "cd reactjs && react-scripts eject",
