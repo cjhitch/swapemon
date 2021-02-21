@@ -5,9 +5,14 @@ module.exports = {
 				allowNull: false,
 				primaryKey: true,
 				type: Sequelize.UUID,
+				defaultValue: Sequelize.UUIDV4,
 			},
 			username: {
 				type: Sequelize.STRING,
+			},
+			access_token: {
+				type: Sequelize.STRING,
+				allowNull: true,
 			},
 			first_name: {
 				type: Sequelize.STRING,
