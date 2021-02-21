@@ -1,5 +1,4 @@
 const { Model } = require('sequelize');
-const { v4 } = require('uuid');
 
 module.exports = (sequelize, DataTypes) => {
 	class Users extends Model {
@@ -16,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
 	Users.init(
 		{
 			id: {
-				defaultValue: DataTypes.UUIDV4,
+				// defaultValue: DataTypes.UUIDV4,
 				primaryKey: true,
 				type: DataTypes.UUID,
 				validate: {
@@ -52,21 +51,27 @@ module.exports = (sequelize, DataTypes) => {
 					},
 				},
 			},
-			password: {
-				allowNull: { args: false, msg: 'Password is required' },
-				type: DataTypes.STRING,
-				validate: {
-					is: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
-					msg:
-						'Password must be at least 8 characters, contain at least one number, one upper case, and one lower case',
-				},
-			},
 			email: {
 				allowNull: { args: false, msg: 'Email is required' },
 				type: DataTypes.STRING,
 				validate: {
-					is: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-					msg: 'Please use a valid email address',
+					len: {
+						args: [3, 120],
+						// is: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+						msg: 'Please use a valid email address',
+					},
+				},
+			},
+			password: {
+				allowNull: { args: false, msg: 'Password is required' },
+				type: DataTypes.STRING,
+				validate: {
+					len: {
+						// is: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+						args: [3, 120],
+						msg:
+							'Password must be at least 8 characters, contain at least one number, one upper case, and one lower case',
+					},
 				},
 			},
 		},
@@ -75,9 +80,5 @@ module.exports = (sequelize, DataTypes) => {
 			modelName: 'Users',
 		}
 	);
-	Users.beforeValidate((user) => {
-		const el = user;
-		el.id = v4;
-	});
 	return Users;
 };

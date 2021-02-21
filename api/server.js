@@ -12,6 +12,7 @@ const pokeballsRouter = require('./routes/pokeballs.routes');
 const movesRouter = require('./routes/moves.routes');
 const conversationsRouter = require('./routes/conversations.routes');
 const usermonsRouter = require('./routes/usermons.routes');
+const usersRouter = require('./routes/users.routes');
 
 // create express app
 const app = express();
@@ -35,6 +36,8 @@ app.use('/moves', movesRouter);
 app.use('/conversations', conversationsRouter);
 // usermons route
 app.use('/usermons', usermonsRouter);
+// users route
+app.use('/users', usersRouter);
 
 // API calls
 app.get('/api/hello', (req, res) => {
