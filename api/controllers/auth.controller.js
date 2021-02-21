@@ -5,6 +5,29 @@ const bcrypt = require('bcrypt');
 const { throwError, throwIf } = require('../utils/errorHandling');
 const { Users, Sequelize } = require('../models');
 
+// get all the users
+exports.getUsers = async (req, res) => {
+	const users = await Users.findAll();
+	res.json(users);
+};
+
+// get user by the user name
+exports.getOneById = async (req, res) => {
+	// get the id from the route params
+	const { id } = req.params;
+	// search our user model for the user
+	const user = await Users.findByPk(id);
+	// if no user is found
+	if (!user) {
+		// return a 404 not found code
+		res.sendStatus(404);
+		return;
+	}
+
+	// if the user is found send back
+	res.json(user);
+};
+
 exports.formLogin = async (req, res) => {
 	// pull the username and password from the body
 	const { username, password } = req.body;

@@ -55,9 +55,10 @@ module.exports = (sequelize, DataTypes) => {
 				allowNull: { args: false, msg: 'Email is required' },
 				type: DataTypes.STRING,
 				validate: {
+					// is: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+					// msg: 'Please use a valid email address',
 					len: {
 						args: [3, 120],
-						// is: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
 						msg: 'Please use a valid email address',
 					},
 				},
@@ -66,8 +67,10 @@ module.exports = (sequelize, DataTypes) => {
 				allowNull: { args: false, msg: 'Password is required' },
 				type: DataTypes.STRING,
 				validate: {
+					// is: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+					// msg:
+					// 	'Password must be at least 8 characters, contain at least one number, one upper case, and one lower case',
 					len: {
-						// is: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
 						args: [3, 120],
 						msg:
 							'Password must be at least 8 characters, contain at least one number, one upper case, and one lower case',
