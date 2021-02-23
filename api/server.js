@@ -13,7 +13,7 @@ const movesRouter = require('./routes/moves.routes');
 const conversationsRouter = require('./routes/conversations.routes');
 const usermonsRouter = require('./routes/usermons.routes');
 const usersRouter = require('./routes/users.routes');
-const loginRoutes = require('./routes/login.routes');
+const authRoutes = require('./routes/auth.routes');
 
 // create express app
 const app = express();
@@ -40,7 +40,7 @@ app.use('/usermons', usermonsRouter);
 // users route
 app.use('/users', usersRouter);
 // login route
-app.use('/logins', loginRoutes);
+app.use('/auth', authRoutes);
 
 // API calls
 app.get('/api/hello', (req, res) => {

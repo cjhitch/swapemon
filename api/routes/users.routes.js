@@ -1,7 +1,7 @@
 // import express router
 const router = require('express').Router();
 // import the users router
-const usersCtrl = require('../controllers/auth.controller');
+const usersCtrl = require('../controllers/users.controller');
 // import the protect middleware
 const protectedRoute = require('../utils/protectedRoute');
 // GET /users
