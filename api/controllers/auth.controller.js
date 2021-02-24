@@ -6,21 +6,16 @@ const { Users } = require('../models');
 exports.formLogin = async (req, res) => {
 	// pull the username and password from the body
 	const { username, password } = req.body;
-	let hashPw;
-	bcrypt.hash(password, 17, (err, hash) => {
-		hashPw = hash;
-	});
+	const hash = bcrypt.hashSync(password, 7);
 	try {
-		const [user] = await Users.upsert(
-			{
-				username,
-				name: username,
-				password: hashPw,
-			},
-			{ returning: true }
-		);
-		const token = jwt.sign({ id: user.id }, process.env.SECRET);
-		res.json({ token, loggedIn: true });
+		const user = await Users.findOne({ where: username });
+		if (user.dataValues.password === hash) {
+			const token = jwt.sign(
+				{ id: user.dataValues.id },
+				process.env.SECRET
+			);
+			res.json({ token, loggedIn: true });
+		}
 	} catch (e) {
 		// log the error
 		// error(e);
