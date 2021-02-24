@@ -4,10 +4,10 @@ import { SET_LOGGED_IN } from '../actionTypes';
 
 // const CACHE_TIME = 1000 * 60 * 5;
 
-export const verifyUser = (password, username) => async (dispatch) => {
+export const verifyUser = (username, password) => async (dispatch) => {
 	const {
 		data: { loggedIn, token },
-	} = await API.post('/auth', { password, username });
+	} = await API.post('/auth', { username, password });
 	localStorage.setItem('token', token);
 	dispatch({ loggedIn, type: SET_LOGGED_IN });
 };

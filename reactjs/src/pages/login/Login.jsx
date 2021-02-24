@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import { verifyUser } from '../../store/auth/actions';
@@ -9,8 +9,9 @@ import Logo from '../../assets/images/logo.png';
 import './Login.scss';
 
 const Login = () => {
-	// const pokeData = useSelector((state) => state.usermons);
+	const logged = useSelector((state) => state.auth);
 	const dispatch = useDispatch();
+	const history = useHistory();
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
 	const update = (id, val) => {
@@ -20,6 +21,11 @@ const Login = () => {
 			setUsername(val);
 		}
 	};
+	useEffect(() => {
+		if (logged.loggedIn) {
+			history.push('/dashboard');
+		}
+	}, [logged]);
 	const login = (e) => {
 		e.preventDefault();
 		dispatch(verifyUser(username, password));
