@@ -13,9 +13,14 @@ const Forgot = () => {
 		setEmail(val);
 		return id;
 	};
-	const reset = (e) => {
+	const reset = async (e) => {
 		e.preventDefault();
-		API.post('/auth/forgot_password', email);
+		try {
+			const res = await API.post('/auth/forgot_password', { email });
+			console.log(res);
+		} catch (error) {
+			console.log(error);
+		}
 	};
 	return (
 		<section className="Forgot">

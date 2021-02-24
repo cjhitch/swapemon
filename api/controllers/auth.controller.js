@@ -1,10 +1,11 @@
 const error = require('debug')('api:error');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const hbs = require('nodemailer-express-handlebars');
+// const hbs = require('nodemailer-express-handlebars');
 const nodemailer = require('nodemailer');
-const path = require('path');
-const async = require('async_hooks');
+// const path = require('path');
+const crypto = require('crypto');
+// const waterfall = require('async/waterfall');
 const { Users } = require('../models');
 require('dotenv').config();
 
@@ -12,28 +13,12 @@ const email = process.env.MAILER_EMAIL_ID || 'auth_email_address@gmail.com';
 const pass = process.env.MAILER_PASSWORD || 'auth_email_pass';
 
 const smtpTransport = nodemailer.createTransport({
-	service: process.env.MAILER_SERVICE_PROVIDER || 'Gmail',
+	service: process.env.MAILER_SERVICE_PROVIDER || 'gmail',
 	auth: {
 		user: email,
 		pass,
 	},
 });
-
-const handlebarsOptions = {
-	viewEngine: 'handlebars',
-	viewPath: path.resolve('./api/templates/'),
-	extName: '.html',
-};
-
-smtpTransport.use('compile', hbs(handlebarsOptions));
-
-exports.render_forgot_password_template = (req, res) => {
-	return res.sendFile(path.resolve('./public/forgot-password.html'));
-};
-
-exports.render_reset_password_template = (req, res) => {
-	return res.sendFile(path.resolve('./public/reset-password.html'));
-};
 
 exports.formLogin = async (req, res) => {
 	// pull the username and password from the body
@@ -62,68 +47,33 @@ exports.formLogin = async (req, res) => {
 		res.status(401).json({ loggedIn: false });
 	}
 };
-
-exports.forgot_password = (req, res) => {
-	console.log('in forgot password');
-	async.waterfall(
-		[
-			(done) => {
-				Users.findOne({
-					email: req.body.email,
-				}).exec((err, user) => {
-					if (user) {
-						done(err, user);
-					} else {
-						done('User not found.');
-					}
-				});
-			},
-			(user, done) => {
-				// create the random token
-				crypto.randomBytes(20, (err, buffer) => {
-					const token = buffer.toString('hex');
-					done(err, user, token);
-				});
-			},
-			(user, token, done) => {
-				Users.findByIdAndUpdate(
-					{ id: user.id },
-					{
-						reset_password_token: token,
-						reset_password_expires: Date.now() + 86400000,
-					},
-					{ upsert: true, new: true }
-				).exec((err, newUser) => {
-					done(err, token, newUser);
-				});
-			},
-			(token, user, done) => {
-				const data = {
-					to: user.email,
-					from: email,
-					template: 'forgot-password-email',
-					subject: 'Password help has arrived!',
-					context: {
-						url: `http://localhost:3000/auth/reset_password?token=${token}`,
-						name: user.fullName.split(' ')[0],
-					},
-				};
-
-				smtpTransport.sendMail(data, (err) => {
-					if (!err) {
-						return res.json({
-							message:
-								'Kindly check your email for further instructions',
-						});
-					}
-					return done(err);
-				});
-			},
-		],
-		(err) => {
-			return res.status(422).json({ message: err });
+// eslint-disable-next-line
+exports.forgot_password = async (req, res) => {
+	const user = await Users.findOne({
+		where: { email: req.body.email },
+	});
+	const token = crypto.randomBytes(20).toString('hex');
+	user.update({
+		resetPasswordToken: token,
+		resetPasswordExpires: Date.now() + 3600000,
+	});
+	const data = {
+		to: user.email,
+		from: email,
+		template: 'forgot-password-email',
+		subject: 'Password help has arrived!',
+		context: {
+			url: `http://localhost:3000/auth/reset_password?token=${token}`,
+			name: `${user.dataValues.first_name} ${user.dataValues.last_name}`,
+		},
+	};
+	smtpTransport.sendMail(data, (err, response) => {
+		console.log(data, err, response);
+		if (err) {
+			return response.status(500).json(err);
 		}
-	);
+		return response.status(200).json('recovery email sent');
+	});
 };
 
 // eslint-disable-next-line
@@ -180,3 +130,25 @@ exports.reset_password = (req, res, next) => {
 		}
 	});
 };
+
+// waterfall(
+// 	[
+// 		(done) => {
+// 			Users.findOne({
+// 				where: { email: req.body.email },
+// 			}).exec((err, user) => {
+// 				if (user) {
+// 					done(err, user);
+// 				} else {
+// 					done('User not found.');
+// 				}
+// 			});
+// 		},
+
+// 		(user, done) => {
+// 			// create the random token
+// 			crypto.randomBytes(20, (err, buffer) => {
+// 				const token = buffer.toString('hex');
+// 				done(err, user, token);
+// 			});
+// 		},
