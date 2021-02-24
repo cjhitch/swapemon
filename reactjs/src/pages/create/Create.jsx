@@ -10,7 +10,6 @@ import Logo from '../../assets/images/logo.png';
 import './Create.scss';
 
 const Create = ({ ...props }) => {
-	// eslint-disable-next-line
 	const history = useHistory();
 	const [user, setUser] = useState({
 		name: '',
@@ -33,13 +32,17 @@ const Create = ({ ...props }) => {
 			},
 		} = props;
 		const { name, first, last, email, password } = user;
-		if (id) {
-			updateUser({ id, name, first, last, email, password });
-		} else {
-			createUser({ name, first, last, email, password });
+		try {
+			if (id) {
+				updateUser({ id, name, first, last, email, password });
+			} else {
+				createUser({ name, first, last, email, password });
+			}
+			history.push('/login');
+		} catch (error) {
+			alert(error);
 		}
 		// TODO: there needs to be error handling on this to ensure user was actually created
-		// history.push('/login');
 	};
 	return (
 		<section className="Create">

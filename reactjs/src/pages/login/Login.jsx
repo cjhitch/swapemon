@@ -35,9 +35,9 @@ const Login = () => {
 					id="password"
 					update={update}
 				/>
-				<Link to="/dashboard">
-					<Button variant="secondary">Submit</Button>
-				</Link>
+				{/* <Link to="/dashboard"> */}
+				<Button variant="secondary">Submit</Button>
+				{/* </Link> */}
 			</form>
 			<p>
 				<Link to="/forgot">Forgot Password?</Link> |{' '}
