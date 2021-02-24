@@ -13,11 +13,14 @@ export const verifyUser = (username, password) => async (dispatch) => {
 	dispatch({ loggedIn, type: SET_LOGGED_IN, user });
 };
 
-export const logout = () => {
+export const logout = () => async (dispatch) => {
 	localStorage.removeItem('token');
-	return { loggedIn: false, type: SET_LOGGED_IN, user: {} };
+	dispatch({ loggedIn: false, type: SET_LOGGED_IN, user: {} });
 };
 
+// export const reset = (email) => async (dispatch) => {
+// 	API.post
+// }
 // was trying to match more of the same we used for capstone but I was unable to translate this into working
 // export const verifyUser = (password, username) => ({
 // 	types: [REQ_USERS_PENDING, REQ_USERS_SUCCESS, REQ_USERS_ERROR],
