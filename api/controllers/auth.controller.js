@@ -11,12 +11,18 @@ exports.formLogin = async (req, res) => {
 		const user = await Users.findOne({ where: { username } });
 		const truthyPW = bcrypt.compareSync(password, user.dataValues.password);
 		if (truthyPW) {
-			console.log('in truthy');
+			const myUser = {
+				id: user.dataValues.id,
+				username: user.dataValues.username,
+				first_name: user.dataValues.first_name,
+				last_name: user.dataValues.last_name,
+				email: user.dataValues.last_name,
+			};
 			const token = jwt.sign(
 				{ id: user.dataValues.id },
 				process.env.SECRET
 			);
-			res.json({ token, loggedIn: true });
+			res.json({ token, loggedIn: true, user: myUser });
 		}
 	} catch (e) {
 		// log the error

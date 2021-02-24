@@ -1,4 +1,5 @@
 import API from '../../API';
+// import { SET_LOGGED_IN, SET_LOGGED_OUT } from '../actionTypes';
 import { SET_LOGGED_IN } from '../actionTypes';
 // import { REQ_USERS_PENDING, REQ_USERS_SUCCESS, REQ_USERS_ERROR } from '../actionTypes';
 
@@ -6,15 +7,15 @@ import { SET_LOGGED_IN } from '../actionTypes';
 
 export const verifyUser = (username, password) => async (dispatch) => {
 	const {
-		data: { loggedIn, token },
+		data: { loggedIn, token, user },
 	} = await API.post('/auth', { username, password });
 	localStorage.setItem('token', token);
-	dispatch({ loggedIn, type: SET_LOGGED_IN });
+	dispatch({ loggedIn, type: SET_LOGGED_IN, user });
 };
 
 export const logout = () => {
 	localStorage.removeItem('token');
-	return { loggedIn: false, type: SET_LOGGED_IN };
+	return { loggedIn: false, type: SET_LOGGED_IN, user: {} };
 };
 
 // was trying to match more of the same we used for capstone but I was unable to translate this into working

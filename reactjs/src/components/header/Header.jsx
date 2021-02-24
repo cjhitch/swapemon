@@ -32,8 +32,11 @@ const Header = () => {
 									Profile
 								</Link>
 								<Button
-									onClick={() => {
+									onClick={(e) => {
+										e.preventDefault();
 										dispatch(logout);
+										// this is a janky work around - i couldn't get state to fire
+										window.location.reload(false);
 									}}
 								>
 									Logout
