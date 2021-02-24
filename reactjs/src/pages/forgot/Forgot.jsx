@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import FormControl from '../../components/formControl';
@@ -8,6 +8,7 @@ import API from '../../API';
 import './Forgot.scss';
 
 const Forgot = () => {
+	const history = useHistory();
 	const [email, setEmail] = useState('');
 	const update = (id, val) => {
 		setEmail(val);
@@ -17,9 +18,10 @@ const Forgot = () => {
 		e.preventDefault();
 		try {
 			const res = await API.post('/auth/forgot_password', { email });
-			console.log(res);
+			alert(res.data);
+			history.push('/login');
 		} catch (error) {
-			console.log(error);
+			alert(error);
 		}
 	};
 	return (
