@@ -1,11 +1,8 @@
 const error = require('debug')('api:error');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-// const hbs = require('nodemailer-express-handlebars');
 const nodemailer = require('nodemailer');
-// const path = require('path');
 const crypto = require('crypto');
-// const waterfall = require('async/waterfall');
 const { Users } = require('../models');
 require('dotenv').config();
 
@@ -47,6 +44,7 @@ exports.formLogin = async (req, res) => {
 		res.status(401).json({ loggedIn: false });
 	}
 };
+
 // eslint-disable-next-line
 exports.forgot_password = async (req, res) => {
 	const user = await Users.findOne({
@@ -67,12 +65,11 @@ exports.forgot_password = async (req, res) => {
 			name: `${user.dataValues.first_name} ${user.dataValues.last_name}`,
 		},
 	};
-	smtpTransport.sendMail(data, (err, response) => {
-		console.log(data, err, response);
+	smtpTransport.sendMail(data, (err) => {
 		if (err) {
-			return response.status(500).json(err);
+			return res.status(500).json(err);
 		}
-		return response.status(200).json('recovery email sent');
+		return res.status(200).json('recovery email sent');
 	});
 };
 
@@ -130,25 +127,3 @@ exports.reset_password = (req, res, next) => {
 		}
 	});
 };
-
-// waterfall(
-// 	[
-// 		(done) => {
-// 			Users.findOne({
-// 				where: { email: req.body.email },
-// 			}).exec((err, user) => {
-// 				if (user) {
-// 					done(err, user);
-// 				} else {
-// 					done('User not found.');
-// 				}
-// 			});
-// 		},
-
-// 		(user, done) => {
-// 			// create the random token
-// 			crypto.randomBytes(20, (err, buffer) => {
-// 				const token = buffer.toString('hex');
-// 				done(err, user, token);
-// 			});
-// 		},
