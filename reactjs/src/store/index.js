@@ -26,7 +26,13 @@ const rootReducer = combineReducers({
 });
 
 // set up middleware
-const middleware = applyMiddleware(thunkMiddleware, callAPI, createLogger());
+const middleware = applyMiddleware(
+	thunkMiddleware,
+	callAPI,
+	createLogger()
+	// eslint-disable-next-line
+	// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 // create a redux store using the combined reducer and middleware functions
 const store = createStore(rootReducer, middleware);

@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
 	up: async (queryInterface, Sequelize) => {
 		await queryInterface.bulkInsert(
@@ -7,7 +5,7 @@ module.exports = {
 			[
 				{
 					id: 'ed35a614-bb4f-4295-bee9-3a4c0c2a6328',
-					userId: '790fe8b3-3ce3-444a-99c2-6eca0d28c65a',
+					userId: 'aa045e40-c223-4cbe-85ec-e835a8600dad',
 					name: 'Charizard',
 					shiny: true,
 					dex: '006',
@@ -33,7 +31,7 @@ module.exports = {
 				},
 				{
 					id: 'bbd2a3a9-6251-4349-8c44-45111c91943a',
-					userId: '790fe8b3-3ce3-444a-99c2-6eca0d28c65a',
+					userId: 'aa045e40-c223-4cbe-85ec-e835a8600dad',
 					name: 'Venusaur',
 					shiny: false,
 					dex: '003',
@@ -54,7 +52,7 @@ module.exports = {
 				},
 				{
 					id: 'b24e25b2-31b7-4b18-8022-cb4564fb06be',
-					userId: '790fe8b3-3ce3-444a-99c2-6eca0d28c65a',
+					userId: 'aa045e40-c223-4cbe-85ec-e835a8600dad',
 					name: 'Arcanine',
 					shiny: true,
 					dex: '059',
@@ -75,7 +73,7 @@ module.exports = {
 				},
 				{
 					id: '29a28fd5-7d2a-4798-9268-734915b8110e',
-					userId: '790fe8b3-3ce3-444a-99c2-6eca0d28c65a',
+					userId: 'aa045e40-c223-4cbe-85ec-e835a8600dad',
 					name: 'Beedrill',
 					shiny: false,
 					dex: '015',
@@ -96,7 +94,7 @@ module.exports = {
 				},
 				{
 					id: '45b381c0-2b9f-4459-8806-a0c8f52b82d3',
-					userId: '790fe8b3-3ce3-444a-99c2-6eca0d28c65a',
+					userId: 'aa045e40-c223-4cbe-85ec-e835a8600dad',
 					name: 'Pidgeotto',
 					shiny: false,
 					dex: '017',
@@ -122,7 +120,7 @@ module.exports = {
 				},
 				{
 					id: 'd5ec9ee1-59a7-45eb-98fd-91db594af3b6',
-					userId: '790fe8b3-3ce3-444a-99c2-6eca0d28c65a',
+					userId: 'aa045e40-c223-4cbe-85ec-e835a8600dad',
 					name: 'Vulpix-Alola',
 					shiny: true,
 					dex: '037',
