@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
+import { verifyUser } from '../../store/auth/actions';
 import FormControl from '../../components/formControl';
 import Logo from '../../assets/images/logo.png';
 import './Login.scss';
 
 const Login = () => {
+	// const pokeData = useSelector((state) => state.usermons);
+	const dispatch = useDispatch();
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
 	const update = (id, val) => {
@@ -16,11 +20,15 @@ const Login = () => {
 			setUsername(val);
 		}
 	};
+	const login = (e) => {
+		e.preventDefault();
+		dispatch(verifyUser(username, password));
+	};
 	return (
 		<section className="Login">
 			<Image src={Logo} />
 			<h1>Login</h1>
-			<form action="">
+			<form onSubmit={login}>
 				<FormControl
 					placeholder="username"
 					value={username}
@@ -36,7 +44,9 @@ const Login = () => {
 					update={update}
 				/>
 				{/* <Link to="/dashboard"> */}
-				<Button variant="secondary">Submit</Button>
+				<Button type="submit" variant="secondary">
+					Submit
+				</Button>
 				{/* </Link> */}
 			</form>
 			<p>
