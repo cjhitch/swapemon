@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
-const { Users, Sequelize } = require('../models');
+const { Users } = require('../models');
 const { throwError, throwIf } = require('../utils/errorHandling');
 require('dotenv').config();
 
@@ -72,72 +72,45 @@ exports.forgot_password = async (req, res) => {
 };
 
 // eslint-disable-next-line
-exports.reset_password = (req, res, next) => {
+exports.reset_password = async (req, res, next) => {
 	try {
-		Users.findOne({
+		const user = await Users.findOne({
 			reset_password_token: req.body.token,
 			reset_password_expires: {
 				$gt: Date.now(),
 			},
-			// eslint-disable-next-line
 		}).then(
-				throwIf((row) => !row, 404, 'Post not found'),
-				throwError(500, 'A database error has occurred, please try again.')
-		)
-		const newUser = user;
-		const hash = bcrypt.hashSync(req.body.newPassword, 7);
-		newUser.reset_password_token = undefined;
-		newUser.reset_password_expires = undefined;
-	} catch (error) {		
+			throwIf((row) => !row, 404, 'Post not found'),
+			throwError(500, 'A database error has occurred, please try again.')
+		);
+		console.log(user);
+		const hash = bcrypt.hashSync(req.body.password, 7);
+		Users.update(
+			{
+				password: hash,
+				reset_password_token: undefined,
+				reset_password_expires: undefined,
+			},
+			{
+				where: { id: user.dataValues.id },
+			}
+		);
+		const data = {
+			to: user.email,
+			from: email,
+			subject: 'Password Reset Confirmation',
+			text: `${user.first_name} ${user.last_name} your password has been reset. If this was not done by you please contact someone, because we probably cannot help you.`,
+		};
+		smtpTransport.sendMail(data, (err) => {
+			if (err) {
+				return res.status(500).json(err);
+			}
+			return res.status(200).json('password reset');
+		});
+	} catch (err) {
 		return res.status(400).send({
-			error: error,
+			error: err,
 			message: 'Password reset token is invalid or has expired.',
 		});
 	}
-
-		.exec((err, user) => {
-			const newUser = user;
-			if (!err && user) {
-				if (req.body.newPassword === req.body.confirmPassword) {
-					newUser.hash_password = bcrypt.hashSync(
-						req.body.newPassword,
-						10
-					);
-					newUser.reset_password_token = undefined;
-					newUser.reset_password_expires = undefined;
-					// eslint-disable-next-line
-					newUser.save((errors, done) => {
-						if (errors) {
-							return res.status(422).send({
-								message: errors,
-							});
-						}
-						const data = {
-							to: user.email,
-							from: email,
-							template: 'reset-password-email',
-							subject: 'Password Reset Confirmation',
-							context: {
-								name: user.fullName.split(' ')[0],
-							},
-						};
-
-						smtpTransport.sendMail(data, (errs) => {
-							if (!err) {
-								return res.json({ message: 'Password reset' });
-							}
-							return done(errs);
-						});
-					});
-				} else {
-					return res.status(422).send({
-						message: 'Passwords do not match',
-					});
-				}
-			} else {
-				return res.status(400).send({
-					message: 'Password reset token is invalid or has expired.',
-				});
-			}
-		});
 };
