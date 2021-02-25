@@ -8,6 +8,7 @@ import Create from './pages/create';
 import Dashboard from './pages/dashboard';
 import Profile from './pages/profile';
 import Trades from './pages/trades';
+import Reset from './pages/reset';
 import Form from './pages/form';
 
 import './App.scss';
@@ -34,6 +35,7 @@ function App() {
 					</AuthRoute>
 					<Route path="/login" component={Login} />
 					<Route path="/forgot" component={Forgot} />
+					<Route path="/reset" component={Reset} />
 					<Route path="/create" component={Create} />
 					<Route path="/" component={Home} />
 				</Switch>
