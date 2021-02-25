@@ -3,7 +3,8 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
-const { Users } = require('../models');
+const { Users, Sequelize } = require('../models');
+const { throwError, throwIf } = require('../utils/errorHandling');
 require('dotenv').config();
 
 const email = process.env.MAILER_EMAIL_ID || 'auth_email_address@gmail.com';
@@ -59,8 +60,8 @@ exports.forgot_password = async (req, res) => {
 		to: user.email,
 		from: email,
 		subject: 'Password help has arrived!',
-		html: `<a>http://localhost:3000/auth/reset_password?token=${token}</a>`,
-		text: `http://localhost:3000/auth/reset_password?token=${token}`,
+		html: `<a>http://localhost:3000/reset?token=${token}</a>`,
+		text: `http://localhost:3000/reset?token=${token}`,
 	};
 	smtpTransport.sendMail(data, (err) => {
 		if (err) {
@@ -72,55 +73,71 @@ exports.forgot_password = async (req, res) => {
 
 // eslint-disable-next-line
 exports.reset_password = (req, res, next) => {
-	Users.findOne({
-		reset_password_token: req.body.token,
-		reset_password_expires: {
-			$gt: Date.now(),
-		},
-		// eslint-disable-next-line
-	}).exec((err, user) => {
+	try {
+		Users.findOne({
+			reset_password_token: req.body.token,
+			reset_password_expires: {
+				$gt: Date.now(),
+			},
+			// eslint-disable-next-line
+		}).then(
+				throwIf((row) => !row, 404, 'Post not found'),
+				throwError(500, 'A database error has occurred, please try again.')
+		)
 		const newUser = user;
-		if (!err && user) {
-			if (req.body.newPassword === req.body.verifyPassword) {
-				newUser.hash_password = bcrypt.hashSync(
-					req.body.newPassword,
-					10
-				);
-				newUser.reset_password_token = undefined;
-				newUser.reset_password_expires = undefined;
-				// eslint-disable-next-line
-				newUser.save((errors, done) => {
-					if (errors) {
-						return res.status(422).send({
-							message: errors,
-						});
-					}
-					const data = {
-						to: user.email,
-						from: email,
-						template: 'reset-password-email',
-						subject: 'Password Reset Confirmation',
-						context: {
-							name: user.fullName.split(' ')[0],
-						},
-					};
+		const hash = bcrypt.hashSync(req.body.newPassword, 7);
+		newUser.reset_password_token = undefined;
+		newUser.reset_password_expires = undefined;
+	} catch (error) {		
+		return res.status(400).send({
+			error: error,
+			message: 'Password reset token is invalid or has expired.',
+		});
+	}
 
-					smtpTransport.sendMail(data, (errs) => {
-						if (!err) {
-							return res.json({ message: 'Password reset' });
+		.exec((err, user) => {
+			const newUser = user;
+			if (!err && user) {
+				if (req.body.newPassword === req.body.confirmPassword) {
+					newUser.hash_password = bcrypt.hashSync(
+						req.body.newPassword,
+						10
+					);
+					newUser.reset_password_token = undefined;
+					newUser.reset_password_expires = undefined;
+					// eslint-disable-next-line
+					newUser.save((errors, done) => {
+						if (errors) {
+							return res.status(422).send({
+								message: errors,
+							});
 						}
-						return done(errs);
+						const data = {
+							to: user.email,
+							from: email,
+							template: 'reset-password-email',
+							subject: 'Password Reset Confirmation',
+							context: {
+								name: user.fullName.split(' ')[0],
+							},
+						};
+
+						smtpTransport.sendMail(data, (errs) => {
+							if (!err) {
+								return res.json({ message: 'Password reset' });
+							}
+							return done(errs);
+						});
 					});
-				});
+				} else {
+					return res.status(422).send({
+						message: 'Passwords do not match',
+					});
+				}
 			} else {
-				return res.status(422).send({
-					message: 'Passwords do not match',
+				return res.status(400).send({
+					message: 'Password reset token is invalid or has expired.',
 				});
 			}
-		} else {
-			return res.status(400).send({
-				message: 'Password reset token is invalid or has expired.',
-			});
-		}
-	});
+		});
 };

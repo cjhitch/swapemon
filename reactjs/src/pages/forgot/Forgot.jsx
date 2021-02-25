@@ -14,7 +14,7 @@ const Forgot = () => {
 		setEmail(val);
 		return id;
 	};
-	const reset = async (e) => {
+	const forgot = async (e) => {
 		e.preventDefault();
 		try {
 			const res = await API.post('/auth/forgot_password', { email });
@@ -28,7 +28,7 @@ const Forgot = () => {
 		<section className="Forgot">
 			<Image src={Logo} />
 			<h1>Forgot Your Password?</h1>
-			<form onSubmit={reset}>
+			<form onSubmit={forgot}>
 				<p>Enter email address to reset password</p>
 				<FormControl
 					placeholder="email@email.com"

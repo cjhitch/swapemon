@@ -6,9 +6,9 @@ const authCtrl = require('../controllers/auth.controller');
 const protectedRoute = require('../utils/protectedRoute');
 // // POST /users
 router.post('/', protectedRoute, authCtrl.formLogin);
-// GET auth/forgot_password
-// router.get('/forgot_password', authCtrl.render_forgot_password_template);
 // POST auth/forgot_password
 router.post('/forgot_password', authCtrl.forgot_password);
+// POST auth/reset_password
+router.post('/reset_password', authCtrl.reset_password);
 // export the routes from this file
 module.exports = router;

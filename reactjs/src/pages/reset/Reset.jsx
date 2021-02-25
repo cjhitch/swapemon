@@ -1,17 +1,13 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
-import { verifyUser } from '../../store/auth/actions';
 import FormControl from '../../components/formControl';
 import Logo from '../../assets/images/logo.png';
+import API from '../../API';
 import './Reset.scss';
 
 const Reset = () => {
-	const logged = useSelector((state) => state.auth);
-	const dispatch = useDispatch();
 	const history = useHistory();
 	const [newPassword, setNewPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
@@ -22,20 +18,37 @@ const Reset = () => {
 			setNewPassword(val);
 		}
 	};
-	// useEffect(() => {
-	// 	if (logged.loggedIn) {
-	// 		history.push('/dashboard');
-	// 	}
-	// }, [logged]);
-	const login = (e) => {
+	const reset = async (e) => {
 		e.preventDefault();
-		dispatch(verifyUser(newPassword, confirmPassword));
+		if (newPassword !== '' && confirmPassword !== '') {
+			// eslint-disable-next-line
+			if (newPassword === confirmPassword) {
+				try {
+					const res = await API.post('/auth/reset_password', {
+						password: newPassword,
+					});
+					alert(res.data);
+					history.push('/login');
+				} catch (error) {
+					alert(error);
+				}
+			} else {
+				alert('Passwords do not match!');
+			}
+		} else {
+			// eslint-disable-next-line
+			if (newPassword === '') {
+				alert('new password cannot be left blank!');
+			} else {
+				alert('confirm password cannot be left blank!');
+			}
+		}
 	};
 	return (
 		<section className="Reset">
 			<Image src={Logo} />
 			<h1>Reset</h1>
-			<form onSubmit={login}>
+			<form onSubmit={reset}>
 				<FormControl
 					placeholder="new password"
 					value={newPassword}
@@ -50,11 +63,9 @@ const Reset = () => {
 					id="confirmPassword"
 					update={update}
 				/>
-				{/* <Link to="/dashboard"> */}
 				<Button type="submit" variant="secondary">
 					Submit
 				</Button>
-				{/* </Link> */}
 			</form>
 			<p>
 				<Link to="/forgot">Forgot Password?</Link> |{' '}
