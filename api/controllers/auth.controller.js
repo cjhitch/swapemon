@@ -52,18 +52,15 @@ exports.forgot_password = async (req, res) => {
 	});
 	const token = crypto.randomBytes(20).toString('hex');
 	user.update({
-		resetPasswordToken: token,
-		resetPasswordExpires: Date.now() + 3600000,
+		reset_password_token: token,
+		reset_password_expires: Date.now() + 3600000,
 	});
 	const data = {
 		to: user.email,
 		from: email,
-		template: 'forgot-password-email',
 		subject: 'Password help has arrived!',
-		context: {
-			url: `http://localhost:3000/auth/reset_password?token=${token}`,
-			name: `${user.dataValues.first_name} ${user.dataValues.last_name}`,
-		},
+		html: `<a>http://localhost:3000/auth/reset_password?token=${token}</a>`,
+		text: `http://localhost:3000/auth/reset_password?token=${token}`,
 	};
 	smtpTransport.sendMail(data, (err) => {
 		if (err) {

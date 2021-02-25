@@ -53,6 +53,7 @@ module.exports = (sequelize, DataTypes) => {
 			},
 			email: {
 				allowNull: { args: false, msg: 'Email is required' },
+				unique: { args: true, msg: 'Email is already in use' },
 				type: DataTypes.STRING,
 				validate: {
 					// is: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
@@ -76,6 +77,14 @@ module.exports = (sequelize, DataTypes) => {
 							'Password must be at least 8 characters, contain at least one number, one upper case, and one lower case',
 					},
 				},
+			},
+			reset_password_token: {
+				allowNull: true,
+				type: DataTypes.STRING,
+			},
+			reset_password_expires: {
+				allowNull: true,
+				type: DataTypes.DATE,
 			},
 		},
 		{

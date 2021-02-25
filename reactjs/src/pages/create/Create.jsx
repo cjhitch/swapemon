@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import container from './container';
 import FormControl from '../../components/formControl';
+import { createUser } from '../../store/users/actions';
+// import { createUser, updateUser } from '../../store/users/actions';
 import Logo from '../../assets/images/logo.png';
 import './Create.scss';
 
-const Create = ({ ...props }) => {
+const Create = () => {
+	const users = useSelector((state) => state.users);
+	const dispatch = useDispatch();
+	// eslint-disable-next-line
 	const history = useHistory();
 	const [user, setUser] = useState({
 		name: '',
@@ -22,26 +28,39 @@ const Create = ({ ...props }) => {
 	const update = (id, val) => {
 		setUser({ ...user, [id]: val });
 	};
-	const save = (e) => {
+	const save = async (e) => {
 		e.preventDefault();
-		const {
-			createUser,
-			updateUser,
-			match: {
-				params: { id },
-			},
-		} = props;
 		const { name, first, last, email, password } = user;
-		try {
-			if (id) {
-				updateUser({ id, name, first, last, email, password });
-			} else {
-				createUser({ name, first, last, email, password });
-			}
-			history.push('/login');
-		} catch (error) {
-			alert(error);
-		}
+		console.log(users);
+		dispatch(createUser(name, first, last, email, password)).catch(
+			alert('This username or email already exists, please try again')
+		);
+		history.push('/login');
+		// const {
+		// 	createUser,
+		// 	updateUser,
+		// 	match: {
+		// 		params: { id },
+		// 	},
+		// } = props;
+		// if (id) {
+		// 	updateUser({
+		// 		id,
+		// 		name,
+		// 		first,
+		// 		last,
+		// 		email,
+		// 		password,
+		// 	}).then((err) => console.log(err));
+		// 	// history.push('/login');
+		// } else {
+		// 	createUser({ name, first, last, email, password }).then((err) =>
+		// 		console.log(err)
+		// 	);
+		// 	// history.push('/login');
+		// }
+		// console.log(props);
+		// history.push('/login');
 		// TODO: there needs to be error handling on this to ensure user was actually created
 	};
 	return (

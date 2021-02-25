@@ -43,9 +43,9 @@ const Dashboard = () => {
 	// seed data - to later be replaced with store
 	const [myPokemon, setMyPokemon] = useState([]);
 	const pokeData = useSelector((state) => state.usermons);
-	const logged = useSelector((state) => state.auth);
+	// const logged = useSelector((state) => state.auth);
 	const dispatch = useDispatch();
-	const history = useHistory();
+	// const history = useHistory();
 	// useEffect(() => {
 	// 	if (!logged.loggedIn) {
 	// 		history.push('/login');
