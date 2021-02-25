@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Autocomplete from 'react-autocomplete';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -42,7 +43,14 @@ const Dashboard = () => {
 	// seed data - to later be replaced with store
 	const [myPokemon, setMyPokemon] = useState([]);
 	const pokeData = useSelector((state) => state.usermons);
+	// const logged = useSelector((state) => state.auth);
 	const dispatch = useDispatch();
+	// const history = useHistory();
+	// useEffect(() => {
+	// 	if (!logged.loggedIn) {
+	// 		history.push('/login');
+	// 	}
+	// }, [logged]);
 	useEffect(() => {
 		// TODO: this needs a better way to find user
 		dispatch(fetchUsermons('790fe8b3-3ce3-444a-99c2-6eca0d28c65a'));
