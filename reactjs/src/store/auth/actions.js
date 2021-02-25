@@ -13,9 +13,10 @@ export const verifyUser = (username, password) => async (dispatch) => {
 	dispatch({ loggedIn, type: SET_LOGGED_IN, user });
 };
 
-export const logout = () => async (dispatch) => {
+export const logout = () => {
+	console.log('hitting logout');
 	localStorage.removeItem('token');
-	dispatch({ loggedIn: false, type: SET_LOGGED_IN, user: {} });
+	return { loggedIn: false, type: SET_LOGGED_IN, user: {} };
 };
 
 // export const reset = (email) => async (dispatch) => {

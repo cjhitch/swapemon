@@ -36,6 +36,14 @@ exports.formLogin = async (req, res) => {
 				{ id: user.dataValues.id },
 				process.env.SECRET
 			);
+			Users.update(
+				{
+					access_token: token,
+				},
+				{
+					where: { id: user.dataValues.id },
+				}
+			);
 			res.json({ token, loggedIn: true, user: myUser });
 		}
 	} catch (e) {
@@ -85,11 +93,11 @@ exports.reset_password = async (req, res, next) => {
 		);
 		console.log(user);
 		const hash = bcrypt.hashSync(req.body.password, 7);
-		Users.update(
+		await Users.update(
 			{
 				password: hash,
-				reset_password_token: undefined,
-				reset_password_expires: undefined,
+				reset_password_token: null,
+				reset_password_expires: null,
 			},
 			{
 				where: { id: user.dataValues.id },
