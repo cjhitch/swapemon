@@ -1,22 +1,34 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import FormControl from '../../components/formControl';
 import Logo from '../../assets/images/logo.png';
+import API from '../../API';
 import './Forgot.scss';
 
 const Forgot = () => {
+	const history = useHistory();
 	const [email, setEmail] = useState('');
 	const update = (id, val) => {
 		setEmail(val);
 		return id;
 	};
+	const forgot = async (e) => {
+		e.preventDefault();
+		try {
+			const res = await API.post('/auth/forgot_password', { email });
+			alert(res.data);
+			history.push('/login');
+		} catch (error) {
+			alert(error);
+		}
+	};
 	return (
 		<section className="Forgot">
 			<Image src={Logo} />
 			<h1>Forgot Your Password?</h1>
-			<form action="">
+			<form onSubmit={forgot}>
 				<p>Enter email address to reset password</p>
 				<FormControl
 					placeholder="email@email.com"
@@ -25,9 +37,9 @@ const Forgot = () => {
 					id="email"
 					update={update}
 				/>
-				<Link to="/login">
-					<Button variant="secondary">Submit</Button>
-				</Link>
+				<Button type="submit" variant="secondary">
+					Submit
+				</Button>
 			</form>
 			<p>
 				<Link to="/login">Ready to Login?</Link> |{' '}

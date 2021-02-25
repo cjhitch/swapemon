@@ -38,7 +38,15 @@ export const createUser = (user) => {
 	const id = v4();
 	return {
 		types: [ADD_USER_PENDING, ADD_USER_SUCCESS, ADD_USER_ERROR],
-		callAPI: () => API.post('/users', { id, ...user }),
+		callAPI: () =>
+			API.post('/users', {
+				id,
+				username: user.name,
+				first_name: user.first,
+				last_name: user.last,
+				email: user.email,
+				password: user.password,
+			}),
 		payload: { id },
 	};
 };
