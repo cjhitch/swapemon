@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'react-bootstrap/Image';
 import './TypePills.scss';
 
-const TypePills = ({ type, name, variant, clickable }) => {
+const TypePills = ({
+	type,
+	name,
+	variant,
+	clickable,
+	newPokemon,
+	setNewPokemon,
+}) => {
 	const [clicked, setClicked] = useState(false);
 	const imgPath = () => {
 		try {
@@ -13,23 +20,57 @@ const TypePills = ({ type, name, variant, clickable }) => {
 		}
 	};
 	const img = imgPath();
-	const clickHandler = () => {
+	useEffect(() => {
+		if (newPokemon && newPokemon.moves) {
+			newPokemon.moves.forEach((move) => {
+				if (move === name) {
+					setClicked(true);
+				}
+			});
+		}
+		// this should not be watching clicked, should only be watching initial
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [newPokemon]);
+	const clickHandler = (move) => {
+		console.log('click handler running');
 		if (clickable) {
-			setClicked(!clicked);
+			console.log(move);
+			const index = newPokemon.moves.indexOf(move);
+			const newMoves = newPokemon.moves;
+			if (index !== -1) {
+				console.log('removing move: ', newMoves[index]);
+				newMoves.splice(index, 1);
+				setClicked(!clicked);
+			} else {
+				// eslint-disable-next-line
+				if (newMoves.length < 4) {
+					newMoves.push(move);
+					setClicked(!clicked);
+				} else {
+					// TODO: replace alert
+					// eslint-disable-next-line no-alert
+					alert(
+						'cannot select anymore moves, please deselect one first!'
+					);
+				}
+			}
+			setNewPokemon({ ...newPokemon, moves: newMoves });
 		}
 	};
 	return (
 		<button
 			value={clicked}
-			onClick={clickHandler}
+			onClick={() => {
+				clickHandler(name);
+			}}
 			type="button"
 			className={`TypePills 
 				${variant !== 'pill' ? 'round' : ''}
-				${type} ${clickable ? 'clickable' : ''}
+				${type} ${!clickable ? '' : 'clickable'}
 			`}
 		>
 			<Image src={img ? img.default : ''} />
-			{variant === 'pill' && <span>{name}</span>}
+			{variant === 'pill' && <>{name}</>}
 		</button>
 	);
 };

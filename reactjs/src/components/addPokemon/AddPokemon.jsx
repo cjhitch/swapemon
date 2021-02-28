@@ -30,6 +30,8 @@ const AddPokemon = ({ id, pokeId }) => {
 	const [isDisabled, setIsDisabled] = useState(true);
 	const [btnDisabled, setBtnDisabled] = useState(true);
 	const [resetSelect, setResetSelect] = useState(false);
+	// const [clickable, setClickable] = useState(true);
+	// variable to hold our new pokemon or editable pokemon as it is selected and built
 	const [newPokemon, setNewPokemon] = useState({
 		name: '',
 		dex: '',
@@ -47,6 +49,7 @@ const AddPokemon = ({ id, pokeId }) => {
 		spd: '',
 		level: 1,
 	});
+	// data when a pokemon is selected from the autcomplete - this sets the available gender, ability, and moves for that pokemon from the corresponding moves and gender tress
 	const [pickedData, setPickedData] = useState({
 		gender: '',
 		ability: '',
@@ -59,7 +62,6 @@ const AddPokemon = ({ id, pokeId }) => {
 		if (pokeId) {
 			if (!pokeData.isLoading && !moves.isLoading && !pokemon.isLoading) {
 				const editPoke = pokeData.byId[pokeId].data;
-				console.log(editPoke.ivs[0].HP);
 				setIsDisabled(false);
 				setNewPokemon({
 					name: editPoke.name,
@@ -84,10 +86,6 @@ const AddPokemon = ({ id, pokeId }) => {
 		// this should only ever run if pokeId is supplied never anytime else
 		// eslint-disable-next-line
 	}, [pokeId]);
-
-	useEffect(() => {
-		console.log(newPokemon);
-	}, [newPokemon]);
 
 	// check if the correct items are selected in state - disable/enable button depending
 	useEffect(() => {
@@ -121,12 +119,13 @@ const AddPokemon = ({ id, pokeId }) => {
 			if (poke.hidden_ability.length !== 0) {
 				abilArr.push(poke.hidden_ability);
 			}
-			// this is not efficient currently but should be better when pulling from the database
+			// pull the move by key to push to the array and pass into the pickeddata
 			const moveArr = [];
 			poke.egg_moves.forEach((move) => {
 				const newMove = { [getType(move)]: move };
 				moveArr.push(newMove);
 			});
+			// set a data block to be passed into the pickeddata
 			const newData = {
 				gender: poke.gender,
 				abilities: abilArr,
@@ -134,6 +133,7 @@ const AddPokemon = ({ id, pokeId }) => {
 			};
 			setPickedData(newData);
 		} else {
+			// if it fails the check - reset the picked data
 			setResetSelect(true);
 			setPickedData({
 				gender: '',
@@ -372,6 +372,9 @@ const AddPokemon = ({ id, pokeId }) => {
 						type={Object.keys(move)[0].toLowerCase()}
 						name={Object.values(move)[0]}
 						clickable
+						newPokemon={newPokemon}
+						setNewPokemon={setNewPokemon}
+						// initial={checkEdit(Object.values(move)[0])}
 					/>
 				))}
 				<FormControl

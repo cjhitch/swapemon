@@ -25,6 +25,8 @@ const Login = () => {
 		if (logged.loggedIn) {
 			history.push('/dashboard');
 		}
+		// this should not be watching history, should only be watching logged
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [logged]);
 	const login = (e) => {
 		e.preventDefault();

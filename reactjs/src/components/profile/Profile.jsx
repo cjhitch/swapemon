@@ -53,11 +53,17 @@ const Profile = () => {
 		if (formState.curPw === 'pass123') {
 			if (formState.newPw === formState.conPw) {
 				// set the password here once db is set up
+				// TODO: replace alert
+				// eslint-disable-next-line no-alert
 				alert('password changed!');
 			} else {
+				// TODO: replace alert
+				// eslint-disable-next-line no-alert
 				alert('passwords do not match');
 			}
 		} else {
+			// TODO: replace alert
+			// eslint-disable-next-line no-alert
 			alert("current password doesn't match");
 		}
 	};
