@@ -139,7 +139,7 @@ const Dashboard = () => {
 	return (
 		<section className="Dashboard">
 			<div>
-				<h1>Add Pokemon</h1>
+				<h1>{pokeData ? 'Edit' : 'Add'} Pokemon</h1>
 				<AddPokemon id="lg" pokeId={pokeId} />
 				<div className="buttons filter-modal">
 					<Button

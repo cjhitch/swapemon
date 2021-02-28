@@ -13,10 +13,8 @@ import './AddPokemon.scss';
 
 const AddPokemon = ({ id, pokeId }) => {
 	const pokeData = useSelector((state) => state.usermons);
-	const pokes = useSelector((state) => state.pokemon);
-	const pokeMoves = useSelector((state) => state.moves);
-	const [moves, setMoves] = useState([]);
-	const [pokemon, setPokemon] = useState([]);
+	const pokemon = useSelector((state) => state.pokemon);
+	const moves = useSelector((state) => state.moves);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
@@ -25,14 +23,6 @@ const AddPokemon = ({ id, pokeId }) => {
 		// this should only run once to run similar to componentDidMount()
 		// eslint-disable-next-line
 	}, []);
-	useEffect(() => {
-		if (pokes.allIds.length > 0) {
-			setPokemon(pokes.byId);
-		}
-		if (pokeMoves.allIds.length > 0) {
-			setMoves(pokeMoves.byId);
-		}
-	}, [pokes, pokeMoves]);
 	// TODO: this will be once the user logged in
 	const username = 'JamesEarlJones';
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
@@ -63,11 +53,14 @@ const AddPokemon = ({ id, pokeId }) => {
 		hiddenAbility: '',
 		moves: [],
 	});
+
 	// if the object has been passed in that means this is being edited - set the state to existing
 	useEffect(() => {
 		if (pokeId) {
-			if (pokeData.allIds.length > 0) {
+			if (!pokeData.isLoading && !moves.isLoading && !pokemon.isLoading) {
 				const editPoke = pokeData.byId[pokeId].data;
+				console.log(editPoke.ivs[0].HP);
+				setIsDisabled(false);
 				setNewPokemon({
 					name: editPoke.name,
 					dex: editPoke.dex,
@@ -76,20 +69,26 @@ const AddPokemon = ({ id, pokeId }) => {
 					ability: editPoke.ability,
 					shiny: editPoke.shiny,
 					types: editPoke.types,
-					moves: editPoke.eggMoves,
-					hp: editPoke.ivs.HP,
-					atk: editPoke.ivs.Atk,
-					def: editPoke.ivs.Def,
-					spAtk: editPoke.ivs.SpAtk,
-					spDef: editPoke.ivs.SpDef,
-					spd: editPoke.ivs.Spd,
+					moves: !editPoke.eggMoves ? [] : editPoke.eggMoves,
+					hp: !editPoke.ivs[0].HP ? '' : editPoke.ivs[0].HP,
+					atk: !editPoke.ivs[1].Atk ? '' : editPoke.ivs[1].Atk,
+					def: !editPoke.ivs[2].Def ? '' : editPoke.ivs[2].Def,
+					spAtk: !editPoke.ivs[3].SpAtk ? '' : editPoke.ivs[3].SpAtk,
+					spDef: !editPoke.ivs[4].SpDef ? '' : editPoke.ivs[4].SpDef,
+					spd: !editPoke.ivs[5].Spd ? '' : editPoke.ivs[5].Spd,
 					level: editPoke.level,
 				});
+				setAutoValue(editPoke.name);
 			}
 		}
 		// this should only ever run if pokeId is supplied never anytime else
 		// eslint-disable-next-line
 	}, [pokeId]);
+
+	useEffect(() => {
+		console.log(newPokemon);
+	}, [newPokemon]);
+
 	// check if the correct items are selected in state - disable/enable button depending
 	useEffect(() => {
 		if (newPokemon.name !== '') {
@@ -109,13 +108,14 @@ const AddPokemon = ({ id, pokeId }) => {
 
 	// run through the data and get types based on the move name - this will be fixed in the database
 	const getType = (move) => {
-		return moves[move].data.type;
+		return moves.byId[move].data.type;
 	};
 
 	// set the picked data to set for the dropdowns
 	useEffect(() => {
-		if (pokemon[newPokemon.name]) {
-			const poke = pokemon[newPokemon.name].data;
+		// console.log(pokemon[newPokemon.name]);
+		if (pokemon.byId[newPokemon.name]) {
+			const poke = pokemon.byId[newPokemon.name].data;
 			setResetSelect(false);
 			const abilArr = poke.ability.filter((abil) => abil.length !== 0);
 			if (poke.hidden_ability.length !== 0) {
@@ -133,14 +133,6 @@ const AddPokemon = ({ id, pokeId }) => {
 				moves: moveArr,
 			};
 			setPickedData(newData);
-			setNewPokemon({
-				...newPokemon,
-				dex: poke.dex,
-			});
-			setNewPokemon({
-				...newPokemon,
-				types: poke.types,
-			});
 		} else {
 			setResetSelect(true);
 			setPickedData({
@@ -184,7 +176,7 @@ const AddPokemon = ({ id, pokeId }) => {
 	// if the pokemon is a complete match it sets the state value for name otherwise it clears the value
 	const changeHandler = (e, val) => {
 		setAutoValue(val);
-		Object.keys(pokemon).forEach((poke) => {
+		Object.keys(pokemon.byId).forEach((poke) => {
 			if (val.toLowerCase() === poke.toString().toLowerCase()) {
 				setNewPokemon({ ...newPokemon, name: properNameCase(val) });
 				setIsDisabled(false);
@@ -220,12 +212,7 @@ const AddPokemon = ({ id, pokeId }) => {
 				{ SpDef: newPokemon.spDef },
 				{ Spd: newPokemon.spd },
 			],
-			eggMoves: [
-				{ normal: 'Belly Drum' },
-				{ dark: 'Bite' },
-				{ dragon: 'Dragon Tail' },
-				{ flying: 'Wing Attack' },
-			],
+			eggMoves: newPokemon.moves,
 		};
 		if (pokeId) {
 			const editPoke = { id: pokeId, ...addPoke };
@@ -244,7 +231,7 @@ const AddPokemon = ({ id, pokeId }) => {
 					inputProps={{
 						placeholder: 'Select Pokemon',
 					}}
-					items={Object.keys(pokemon)}
+					items={Object.keys(pokemon.byId)}
 					getItemValue={(item) => item}
 					shouldItemRender={renderPokemonName}
 					renderMenu={(item) => (

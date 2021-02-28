@@ -176,7 +176,12 @@
 	input {
 		appearance: none;
 		&:disabled {
-			opacity: 0.25;
+			&:not([name='name']) {
+				opacity: 0.25;
+			}
+			&[name='name'] {
+				opacity: 0.85;
+			}
 			// filter: brightness(0.15);
 		}
 	}
