@@ -24,18 +24,17 @@ exports.formLogin = async (req, res) => {
 	try {
 		const user = await Users.findOne({ where: { username } });
 		const truthyPW = bcrypt.compareSync(password, user.dataValues.password);
+		let myUser = {};
+		let token;
 		if (truthyPW) {
-			const myUser = {
+			myUser = {
 				id: user.dataValues.id,
 				username: user.dataValues.username,
 				first_name: user.dataValues.first_name,
 				last_name: user.dataValues.last_name,
-				email: user.dataValues.last_name,
+				email: user.dataValues.email,
 			};
-			const token = jwt.sign(
-				{ id: user.dataValues.id },
-				process.env.SECRET
-			);
+			token = jwt.sign({ id: user.dataValues.id }, process.env.SECRET);
 			Users.update(
 				{
 					access_token: token,
@@ -44,8 +43,8 @@ exports.formLogin = async (req, res) => {
 					where: { id: user.dataValues.id },
 				}
 			);
-			res.json({ token, loggedIn: true, user: myUser });
 		}
+		res.json({ token, loggedIn: true, user: myUser });
 	} catch (e) {
 		// log the error
 		error(e);
