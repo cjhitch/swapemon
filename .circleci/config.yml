@@ -1,9 +1,7 @@
-version: 2
-jobs:
-  dredd:
-    docker:
-      - image: 'circleci/node:latest'
-    steps:
-      - checkout
-      - run: npm install dredd@14.0.0 --global
-      - run: dredd
+version: 2.1
+orbs:
+  node: circleci/node@3.0.0
+workflows:
+  node-tests:
+    jobs:
+      - node/test
