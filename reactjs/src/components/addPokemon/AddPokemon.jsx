@@ -371,6 +371,7 @@ const AddPokemon = ({ id, pokeId }) => {
 						key={Object.values(move)[0]}
 						type={Object.keys(move)[0].toLowerCase()}
 						name={Object.values(move)[0]}
+						clickable
 					/>
 				))}
 				<FormControl
