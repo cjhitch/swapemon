@@ -5,7 +5,30 @@ HOST: https://polls.apiblueprint.org/
 
 Swapemon API allows to read, edit, update, and delete various pokemon, moves, balls, and users.
 
+## Auth Collection [/auth]
 
+### Form Login [POST]
+
++ Request (application/json)
+
+        {
+            "username": "hitch",
+            "password": "$2b$07$1VKCirhrWI5IOeoQzsZfpOhu0p4KSwqhIIp2803gvN2WPcIoCKpSC"
+        }
+    
++ Response 200 (application/json)
+
+        {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc5MGZlOGIzLTNjZTMtNDQ0YS05OWMyLTZlY2EwZDI4YzY1YSIsImlhdCI6MTYxNDQ4OTU5OX0.q95gfWBYuQt_d1PlR9sJRgSXvCThR9faeWl9eM-yQyk",
+            "loggedIn": true,
+            "user": {
+                "id": "790fe8b3-3ce3-444a-99c2-6eca0d28c65a",
+                "username": "fredflintstone",
+                "first_name":"Fred",
+                "last_name": "Flintstone",
+                "email": "swapemon@gmail.com",
+            }
+        }
 
 ## User Collection [/users]
 
