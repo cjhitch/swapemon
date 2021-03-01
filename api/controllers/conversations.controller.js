@@ -10,6 +10,7 @@ exports.getConversations = async (req, res) => {
 			{
 				model: Messages,
 				required: true,
+				attributes: ['id', 'from', 'message'],
 			},
 		],
 		where: { userId },

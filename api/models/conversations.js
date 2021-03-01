@@ -33,6 +33,11 @@ module.exports = (sequelize, DataTypes) => {
 					isUUID: { args: 4, msg: 'Id not valid, please try again' },
 				},
 			},
+			username: {
+				type: DataTypes.STRING,
+				unique: { args: true, msg: 'Username is already in use' },
+				allowNull: { args: false, msg: 'Username is required' },
+			},
 		},
 		{
 			sequelize,
