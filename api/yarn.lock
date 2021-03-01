@@ -507,6 +507,11 @@ dottie@^2.0.0:
   resolved "https://registry.yarnpkg.com/dottie/-/dottie-2.0.2.tgz#cc91c0726ce3a054ebf11c55fbc92a7f266dd154"
   integrity sha512-fmrwR04lsniq/uSr8yikThDTrM7epXHBAAjH9TbeH3rEA8tdCO7mRzB9hdmdGyJCxF8KERo9CITcm3kGuoyMhg==
 
+dread@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/dread/-/dread-2.3.0.tgz#a8a7ff3f610c835ae9c63620d3c961e6ac0c498b"
+  integrity sha512-lDQS42YVLTjeda+dy4dmcya+L4Utz6snOIcpq5fTvauOEnnGc9Hsj4n6efeQVstq+Y4Lw5k80OcHabjPis6m5Q==
+
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"

@@ -4,7 +4,7 @@ const router = require('express').Router();
 const authCtrl = require('../controllers/auth.controller');
 // import the protect middleware
 const protectedRoute = require('../utils/protectedRoute');
-// // POST /users
+// POST /auth
 router.post('/', protectedRoute, authCtrl.formLogin);
 // POST auth/forgot_password
 router.post('/forgot_password', authCtrl.forgot_password);

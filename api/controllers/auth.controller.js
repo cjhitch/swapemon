@@ -24,6 +24,7 @@ exports.formLogin = async (req, res) => {
 	try {
 		const user = await Users.findOne({ where: { username } });
 		const truthyPW = bcrypt.compareSync(password, user.dataValues.password);
+
 		let token;
 		if (truthyPW) {
 			token = jwt.sign({ id: user.dataValues.id }, process.env.SECRET);
@@ -37,6 +38,7 @@ exports.formLogin = async (req, res) => {
 			);
 		}
 		res.json({ token, loggedIn: true });
+
 	} catch (e) {
 		// log the error
 		error(e);

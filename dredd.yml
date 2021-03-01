@@ -1,15 +1,17 @@
 color: true
+reporter: apiary
+custom:
+  apiaryApiKey: 2ba4d8682165637884119672cd522eb9
+  apiaryApiName: swapemon
 dry-run: null
 hookfiles: null
 language: nodejs
 require: null
-server: npm start
+server: yarn start
 server-wait: 3
 init: false
-custom: {}
 names: false
 only: []
-reporter: apiary
 output: []
 header: []
 sorted: false
