@@ -42,9 +42,9 @@ const FormControl = ({
 					>
 						<option disabled>{placeholder}</option>
 						{options &&
-							options.map((opt) => (
-								<option key={opt}>{opt}</option>
-							))}
+							options
+								.filter((opt) => opt !== 'undefined undefined%')
+								.map((opt) => <option key={opt}>{opt}</option>)}
 					</Form.Control>
 				</Form.Group>
 			) : (

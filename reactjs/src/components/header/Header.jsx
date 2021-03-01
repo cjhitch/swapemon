@@ -20,6 +20,9 @@ const Header = () => {
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="mx-auto-sm ml-auto-md">
+						<Link className="px-4 nav-link" to="/">
+							Home
+						</Link>
 						{logged.loggedIn ? (
 							<>
 								<Link className="px-4 nav-link" to="/dashboard">
@@ -30,6 +33,9 @@ const Header = () => {
 									to="/profile"
 								>
 									Profile
+								</Link>
+								<Link className="px-4 nav-link" to="/about">
+									About
 								</Link>
 								<Button
 									onClick={(e) => {
@@ -43,13 +49,14 @@ const Header = () => {
 								</Button>
 							</>
 						) : (
-							<Button
-								onClick={(e) => {
-									e.preventDefault();
-								}}
-							>
-								Login
-							</Button>
+							<>
+								<Link className="px-4 nav-link" to="/about">
+									About
+								</Link>
+								<Link className="px-4 nav-link" to="/login">
+									Login
+								</Link>
+							</>
 						)}
 					</Nav>
 				</Navbar.Collapse>

@@ -9,7 +9,7 @@ import callAPI from './helpers/callAPIMiddleware';
 
 // pull our reducers
 import auth from './auth/reducer';
-import items from './items/reducer';
+import conversations from './conversations/reducer';
 import users from './users/reducer';
 import usermons from './usermons/reducer';
 import pokemon from './pokemon/reducer';
@@ -18,7 +18,7 @@ import moves from './moves/reducer';
 // combine multiple reducers into one
 const rootReducer = combineReducers({
 	auth,
-	items,
+	conversations,
 	users,
 	usermons,
 	pokemon,

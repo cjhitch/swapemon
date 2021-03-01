@@ -108,6 +108,8 @@ const Trade = ({ myTrades }) => {
 		setMyShow(false);
 	};
 	const tradeHandler = () => {
+		// TODO: replace alert
+		// eslint-disable-next-line no-alert
 		alert('needs to be set up with store but your pokemon were traded!');
 	};
 	return (

@@ -18,9 +18,13 @@ const Forgot = () => {
 		e.preventDefault();
 		try {
 			const res = await API.post('/auth/forgot_password', { email });
+			// TODO: replace alert
+			// eslint-disable-next-line no-alert
 			alert(res.data);
 			history.push('/login');
 		} catch (error) {
+			// TODO: replace alert
+			// eslint-disable-next-line no-alert
 			alert(error);
 		}
 	};

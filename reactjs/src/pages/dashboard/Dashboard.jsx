@@ -25,7 +25,7 @@ const Dashboard = () => {
 		gender: '',
 		ability: '',
 		ball: '',
-		// going to filter off this later
+		// going to filter off this later as well as the others
 		// level: '',
 		// maxhp: '',
 		// maxatk: '',
@@ -139,8 +139,8 @@ const Dashboard = () => {
 	return (
 		<section className="Dashboard">
 			<div>
-				<h1>Add Pokemon</h1>
-				<AddPokemon id="lg" pokeId={pokeId} />
+				<h1>{pokeData ? 'Edit' : 'Add'} Pokemon</h1>
+				<AddPokemon size="lg" pokeId={pokeId} />
 				<div className="buttons filter-modal">
 					<Button
 						className="add"

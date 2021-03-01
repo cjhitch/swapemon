@@ -10,11 +10,9 @@ module.exports = {
 				type: Sequelize.UUID,
 			},
 			userId: {
-				allowNull: false,
 				type: Sequelize.UUID,
 			},
 			name: {
-				allowNull: false,
 				type: Sequelize.STRING,
 			},
 			shiny: {
@@ -22,11 +20,9 @@ module.exports = {
 				type: Sequelize.BOOLEAN,
 			},
 			dex: {
-				allowNull: false,
 				type: Sequelize.STRING,
 			},
 			ball: {
-				allowNull: false,
 				type: Sequelize.STRING,
 			},
 			level: {
@@ -34,15 +30,12 @@ module.exports = {
 				type: Sequelize.INTEGER,
 			},
 			types: {
-				allowNull: false,
 				type: Sequelize.ARRAY(Sequelize.STRING),
 			},
 			gender: {
-				allowNull: false,
 				type: Sequelize.ARRAY(Sequelize.STRING),
 			},
 			ability: {
-				allowNull: false,
 				type: Sequelize.STRING,
 			},
 			hp: {

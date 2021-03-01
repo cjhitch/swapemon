@@ -1,4 +1,3 @@
-import { v4 } from 'uuid/';
 import API from '../../API';
 import {
 	REQ_USERMONS_PENDING,
@@ -36,13 +35,12 @@ export const fetchUsermons = (userId) => ({
 	},
 });
 
-export const createUsermon = (userId, pokemon) => {
+export const createUsermon = (pokemon) => {
 	// create a uuid for this pokemon so that we can use it in the reducers for pending and loading
-	const id = v4();
+	console.log('pokemon: ', pokemon);
 	return {
 		types: [ADD_USERMON_PENDING, ADD_USERMON_SUCCESS, ADD_USERMON_ERROR],
-		callAPI: () =>
-			API.post(`/usermons/?userId=${userId}`, { id, ...pokemon }),
+		callAPI: () => API.post('/usermons', { pokemon }),
 		payload: { pokemon },
 	};
 };
@@ -60,17 +58,17 @@ export const fetchUsermon = (pokeId) => ({
 	payload: { pokeId },
 });
 
-export const updateUsermon = (username, pokemon) => ({
+export const updateUsermon = (pokemon) => ({
 	types: [
 		UPDATE_USERMON_PENDING,
 		UPDATE_USERMON_SUCCESS,
 		UPDATE_USERMON_ERROR,
 	],
-	callAPI: () => API.post(`/usermons/${pokemon.id}`, pokemon),
+	callAPI: () => API.put(`/usermons/${pokemon.id}`, pokemon),
 	payload: { id: pokemon.id },
 });
 
-export const deleteUsermon = (username, id) => ({
+export const deleteUsermon = (id) => ({
 	types: [
 		DELETE_USERMON_PENDING,
 		DELETE_USERMON_SUCCESS,

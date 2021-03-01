@@ -27,19 +27,29 @@ const Reset = () => {
 					const res = await API.post('/auth/reset_password', {
 						password: newPassword,
 					});
+					// TODO: replace alert
+					// eslint-disable-next-line no-alert
 					alert(res.data);
 					history.push('/login');
 				} catch (error) {
+					// TODO: replace alert
+					// eslint-disable-next-line no-alert
 					alert(error);
 				}
 			} else {
+				// TODO: replace alert
+				// eslint-disable-next-line no-alert
 				alert('Passwords do not match!');
 			}
 		} else {
 			// eslint-disable-next-line
 			if (newPassword === '') {
+				// TODO: replace alert
+				// eslint-disable-next-line no-alert
 				alert('new password cannot be left blank!');
 			} else {
+				// TODO: replace alert
+				// eslint-disable-next-line no-alert
 				alert('confirm password cannot be left blank!');
 			}
 		}

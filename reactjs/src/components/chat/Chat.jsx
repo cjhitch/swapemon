@@ -1,100 +1,90 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import { BiTrash } from 'react-icons/bi';
+import API from '../../API';
+import FormControl from '../formControl';
 import './Chat.scss';
 
-const Chat = ({ conversationId }) => {
-	// this will be replaced by the store and db
-	const chat = [
-		{
-			id: 'a54aa11a-2597-41a4-965a-b96350261e24',
-			messages: [
-				{
-					user: 0,
-					msg: 'Hey do you have any dream balls to trade for?',
-				},
-				{
-					user: 1,
-					msg: 'No sorry is there anything else you want?',
-				},
-				{
-					user: 0,
-					msg: "I am at work I'll check when I get home",
-				},
-				{
-					user: 0,
-					msg: "Sorry I couldn't find any",
-				},
-			],
-		},
-		{
-			id: 'b9d2c918-ad14-41fe-8877-5143bff92463',
-			messages: [
-				{
-					user: 1,
-					msg: 'Hey do you have any safari balls to trade for?',
-				},
-				{
-					user: 0,
-					msg: 'Yes does tonight work?',
-				},
-				{
-					user: 1,
-					msg: "Yes! Let's trade when I get home tonight",
-				},
-				{
-					user: 1,
-					msg: 'Did you still have time to trade tonight?',
-				},
-			],
-		},
-		{
-			id: '36d314e3-03c9-4e1c-9e48-45f71642b8c7',
-			messages: [
-				{
-					user: 0,
-					msg: 'Hey do you have any moon balls to trade for?',
-				},
-				{
-					user: 1,
-					msg: "Here's my list let me know what you want",
-				},
-				{
-					user: 0,
-					msg: "Cool I'd like your charmander in the moon ball",
-				},
-				{
-					user: 0,
-					msg:
-						'Would you be willing to trade one of your Moon Bulbasaur?',
-				},
-			],
-		},
-	];
+const Chat = ({ chat, submitHandler }) => {
+	const id = useSelector((state) => state.auth.id);
+	const [input, setInput] = useState('');
+	const [show, setShow] = useState(false);
+	const [clicked, setClicked] = useState('');
+
+	const update = (inId, val) => {
+		setInput(val);
+	};
+	useEffect(() => {
+		console.log(chat);
+	}, [chat]);
 	return (
-		<div className="Chat">
-			{chat.map(
-				(convo) =>
-					convo.id === conversationId &&
-					convo.messages.map((msg, index) => (
+		<>
+			<div className="Chat">
+				{chat[0].id !== '' &&
+					chat.map((msg) => (
 						<p
-							// eslint-disable-next-line
-							key={`${convo.id}-msg-${index}`}
-							className={msg.user === 0 ? 'user' : ''}
+							key={msg.id}
+							className={msg.from === id ? 'user' : ''}
 						>
-							{msg.msg}
+							{msg.message}
+							<BiTrash
+								onClick={() => {
+									setClicked(msg.id);
+									setShow(true);
+								}}
+							/>
 						</p>
-					))
+					))}
+			</div>
+			{chat[0].id !== '' && (
+				<>
+					<span>Send New Message: </span>
+					<form onSubmit={(e) => submitHandler(e, input)}>
+						<FormControl
+							value={input}
+							update={update}
+							placeholder="new message"
+						/>
+					</form>
+				</>
 			)}
-		</div>
+			<Modal show={show} onHide={() => setShow(false)}>
+				<Modal.Header closeButton>
+					<Modal.Title>Are you sure you want to delete?</Modal.Title>
+				</Modal.Header>
+
+				<Modal.Footer>
+					<Button onClick={() => setShow(false)} variant="tertiary">
+						Close
+					</Button>
+					<Button
+						onClick={async () => {
+							await API.delete(`/messages/${clicked}`);
+							setShow(false);
+							window.location.reload(false);
+						}}
+						variant="secondary"
+					>
+						Delete
+					</Button>
+				</Modal.Footer>
+			</Modal>
+		</>
 	);
 };
 
 Chat.propTypes = {
-	conversationId: PropTypes.string,
-};
-
-Chat.defaultProps = {
-	conversationId: '',
+	chat: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.string,
+			from: PropTypes.string,
+			message: PropTypes.string,
+		})
+	).isRequired,
+	submitHandler: PropTypes.func.isRequired,
 };
 
 export default Chat;

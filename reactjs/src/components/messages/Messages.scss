@@ -8,13 +8,13 @@
 	color: $light;
 	border-radius: 0.625rem;
 	display: grid;
-	grid-template-areas: 'title title' 'user msg';
+	grid-template-areas: 'title title' 'user msg' ' . inp ';
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto 1fr;
 	grid-column-gap: 1rem;
 	@media (max-width: 47.9375rem) {
 		grid-template-columns: 1fr;
-		grid-template-areas: 'title' 'user' 'msg';
+		grid-template-areas: 'title' 'user' 'msg' 'inp';
 	}
 	h1 {
 		grid-area: title;
@@ -38,5 +38,11 @@
 		p {
 			margin-left: 0.5rem;
 		}
+	}
+	> span {
+		padding-top: 0.75rem;
+	}
+	.FormControl {
+		grid-area: inp;
 	}
 }
