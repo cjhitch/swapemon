@@ -113,3 +113,34 @@ exports.reset_password = async (req, res, next) => {
 		});
 	}
 };
+
+exports.contactForm = async (req, res) => {
+	try {
+		// get the users data
+		const { inputs } = req.body;
+		const data = {
+			to: email,
+			from: inputs.email,
+			subject: 'Contact Form Submission',
+			text: `
+			${inputs.name} would like some additional information!
+			
+			Phone: ${inputs.phone}
+			Email: ${inputs.email},
+			they wrote and left us this message: 
+			${inputs.message}`,
+		};
+		// eslint-disable-next-line
+		smtpTransport.sendMail(data, (err) => {
+			if (err) {
+				return res.status(500).json(err);
+			}
+		});
+		return res.status(200).json('Contact form submitted!');
+	} catch (err) {
+		res.status(500).send({
+			error: err,
+			message: 'Something went wrong',
+		});
+	}
+};

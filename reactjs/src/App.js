@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AuthRoute from './components/authRoute';
 import Home from './pages/home';
+import About from './pages/about';
 import Login from './pages/login';
 import Forgot from './pages/forgot';
 import Create from './pages/create';
@@ -10,6 +11,8 @@ import Profile from './pages/profile';
 import Trades from './pages/trades';
 import Reset from './pages/reset';
 import Form from './pages/form';
+import Footer from './components/footer';
+import Header from './components/header';
 
 import './App.scss';
 
@@ -33,6 +36,11 @@ function App() {
 					<AuthRoute path="/edit/:id">
 						<Form />
 					</AuthRoute>
+					<Route path="/about">
+						<Header />
+						<About />
+						<Footer />
+					</Route>
 					<Route path="/login" component={Login} />
 					<Route path="/forgot" component={Forgot} />
 					<Route path="/reset" component={Reset} />
