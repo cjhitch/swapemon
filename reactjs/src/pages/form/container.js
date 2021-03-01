@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchItem, createItem, updateItem } from '../../store/items/actions';
+// import { fetchItem, createItem, updateItem } from '../../store/items/actions';
 
 const mapStateToProps = (state, props) => {
 	const {
@@ -16,6 +16,6 @@ const mapStateToProps = (state, props) => {
 };
 
 // set the actions we need in this component
-const mapDispatchToProps = { fetchItem, createItem, updateItem };
+// const mapDispatchToProps = { fetchItem, createItem, updateItem };
 
-export default connect(mapStateToProps, mapDispatchToProps);
+export default connect(mapStateToProps);
