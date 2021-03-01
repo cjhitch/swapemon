@@ -17,23 +17,21 @@ const Profile = () => {
 		newPw: '',
 		conPw: '',
 	};
+	const id = useSelector((state) => state.auth.id);
 	const [formState, setFormState] = useState(initialState);
 	const [user, setUser] = useState();
 	const storeData = useSelector((state) => state.users);
 	const dispatch = useDispatch();
 	useEffect(() => {
-		// TODO: this needs a better way to find user
-		dispatch(fetchUser('790fe8b3-3ce3-444a-99c2-6eca0d28c65a'));
+		dispatch(fetchUser(id));
 		// this is intentionally left as empty array to run once on load like a componentDidMount()
 		// eslint-disable-next-line
 	}, []);
 	useEffect(() => {
 		if (storeData.allIds.length > 0) {
-			setUser(
-				storeData.byId['790fe8b3-3ce3-444a-99c2-6eca0d28c65a'].data
-			);
+			setUser(storeData.byId[id].data);
 		}
-	}, [setUser, storeData]);
+	}, [setUser, storeData, id]);
 
 	const update = (inputId, value) => {
 		setFormState({ ...formState, [inputId]: value });

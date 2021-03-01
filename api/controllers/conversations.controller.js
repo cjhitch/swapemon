@@ -10,12 +10,11 @@ exports.getConversations = async (req, res) => {
 			{
 				model: Messages,
 				required: true,
-				attributes: ['id', 'from', 'message'],
+				attributes: ['id', 'from', 'message', 'conversationId'],
 			},
 		],
 		where: { userId },
 	});
-	console.log(conversations);
 	res.json(conversations);
 };
 
