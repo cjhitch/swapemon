@@ -4,8 +4,8 @@ const router = require('express').Router();
 const conversationCtrl = require('../controllers/conversations.controller');
 // import the protect middleware
 const protectedRoute = require('../utils/protectedRoute');
-// GET /conversations route
-router.get('/', protectedRoute, conversationCtrl.getConversations);
+// GET /conversations?userId=____ route
+router.get('/', conversationCtrl.getConversations);
 // GET /conversations/:id
 router.get('/:id', conversationCtrl.getOneById);
 // POST /conversations

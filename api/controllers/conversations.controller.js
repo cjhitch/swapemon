@@ -3,7 +3,11 @@ const { Conversations } = require('../models');
 
 // get all the conversations
 exports.getConversations = async (req, res) => {
-	const conversations = await Conversations.findAll();
+	const { userId } = req.query;
+	console.log('conversations', userId);
+	const conversations = await Conversations.findAll({
+		where: { userId },
+	});
 	res.json(conversations);
 };
 

@@ -9,6 +9,15 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		// eslint-disable-next-line no-unused-vars
 		static associate(models) {
+			Conversations.hasMany(models.Messages, {
+				foreignKey: 'conversation_id',
+			});
+			Conversations.belongsTo(models.Users, {
+				foreignKey: 'userId',
+			});
+			Conversations.belongsTo(models.Users, {
+				foreignKey: 'otherUserId',
+			});
 			// this will need a user definition but user doesn't exist yet
 			// define association here
 		}
@@ -22,35 +31,6 @@ module.exports = (sequelize, DataTypes) => {
 				type: DataTypes.UUID,
 				validate: {
 					isUUID: { args: 4, msg: 'Id not valid, please try again' },
-				},
-			},
-			userId: {
-				allowNull: { args: false, msg: 'User id is required' },
-				type: DataTypes.UUID,
-				validate: {
-					isUUID: { args: 4, msg: 'Id not valid, please try again' },
-				},
-			},
-			userName: {
-				allowNull: { args: false, msg: 'Username is required' },
-				type: DataTypes.STRING,
-				validate: {
-					len: {
-						args: [3, 500],
-						msg:
-							'Username must be at least 3 character, please try again',
-					},
-				},
-			},
-			convoMsg: {
-				allowNull: { args: false, msg: 'Message is required' },
-				type: DataTypes.STRING,
-				validate: {
-					len: {
-						args: [3, 500],
-						msg:
-							'Choice must be at least 3 character, please try again',
-					},
 				},
 			},
 		},

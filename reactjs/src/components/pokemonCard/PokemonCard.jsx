@@ -14,7 +14,6 @@ import {
 	BiTrash,
 	BiShare,
 } from 'react-icons/bi';
-// import { fetchMoves } from '../../store/moves/actions';
 import { deleteUsermon } from '../../store/usermons/actions';
 import TypePills from '../typePills';
 import Shiny from '../../assets/images/icons/shiny.svg';
@@ -26,6 +25,8 @@ const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 	const dispatch = useDispatch();
 
 	const [expanded, setExpanded] = useState(false);
+
+	// dynamic pathing for pokemon image based on whether it is shiny or not
 	const pokePath = () => {
 		try {
 			return require(`../../assets/images/icons/pokemon/${
@@ -37,6 +38,7 @@ const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 	};
 	const pokeImg = pokePath();
 
+	// dynamic pathing for ball image
 	const ballPath = () => {
 		try {
 			return require(`../../assets/images/icons/balls/${pokemon.ball}.svg`);
