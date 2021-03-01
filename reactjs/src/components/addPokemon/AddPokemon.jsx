@@ -191,29 +191,29 @@ const AddPokemon = ({ size, pokeId }) => {
 	// assign values and submit
 	const submitHandler = (e) => {
 		e.preventDefault();
-		let gender;
+		const gender = newPokemon.gender.split(' ');
 		// check the gender character - return the key and the value corresponding with each
-		if (newPokemon.gender !== pokeData.data.gender) {
-			console.log(newPokemon.gender);
-			console.log(pokeData.data.gender);
-			if (newPokemon.gender.slice(0, 1) === '♂') {
-				gender = [
-					'male',
-					`${pokemon[newPokemon.name].data.gender.male.toString()}%`,
-				];
-			} else if (newPokemon.gender.slice(0, 1) === '♀') {
-				gender = [
-					'female',
-					`${pokemon[
-						newPokemon.name
-					].data.gender.female.toString()}%`,
-				];
-			} else {
-				gender = ['none', 100];
-			}
-		} else {
-			gender = pokeData.data.gender;
-		}
+		// if (newPokemon.gender !== pokeData.data.gender) {
+		// 	console.log(newPokemon.gender);
+		// 	console.log(pokeData.data.gender);
+		// 	if (newPokemon.gender.slice(0, 1) === '♂') {
+		// 		gender = [
+		// 			'male',
+		// 			`${pokemon[newPokemon.name].data.gender.male.toString()}%`,
+		// 		];
+		// 	} else if (newPokemon.gender.slice(0, 1) === '♀') {
+		// 		gender = [
+		// 			'female',
+		// 			`${pokemon[
+		// 				newPokemon.name
+		// 			].data.gender.female.toString()}%`,
+		// 		];
+		// 	} else {
+		// 		gender = ['none', 100];
+		// 	}
+		// } else {
+		// 	gender = pokeData.data.gender;
+		// }
 		// set each string to lowercase in the array for types before passing to DB
 		const types = pokemon[newPokemon.name].data.type.map((type) => {
 			return type.toLowerCase();
@@ -248,7 +248,7 @@ const AddPokemon = ({ size, pokeId }) => {
 		} else {
 			dispatch(createUsermon(poke));
 		}
-		// window.location.reload(false);
+		window.location.reload(false);
 	};
 
 	return (
@@ -287,8 +287,12 @@ const AddPokemon = ({ size, pokeId }) => {
 				placeholder="Select Gender"
 				disabled={isDisabled}
 				options={[
-					`♂ ${pickedData.gender.male}%`,
-					`♀ ${pickedData.gender.female}%`,
+					`${Object.keys(pickedData.gender)[0]} ${
+						pickedData.gender.male
+					}%`,
+					`${Object.keys(pickedData.gender)[1]} ${
+						pickedData.gender.female
+					}%`,
 				]}
 				value={newPokemon.gender}
 				update={update}
