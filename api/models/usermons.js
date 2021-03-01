@@ -1,4 +1,5 @@
 const { Model } = require('sequelize');
+const { v4 } = require('uuid');
 
 module.exports = (sequelize, DataTypes) => {
 	class Usermons extends Model {
@@ -16,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
 	Usermons.init(
 		{
 			id: {
-				defaultValue: DataTypes.UUID,
+				defaultValue: DataTypes.UUIDV4,
 				primaryKey: true,
 				allowNull: { args: false, msg: 'Id is required' },
 				type: DataTypes.UUID,
@@ -48,8 +49,8 @@ module.exports = (sequelize, DataTypes) => {
 				type: DataTypes.STRING,
 				validate: {
 					is: /^\d{3}/,
-					msg:
-						'Dex is required and must be in 001 format with at least 3 digits',
+					// msg:
+					// 	'Dex is required and must be in 001 format with at least 3 digits',
 				},
 			},
 			ball: {
@@ -65,15 +66,13 @@ module.exports = (sequelize, DataTypes) => {
 				validate: {
 					max: 100,
 					min: 1,
-					msg: 'Level must be between 1-100',
+					// msg: 'Level must be between 1-100',
 				},
 			},
 			types: {
-				allowNull: false,
 				type: DataTypes.ARRAY(DataTypes.STRING),
 			},
 			gender: {
-				allowNull: false,
 				type: DataTypes.ARRAY(DataTypes.STRING),
 			},
 			ability: {
@@ -147,5 +146,7 @@ module.exports = (sequelize, DataTypes) => {
 			modelName: 'Usermons',
 		}
 	);
+	// eslint-disable-next-line
+	Usermons.beforeValidate((mon) => (mon.id = v4));
 	return Usermons;
 };

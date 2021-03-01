@@ -3,7 +3,7 @@ import { combineReducers, createStore, applyMiddleware } from 'redux';
 // middleware for making actions async
 import thunkMiddleware from 'redux-thunk';
 // will log to console all the actions that are run
-// import { createLogger } from 'redux-logger';
+import { createLogger } from 'redux-logger';
 // middleware to help with api calls
 import callAPI from './helpers/callAPIMiddleware';
 
@@ -28,8 +28,8 @@ const rootReducer = combineReducers({
 // set up middleware
 const middleware = applyMiddleware(
 	thunkMiddleware,
-	callAPI
-	// createLogger()
+	callAPI,
+	createLogger()
 	// eslint-disable-next-line
 	// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

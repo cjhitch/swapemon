@@ -6,25 +6,27 @@ import Button from 'react-bootstrap/Button';
 import pokemonData from '../../assets/data/pokemon_info.json';
 import FormControl from '../formControl';
 import TypePills from '../typePills';
-import { updateUsermon, createUsermon } from '../../store/usermons/actions';
+import {
+	updateUsermon,
+	createUsermon,
+	fetchUsermon,
+} from '../../store/usermons/actions';
 import { fetchPokemons } from '../../store/pokemon/actions';
 import { fetchMoves } from '../../store/moves/actions';
 import './AddPokemon.scss';
 
-const AddPokemon = ({ id, pokeId }) => {
-	const pokeData = useSelector((state) => state.usermons);
-	const pokemon = useSelector((state) => state.pokemon);
+const AddPokemon = ({ size, pokeId }) => {
+	const pokeData = useSelector((state) => state.usermons.byId[pokeId]);
+	const id = useSelector((state) => state.auth.id);
+	const pokemon = useSelector((state) => state.pokemon.byId);
 	const moves = useSelector((state) => state.moves);
 	const dispatch = useDispatch();
-
 	useEffect(() => {
 		dispatch(fetchPokemons());
 		dispatch(fetchMoves());
 		// this should only run once to run similar to componentDidMount()
 		// eslint-disable-next-line
 	}, []);
-	// TODO: this will be once the user logged in
-	const username = 'JamesEarlJones';
 	// state for the autocomplete, disabled entries, a new pokemon, and pickeddata once a pokemon is selected
 	const [autoValue, setAutoValue] = useState('');
 	const [isDisabled, setIsDisabled] = useState(true);
@@ -60,27 +62,28 @@ const AddPokemon = ({ id, pokeId }) => {
 	// if the object has been passed in that means this is being edited - set the state to existing
 	useEffect(() => {
 		if (pokeId) {
-			if (!pokeData.isLoading && !moves.isLoading && !pokemon.isLoading) {
-				const editPoke = pokeData.byId[pokeId].data;
+			dispatch(fetchUsermon(pokeId));
+			if (!pokeData.isLoading) {
+				const poke = pokeData.data;
 				setIsDisabled(false);
 				setNewPokemon({
-					name: editPoke.name,
-					dex: editPoke.dex,
-					ball: editPoke.ball,
-					gender: editPoke.gender[1],
-					ability: editPoke.ability,
-					shiny: editPoke.shiny,
-					types: editPoke.types,
-					moves: !editPoke.eggMoves ? [] : editPoke.eggMoves,
-					hp: !editPoke.ivs[0].HP ? '' : editPoke.ivs[0].HP,
-					atk: !editPoke.ivs[1].Atk ? '' : editPoke.ivs[1].Atk,
-					def: !editPoke.ivs[2].Def ? '' : editPoke.ivs[2].Def,
-					spAtk: !editPoke.ivs[3].SpAtk ? '' : editPoke.ivs[3].SpAtk,
-					spDef: !editPoke.ivs[4].SpDef ? '' : editPoke.ivs[4].SpDef,
-					spd: !editPoke.ivs[5].Spd ? '' : editPoke.ivs[5].Spd,
-					level: editPoke.level,
+					name: poke.name,
+					dex: poke.dex,
+					ball: poke.ball,
+					gender: poke.gender[1],
+					ability: poke.ability,
+					shiny: poke.shiny,
+					types: poke.types,
+					moves: !poke.eggMoves ? [] : poke.eggMoves,
+					hp: !poke.ivs[0].HP ? '' : poke.ivs[0].HP,
+					atk: !poke.ivs[1].Atk ? '' : poke.ivs[1].Atk,
+					def: !poke.ivs[2].Def ? '' : poke.ivs[2].Def,
+					spAtk: !poke.ivs[3].SpAtk ? '' : poke.ivs[3].SpAtk,
+					spDef: !poke.ivs[4].SpDef ? '' : poke.ivs[4].SpDef,
+					spd: !poke.ivs[5].Spd ? '' : poke.ivs[5].Spd,
+					level: poke.level,
 				});
-				setAutoValue(editPoke.name);
+				setAutoValue(poke.name);
 			}
 		}
 		// this should only ever run if pokeId is supplied never anytime else
@@ -111,9 +114,8 @@ const AddPokemon = ({ id, pokeId }) => {
 
 	// set the picked data to set for the dropdowns
 	useEffect(() => {
-		// console.log(pokemon[newPokemon.name]);
-		if (pokemon.byId[newPokemon.name]) {
-			const poke = pokemon.byId[newPokemon.name].data;
+		if (pokemon[newPokemon.name]) {
+			const poke = pokemon[newPokemon.name].data;
 			setResetSelect(false);
 			const abilArr = poke.ability.filter((abil) => abil.length !== 0);
 			if (poke.hidden_ability.length !== 0) {
@@ -176,7 +178,7 @@ const AddPokemon = ({ id, pokeId }) => {
 	// if the pokemon is a complete match it sets the state value for name otherwise it clears the value
 	const changeHandler = (e, val) => {
 		setAutoValue(val);
-		Object.keys(pokemon.byId).forEach((poke) => {
+		Object.keys(pokemon).forEach((poke) => {
 			if (val.toLowerCase() === poke.toString().toLowerCase()) {
 				setNewPokemon({ ...newPokemon, name: properNameCase(val) });
 				setIsDisabled(false);
@@ -186,44 +188,59 @@ const AddPokemon = ({ id, pokeId }) => {
 			}
 		});
 	};
+
 	// assign values and submit
 	const submitHandler = (e) => {
 		e.preventDefault();
+		let gender;
+		if (newPokemon.gender.slice(0, 1) === '♂') {
+			gender = [
+				'male',
+				`${pokemon[newPokemon.name].data.gender.male.toString()}%`,
+			];
+		} else if (newPokemon.gender.slice(0, 1) === '♀') {
+			gender = [
+				'female',
+				`${pokemon[newPokemon.name].data.gender.female.toString()}%`,
+			];
+		} else {
+			gender = ['none', 100];
+		}
+		const types = pokemon[newPokemon.name].data.type.map((type) => {
+			return type.toLowerCase();
+		});
 		const ball = newPokemon.ball
 			.substr(0, newPokemon.ball.indexOf(' '))
 			.toLowerCase();
-		const addPoke = {
+		const poke = {
+			userId: id,
 			name: newPokemon.name,
-			shiny: newPokemon.shiny,
-			dex: newPokemon.dex,
+			shiny: newPokemon.shiny === '' ? 0 : newPokemon.shiny,
+			dex: pokemon[newPokemon.name].data.dex,
 			ball,
 			level: newPokemon.level,
-			types: [
-				{ type: 'fire', name: 'Fire' },
-				{ type: 'flying', name: 'Flying' },
-			],
-			gender: ['female', '87.5%'],
+			types,
+			gender,
 			ability: newPokemon.ability,
-			ivs: [
-				{ HP: newPokemon.hp },
-				{ Atk: newPokemon.atk },
-				{ Def: newPokemon.def },
-				{ SpAtk: newPokemon.spAtk },
-				{ SpDef: newPokemon.spDef },
-				{ Spd: newPokemon.spd },
-			],
-			eggMoves: newPokemon.moves,
+			hp: newPokemon.hp === '' ? null : newPokemon.hp,
+			atk: newPokemon.atk === '' ? null : newPokemon.atk,
+			def: newPokemon.def === '' ? null : newPokemon.def,
+			spAtk: newPokemon.spAtk === '' ? null : newPokemon.spAtk,
+			spDef: newPokemon.spDef === '' ? null : newPokemon.spDef,
+			spd: newPokemon.spd === '' ? null : newPokemon.spd,
+			eggMoves: newPokemon.moves.length < 1 ? null : newPokemon.moves,
 		};
 		if (pokeId) {
-			const editPoke = { id: pokeId, ...addPoke };
-			dispatch(updateUsermon(username, editPoke));
+			const editPoke = { id: pokeId, ...poke };
+			dispatch(updateUsermon(editPoke));
 		} else {
-			dispatch(createUsermon(username, addPoke));
+			dispatch(createUsermon(poke));
 		}
+		window.location.reload(false);
 	};
 
 	return (
-		<div className={`AddPokemon ${id}`}>
+		<div className={`AddPokemon ${size}`}>
 			<div className="Autocomplete">
 				<Autocomplete
 					className="Autocomplete"
@@ -231,7 +248,7 @@ const AddPokemon = ({ id, pokeId }) => {
 					inputProps={{
 						placeholder: 'Select Pokemon',
 					}}
-					items={Object.keys(pokemon.byId)}
+					items={Object.keys(pokemon)}
 					getItemValue={(item) => item}
 					shouldItemRender={renderPokemonName}
 					renderMenu={(item) => (
@@ -406,7 +423,7 @@ const AddPokemon = ({ id, pokeId }) => {
 };
 
 AddPokemon.propTypes = {
-	id: PropTypes.string,
+	size: PropTypes.string,
 	pokeId: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 	// pokemon: PropTypes.objectOf(
 	// 	PropTypes.oneOfType([
@@ -420,7 +437,7 @@ AddPokemon.propTypes = {
 };
 
 AddPokemon.defaultProps = {
-	id: '',
+	size: '',
 	pokeId: false,
 	// pokemon: null,
 };

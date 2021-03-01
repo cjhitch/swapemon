@@ -30,10 +30,28 @@ exports.getOneById = async (req, res) => {
 // add a new usermon
 exports.createUsermon = async (req, res) => {
 	// get the title and type titles from the request body
-	const { title, userId } = req.body;
+	const { pokemon } = req.body;
+	console.log('trying to create a pokemon!', pokemon);
 	try {
 		// create the item and save the new option
-		const newUsermon = await Usermons.create({ title, userId });
+		const newUsermon = await Usermons.create({
+			userId: pokemon.userId,
+			name: pokemon.name,
+			shiny: pokemon.shiny,
+			dex: pokemon.dex,
+			ball: pokemon.ball,
+			level: pokemon.level,
+			types: pokemon.types,
+			gender: pokemon.gender,
+			ability: pokemon.ability,
+			hp: pokemon.hp,
+			atk: pokemon.atk,
+			def: pokemon.def,
+			spAtk: pokemon.spAtk,
+			spDef: pokemon.spDef,
+			spd: pokemon.spd,
+			eggMoves: pokemon.eggMoves,
+		});
 		// send the new id back to the req
 		res.json({ id: newUsermon.id });
 	} catch (e) {

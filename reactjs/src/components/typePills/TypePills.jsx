@@ -32,13 +32,10 @@ const TypePills = ({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [newPokemon]);
 	const clickHandler = (move) => {
-		console.log('click handler running');
 		if (clickable) {
-			console.log(move);
 			const index = newPokemon.moves.indexOf(move);
 			const newMoves = newPokemon.moves;
 			if (index !== -1) {
-				console.log('removing move: ', newMoves[index]);
 				newMoves.splice(index, 1);
 				setClicked(!clicked);
 			} else {

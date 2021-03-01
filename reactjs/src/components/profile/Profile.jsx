@@ -42,12 +42,13 @@ const Profile = () => {
 		const newEmail = formState.email;
 		setUser({ ...user, email: newEmail });
 	};
-	const addGame = () => {
-		const newArr = user.games;
-		const newGame = { id: formState.gameCode, name: formState.gameName };
-		newArr.push(newGame);
-		setUser({ ...user, games: newArr });
-	};
+	// TODO: this needs to be added back
+	// const addGame = () => {
+	// 	const newArr = user.games;
+	// 	const newGame = { id: formState.gameCode, name: formState.gameName };
+	// 	newArr.push(newGame);
+	// 	setUser({ ...user, games: newArr });
+	// };
 	const updatePassword = () => {
 		// TODO: this should actually be replaced with the db value from the store
 		if (formState.curPw === 'pass123') {
@@ -77,27 +78,29 @@ const Profile = () => {
 			) : (
 				<>
 					<User username={user.username} image={`${user.id}.jpg`} />
-					<p>
+					{/* <p>
 						<b>
 							{user.system.name} - {user.system.id}
 						</b>
-					</p>
-					<h2>Games</h2>
-					{user.games.map((game) => (
+					</p> */}
+					{/* <h2>Games</h2> */}
+					{/* {user.games.map((game) => (
 						<p key={game.id}>
 							{game.name} - {game.id}
 						</p>
-					))}
-					<form id="addGame" action="">
-						<h2>Add Game</h2>
+					))} */}
+					{/* 
+					TODO: GAMES NEED TO BE ADDED BACK
+					<form id="addGame" action=""> */}
+					{/* <h2>Add Game</h2>
 						<FormControl
 							value={formState.gameName}
 							type="input"
 							id="gameName"
 							update={update}
 							placeholder="name"
-						/>
-						<FormControl
+						/> */}
+					{/* <FormControl
 							value={formState.code}
 							type="input"
 							id="gameCode"
@@ -106,8 +109,8 @@ const Profile = () => {
 						/>
 						<Button onClick={addGame} variant="primary-light">
 							add game
-						</Button>
-					</form>
+						</Button> */}
+					{/* </form> */}
 					<form id="updateEmail" action="">
 						<p>Update Email</p>
 						<FormControl
