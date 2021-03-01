@@ -32,7 +32,6 @@ const AddPokemon = ({ size, pokeId }) => {
 	const [isDisabled, setIsDisabled] = useState(true);
 	const [btnDisabled, setBtnDisabled] = useState(true);
 	const [resetSelect, setResetSelect] = useState(false);
-	// const [clickable, setClickable] = useState(true);
 	// variable to hold our new pokemon or editable pokemon as it is selected and built
 	const [newPokemon, setNewPokemon] = useState({
 		name: '',
@@ -193,22 +192,33 @@ const AddPokemon = ({ size, pokeId }) => {
 	const submitHandler = (e) => {
 		e.preventDefault();
 		let gender;
-		if (newPokemon.gender.slice(0, 1) === '♂') {
-			gender = [
-				'male',
-				`${pokemon[newPokemon.name].data.gender.male.toString()}%`,
-			];
-		} else if (newPokemon.gender.slice(0, 1) === '♀') {
-			gender = [
-				'female',
-				`${pokemon[newPokemon.name].data.gender.female.toString()}%`,
-			];
+		// check the gender character - return the key and the value corresponding with each
+		if (newPokemon.gender !== pokeData.data.gender) {
+			console.log(newPokemon.gender);
+			console.log(pokeData.data.gender);
+			if (newPokemon.gender.slice(0, 1) === '♂') {
+				gender = [
+					'male',
+					`${pokemon[newPokemon.name].data.gender.male.toString()}%`,
+				];
+			} else if (newPokemon.gender.slice(0, 1) === '♀') {
+				gender = [
+					'female',
+					`${pokemon[
+						newPokemon.name
+					].data.gender.female.toString()}%`,
+				];
+			} else {
+				gender = ['none', 100];
+			}
 		} else {
-			gender = ['none', 100];
+			gender = pokeData.data.gender;
 		}
+		// set each string to lowercase in the array for types before passing to DB
 		const types = pokemon[newPokemon.name].data.type.map((type) => {
 			return type.toLowerCase();
 		});
+		// get just first part of the ball - only uses first abbreviation
 		const ball = newPokemon.ball
 			.substr(0, newPokemon.ball.indexOf(' '))
 			.toLowerCase();
@@ -217,7 +227,7 @@ const AddPokemon = ({ size, pokeId }) => {
 			name: newPokemon.name,
 			shiny: newPokemon.shiny === '' ? 0 : newPokemon.shiny,
 			dex: pokemon[newPokemon.name].data.dex,
-			ball,
+			ball: pokeId ? newPokemon.ball : ball,
 			level: newPokemon.level,
 			types,
 			gender,
@@ -230,13 +240,15 @@ const AddPokemon = ({ size, pokeId }) => {
 			spd: newPokemon.spd === '' ? null : newPokemon.spd,
 			eggMoves: newPokemon.moves.length < 1 ? null : newPokemon.moves,
 		};
+		console.log(poke);
+		// check if updating the pokemon or creating a new one
 		if (pokeId) {
 			const editPoke = { id: pokeId, ...poke };
 			dispatch(updateUsermon(editPoke));
 		} else {
 			dispatch(createUsermon(poke));
 		}
-		window.location.reload(false);
+		// window.location.reload(false);
 	};
 
 	return (

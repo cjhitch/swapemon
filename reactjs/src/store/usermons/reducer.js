@@ -99,7 +99,7 @@ const usermonsError = (state, action) => {
 	return {
 		...state,
 		isLoading: false,
-		error: action.err,
+		error: action.error,
 	};
 };
 
@@ -148,17 +148,12 @@ const usermonDelete = (state, action) => {
 };
 
 const usermonError = (state, action) => {
+	console.log(action);
 	// clear loading and set error
 	return {
 		...state,
-		byId: {
-			...state.byId,
-			[action.payload.id]: {
-				...state.byId[action.payload.id],
-				isLoading: false,
-				error: action.err,
-			},
-		},
+		isLoading: false,
+		error: action.error,
 	};
 };
 

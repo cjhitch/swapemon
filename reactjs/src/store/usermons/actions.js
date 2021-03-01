@@ -58,13 +58,13 @@ export const fetchUsermon = (pokeId) => ({
 	payload: { pokeId },
 });
 
-export const updateUsermon = (username, pokemon) => ({
+export const updateUsermon = (pokemon) => ({
 	types: [
 		UPDATE_USERMON_PENDING,
 		UPDATE_USERMON_SUCCESS,
 		UPDATE_USERMON_ERROR,
 	],
-	callAPI: () => API.post(`/usermons/${pokemon.id}`, pokemon),
+	callAPI: () => API.put(`/usermons/${pokemon.id}`, pokemon),
 	payload: { id: pokemon.id },
 });
 

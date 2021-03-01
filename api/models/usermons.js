@@ -48,9 +48,11 @@ module.exports = (sequelize, DataTypes) => {
 				allowNull: { args: false, msg: 'Dex is required' },
 				type: DataTypes.STRING,
 				validate: {
-					is: /^\d{3}/,
-					// msg:
-					// 	'Dex is required and must be in 001 format with at least 3 digits',
+					is: {
+						args: /^\d{3}/,
+						msg:
+							'Dex is required and must be in 001 format with at least 3 digits',
+					},
 				},
 			},
 			ball: {
@@ -64,9 +66,11 @@ module.exports = (sequelize, DataTypes) => {
 				allowNull: true,
 				type: DataTypes.INTEGER,
 				validate: {
-					max: 100,
-					min: 1,
-					// msg: 'Level must be between 1-100',
+					max: {
+						args: [100],
+						msg: 'Level must not be higher than 100',
+					},
+					min: { args: [1], msg: 'Level must be greater than 1' },
 				},
 			},
 			types: {
@@ -86,54 +90,69 @@ module.exports = (sequelize, DataTypes) => {
 				allowNull: true,
 				type: DataTypes.INTEGER,
 				validate: {
-					max: 100,
-					min: 1,
-					msg: 'HP must be between 0-31',
+					max: {
+						args: [31],
+						msg: 'Hp must not be higher than 31',
+					},
+					min: { args: [1], msg: 'Hp must be greater than 1' },
 				},
 			},
 			atk: {
 				allowNull: true,
 				type: DataTypes.INTEGER,
 				validate: {
-					max: 100,
-					min: 1,
-					msg: 'Attack must be between 0-31',
+					max: {
+						args: [31],
+						msg: 'Attack must not be higher than 31',
+					},
+					min: { args: [1], msg: 'Attack must be greater than 1' },
 				},
 			},
 			def: {
 				allowNull: true,
 				type: DataTypes.INTEGER,
 				validate: {
-					max: 100,
-					min: 1,
-					msg: 'Defense must be between 0-31',
+					max: {
+						args: [31],
+						msg: 'Defense must not be higher than 31',
+					},
+					min: { args: [1], msg: 'Defense must be greater than 1' },
 				},
 			},
 			spAtk: {
 				allowNull: true,
 				type: DataTypes.INTEGER,
 				validate: {
-					max: 100,
-					min: 1,
-					msg: 'Special attack must be between 0-31',
+					max: {
+						args: [31],
+						msg: 'Level must not be higher than 31',
+					},
+					min: { args: [1], msg: 'Level must be greater than 1' },
 				},
 			},
 			spDef: {
 				allowNull: true,
 				type: DataTypes.INTEGER,
 				validate: {
-					max: 100,
-					min: 1,
-					msg: 'Special defense must be between 0-31',
+					max: {
+						args: [31],
+						msg: 'Special Defense must not be higher than 31',
+					},
+					min: {
+						args: [1],
+						msg: 'Special Defense must be greater than 1',
+					},
 				},
 			},
 			spd: {
 				allowNull: true,
 				type: DataTypes.INTEGER,
 				validate: {
-					max: 100,
-					min: 1,
-					msg: 'Speed must be between 0-31',
+					max: {
+						args: [31],
+						msg: 'Speed must not be higher than 31',
+					},
+					min: { args: [1], msg: 'Speed must be greater than 1' },
 				},
 			},
 			eggMoves: {

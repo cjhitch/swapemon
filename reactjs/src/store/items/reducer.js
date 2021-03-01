@@ -76,7 +76,7 @@ const itemsError = (state, action) => {
 	return {
 		...state,
 		isLoading: false,
-		error: action.err,
+		error: action.error,
 	};
 };
 
@@ -124,7 +124,7 @@ const itemError = (state, action) => {
 			[action.payload.id]: {
 				...state.byId[action.payload.id],
 				isLoading: false,
-				error: action.err,
+				error: action.error,
 			},
 		},
 	};

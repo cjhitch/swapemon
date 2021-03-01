@@ -64,16 +64,39 @@ exports.createUsermon = async (req, res) => {
 // update an existing usermon
 exports.updateUsermon = async (req, res) => {
 	// get the id from the route params
-	const { id } = req.params;
+	const pokemon = req.body;
+	const { id } = pokemon;
 	try {
-		const [, [updatedUsermon]] = await Usermons.update(req.body, {
-			// only update the row using the id in the url
-			where: { id },
-			// return the updated row
-			returning: true,
-		});
+		const updatedUsermon = await Usermons.update(
+			{
+				id: pokemon.id,
+				userId: pokemon.userId,
+				name: pokemon.name,
+				shiny: pokemon.shiny,
+				dex: pokemon.dex,
+				ball: pokemon.ball,
+				level: pokemon.level,
+				types: pokemon.types,
+				gender: pokemon.gender,
+				ability: pokemon.ability,
+				hp: pokemon.hp,
+				atk: pokemon.atk,
+				def: pokemon.def,
+				spAtk: pokemon.spAtk,
+				spDef: pokemon.spDef,
+				spd: pokemon.spd,
+				eggMoves: pokemon.eggMoves,
+			},
+			{ where: { id } }
+		);
+		// const [, [updatedUsermon]] = await Usermons.update(req.body, {
+		// 	// only update the row using the id in the url
+		// 	where: { id },
+		// 	// return the updated row
+		// 	returning: true,
+		// });
 		// send the updated usermon back to the front-end
-		res.json(updatedUsermon);
+		res.status(204).json(updatedUsermon);
 	} catch (e) {
 		// map the errors messages to send them back
 		const errors = e.errors.map((err) => err.message);
