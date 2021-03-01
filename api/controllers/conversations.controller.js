@@ -1,13 +1,20 @@
 // load the pokemon model
-const { Conversations } = require('../models');
+const { Conversations, Messages } = require('../models');
 
 // get all the conversations
 exports.getConversations = async (req, res) => {
 	const { userId } = req.query;
 	console.log('conversations', userId);
 	const conversations = await Conversations.findAll({
+		include: [
+			{
+				model: Messages,
+				required: true,
+			},
+		],
 		where: { userId },
 	});
+	console.log(conversations);
 	res.json(conversations);
 };
 

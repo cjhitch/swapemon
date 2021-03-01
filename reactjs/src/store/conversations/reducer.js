@@ -39,6 +39,7 @@ const conversationsPending = (state, action) => {
 };
 
 const conversationsSuccess = (state, action) => {
+	console.log(state, action);
 	// clear loading and error, update cache time, add conversations
 	return {
 		...state,
@@ -99,6 +100,7 @@ const conversationPending = (state, action) => {
 };
 
 const conversationSuccess = (state, action) => {
+	console.log(state, action);
 	// clear loading and error, update cache time, add conversations
 	return {
 		...state,

@@ -9,7 +9,7 @@ import callAPI from './helpers/callAPIMiddleware';
 
 // pull our reducers
 import auth from './auth/reducer';
-import conversations from './conversation/reducer';
+import conversations from './conversations/reducer';
 import users from './users/reducer';
 import usermons from './usermons/reducer';
 import pokemon from './pokemon/reducer';

@@ -7,6 +7,9 @@ module.exports = {
 				type: Sequelize.UUID,
 				defaultValue: Sequelize.UUIDV4,
 			},
+			from: {
+				type: Sequelize.UUID,
+			},
 			message: {
 				type: Sequelize.STRING(512),
 			},

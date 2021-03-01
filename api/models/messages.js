@@ -8,6 +8,9 @@ module.exports = (sequelize, DataTypes) => {
 		 * The `models/index` file will call this method automatically.
 		 */
 		static associate(models) {
+			Messages.belongsTo(models.Conversations, {
+				foreignKey: 'conversationId',
+			});
 			// define association here
 		}
 	}
@@ -21,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
 					isUUID: { args: 4, msg: 'Id not valid, please try again' },
 				},
 			},
-			conversationId: {
+			from: {
 				type: DataTypes.UUID,
 				validate: {
 					isUUID: { args: 4, msg: 'Id not valid, please try again' },
