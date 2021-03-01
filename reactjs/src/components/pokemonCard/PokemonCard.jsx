@@ -14,7 +14,6 @@ import {
 	BiTrash,
 	BiShare,
 } from 'react-icons/bi';
-// import { fetchMoves } from '../../store/moves/actions';
 import { deleteUsermon } from '../../store/usermons/actions';
 import TypePills from '../typePills';
 import Shiny from '../../assets/images/icons/shiny.svg';
@@ -22,29 +21,12 @@ import './PokemonCard.scss';
 
 const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 	const pokeMoves = useSelector((state) => state.moves);
-	// const [movesIsLoading, setMovesIsLoading] = useState(true);
-	// const pokeData = useSelector((state) => state.usermons);
 	const [show, setShow] = useState(false);
 	const dispatch = useDispatch();
 
-	// useEffect(() => {
-	// 	// dispatch(fetchMoves());
-	// 	// this should only run once to run similar to componentDidMount()
-	// 	// eslint-disable-next-line
-	// }, []);
-
-	// useEffect(() => {
-	// 	if (pokeMoves.isLoading === false) {
-	// 		setMovesIsLoading(false);
-	// 	} else {
-	// 		setMovesIsLoading(true);
-	// 	}
-	// 	console.log(pokeMoves);
-	// }, [pokeMoves]);
-
-	// TODO: this will be once the user logged in
-	const username = 'JamesEarlJones';
 	const [expanded, setExpanded] = useState(false);
+
+	// dynamic pathing for pokemon image based on whether it is shiny or not
 	const pokePath = () => {
 		try {
 			return require(`../../assets/images/icons/pokemon/${
@@ -56,6 +38,7 @@ const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 	};
 	const pokeImg = pokePath();
 
+	// dynamic pathing for ball image
 	const ballPath = () => {
 		try {
 			return require(`../../assets/images/icons/balls/${pokemon.ball}.svg`);
@@ -152,15 +135,10 @@ const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 									// I want this to say the number of each move for the key
 									//  eslint-disable-next-line
 										<p key={`move-${i}`}>
-										{/* {moves.length > 0 && ( */}
-										{
-											<TypePills
-												variant="round"
-												type={unCapitalize(
-													getType(move)
-												)}
-											/>
-										}
+										<TypePills
+											variant="round"
+											type={unCapitalize(getType(move))}
+										/>
 										<span>{move}</span>
 									</p>
 								))
@@ -219,9 +197,7 @@ const PokemonCard = ({ pokemon, addTrade, setPokeId }) => {
 						Close
 					</Button>
 					<Button
-						onClick={() =>
-							dispatch(deleteUsermon(username, pokemon.id))
-						}
+						onClick={() => dispatch(deleteUsermon(pokemon.id))}
 						variant="secondary"
 					>
 						Delete

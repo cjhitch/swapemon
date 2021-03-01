@@ -1,51 +1,87 @@
-import React, { useState } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect } from 'react';
+import { v4 } from 'uuid';
+import { useDispatch, useSelector } from 'react-redux';
+import API from '../../API';
+// import PropTypes from 'prop-types';
+import { fetchConversations } from '../../store/conversations/actions';
 import User from '../user';
 import Chat from '../chat';
 import './Messages.scss';
 
 const Messages = () => {
-	const [activeId, setActiveId] = useState(null);
-	const [conversationId, setConversationId] = useState(null);
-	const conversations = [
+	const id = useSelector((state) => state.auth.id);
+	const chats = useSelector((state) => state.conversations);
+	const dispatch = useDispatch();
+	useEffect(() => {
+		dispatch(fetchConversations(id));
+		// this should only run once to run similar to componentDidMount()
+		// eslint-disable-next-line
+	}, []);
+	const [activeId, setActiveId] = useState(
+		sessionStorage.getItem('activeId') || null
+	);
+	const [chat, setChat] = useState([
 		{
-			id: 'a54aa11a-2597-41a4-965a-b96350261e24',
-			userId: '806dd04e-dae0-4e07-bc29-3013a3cdc895',
-			userName: 'DarthVader',
-			msg: "Sorry I couldn't find any",
+			id: '',
+			from: '',
+			message: '',
+			conversationId: '',
 		},
-		{
-			id: 'b9d2c918-ad14-41fe-8877-5143bff92463',
-			userId: '106a6442-df8f-4b97-b7fe-156e823283e4',
-			userName: 'QuiGon',
-			msg: 'Did you still have time to trade tonight?',
-		},
-		{
-			id: '36d314e3-03c9-4e1c-9e48-45f71642b8c7',
-			userId: 'af2cec25-1078-4b1b-8fd1-6dae365b5c51',
-			userName: 'Fred',
-			msg: 'Would you be willing to trade one of your Moon Bulbasaur?',
-		},
-	];
-	const userClickHandler = (id, convo) => {
-		setConversationId(convo);
-		setActiveId(id);
+	]);
+	useEffect(() => {
+		if (!chats.isLoading) {
+			console.log('not loading');
+			if (sessionStorage.getItem('convo')) {
+				if (chats.byId[sessionStorage.getItem('convo')]) {
+					setChat(
+						chats.byId[sessionStorage.getItem('convo')].data
+							.Messages
+					);
+				}
+			}
+		}
+	}, [chats]);
+	const submitHandler = async (e, input) => {
+		e.preventDefault();
+		const newChats = chat;
+		if (input !== '') {
+			const post = {
+				id: v4(),
+				from: id,
+				message: input,
+				conversationId: chat[0].conversationId,
+			};
+			newChats.push(post);
+			setChat(newChats);
+			await API.post('/messages', { post });
+			window.location.reload(false);
+		} else {
+			alert('you must enter a value!');
+		}
+	};
+	const userClickHandler = (userId, convo) => {
+		setChat(chats.byId[convo].data.Messages);
+		setActiveId(userId);
+		sessionStorage.setItem('activeId', userId);
+		sessionStorage.setItem('convo', convo);
 	};
 	return (
 		<section className="Messages">
 			<h1>Messages</h1>
 			<div className="users">
-				{conversations.map((convo) => (
+				{Object.values(chats.byId).map((byId) => (
 					<User
 						activeChat={activeId}
-						key={convo.id}
-						username={convo.userName}
-						image={`${convo.userId}.jpg`}
+						key={byId.data.id}
+						username={byId.data.username}
+						image={`${byId.data.otherUserId}.jpg`}
 						userClickHandler={userClickHandler}
-						conversationId={convo.id}
+						conversationId={byId.data.id}
 					/>
 				))}
 			</div>
-			<Chat conversationId={conversationId} />
+			<Chat submitHandler={submitHandler} chat={chat} />
 		</section>
 	);
 };

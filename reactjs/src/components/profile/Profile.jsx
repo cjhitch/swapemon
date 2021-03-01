@@ -17,23 +17,21 @@ const Profile = () => {
 		newPw: '',
 		conPw: '',
 	};
+	const id = useSelector((state) => state.auth.id);
 	const [formState, setFormState] = useState(initialState);
 	const [user, setUser] = useState();
 	const storeData = useSelector((state) => state.users);
 	const dispatch = useDispatch();
 	useEffect(() => {
-		// TODO: this needs a better way to find user
-		dispatch(fetchUser('790fe8b3-3ce3-444a-99c2-6eca0d28c65a'));
+		dispatch(fetchUser(id));
 		// this is intentionally left as empty array to run once on load like a componentDidMount()
 		// eslint-disable-next-line
 	}, []);
 	useEffect(() => {
 		if (storeData.allIds.length > 0) {
-			setUser(
-				storeData.byId['790fe8b3-3ce3-444a-99c2-6eca0d28c65a'].data
-			);
+			setUser(storeData.byId[id].data);
 		}
-	}, [setUser, storeData]);
+	}, [setUser, storeData, id]);
 
 	const update = (inputId, value) => {
 		setFormState({ ...formState, [inputId]: value });
@@ -42,22 +40,29 @@ const Profile = () => {
 		const newEmail = formState.email;
 		setUser({ ...user, email: newEmail });
 	};
-	const addGame = () => {
-		const newArr = user.games;
-		const newGame = { id: formState.gameCode, name: formState.gameName };
-		newArr.push(newGame);
-		setUser({ ...user, games: newArr });
-	};
+	// TODO: this needs to be added back
+	// const addGame = () => {
+	// 	const newArr = user.games;
+	// 	const newGame = { id: formState.gameCode, name: formState.gameName };
+	// 	newArr.push(newGame);
+	// 	setUser({ ...user, games: newArr });
+	// };
 	const updatePassword = () => {
 		// TODO: this should actually be replaced with the db value from the store
 		if (formState.curPw === 'pass123') {
 			if (formState.newPw === formState.conPw) {
 				// set the password here once db is set up
+				// TODO: replace alert
+				// eslint-disable-next-line no-alert
 				alert('password changed!');
 			} else {
+				// TODO: replace alert
+				// eslint-disable-next-line no-alert
 				alert('passwords do not match');
 			}
 		} else {
+			// TODO: replace alert
+			// eslint-disable-next-line no-alert
 			alert("current password doesn't match");
 		}
 	};
@@ -71,27 +76,29 @@ const Profile = () => {
 			) : (
 				<>
 					<User username={user.username} image={`${user.id}.jpg`} />
-					<p>
+					{/* <p>
 						<b>
 							{user.system.name} - {user.system.id}
 						</b>
-					</p>
-					<h2>Games</h2>
-					{user.games.map((game) => (
+					</p> */}
+					{/* <h2>Games</h2> */}
+					{/* {user.games.map((game) => (
 						<p key={game.id}>
 							{game.name} - {game.id}
 						</p>
-					))}
-					<form id="addGame" action="">
-						<h2>Add Game</h2>
+					))} */}
+					{/* 
+					TODO: GAMES NEED TO BE ADDED BACK
+					<form id="addGame" action=""> */}
+					{/* <h2>Add Game</h2>
 						<FormControl
 							value={formState.gameName}
 							type="input"
 							id="gameName"
 							update={update}
 							placeholder="name"
-						/>
-						<FormControl
+						/> */}
+					{/* <FormControl
 							value={formState.code}
 							type="input"
 							id="gameCode"
@@ -100,8 +107,8 @@ const Profile = () => {
 						/>
 						<Button onClick={addGame} variant="primary-light">
 							add game
-						</Button>
-					</form>
+						</Button> */}
+					{/* </form> */}
 					<form id="updateEmail" action="">
 						<p>Update Email</p>
 						<FormControl

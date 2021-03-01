@@ -4,6 +4,21 @@
 	&:hover {
 		background-color: darken($color: $color, $amount: 20);
 	}
+	&:not(.clickable) {
+		cursor: default;
+		&:hover {
+			background-color: $color;
+		}
+	}
+	&.clickable {
+		&:not([value='true']) {
+			background-color: $dark-54;
+			opacity: 0.5;
+			&:hover {
+				background-color: darken($color: $color, $amount: 20);
+			}
+		}
+	}
 }
 @mixin py($pad) {
 	padding-top: $pad;

@@ -14,6 +14,7 @@ const conversationsRouter = require('./routes/conversations.routes');
 const usermonsRouter = require('./routes/usermons.routes');
 const usersRouter = require('./routes/users.routes');
 const authRoutes = require('./routes/auth.routes');
+const msgRoutes = require('./routes/messages.routes');
 
 // create express app
 const app = express();
@@ -41,6 +42,8 @@ app.use('/usermons', usermonsRouter);
 app.use('/users', usersRouter);
 // login route
 app.use('/auth', authRoutes);
+// message route
+app.use('/messages', msgRoutes);
 
 // API calls
 app.get('/api/hello', (req, res) => {

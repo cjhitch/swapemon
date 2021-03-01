@@ -33,6 +33,8 @@ const Create = () => {
 		const { name, first, last, email, password } = user;
 		console.log(users);
 		dispatch(createUser(name, first, last, email, password)).catch(
+			// TODO: replace alert
+			// eslint-disable-next-line no-alert
 			alert('This username or email already exists, please try again')
 		);
 		history.push('/login');

@@ -24,16 +24,9 @@ exports.formLogin = async (req, res) => {
 	try {
 		const user = await Users.findOne({ where: { username } });
 		const truthyPW = bcrypt.compareSync(password, user.dataValues.password);
-		let myUser = {};
+
 		let token;
 		if (truthyPW) {
-			myUser = {
-				id: user.dataValues.id,
-				username: user.dataValues.username,
-				first_name: user.dataValues.first_name,
-				last_name: user.dataValues.last_name,
-				email: user.dataValues.email,
-			};
 			token = jwt.sign({ id: user.dataValues.id }, process.env.SECRET);
 			Users.update(
 				{
@@ -44,7 +37,8 @@ exports.formLogin = async (req, res) => {
 				}
 			);
 		}
-		res.json({ token, loggedIn: true, user: myUser });
+		res.json({ token, loggedIn: true });
+
 	} catch (e) {
 		// log the error
 		error(e);
@@ -118,6 +112,37 @@ exports.reset_password = async (req, res, next) => {
 		return res.status(400).send({
 			error: err,
 			message: 'Password reset token is invalid or has expired.',
+		});
+	}
+};
+
+exports.contactForm = async (req, res) => {
+	try {
+		// get the users data
+		const { inputs } = req.body;
+		const data = {
+			to: email,
+			from: inputs.email,
+			subject: 'Contact Form Submission',
+			text: `
+			${inputs.name} would like some additional information!
+			
+			Phone: ${inputs.phone}
+			Email: ${inputs.email},
+			they wrote and left us this message: 
+			${inputs.message}`,
+		};
+		// eslint-disable-next-line
+		smtpTransport.sendMail(data, (err) => {
+			if (err) {
+				return res.status(500).json(err);
+			}
+		});
+		return res.status(200).json('Contact form submitted!');
+	} catch (err) {
+		res.status(500).send({
+			error: err,
+			message: 'Something went wrong',
 		});
 	}
 };

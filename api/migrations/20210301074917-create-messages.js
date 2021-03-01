@@ -1,34 +1,25 @@
-// eslint-disable-next-line
-'use strict';
-
 module.exports = {
 	up: async (queryInterface, Sequelize) => {
-		await queryInterface.createTable('Conversations', {
+		await queryInterface.createTable('Messages', {
 			id: {
 				allowNull: false,
 				primaryKey: true,
 				type: Sequelize.UUID,
+				defaultValue: Sequelize.UUIDV4,
 			},
-			userId: {
+			from: {
+				type: Sequelize.UUID,
+			},
+			message: {
+				type: Sequelize.STRING(512),
+			},
+			conversationId: {
 				type: Sequelize.UUID,
 				onDelete: 'CASCADE',
 				references: {
-					model: 'Users',
+					model: 'Conversations',
 					key: 'id',
 				},
-			},
-			otherUserId: {
-				type: Sequelize.UUID,
-				onDelete: 'CASCADE',
-				references: {
-					model: 'Users',
-					key: 'id',
-				},
-			},
-			username: {
-				allowNull: false,
-				type: Sequelize.STRING,
-				unique: true,
 			},
 			createdAt: {
 				allowNull: false,
@@ -40,8 +31,7 @@ module.exports = {
 			},
 		});
 	},
-	// eslint-disable-next-line no-unused-vars
 	down: async (queryInterface, Sequelize) => {
-		await queryInterface.dropTable('Conversations');
+		await queryInterface.dropTable('Messages');
 	},
 };

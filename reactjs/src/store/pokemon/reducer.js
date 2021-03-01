@@ -118,7 +118,7 @@ const pokemonsError = (state, action) => {
 	return {
 		...state,
 		isLoading: false,
-		error: action.err,
+		error: action.error,
 	};
 };
 
@@ -175,7 +175,7 @@ const pokemonError = (state, action) => {
 			[action.payload.id]: {
 				...state.byId[action.payload.id],
 				isLoading: false,
-				error: action.err,
+				error: action.error,
 			},
 		},
 	};

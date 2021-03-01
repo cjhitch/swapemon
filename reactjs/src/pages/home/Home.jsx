@@ -16,6 +16,13 @@ const Home = () => {
 			<Link to="/create">
 				<Button variant="tertiary">Create an Account</Button>
 			</Link>
+			<h2 className="text-center mt-5 h3">
+				Learn more{' '}
+				<Link className="nav-link d-inline" to="/about">
+					About
+				</Link>{' '}
+				Us
+			</h2>
 		</section>
 	);
 };
