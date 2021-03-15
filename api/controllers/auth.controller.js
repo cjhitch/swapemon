@@ -38,7 +38,6 @@ exports.formLogin = async (req, res) => {
 			);
 		}
 		res.json({ token, loggedIn: true });
-
 	} catch (e) {
 		// log the error
 		error(e);
@@ -62,7 +61,10 @@ exports.forgot_password = async (req, res) => {
 		from: email,
 		subject: 'Password help has arrived!',
 		html: `<a>http://localhost:3000/reset?token=${token}</a>`,
-		text: `http://localhost:3000/reset?token=${token}`,
+		text:
+			process.env.NODE_ENV === 'production'
+				? `https://swapemon.herokuapp.com/reset?token=${token}`
+				: `http://localhost:3000/reset?token=${token}`,
 	};
 	smtpTransport.sendMail(data, (err) => {
 		if (err) {
