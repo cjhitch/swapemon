@@ -1,0 +1,75 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/mixins';
+
+.Trade {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	grid-column-gap: 4.5rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	@media (max-width: 47.9375rem) {
+		grid-template-columns: 1fr;
+	}
+	> div {
+		width: 22.1875rem;
+		justify-self: flex-start;
+		&.mytrade {
+			justify-self: flex-end;
+		}
+		.User {
+			margin-bottom: 1rem;
+		}
+		.PokemonCard {
+			margin: 0 0 0.5rem 0;
+			.more.edit {
+				justify-content: center;
+				> div {
+					display: none;
+				}
+				svg {
+					display: none;
+				}
+				button {
+					svg {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+	button {
+		grid-column: 1 / 3;
+		&.btn-secondary {
+			margin-top: 1rem;
+			padding: 0.75rem 2.25rem;
+		}
+		&.addPoke {
+			width: 22.1875rem;
+			height: 5rem;
+			border-radius: 0.625rem;
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+	}
+}
+.modal-trade {
+	color: $light;
+	border-radius: 0.625rem;
+	.close {
+		color: $light;
+	}
+	.modal-content {
+		background-color: $primary-dark;
+		border-radius: 0.625rem;
+		.modal-body {
+			justify-content: center;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			.PokemonCard {
+				margin: 0 0 0.5rem 0;
+			}
+		}
+	}
+}

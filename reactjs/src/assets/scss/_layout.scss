@@ -1,0 +1,27 @@
+$spacer: 1rem;
+$spacers: () !default;
+$spacers: map-merge(
+	(
+		0: 0,
+		1: (
+			$spacer * 0.25,
+		),
+		2: (
+			$spacer * 0.5,
+		),
+		3: $spacer,
+		4: (
+			$spacer * 1.25,
+		),
+		5: (
+			$spacer * 1.5,
+		),
+		6: (
+			$spacer * 2,
+		),
+		7: (
+			$spacer * 3,
+		),
+	),
+	$spacers
+);

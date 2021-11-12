@@ -1,0 +1,76 @@
+{
+	"name": "capstone-project-2101-cjhitch",
+	"version": "1.0.0",
+	"description": "Swapemon pokemon application",
+	"main": "server.js",
+	"directories": {
+		"doc": "docs"
+	},
+	"scripts": {
+		"start": "npm start --prefix api",
+		"start:react": "cd reactjs && yarn start",
+		"heroku-postbuild": "concurrently \"npm:install-*\"; concurrently \"npm:build-*\"; concurrently \"npm:seed-*\";",
+		"install-reactjs": "npm install --prefix reactjs",
+		"install-api": "npm install --prefix api",
+		"build-reactjs": "npm run build --prefix reactjs",
+		"build-api": "npm run db-update --prefix api",
+		"seed-db": "npm run db-seed --prefix api",
+		"dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn start:react\"",
+		"test:react": "rcd reactjs && eact-scripts test",
+		"eject": "cd reactjs && react-scripts eject",
+		"format": "cd reactjs && yarn run prettier --write",
+		"prettier": "cd reactjs && prettier \"src/**/*.{js,jsx,json,css}\"",
+		"lint": "cd reactjs && eslint \"src/**/*.{js,jsx,json}\"",
+		"lint:fix": "cd reactjs && eslint . --fix",
+		"server": "cd api && nodemon server.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx,json}": [
+			"npm run format",
+			"npm run lint:fix"
+		]
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"proxy": "http://localhost:5000/",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fs-tech-degs/capstone-project-2101-cjhitch.git"
+	},
+	"author": "Christopher Hitchcock",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/fs-tech-degs/capstone-project-2101-cjhitch/issues"
+	},
+	"homepage": "https://github.com/fs-tech-degs/capstone-project-2101-cjhitch#readme",
+	"devDependencies": {
+		"concurrently": "^5.3.0",
+		"eslint": "^7.18.0",
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-prettier": "^7.2.0",
+		"eslint-plugin-compat": "^3.9.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-prettier": "^3.3.1",
+		"eslint-plugin-react": "^7.22.0",
+		"husky": "^4.3.8",
+		"lint-staged": "^10.5.3",
+		"prettier": "^2.2.1"
+	},
+	"dependencies": {
+		"nodemon": "^2.0.7",
+		"eslint-plugin-cypress": "^2.11.2",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"babel-eslint": "^10.1.0"
+	}
+}

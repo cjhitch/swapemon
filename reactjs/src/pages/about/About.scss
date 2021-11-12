@@ -1,0 +1,13 @@
+@import '../../assets/scss/mixins';
+.About {
+	@extend %logForm;
+	p {
+		justify-self: center;
+		font-size: 1.125rem;
+		max-width: 80%;
+		span {
+			font-size: 1.25rem;
+			font-weight: 700;
+		}
+	}
+}

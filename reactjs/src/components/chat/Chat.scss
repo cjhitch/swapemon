@@ -1,0 +1,23 @@
+@import '../../assets/scss/colors';
+.Chat {
+	border-radius: 0.625rem;
+	padding: 1.25rem;
+	background-color: $light;
+	margin-bottom: 1.875rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	overflow-y: scroll;
+	max-height: 75vh;
+	p {
+		background-color: grey;
+		padding: 1rem;
+		border-radius: 0.625rem;
+		width: 75%;
+		margin-left: auto;
+		&.user {
+			background-color: $primary-dark;
+			margin-left: 0;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+.Logo {
+	@media (max-width: 47.9375rem) {
+		max-width: 12.625rem;
+	}
+	&.footer {
+		max-width: 2.5rem;
+	}
+}

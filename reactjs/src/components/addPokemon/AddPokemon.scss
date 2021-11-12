@@ -1,0 +1,238 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/mixins';
+.AddPokemon {
+	&.lg {
+		@media (max-width: 47.9375rem) {
+			display: none;
+		}
+		.buttons {
+			@media (max-width: 47.9375rem) {
+				display: none !important;
+			}
+		}
+	}
+	display: grid;
+	grid-template-areas: 'name gender ivarea' 'ball abil ivarea' 'move move move' 'btn btn . ';
+	grid-template-columns: 1fr 1fr 2fr;
+	@media (max-width: 47.9375rem) {
+		grid-template-columns: 1fr;
+		grid-template-areas: 'name' 'gender' 'abil' 'ball' 'ivarea' 'move';
+	}
+	grid-column-gap: 1.25rem;
+	.Autocomplete {
+		@extend %autocomplete;
+		// grid-area: name;
+		// width: 100%;
+		// position: relative;
+		// display: inline-block;
+		// > div {
+		// 	width: 100%;
+		// }
+		// input {
+		// 	display: block;
+		// 	width: 100%;
+		// 	height: calc(1.5em + 1rem + 2px);
+		// 	padding: 0.375rem 0.75rem;
+		// 	padding-left: 1.125rem;
+		// 	font-weight: 400;
+		// 	line-height: 1.5;
+		// 	border-radius: 0.25rem;
+		// 	font-size: 1.125rem;
+		// 	background-color: $primary-dark;
+		// 	color: $primary;
+		// 	border: none;
+		// 	// decided to not do background image at the current time - saving for later
+		// 	// transition: border-color 0.15s ease-in-out,
+		// 	// 	box-shadow 0.15s ease-in-out;
+		// 	// background-clip: padding-box;
+		// 	// background-size: contain;
+		// 	// background-repeat: no-repeat;
+		// 	// padding-left: 3rem;
+		// 	// background-origin: content-box;
+		// 	// background-position-x: -17%;
+		// 	&:focus {
+		// 		color: $dark;
+		// 		background-color: $light;
+		// 		border-color: $primary-light;
+		// 		outline: 0;
+		// 		box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+		// 	}
+		// }
+		// .dropdown {
+		// 	z-index: 1;
+		// 	width: 100%;
+		// 	padding: 0;
+		// 	text-align: left;
+		// 	max-height: 280px;
+		// 	overflow: hidden;
+		// 	overflow-y: auto;
+		// 	background-color: $primary-dark;
+		// 	border-top: none;
+		// 	position: absolute;
+		// 	.item {
+		// 		display: block;
+		// 		cursor: pointer;
+		// 		font-size: 14px;
+		// 		padding: 15px;
+		// 		&.selected-item {
+		// 			background-color: $primary-lighten;
+		// 			color: $light;
+		// 		}
+		// 		&:hover {
+		// 			background-color: $primary-lighten;
+		// 			color: $light;
+		// 		}
+		// 	}
+		// }
+	}
+	.FormControl {
+		&.gender {
+			grid-area: gender;
+		}
+		&.ability {
+			grid-area: abil;
+		}
+		&.ball {
+			grid-area: ball;
+		}
+	}
+	.level-iv-shiny {
+		grid-area: ivarea;
+		display: grid;
+		grid-template-areas:
+			'lvl hp atk def'
+			'shiny spatk spdef spd';
+		@media (max-width: 47.9375rem) {
+			grid-template-areas:
+				'lvl shiny'
+				'hp atk'
+				'def spatk'
+				'spdef spd';
+		}
+		// grid-template-columns: repeat(4 1fr);
+		grid-column-gap: 1.25rem;
+		.FormControl {
+			&.level {
+				grid-area: lvl;
+			}
+			&.shiny {
+				margin-top: 0.5rem;
+				grid-area: shiny;
+				label {
+					margin-top: 0.35rem;
+					padding-left: 1rem;
+					&::before {
+						width: 2rem;
+						height: 2rem;
+					}
+					&:after {
+						top: 0.55em;
+						left: 0.15em;
+						font-size: 2rem;
+					}
+				}
+			}
+			&.hp {
+				grid-area: hp;
+			}
+			&.atk {
+				grid-area: atk;
+			}
+			&.def {
+				grid-area: def;
+			}
+			&.spAtk {
+				grid-area: spatk;
+			}
+			&.spDef {
+				grid-area: spdef;
+			}
+			&.spd {
+				grid-area: spd;
+			}
+			.form-group {
+				display: flex;
+				label {
+					flex: 0 0 4.375rem;
+					text-align: right;
+					background: $dark-54;
+					padding: 0.78125rem 0.5625rem 0.78125rem 0;
+					border-top-left-radius: 0.625rem;
+					border-bottom-left-radius: 0.625rem;
+					height: 2.8125rem;
+					align-self: center;
+					margin-bottom: 0;
+					color: $light-70;
+				}
+				input {
+					// width: 66px;
+					height: 2.8125rem;
+				}
+			}
+		}
+	}
+
+	select.form-control,
+	input {
+		appearance: none;
+		&:disabled {
+			&:not([name='name']) {
+				opacity: 0.25;
+			}
+			&[name='name'] {
+				opacity: 0.85;
+			}
+			// filter: brightness(0.15);
+		}
+	}
+	select.Form-Control {
+		appearance: none;
+	}
+	label,
+	span {
+		color: $light;
+	}
+	.moves {
+		grid-area: move;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		@media (max-width: 47.9375rem) {
+			justify-content: center;
+		}
+		h2 {
+			@include py(0.75rem);
+			font-size: 1.25rem;
+			align-items: center;
+			flex-shrink: 0;
+			margin-bottom: 0;
+			margin-right: 2rem;
+		}
+		.TypePills {
+			flex-shrink: 0;
+			@media (max-width: 47.9375rem) {
+				display: none;
+			}
+		}
+		.ems {
+			width: 100%;
+			@media (min-width: 48rem) {
+				display: none;
+			}
+			#ems {
+				max-height: 45px;
+			}
+		}
+	}
+	.buttons {
+		@media (max-width: 47.9375rem) {
+			margin-top: 0.75rem;
+			margin-bottom: 0.85rem;
+			button {
+				margin: 0 auto;
+				display: block;
+			}
+		}
+	}
+}
